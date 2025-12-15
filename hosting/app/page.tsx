@@ -14,17 +14,16 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          <div className="flex flex-col items-start gap-12 lg:gap-16 text-left">
 
-            {/* Left Content */}
-            <div className="max-w-2xl text-left z-10">
+            {/* Content */}
+            <div className="max-w-4xl z-10">
               <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold font-serif leading-[1.1] mb-6 tracking-tight">
-                Home buying built <br />
-                <span className="text-brand-blue">for the buyer</span>, <br />
+                Home buying built <span className="text-brand-blue">for the buyer,</span> <br />
                 not the agent.
               </h1>
-              <p className="text-lg md:text-xl text-gray-500 mb-8 max-w-lg leading-relaxed">
-                The complete platform for savvy buyers to acquire homes directly from sellers. Save the 3% commission and get the same protection, without paying an agent.
+              <p className="text-lg md:text-xl text-gray-500 mb-8 max-w-2xl leading-relaxed">
+                The complete platform for savvy buyers to acquire homes directly from sellers. Save the 3% commission and get the same protection, powered by AI and expert support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -36,8 +35,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Right Mockup */}
-            <div className="relative z-0 lg:ml-[-50px] lg:mr-[-100px] mt-8 lg:mt-0">
+            {/* Mockup */}
+            <div className="relative z-0 w-full max-w-5xl mx-auto">
               {/* Abstract background blobs */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-gradient-to-tr from-blue-50/50 to-purple-50/50 rounded-full blur-3xl -z-10"></div>
 
@@ -124,8 +123,8 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-600 transition-colors">
-                <FileText className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-blue transition-colors">
+                <FileText className="w-6 h-6 text-brand-blue group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-xl font-bold mb-3 font-serif">Legal Documents</h3>
               <p className="text-gray-500 leading-relaxed text-sm">
@@ -134,8 +133,8 @@ export default function LandingPage() {
             </div>
             {/* Card 2 */}
             <div className="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-600 transition-colors">
-                <Clock className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-blue transition-colors">
+                <Clock className="w-6 h-6 text-brand-blue group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-xl font-bold mb-3 font-serif">Market Data</h3>
               <p className="text-gray-500 leading-relaxed text-sm">
@@ -144,8 +143,8 @@ export default function LandingPage() {
             </div>
             {/* Card 3 */}
             <div className="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-600 transition-colors">
-                <MessageSquare className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-blue transition-colors">
+                <MessageSquare className="w-6 h-6 text-brand-blue group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-xl font-bold mb-3 font-serif">Expert Support</h3>
               <p className="text-gray-500 leading-relaxed text-sm">
@@ -188,34 +187,49 @@ export default function LandingPage() {
 
             {/* Right UI Mockup List */}
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-50 transform rotate-6 rounded-3xl -z-10 scale-95 opacity-50"></div>
-              <div className="grid gap-4">
-                {/* Item 1 */}
-                <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex items-center gap-4 transform hover:scale-[1.02] transition-transform">
-                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center font-bold text-purple-600">MJ</div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-sm">Mary Jane Watson</h4>
-                    <p className="text-xs text-gray-400">Offer Accepted • $425,000</p>
+              <div className="absolute inset-0 bg-gray-50/50 transform rotate-2 rounded-[2.5rem] -z-10 scale-105"></div>
+
+              <div className="bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-100 relative">
+                {/* Step 1 */}
+                <div className="relative z-10">
+                  <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 transition-transform hover:scale-[1.01] cursor-default">
+                    <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-lg">1</div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-lg font-serif">Identify Home</h4>
+                      <p className="text-sm text-gray-400 font-medium">Import from Zillow/Redfin</p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-gray-300" />
                   </div>
-                  <div className="px-3 py-1 bg-green-50 text-green-600 text-xs font-bold rounded-full">Active</div>
                 </div>
-                {/* Item 2 */}
-                <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex items-center gap-4 transform translate-x-8 hover:translate-x-9 transition-transform">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600">JD</div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-sm">John Doe</h4>
-                    <p className="text-xs text-gray-400">Drafting Offer • 2 days ago</p>
+
+                {/* Connector 1 */}
+                <div className="h-10 border-l-2 border-dashed border-gray-200 ml-[2.35rem] my-2"></div>
+
+                {/* Step 2 - Active */}
+                <div className="relative z-10">
+                  <div className="bg-white p-5 rounded-2xl shadow-xl border border-blue-100 flex items-center gap-5 relative overflow-hidden transform scale-[1.02]">
+                    <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-blue"></div>
+                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-brand-blue font-bold text-lg ml-1">2</div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-lg font-serif">Generate Offer</h4>
+                      <p className="text-sm text-gray-400 font-medium">AI-assisted terms & price</p>
+                    </div>
+                    <span className="px-3 py-1 bg-blue-50 text-brand-blue text-xs font-bold rounded-lg uppercase tracking-wider">Active</span>
                   </div>
-                  <button className="px-3 py-1 bg-blue-50 text-brand-blue text-xs font-bold rounded-full">Resume</button>
                 </div>
-                {/* Item 3 */}
-                <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex items-center gap-4 transform hover:scale-[1.02] transition-transform">
-                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-bold text-gray-600">BR</div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-sm">Ben Reilly</h4>
-                    <p className="text-xs text-gray-400">Viewing Listings</p>
+
+                {/* Connector 2 */}
+                <div className="h-10 border-l-2 border-dashed border-gray-200 ml-[2.35rem] my-2"></div>
+
+                {/* Step 3 */}
+                <div className="relative z-10">
+                  <div className="bg-gray-50/50 p-5 rounded-2xl border border-gray-100 flex items-center gap-5 opacity-60">
+                    <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400 font-bold text-lg">3</div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-lg font-serif">Close Deal</h4>
+                      <p className="text-sm text-gray-400 font-medium">Title & Escrow Coordination</p>
+                    </div>
                   </div>
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -227,8 +241,8 @@ export default function LandingPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6 leading-tight">
-              Make all your data <span className="italic font-serif text-gray-400">instantly actionable</span>.
+            <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6 leading-loose">
+              Make all your data <span className="italic font-serif text-brand-blue">instantly actionable</span>.
             </h2>
             <p className="text-lg text-gray-500">
               Control your deal terms with precision. Our calculators and negotiation tools put you in the driver's seat.
@@ -313,7 +327,7 @@ export default function LandingPage() {
             </div>
 
             {/* Person 2 */}
-            <div className="group relative h-[420px] rounded-3xl overflow-hidden cursor-pointer md:-mt-8">
+            <div className="group relative h-[420px] rounded-3xl overflow-hidden cursor-pointer">
               <Image
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
                 alt="Testimonial 2"
@@ -365,7 +379,7 @@ export default function LandingPage() {
             <div>
               <p className="text-blue-200 font-bold uppercase tracking-widest text-xs mb-4">Enterprise Grade</p>
               <h2 className="text-4xl md:text-5xl font-bold font-serif mb-6 leading-tight">
-                Enterprise-ready tools for <br /> buyers who want to <br /> build wealth, not pay fees.
+                Tools for <br /> buyers who want to <br /> build wealth, not pay fees.
               </h2>
               <p className="text-blue-100 text-lg mb-10 max-w-md">
                 We've taken the tools used by top real estate firms and made them accessible to you. Fully secure, compliant, and easy to use.

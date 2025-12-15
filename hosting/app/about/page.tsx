@@ -23,7 +23,7 @@ export default function AboutPage() {
             {/* About Us Content */}
             <section className="py-16 md:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                    <div className="grid md:grid-cols-2 gap-16 items-start">
                         <div>
                             <h2 className="text-3xl font-bold font-serif mb-8">About Us</h2>
                             <div className="prose prose-lg text-gray-500">
@@ -40,14 +40,12 @@ export default function AboutPage() {
                         </div>
                         <div className="relative">
                             <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative">
-                                {/* Placeholder for Kayla Image - Using branded backdrop style */}
-                                <div className="absolute inset-0 flex items-center justify-center bg-blue-50">
-                                    <div className="text-center p-8">
-                                        <div className="text-6xl font-serif text-brand-blue/20 rotate-12 mb-4">BuyUnrepped</div>
-                                        <div className="text-sm font-bold text-brand-navy uppercase tracking-widest">Kayla Brown</div>
-                                        <div className="text-xs text-gray-500">Founder & Principal Broker</div>
-                                    </div>
-                                </div>
+                                <Image
+                                    src="/images/kayla-buyunrepped.png"
+                                    alt="Kayla Brown"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                             {/* Decorative circle element behind */}
                             <div className="absolute -z-10 top-10 -right-10 w-48 h-48 bg-brand-blue/10 rounded-full blur-3xl"></div>
