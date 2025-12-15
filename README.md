@@ -1,4 +1,4 @@
-# Firebase Next.js Template
+# Buy Unrepped
 
 A ready-to-use template for building Next.js applications with Firebase Authentication and Hosting.
 

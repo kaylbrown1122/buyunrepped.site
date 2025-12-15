@@ -1,16 +1,8 @@
 {
   "projects": {
-    "default": "your-project-id"
+    "default": "buyunrepped"
   },
-  "targets": {
-    "your-project-id": {
-      "hosting": {
-        "your-site-name": [
-          "your-site-name"
-        ]
-      }
-    }
-  },
+  "targets": {},
   "etags": {},
   "dataconnectEmulatorConfig": {}
 }
