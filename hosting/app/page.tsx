@@ -36,7 +36,7 @@ export default function LandingPage() {
             </div>
 
             {/* Mockup */}
-            <div className="relative z-0 w-full max-w-5xl mx-auto">
+            <div className="relative z-0 w-full">
               {/* Abstract background blobs */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-gradient-to-tr from-blue-50/50 to-purple-50/50 rounded-full blur-3xl -z-10"></div>
 
@@ -109,7 +109,7 @@ export default function LandingPage() {
           <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-10">Trusted by buyers closing on</p>
           <div className="flex flex-wrap justify-between items-center gap-8 md:gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-500 max-w-5xl mx-auto">
             <span className="text-2xl font-serif font-black">Zillow</span>
-            <span className="text-2xl font-sans font-bold italic">Redfin</span>
+            <span className="text-2xl font-sans font-bold">Redfin</span>
             <span className="text-2xl font-sans font-bold">Realtor.com</span>
             <span className="text-2xl font-serif font-bold tracking-tight">Opendoor</span>
             <span className="text-2xl font-sans font-bold">Rocket Mortgage</span>
@@ -280,24 +280,27 @@ export default function LandingPage() {
             </div>
 
             {/* Tool 2 */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-              <div className="flex justify-between items-center mb-8">
-                <div className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full uppercase tracking-wider">Beta</div>
-                <TrendingUp className="w-6 h-6 text-gray-300" />
+            <Link href="/savings" className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 block hover:shadow-md transition-all cursor-pointer group">
+              <div className="flex justify-end items-center mb-8">
+                <TrendingUp className="w-6 h-6 text-gray-300 group-hover:text-brand-blue transition-colors" />
               </div>
               <h3 className="text-2xl font-bold serif mb-2">Closing Cost Calculator</h3>
               <p className="text-gray-400 text-sm mb-8">Know your exact cash to close to the penny.</p>
               {/* Micro UI Graph */}
-              <div className="flex items-end gap-2 h-32 pt-4">
-                <div className="flex-1 bg-purple-100 rounded-t-lg h-[40%] relative group">
+              <div className="flex items-end gap-2 h-32 pt-4 mb-6">
+                <div className="flex-1 bg-brand-blue/20 rounded-t-lg h-[40%] relative">
                   <div className="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-[10px] px-2 py-1 rounded transition-opacity">Fees</div>
                 </div>
-                <div className="flex-1 bg-purple-200 rounded-t-lg h-[60%]"></div>
-                <div className="flex-1 bg-purple-300 rounded-t-lg h-[30%]"></div>
-                <div className="flex-1 bg-purple-400 rounded-t-lg h-[80%]"></div>
-                <div className="flex-1 bg-purple-500 rounded-t-lg h-[50%]"></div>
+                <div className="flex-1 bg-brand-blue/40 rounded-t-lg h-[60%]"></div>
+                <div className="flex-1 bg-brand-blue/60 rounded-t-lg h-[30%]"></div>
+                <div className="flex-1 bg-brand-blue/80 rounded-t-lg h-[80%]"></div>
+                <div className="flex-1 bg-brand-blue rounded-t-lg h-[50%]"></div>
               </div>
-            </div>
+
+              <div className="w-full py-3 bg-brand-blue text-white font-bold rounded-xl text-center shadow-lg group-hover:bg-cyan-700 transition-colors">
+                Calculate Savings
+              </div>
+            </Link>
           </div>
         </div>
       </section>

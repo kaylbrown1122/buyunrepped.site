@@ -56,7 +56,7 @@ export default function Header() {
                         </Link>
                         <Link
                             href="/pricing"
-                            className="px-6 py-3 bg-black text-white text-xs font-bold rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-lg"
+                            className="px-7 py-3.5 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all shadow-md hover:shadow-lg"
                         >
                             Get Started
                         </Link>
