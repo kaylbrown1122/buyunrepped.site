@@ -17,7 +17,7 @@ export default function Footer() {
                             <span className="text-xl font-bold text-brand-navy font-serif tracking-tight">BuyUnrepped</span>
                         </Link>
                         <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-                            Empowering home buyers to purchase directly, negotiate better, and save the 3% buyer agent commission.
+                            Empowering Tennessee home buyers to purchase directly, negotiate better, and save the 3% buyer agent commission.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-brand-blue transition-colors">
