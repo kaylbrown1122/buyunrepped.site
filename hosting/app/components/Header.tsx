@@ -3,9 +3,11 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home } from 'lucide-react';
+import { useWaitlist } from './WaitlistModal';
 
 export default function Header() {
     const pathname = usePathname();
+    const { openModal } = useWaitlist();
 
     const isActive = (path: string) => pathname === path;
 
@@ -42,6 +44,12 @@ export default function Header() {
                             About
                         </Link>
                         <Link
+                            href="/resources"
+                            className="text-xs font-bold text-gray-500 hover:text-black uppercase tracking-wide transition-colors"
+                        >
+                            Resources
+                        </Link>
+                        <Link
                             href="/contact"
                             className="text-xs font-bold text-gray-500 hover:text-black uppercase tracking-wide transition-colors"
                         >
@@ -51,12 +59,12 @@ export default function Header() {
 
                     {/* Right Actions */}
                     <div className="flex items-center">
-                        <Link
-                            href="/pricing"
+                        <button
+                            onClick={openModal}
                             className="px-7 py-3.5 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all shadow-md hover:shadow-lg"
                         >
-                            Get Started
-                        </Link>
+                            Join Waitlist
+                        </button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,98 @@
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { getAllPosts } from '../../lib/posts';
+import { ArrowRight, BookOpen } from 'lucide-react';
+import Link from 'next/link';
+import { WaitlistButton } from '../components/WaitlistModal';
+
+export const metadata = {
+  title: 'Resources & Insights | BuyUnrepped',
+  description: 'Expert guides, tips, and insights for Tennessee home buyers looking to save on their next purchase.',
+};
+
+export default function ResourcesPage() {
+  const posts = getAllPosts();
+
+  return (
+    <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="pt-12 pb-16 md:pt-20 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-bold font-serif leading-[1.1] mb-6 tracking-tight">
+              Resources & <span className="text-brand-blue">Insights</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-500 leading-relaxed">
+              Expert guides and practical tips to help Tennessee buyers navigate the home buying process with confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Posts Grid */}
+      <section className="pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/resources/${post.slug}`}
+                className="group bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="px-3 py-1 bg-blue-100 text-brand-blue text-xs font-bold rounded-full uppercase tracking-wider">
+                    {post.frontmatter.category}
+                  </span>
+                  <span className="text-xs text-gray-400">{post.frontmatter.readingTime}</span>
+                </div>
+                <h2 className="text-xl font-bold mb-3 font-serif group-hover:text-brand-blue transition-colors">
+                  {post.frontmatter.title}
+                </h2>
+                <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                  {post.frontmatter.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-400">
+                    {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-brand-blue group-hover:translate-x-1 transition-all" />
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {posts.length === 0 && (
+            <div className="text-center py-16">
+              <BookOpen className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-400">No posts yet</h3>
+              <p className="text-gray-400">Check back soon for helpful resources.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold font-serif mb-4">Ready to start saving?</h2>
+          <p className="text-gray-500 mb-8 max-w-xl mx-auto">
+            Put these insights into action. Our platform gives you all the tools you need to buy your next home without paying agent fees.
+          </p>
+          <WaitlistButton
+            className="px-8 py-4 bg-brand-blue text-white text-base font-bold rounded-full hover:bg-cyan-700 transition-all shadow-lg hover:shadow-xl inline-block"
+          >
+            Join Waitlist
+          </WaitlistButton>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

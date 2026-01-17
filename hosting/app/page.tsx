@@ -5,8 +5,10 @@ import Footer from './components/Footer';
 import Link from 'next/link';
 import { FileText, Clock, MessageSquare, Check, TrendingUp, Shield, ArrowRight, Lock, FileCheck, Globe, BarChart3 } from 'lucide-react';
 import Image from 'next/image';
+import { useWaitlist } from './components/WaitlistModal';
 
 export default function LandingPage() {
+  const { openModal } = useWaitlist();
   return (
     <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
       <Header />
@@ -26,12 +28,12 @@ export default function LandingPage() {
                 The complete platform for Tennessee buyers to acquire homes directly from sellers. Save the 3% commission and get the same protection, powered by AI and expert support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/pricing"
+                <button
+                  onClick={openModal}
                   className="px-8 py-4 bg-brand-blue text-white text-base font-bold rounded-full hover:bg-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center"
                 >
-                  Start Saving Now
-                </Link>
+                  Join Waitlist
+                </button>
               </div>
             </div>
 
@@ -180,9 +182,9 @@ export default function LandingPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/pricing" className="px-8 py-3 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors inline-block shadow-lg">
-                Get Started
-              </Link>
+              <button onClick={openModal} className="px-8 py-3 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors inline-block shadow-lg">
+                Join Waitlist
+              </button>
             </div>
 
             {/* Right UI Mockup List */}
@@ -387,9 +389,9 @@ export default function LandingPage() {
               <p className="text-blue-100 text-lg mb-10 max-w-md">
                 We've taken the tools used by top real estate firms and made them accessible to you. Fully secure, compliant, and easy to use.
               </p>
-              <Link href="/pricing" className="px-8 py-3 bg-white text-brand-blue font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg inline-block">
-                Get Started
-              </Link>
+              <button onClick={openModal} className="px-8 py-3 bg-white text-brand-blue font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg inline-block">
+                Join Waitlist
+              </button>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
