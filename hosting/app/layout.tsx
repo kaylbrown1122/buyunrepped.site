@@ -10,7 +10,7 @@ const merriweather = Merriweather({
 
 export const metadata = {
   title: 'BuyUnrepped - Home Buying Built for the Buyer',
-  description: 'The complete platform for savvy buyers to acquire homes directly from sellers. Save the 3% commission.',
+  description: 'The complete platform for Tennessee buyers to acquire homes directly from sellers. Save the 3% commission.',
 };
 
 export default function RootLayout({

@@ -23,7 +23,7 @@ export default function LandingPage() {
                 not the agent.
               </h1>
               <p className="text-lg md:text-xl text-gray-500 mb-8 max-w-2xl leading-relaxed">
-                The complete platform for savvy buyers to acquire homes directly from sellers. Save the 3% commission and get the same protection, powered by AI and expert support.
+                The complete platform for Tennessee buyers to acquire homes directly from sellers. Save the 3% commission and get the same protection, powered by AI and expert support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -324,7 +324,7 @@ export default function LandingPage() {
                 <div>
                   <p className="text-brand-blue font-bold text-3xl mb-1">Saved $14,500</p>
                   <p className="text-white font-bold text-sm">James S.</p>
-                  <p className="text-gray-400 text-xs">Closed in Denver, CO</p>
+                  <p className="text-gray-400 text-xs">Closed in Memphis, TN</p>
                 </div>
               </div>
             </div>
@@ -342,7 +342,7 @@ export default function LandingPage() {
                 <div>
                   <p className="text-brand-blue font-bold text-3xl mb-1">Saved $22,100</p>
                   <p className="text-white font-bold text-sm">Sarah M.</p>
-                  <p className="text-gray-400 text-xs">Closed in Austin, TX</p>
+                  <p className="text-gray-400 text-xs">Closed in Knoxville, TN</p>
                 </div>
               </div>
             </div>
@@ -396,7 +396,7 @@ export default function LandingPage() {
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-colors">
                 <FileCheck className="w-8 h-8 text-blue-200 mb-4" />
                 <h4 className="font-bold text-lg mb-1">Smart Contracts</h4>
-                <p className="text-blue-200 text-xs leading-relaxed">Attorney-approved templates for all 50 states.</p>
+                <p className="text-blue-200 text-xs leading-relaxed">Attorney-approved templates for Tennessee transactions.</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-colors">
                 <Lock className="w-8 h-8 text-blue-200 mb-4" />
@@ -410,8 +410,8 @@ export default function LandingPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/20 transition-colors">
                 <Globe className="w-8 h-8 text-blue-200 mb-4" />
-                <h4 className="font-bold text-lg mb-1">National Data</h4>
-                <p className="text-blue-200 text-xs leading-relaxed">Access to MLS data across the entire country.</p>
+                <h4 className="font-bold text-lg mb-1">Tennessee MLS Data</h4>
+                <p className="text-blue-200 text-xs leading-relaxed">Access to MLS data across the state of Tennessee.</p>
               </div>
             </div>
           </div>
