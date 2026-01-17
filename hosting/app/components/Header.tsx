@@ -50,10 +50,7 @@ export default function Header() {
                     </nav>
 
                     {/* Right Actions */}
-                    <div className="flex items-center space-x-8">
-                        <Link href="/signin" className="text-sm font-bold text-gray-900 hover:text-brand-blue transition-colors">
-                            Log In
-                        </Link>
+                    <div className="flex items-center">
                         <Link
                             href="/pricing"
                             className="px-7 py-3.5 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all shadow-md hover:shadow-lg"
