@@ -35,7 +35,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-firebase-debug.log*
 ui-debug.log*
 
 # env files
@@ -51,8 +50,5 @@ ui-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# firebase
-.firebase
-firebase-debug.log
 data/*
 !data/.gitkeep

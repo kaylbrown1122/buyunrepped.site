@@ -26,7 +26,7 @@ Founded by Kayla Brown, an experienced real estate broker with 8+ years and 250+
 - React 19
 - TypeScript
 - Tailwind CSS
-- Firebase Hosting
+- Vercel
 
 ## Project Structure
 
@@ -55,12 +55,6 @@ npm run build
 
 ## Deployment
 
-```bash
-# Deploy to preview channel
-firebase hosting:channel:deploy preview-1
-
-# Deploy to production
-firebase deploy --only hosting
-```
+Deployed automatically via Vercel on push to `main`.
 
 
