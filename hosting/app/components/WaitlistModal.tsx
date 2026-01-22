@@ -48,34 +48,13 @@ function WaitlistModal() {
     setErrorMessage('');
 
     try {
-      const response = await fetch(
-        'https://discord.com/api/webhooks/1461985732045574381/RSw48aWq0tU2JbvjXQbZD41Shqd5RTpsfC7VQmjXEmlVlibQGlTSRbBaRGI1IEtwG_Nv',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            content: `New waitlist signup: ${email}`,
-            embeds: [
-              {
-                title: 'Waitlist Signup',
-                color: 0x0891B2,
-                fields: [
-                  {
-                    name: 'Email',
-                    value: email,
-                  },
-                  {
-                    name: 'Timestamp',
-                    value: new Date().toISOString(),
-                  },
-                ],
-              },
-            ],
-          }),
-        }
-      );
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
 
       if (response.ok) {
         setStatus('success');
