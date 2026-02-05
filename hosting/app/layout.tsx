@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata = {
   title: 'BuyUnrepped - Home Buying Built for the Buyer',
   description: 'The complete platform for Tennessee buyers to acquire homes directly from sellers. Save the 3% commission.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
