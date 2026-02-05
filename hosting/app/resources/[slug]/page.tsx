@@ -29,7 +29,7 @@ export default async function PostPage({ params }: PageProps) {
   const post = await getPostBySlugWithHtml(slug);
 
   return (
-    <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
+    <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
       <Header />
 
       {/* Back Link */}
@@ -47,11 +47,11 @@ export default async function PostPage({ params }: PageProps) {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="mb-10">
           <div className="flex items-center gap-4 mb-6">
-            <span className="px-3 py-1 bg-blue-100 text-brand-blue text-xs font-bold rounded-full uppercase tracking-wider">
+            <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-xs font-bold rounded-full uppercase tracking-wider">
               {post.frontmatter.category}
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold font-serif leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
             {post.frontmatter.title}
           </h1>
           <div className="flex items-center gap-6 text-sm text-gray-500">
@@ -72,20 +72,20 @@ export default async function PostPage({ params }: PageProps) {
 
         {/* Article Content */}
         <div
-          className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-a:text-brand-blue prose-a:no-underline hover:prose-a:underline prose-strong:text-brand-navy prose-li:marker:text-brand-blue"
+          className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-a:text-brand-blue prose-a:no-underline hover:prose-a:underline prose-strong:text-brand-navy prose-li:marker:text-brand-blue"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
 
         {/* CTA */}
-        <div className="mt-16 p-8 bg-gray-50 rounded-2xl text-center">
-          <h3 className="text-2xl font-bold font-serif mb-3">Ready to buy smarter?</h3>
+        <div className="mt-16 p-8 bg-white rounded-2xl text-center shadow-sm border border-gray-100">
+          <h3 className="text-2xl font-bold mb-3">Ready to buy smarter?</h3>
           <p className="text-gray-500 mb-6">
             Get access to all the tools you need to purchase your Tennessee home without paying agent fees.
           </p>
           <WaitlistButton
             className="px-8 py-3 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors inline-block shadow-lg"
           >
-            Join Waitlist
+            Join Early Access
           </WaitlistButton>
         </div>
       </article>

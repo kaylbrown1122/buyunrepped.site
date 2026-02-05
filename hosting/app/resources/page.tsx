@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SectionBadge from '../components/SectionBadge';
 import { getAllPosts } from '../../lib/posts';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import Link from 'next/link';
@@ -14,21 +15,18 @@ export default function ResourcesPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
+    <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-12 pb-16 md:pt-20 md:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold font-serif leading-[1.1] mb-6 tracking-tight">
-              Resources & <span className="text-brand-blue">Insights</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed">
-              Expert guides and practical tips to help Tennessee buyers navigate the home buying process with confidence.
-            </p>
-          </div>
-        </div>
+      <section className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
+        <SectionBadge>Resources</SectionBadge>
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
+          Resources & <span className="text-brand-blue">Insights</span>
+        </h1>
+        <p className="text-xl text-gray-500">
+          Expert guides and practical tips to help Tennessee buyers navigate the home buying process with confidence.
+        </p>
       </section>
 
       {/* Posts Grid */}
@@ -39,15 +37,15 @@ export default function ResourcesPage() {
               <Link
                 key={post.slug}
                 href={`/resources/${post.slug}`}
-                className="group bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100"
+                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-blue-100 text-brand-blue text-xs font-bold rounded-full uppercase tracking-wider">
+                  <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-xs font-bold rounded-full uppercase tracking-wider">
                     {post.frontmatter.category}
                   </span>
                   <span className="text-xs text-gray-400">{post.frontmatter.readingTime}</span>
                 </div>
-                <h2 className="text-xl font-bold mb-3 font-serif group-hover:text-brand-blue transition-colors">
+                <h2 className="text-xl font-bold mb-3 group-hover:text-brand-blue transition-colors">
                   {post.frontmatter.title}
                 </h2>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">
@@ -78,16 +76,17 @@ export default function ResourcesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold font-serif mb-4">Ready to start saving?</h2>
+          <SectionBadge>Get Started</SectionBadge>
+          <h2 className="text-3xl font-bold mb-4 mt-4">Ready to start saving?</h2>
           <p className="text-gray-500 mb-8 max-w-xl mx-auto">
             Put these insights into action. Our platform gives you all the tools you need to buy your next home without paying agent fees.
           </p>
           <WaitlistButton
             className="px-8 py-4 bg-brand-blue text-white text-base font-bold rounded-full hover:bg-cyan-700 transition-all shadow-lg hover:shadow-xl inline-block"
           >
-            Join Waitlist
+            Join Early Access
           </WaitlistButton>
         </div>
       </section>

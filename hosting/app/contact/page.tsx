@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SectionBadge from '../components/SectionBadge';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactPage() {
@@ -20,24 +21,12 @@ export default function ContactPage() {
         setStatus('loading');
 
         try {
-            const response = await fetch('https://discord.com/api/webhooks/1461986196099039306/QT25UXH1oq7R5Y7xhCm0xxWUsfCmGkjQErMzM3wVc_qnKpXvlT8Djoyf_AJsIhPfotrW', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    embeds: [{
-                        title: '📬 New Contact Form Submission',
-                        color: 0x0891b2,
-                        fields: [
-                            { name: 'Name', value: `${formData.firstName} ${formData.lastName}`, inline: true },
-                            { name: 'Email', value: formData.email, inline: true },
-                            { name: 'Interested In', value: formData.interestedIn, inline: true },
-                            { name: 'Message', value: formData.message || 'No message provided' },
-                        ],
-                        timestamp: new Date().toISOString(),
-                    }],
-                }),
+                body: JSON.stringify(formData),
             });
 
             if (response.ok) {
@@ -52,24 +41,31 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="min-h-screen bg-white font-sans text-brand-navy">
+        <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
             <Header />
 
-            <section className="py-16 md:py-24">
+            {/* Hero */}
+            <section className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
+                <SectionBadge>Contact</SectionBadge>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
+                    Get in touch
+                </h1>
+                <p className="text-xl text-gray-500">
+                    Have questions about how to buy without an agent? We&apos;re here to help you navigate the process.
+                </p>
+            </section>
+
+            <section className="pb-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
 
                         {/* Left Column - Info */}
                         <div>
-                            <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6">Get in touch</h1>
-                            <p className="text-lg text-gray-500 mb-12">
-                                Have questions about how to buy without an agent? We're here to help you navigate the process.
-                            </p>
 
                             <div className="space-y-10">
-                                <div className="flex gap-5 group">
-                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                                        <Mail className="w-6 h-6 text-brand-blue group-hover:text-white transition-colors" />
+                                <div className="flex gap-5">
+                                    <div className="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <Mail className="w-6 h-6 text-brand-blue" />
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg mb-1">Email</h4>
@@ -77,9 +73,9 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                <div className="flex gap-5 group">
-                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                                        <Phone className="w-6 h-6 text-brand-blue group-hover:text-white transition-colors" />
+                                <div className="flex gap-5">
+                                    <div className="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <Phone className="w-6 h-6 text-brand-blue" />
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg mb-1">Phone</h4>
@@ -88,9 +84,9 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                <div className="flex gap-5 group">
-                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                                        <MapPin className="w-6 h-6 text-brand-blue group-hover:text-white transition-colors" />
+                                <div className="flex gap-5">
+                                    <div className="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <MapPin className="w-6 h-6 text-brand-blue" />
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg mb-1">Office</h4>
@@ -101,7 +97,7 @@ export default function ContactPage() {
                         </div>
 
                         {/* Right Column - Form */}
-                        <div className="bg-gray-50 rounded-3xl p-8 shadow-sm border border-gray-100">
+                        <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
                             {status === 'success' ? (
                                 <div className="text-center py-12">
                                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -193,7 +189,7 @@ export default function ContactPage() {
                                     <button
                                         type="submit"
                                         disabled={status === 'loading'}
-                                        className="w-full py-4 bg-brand-blue text-white font-bold rounded-lg hover:bg-cyan-700 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full py-4 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {status === 'loading' ? 'Sending...' : 'Send Message'}
                                     </button>

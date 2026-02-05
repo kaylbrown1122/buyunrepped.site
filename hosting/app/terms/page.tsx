@@ -2,15 +2,17 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SectionBadge from '../components/SectionBadge';
 
 export default function TermsPage() {
     return (
-        <div className="min-h-screen bg-white font-sans text-brand-navy">
+        <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
             <Header />
 
             {/* Hero */}
             <section className="pt-20 pb-12 text-center max-w-4xl mx-auto px-4">
-                <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6">
+                <SectionBadge>Legal</SectionBadge>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
                     Terms and Conditions of Use
                 </h1>
             </section>

@@ -11,13 +11,15 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         brand: {
-          blue: '#0891B2',
-          navy: '#1F2937',
+          blue: '#39b6ff',
+          navy: '#1b5373',
+          gold: '#f7c74a',
+          green: '#23b666',
           gray: '#F9FAFB',
+          cream: '#F8F5F0',
         }
       },
       fontFamily: {
-        serif: ['var(--font-merriweather)', 'serif'],
         sans: ['var(--font-inter)', 'sans-serif'],
       },
       typography: {
@@ -31,13 +33,13 @@ module.exports = {
             },
             thead: {
               borderBottomWidth: '2px',
-              borderBottomColor: '#0891B2',
+              borderBottomColor: '#39b6ff',
             },
             'thead th': {
               padding: '0.75em 1em',
               textAlign: 'left',
               fontWeight: '700',
-              color: '#1F2937',
+              color: '#1b5373',
               backgroundColor: '#F3F4F6',
             },
             'tbody tr': {

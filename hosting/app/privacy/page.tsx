@@ -2,15 +2,17 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SectionBadge from '../components/SectionBadge';
 
 export default function PrivacyPage() {
     return (
-        <div className="min-h-screen bg-white font-sans text-brand-navy">
+        <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
             <Header />
 
             {/* Hero */}
             <section className="pt-20 pb-8 text-center max-w-4xl mx-auto px-4">
-                <h1 className="text-5xl md:text-6xl font-bold font-serif mb-6">
+                <SectionBadge>Legal</SectionBadge>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
                     Privacy Policy
                 </h1>
                 <p className="text-lg text-gray-500">
@@ -51,7 +53,7 @@ export default function PrivacyPage() {
                             <a href="mailto:info@buyunrepped.com" className="text-brand-blue hover:underline">info@buyunrepped.com</a>.
                         </p>
 
-                        <div className="bg-gray-50 p-6 rounded-xl my-8">
+                        <div className="bg-white p-6 rounded-xl my-8 border border-gray-100">
                             <p className="font-bold text-brand-navy mb-4">
                                 IMPORTANT: BY USING THE SITE, OR CONTENT, PRODUCTS, OR SERVICES AVAILABLE OR OFFERED THROUGH THE SITE:
                             </p>
@@ -61,7 +63,7 @@ export default function PrivacyPage() {
                             </ul>
                         </div>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">1. Types of Information We Collect</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">1. Types of Information We Collect</h2>
                         <p className="mb-6">
                             We collect two types of information about our users: Personally Identifiable Information ("PII") and Aggregated Information.
                         </p>
@@ -72,7 +74,7 @@ export default function PrivacyPage() {
                             Aggregated Information is information that does not by itself identify a specific individual. We gather certain information about you based upon where you visit on our Site and what other sites may have directed you to us. This information, which is collected in a variety of different ways, is compiled, and analyzed on both a personal and an aggregated basis. This information may include the Website's Uniform Resource Locator ("URL") that points to the site you just came from, which URL you go to after visiting our Site, what browser you are using, and your Internet Protocol ("IP") address.
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">2. How We Collect and Use Information</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">2. How We Collect and Use Information</h2>
                         <p className="mb-6">
                             We do not collect any of your PII unless you voluntarily provide it to us. However, you may be required to provide certain PII to us when you elect to order or use certain Content, Products, or Services that you order or access through the Site. Examples of when you may be required to provide certain PII are: (a) registering for an account with us; (b) entering a contest or sweepstakes sponsored by us or a Provider (defined below); (c) signing up for special offers from selected third parties; (d) sending us an email message; or (e) submitting a form or transmitting other information by telephone or letter. When processing certain information, we encrypt the transaction, using Secure Socket Layer (SSL) encryption technology, to make it more secure against being stolen, intercepted, or misused.
                         </p>
@@ -83,7 +85,7 @@ export default function PrivacyPage() {
                             We may also collect and use certain Aggregated Information. For example, we may use your IP address to diagnose problems with our servers, software, to administer our Site and to gather demographic information.
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">3. Cookies</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">3. Cookies</h2>
                         <p className="mb-6">
                             Depending on how you use our Site, we may store cookies on your computer to collect certain Aggregated Information about our users and to customize certain aspects of your specific user experience. A cookie is a small data text file that is stored on your computer that uniquely identifies your browser. Cookies may also include more personalized information, such as your IP address, browser type, the server your computer is logged onto, the area code and ZIP code associated with your server, and your first name to welcome you back to our Site. We may use cookies to perform tasks such as: monitoring aggregate site usage metrics, storing, and remembering your passwords (if you allow us to do so), storing account and advertising preferences that you have set, and personalizing the offerings that we make available to you. However, we do not store cookies to track your browsing behaviors. Most browsers are initially set up to accept cookies, but you can reset your browser to refuse all cookies or to indicate when a cookie is being sent.
                         </p>
@@ -93,7 +95,7 @@ export default function PrivacyPage() {
 
                         <div className="overflow-x-auto mb-6">
                             <table className="min-w-full border border-gray-200 rounded-lg">
-                                <thead className="bg-gray-50">
+                                <thead className="bg-white">
                                     <tr>
                                         <th className="px-4 py-3 text-left text-sm font-semibold text-brand-navy border-b">Provider/App/Service</th>
                                         <th className="px-4 py-3 text-left text-sm font-semibold text-brand-navy border-b">Current URL</th>
@@ -133,7 +135,7 @@ export default function PrivacyPage() {
                             If you modify or block cookies and tracking tools or other information collection and tracking, certain features with respect to our Site, it may impair functionality of links and programming through Content, but it will not stop all the tracking described in this Policy.
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">4. Release of Information</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">4. Release of Information</h2>
                         <p className="mb-6">
                             We will not sell, trade, or rent your PII to others. We do offer some Products and Services through contractual arrangements made with advertisers, and other service or product providers, some of which are affiliates and others of which are third parties that we work with from time to time ("Providers"). We and our Providers may need to use some of your PII to perform tasks between our respective sites, or to deliver products or services to you. We encourage our Providers to adopt and promote strong privacy policies. However, the use of your PII by our Providers is governed by their own respective privacy policies and is under their control, not ours. Except as otherwise discussed in this Privacy Policy, this document only addresses the use and disclosure of information we collect from you. Other sites accessible through our Site, including our advertisers, and our other Providers, have their own privacy policies and data collection, use, and disclosure practices. Please consult each Site's privacy policy. We are not responsible for the policies or practices of our Providers or other third parties.
                         </p>
@@ -144,13 +146,13 @@ export default function PrivacyPage() {
                             We may also provide Aggregated Information about our customers' sales, traffic patterns, and related Site information to third-party advertisers, but these statistics do not include any PII.
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">5. Updating and Correcting Information</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">5. Updating and Correcting Information</h2>
                         <p className="mb-6">
                             We believe you should have the ability to access and edit the PII that you have provided to us. You may change any of your PII in your account online at any time by linking to your account in accordance with instructions posted elsewhere on this Site. You may also access and correct your personal information and privacy preferences by emailing us at{' '}
                             <a href="mailto:info@buyunrepped.com" className="text-brand-blue hover:underline">info@buyunrepped.com</a>, or writing to us at:
                         </p>
 
-                        <div className="bg-gray-50 p-6 rounded-xl mb-6">
+                        <div className="bg-white p-6 rounded-xl mb-6 border border-gray-100">
                             <p className="font-semibold">Attn: Privacy Compliance</p>
                             <p>BuyUnrepped.com</p>
                             <p>2509 Cruzen St</p>
@@ -164,7 +166,7 @@ export default function PrivacyPage() {
                             We encourage you to promptly update your PII if it changes. Also, depending on your location, you may have certain additional rights with respect to your information such as deletion (including the right to have the Company delete your personal information, except information we are required to retain, by contacting us at the address listed above), or we may delete your data if we are instructed to do so by our customers who export your personal information to us, except for information we are required to retain; and withdrawal of consent or object to processing (including, in limited circumstances, the right to ask the Company to stop processing your personal data, by contacting us at the address listed above).
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">6. User Choices on Collection and Use of Information</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">6. User Choices on Collection and Use of Information</h2>
                         <p className="mb-6">
                             If you indicated upon registration or otherwise that you are interested in receiving offers or information from us and our Providers, then we may from time to time, send you emails, call you, or send you direct mail about Products and Services that may be of interest to you. We (or agents working on our behalf under confidentiality agreements) are the only ones who will send you these solicitations, and only if you have previously indicated that you wish to receive them. If you change your mind after giving consent to receive these solicitations, you can "opt-out" by 1) selecting the "unsubscribe" link at the end of our communications to you; 2) responding to any of our text messages with any of the following replies: STOP, END, CANCEL, UNSUBSCRIBE, or QUIT; 3) logging into the Site or Services and adjusting your user preferences in your account profile; or 4) sending us an email at{' '}
                             <a href="mailto:info@buyunrepped.com" className="text-brand-blue hover:underline">info@buyunrepped.com</a> stating your request.
@@ -173,7 +175,7 @@ export default function PrivacyPage() {
                             You also have choices with respect to cookies, as described above. By modifying your browser preferences, you have the choice to accept all cookies, to be notified when a cookie is set, or to reject all cookies. If you choose to reject all cookies some parts of our Site may not work properly in your case.
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">7. Security of Your PII</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">7. Security of Your PII</h2>
                         <p className="mb-6">
                             At our Site, you can be assured that your PII is secure, consistent with current industry standards. We strive to take appropriate security measures to protect against unauthorized access to or unauthorized alteration, disclosure, or destruction of your PII.
                         </p>
@@ -193,13 +195,13 @@ export default function PrivacyPage() {
                             Unfortunately, there is no way to give a 100% guarantee of security for any data transmission over the Internet or through any other communication channel. As a result, while we strive to protect your PII, you acknowledge that: (a) there are features inherent to the Internet and other communication networks which limit our ability to preserve data security, integrity, and privacy in ways that are beyond our control; and (b) the security, integrity, and privacy of information and other data that you exchange with us through this Site or through other communication channels cannot be guaranteed.
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">8. Questions, Comments, or Complaints</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">8. Questions, Comments, or Complaints</h2>
                         <p className="mb-6">
                             If you have questions or comments about this Privacy Policy, or if you are not completely satisfied with this Privacy Policy or its application by us, we invite you to convey your concerns or suggestions to us at{' '}
                             <a href="mailto:info@buyunrepped.com" className="text-brand-blue hover:underline">info@buyunrepped.com</a>. If you have an applicable disability, you may also contact us at the above email address to request access to this Privacy Policy an alternative format. We will reply as quickly as possible and inform you of the steps, if any, that have been or will be taken in order to address your concern or implement the suggestion.
                         </p>
 
-                        <h2 className="text-2xl font-bold font-serif text-brand-navy mt-12 mb-4">9. Miscellaneous</h2>
+                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">9. Miscellaneous</h2>
                         <p className="mb-6">
                             You must be at least 13 years old to have our permission to use this Site, or Content, or order any Products or Services. If you are not at least 13 years old, your use and activities are supervised by your parent or guardian, who represents that they are solely responsible for your use and activities with respect to the Site, Content, and any Products and Services.
                         </p>
@@ -214,7 +216,7 @@ export default function PrivacyPage() {
                             <a href="mailto:info@buyunrepped.com" className="text-brand-blue hover:underline">info@buyunrepped.com</a>. You can also reach our Privacy Compliance department by sending written correspondence to:
                         </p>
 
-                        <div className="bg-gray-50 p-6 rounded-xl mb-6">
+                        <div className="bg-white p-6 rounded-xl mb-6 border border-gray-100">
                             <p className="font-semibold">Attn: Privacy Compliance</p>
                             <p>BuyUnrepped</p>
                             <p>2509 Cruzen St</p>

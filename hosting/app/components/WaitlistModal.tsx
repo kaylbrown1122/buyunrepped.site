@@ -105,7 +105,7 @@ function WaitlistModal() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold font-serif mb-2">You're on the list!</h2>
+            <h2 className="text-2xl font-bold mb-2">You're on the list!</h2>
             <p className="text-gray-500 mb-6">
               We'll notify you when BuyUnrepped is ready to help you save on your home purchase.
             </p>
@@ -119,7 +119,7 @@ function WaitlistModal() {
         ) : (
           <>
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold font-serif mb-2">Join the Waitlist</h2>
+              <h2 className="text-2xl font-bold mb-2">Join Early Access</h2>
               <p className="text-gray-500">
                 Be the first to know when BuyUnrepped launches in Tennessee. Save thousands on your next home purchase.
               </p>
@@ -150,7 +150,7 @@ function WaitlistModal() {
                 disabled={status === 'loading'}
                 className="w-full py-4 bg-brand-blue text-white font-bold rounded-xl hover:bg-cyan-700 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
+                {status === 'loading' ? 'Joining...' : 'Join Early Access'}
               </button>
 
               <p className="text-xs text-gray-400 text-center">
@@ -174,7 +174,7 @@ export function WaitlistButton({ className, children }: WaitlistButtonProps) {
   const { openModal } = useWaitlist();
   return (
     <button onClick={openModal} className={className}>
-      {children || 'Join Waitlist'}
+      {children || 'Join Early Access'}
     </button>
   );
 }

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SectionBadge from '../components/SectionBadge';
 import { Calculator, DollarSign, ArrowRight, Check, Play } from 'lucide-react';
 import Link from 'next/link';
 
@@ -52,26 +53,21 @@ export default function CalculatorPage() {
     const potentialSavings = buyingAgentFee - BUY_UNREPPED_FEE;
 
     return (
-        <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
+        <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
             <Header />
 
-            <main className="pt-24 pb-20">
+            <main className="pb-20">
                 {/* Hero Section */}
-                <section className="mb-16 text-center px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-brand-blue rounded-full text-sm font-bold mb-6">
-                            <Calculator className="w-4 h-4" />
-                            <span>Savings Calculator</span>
-                        </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif mb-6 leading-tight">
-                            See how much you could <br />
-                            <span className="text-brand-blue">save on your next home.</span>
-                        </h1>
-                        <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                            Traditional real estate transactions cost 6% in agent fees.
-                            By buying unrepped, you can save the 3% buyer's agent commission.
-                        </p>
-                    </div>
+                <section className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
+                    <SectionBadge>Savings Calculator</SectionBadge>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4 leading-tight">
+                        See how much you could <br />
+                        <span className="text-brand-blue">save on your next home.</span>
+                    </h1>
+                    <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        Traditional real estate transactions cost 6% in agent fees.
+                        By buying unrepped, you can save the 3% buyer&apos;s agent commission.
+                    </p>
                 </section>
 
                 {/* Calculator Interface */}
@@ -90,12 +86,12 @@ export default function CalculatorPage() {
                                     </label>
                                     <div className="relative mb-6">
                                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                            <span className="text-gray-400 text-2xl font-serif font-bold">$</span>
+                                            <span className="text-gray-400 text-2xl font-bold">$</span>
                                         </div>
                                         <input
                                             type="text"
                                             id="homePrice"
-                                            className="block w-full pl-10 pr-4 py-4 text-3xl md:text-4xl font-serif font-bold text-brand-navy bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all shadow-sm"
+                                            className="block w-full pl-10 pr-4 py-4 text-3xl md:text-4xl font-bold text-brand-navy bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all shadow-sm"
                                             placeholder="0"
                                             value={displayPrice}
                                             onChange={handlePriceChange}
@@ -107,7 +103,7 @@ export default function CalculatorPage() {
 
                                     <button
                                         onClick={handleCalculate}
-                                        className="w-full py-4 bg-brand-blue text-white font-bold rounded-xl shadow-lg hover:bg-cyan-700 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
+                                        className="w-full py-4 bg-brand-blue text-white font-bold rounded-full shadow-lg hover:bg-cyan-700 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
                                     >
                                         <Play className="w-5 h-5 fill-current" /> Calculate Savings
                                     </button>
@@ -151,12 +147,12 @@ export default function CalculatorPage() {
                                         <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
                                             <Calculator className="w-10 h-10 text-gray-300" />
                                         </div>
-                                        <h3 className="text-2xl font-bold text-gray-300 font-serif mb-2">Ready to crunch numbers?</h3>
+                                        <h3 className="text-2xl font-bold text-gray-300 mb-2">Ready to crunch numbers?</h3>
                                         <p className="text-gray-400 max-w-sm">Enter a home price and click calculate to see your potential breakdown.</p>
                                     </div>
                                 ) : (
                                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-                                        <h3 className="text-2xl font-serif font-bold mb-8">Estimated Fee Breakdown</h3>
+                                        <h3 className="text-2xl font-bold mb-8">Estimated Fee Breakdown</h3>
 
                                         {/* Bars Chart Visualization */}
                                         <div className="space-y-8 mb-12">
@@ -210,7 +206,7 @@ export default function CalculatorPage() {
                                             <div className="relative z-10">
                                                 <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-2">Total Potential Savings</p>
                                                 <div className="flex items-baseline gap-2 mb-6">
-                                                    <span className="text-5xl md:text-6xl font-serif font-bold text-white tracking-tight">
+                                                    <span className="text-5xl md:text-6xl font-bold text-white tracking-tight">
                                                         ${potentialSavings.toLocaleString()}
                                                     </span>
                                                 </div>
@@ -275,7 +271,8 @@ export default function CalculatorPage() {
 
                 {/* FAQ / Info Section */}
                 <section className="mt-24 max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-bold font-serif mb-6">How do you save the 3%?</h2>
+                    <SectionBadge>How It Works</SectionBadge>
+                    <h2 className="text-3xl font-bold mb-6 mt-4">How do you save the 3%?</h2>
                     <p className="text-gray-500 leading-relaxed mb-8">
                         When a seller lists their home, they typically agree to pay a 6% commission: 3% to their agent and 3% to the buyer's agent.
                         If you buy without an agent, that 3% buyer's commission doesn't need to be paid.

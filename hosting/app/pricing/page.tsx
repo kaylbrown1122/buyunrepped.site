@@ -2,22 +2,42 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SectionBadge from '../components/SectionBadge';
 import { Check, X } from 'lucide-react';
 import { useWaitlist } from '../components/WaitlistModal';
 
 export default function PricingPage() {
     const { openModal } = useWaitlist();
     return (
-        <div className="min-h-screen bg-white font-sans text-brand-navy">
+        <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
             <Header />
 
             {/* Hero */}
             <section className="pt-20 pb-16 text-center max-w-3xl mx-auto px-4">
-                <h1 className="text-5xl md:text-6xl font-bold font-serif mb-6">
-                    Simple, transparent pricing
+                <SectionBadge>Pricing</SectionBadge>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
+                    Flexible support, without full-service commitments
                 </h1>
-                <p className="text-xl text-gray-500">
-                    Pay a fraction of the cost of a traditional realtor commission. Most buyers save over $15,000 using our platform.
+                <p className="text-xl text-gray-500 mb-8">
+                    Why some buyers choose BuyUnrepped
+                </p>
+                <ul className="space-y-3 text-left max-w-xl mx-auto">
+                    {[
+                        'Buyer agent fees are typically 2.5\u20133%',
+                        'Choosing not to use full service can free up real buying power',
+                        'That flexibility can matter in price, terms, or cash at closing',
+                        'You still want a clean, professional process',
+                    ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                            <div className="w-5 h-5 mt-0.5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
+                                <Check className="w-3 h-3 text-brand-blue" />
+                            </div>
+                            <span className="text-gray-600">{item}</span>
+                        </li>
+                    ))}
+                </ul>
+                <p className="text-lg font-bold text-brand-blue mt-6">
+                    This is what BuyUnrepped is built for.
                 </p>
             </section>
 
@@ -27,8 +47,8 @@ export default function PricingPage() {
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
                         {/* DIY Toolkit */}
-                        <div className="bg-white rounded-3xl border border-gray-200 p-8 shadow-sm hover:shadow-xl transition-shadow relative">
-                            <h3 className="text-2xl font-bold font-serif mb-2">DIY Toolkit</h3>
+                        <div className="bg-white rounded-3xl border border-gray-100 p-8 shadow-sm hover:shadow-xl transition-shadow relative">
+                            <h3 className="text-2xl font-bold mb-2">DIY Toolkit</h3>
                             <p className="text-sm text-gray-500 mb-8">Essential tools for the confident self-starter.</p>
 
                             <div className="flex items-baseline gap-1 mb-8">
@@ -36,8 +56,8 @@ export default function PricingPage() {
                                 <span className="text-gray-500 text-sm">/one-time</span>
                             </div>
 
-                            <button onClick={openModal} className="w-full py-4 rounded-xl border-2 border-gray-100 font-bold hover:border-brand-navy hover:bg-gray-50 transition-colors mb-10">
-                                Join Waitlist
+                            <button onClick={openModal} className="w-full py-4 rounded-full border-2 border-gray-200 font-bold hover:border-brand-navy hover:bg-gray-50 transition-colors mb-10">
+                                Join Early Access
                             </button>
 
                             <ul className="space-y-4">
@@ -53,9 +73,13 @@ export default function PricingPage() {
                                 ].map((feature, i) => (
                                     <li key={i} className={`flex items-center gap-3 text-sm ${feature.included ? 'text-gray-800' : 'text-gray-400'}`}>
                                         {feature.included ? (
-                                            <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                                            <div className="w-5 h-5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
+                                                <Check className="w-3 h-3 text-brand-blue" />
+                                            </div>
                                         ) : (
-                                            <X className="w-5 h-5 text-gray-300 flex-shrink-0" />
+                                            <div className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                                <X className="w-3 h-3 text-gray-300" />
+                                            </div>
                                         )}
                                         {feature.text}
                                     </li>
@@ -69,7 +93,7 @@ export default function PricingPage() {
                                 Most Popular
                             </div>
 
-                            <h3 className="text-2xl font-bold font-serif mb-2">Full Support</h3>
+                            <h3 className="text-2xl font-bold mb-2">Full Support</h3>
                             <p className="text-sm text-gray-400 mb-8">Expert guidance from offer to closing table.</p>
 
                             <div className="flex items-baseline gap-1 mb-8">
@@ -77,8 +101,8 @@ export default function PricingPage() {
                                 <span className="text-gray-400 text-sm">/one-time</span>
                             </div>
 
-                            <button onClick={openModal} className="w-full py-4 rounded-xl bg-brand-blue text-white font-bold hover:bg-cyan-500 transition-colors mb-10 shadow-lg">
-                                Join Waitlist
+                            <button onClick={openModal} className="w-full py-4 rounded-full bg-brand-blue text-white font-bold hover:bg-cyan-500 transition-colors mb-10 shadow-lg">
+                                Join Early Access
                             </button>
 
                             <ul className="space-y-4">
@@ -107,28 +131,37 @@ export default function PricingPage() {
             </section>
 
             {/* FAQ */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-24 bg-brand-cream">
                 <div className="max-w-3xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold font-serif text-center mb-16">Frequently Asked Questions</h2>
-                    <div className="space-y-10">
-                        <div>
-                            <h3 className="text-lg font-bold mb-2">How much do I actually save?</h3>
-                            <p className="text-gray-500 leading-relaxed">
-                                Typically, a buyer's agent takes 2.5% to 3% of the home price. On a $500,000 home, that is $15,000. By representing yourself with our tools, you can ask the seller to reduce the price by that amount.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold mb-2">Is this legal?</h3>
-                            <p className="text-gray-500 leading-relaxed">
-                                Absolutely. You are never required by law to have a real estate agent. We provide the standard forms and guidance you need to execute the contract legally.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold mb-2">What if things get complicated?</h3>
-                            <p className="text-gray-500 leading-relaxed">
-                                Our Full Support plan includes access to licensed real estate experts who can answer specific questions and help you navigate tricky inspection or appraisal issues.
-                            </p>
-                        </div>
+                    <div className="text-center mb-16">
+                        <SectionBadge>FAQ</SectionBadge>
+                        <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">Frequently Asked Questions</h2>
+                    </div>
+                    <div className="space-y-8">
+                        {[
+                            {
+                                question: 'How much do I actually save?',
+                                answer: "Typically, a buyer's agent takes 2.5% to 3% of the home price. On a $500,000 home, that is $15,000. By representing yourself with our tools, you can ask the seller to reduce the price by that amount.",
+                            },
+                            {
+                                question: 'Is this legal?',
+                                answer: 'Absolutely. You are never required by law to have a real estate agent. We provide the standard forms and guidance you need to execute the contract legally.',
+                            },
+                            {
+                                question: 'What if things get complicated?',
+                                answer: 'Our Full Support plan includes access to licensed real estate experts who can answer specific questions and help you navigate tricky inspection or appraisal issues.',
+                            },
+                        ].map((faq, i) => (
+                            <div key={i} className="flex items-start gap-4">
+                                <div className="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span className="text-brand-blue font-bold text-sm">?</span>
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
+                                    <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
