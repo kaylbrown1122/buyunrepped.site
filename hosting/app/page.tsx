@@ -248,13 +248,62 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Right — image placeholder */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 aspect-[4/3] flex items-center justify-center">
-              <div className="text-center text-gray-300">
-                <svg className="w-16 h-16 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
-                <p className="text-sm font-medium">Image or graphic</p>
+            {/* Right — Purchase offer mockup card */}
+            <div className="relative z-0">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                {/* Dashboard Header */}
+                <div className="flex justify-between items-center mb-8">
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-12 gap-6">
+                  {/* Suggestion Card */}
+                  <div className="col-span-12 md:col-span-8 bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="font-bold text-lg mb-1">Purchase Offer</h3>
+                        <p className="text-gray-400 text-xs">123 Berry St, Nashville TN</p>
+                      </div>
+                      <span className="px-2 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase rounded tracking-wider">Drafting</span>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4 mt-6">
+                      <div className="bg-gray-50 p-3 rounded-lg">
+                        <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Offer Price</p>
+                        <p className="font-bold text-sm">$450,000</p>
+                      </div>
+                      <div className="bg-gray-50 p-3 rounded-lg">
+                        <p className="text-[10px] text-green-600 uppercase font-bold mb-1">Savings</p>
+                        <p className="font-bold text-green-600 text-sm">+$13,500</p>
+                      </div>
+                      <div className="bg-gray-50 p-3 rounded-lg">
+                        <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Closing</p>
+                        <p className="font-bold text-sm">Oct 24</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Sidebar Cards */}
+                  <div className="col-span-12 md:col-span-4 space-y-4">
+                    <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">$</div>
+                      <div>
+                        <p className="text-xs font-bold">Seller Agreed</p>
+                        <p className="text-[10px] text-gray-400">Save $12k fees</p>
+                      </div>
+                    </div>
+                    <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xs">%</div>
+                      <div>
+                        <p className="text-xs font-bold">Rates Dropped</p>
+                        <p className="text-[10px] text-gray-400">Lock in 5.2%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
