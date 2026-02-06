@@ -40,12 +40,6 @@ export default function Header() {
                             How it Works
                         </Link>
                         <Link
-                            href="/pricing"
-                            className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/pricing' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
-                        >
-                            Pricing
-                        </Link>
-                        <Link
                             href="/about"
                             className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/about' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
                         >
@@ -93,7 +87,6 @@ export default function Header() {
             {mobileOpen && (
                 <div className="md:hidden bg-brand-cream border-t border-gray-100 px-4 py-6 space-y-4">
                     <Link href="/" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">How it Works</Link>
-                    <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Pricing</Link>
                     <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">About</Link>
                     <Link href="/resources" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Resources</Link>
                     <Link href="/tools" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Tools</Link>
