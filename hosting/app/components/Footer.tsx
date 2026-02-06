@@ -33,23 +33,13 @@ export default function Footer() {
                     </div>
 
                     {/* Link Columns */}
-                    <div className="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div>
-                            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Product</h3>
-                            <ul className="space-y-3">
-                                <li><Link href="/pricing" className="text-sm text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
-                                <li><Link href="/savings" className="text-sm text-gray-400 hover:text-white transition-colors">Savings Calculator</Link></li>
-                                <li><Link href="/tools" className="text-sm text-gray-400 hover:text-white transition-colors">Tools</Link></li>
-                                <li><Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Offer Generator</Link></li>
-                                <li><Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Market Analysis</Link></li>
-                            </ul>
-                        </div>
+                    <div className="md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
                         <div>
                             <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Resources</h3>
                             <ul className="space-y-3">
                                 <li><Link href="/resources" className="text-sm text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-                                <li><Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Guides</Link></li>
-                                <li><Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">FAQ</Link></li>
+                                <li><Link href="/savings" className="text-sm text-gray-400 hover:text-white transition-colors">Savings Calculator</Link></li>
+                                <li><Link href="/tools" className="text-sm text-gray-400 hover:text-white transition-colors">Tools</Link></li>
                             </ul>
                         </div>
                         <div>

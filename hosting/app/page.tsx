@@ -5,32 +5,8 @@ import Footer from './components/Footer';
 import SectionBadge from './components/SectionBadge';
 import Link from 'next/link';
 import { useState } from 'react';
-import { X, ChevronLeft, ChevronRight, ChevronDown, Check, FileText, Clock, MessageSquare, FileCheck, Lock, BarChart3, Star } from 'lucide-react';
+import { X, ChevronDown, Check, FileText, Clock, MessageSquare, FileCheck, Lock, BarChart3 } from 'lucide-react';
 import { useWaitlist } from './components/WaitlistModal';
-
-const testimonials = [
-  {
-    quote: "I was skeptical at first, but the step-by-step guidance made it incredibly easy. The seller was happy to save too.",
-    name: "James S.",
-    location: "Memphis, TN",
-    initials: "JS",
-    savings: "$14,500",
-  },
-  {
-    quote: "BuyUnrepped gave me the confidence to negotiate directly. The tools are professional grade and easy to use.",
-    name: "Sarah M.",
-    location: "Knoxville, TN",
-    initials: "SM",
-    savings: "$22,100",
-  },
-  {
-    quote: "The process was smoother than my last purchase with an agent. Why pay fees when you can do this?",
-    name: "Marcus R.",
-    location: "Nashville, TN",
-    initials: "MR",
-    savings: "$9,800",
-  },
-];
 
 const faqs = [
   {
@@ -57,7 +33,6 @@ const faqs = [
 
 export default function LandingPage() {
   const { openModal } = useWaitlist();
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [sliderValue, setSliderValue] = useState(450000);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [heroEmail, setHeroEmail] = useState('');
@@ -553,81 +528,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* F. Testimonial Carousel */}
-      <section className="py-24 bg-brand-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <SectionBadge>Testimonials</SectionBadge>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
-              Buyers who took control
-            </h2>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              Real stories from Tennessee buyers who saved thousands with BuyUnrepped.
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 text-center">
-              {/* Quote mark */}
-              <svg className="w-12 h-12 text-brand-blue/20 mx-auto mb-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983z" />
-              </svg>
-
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
-                &ldquo;{testimonials[activeTestimonial].quote}&rdquo;
-              </p>
-
-              {/* Stars */}
-              <div className="flex justify-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-brand-gold fill-brand-gold" />
-                ))}
-              </div>
-
-              {/* Avatar + info */}
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold">
-                  {testimonials[activeTestimonial].initials}
-                </div>
-                <div>
-                  <p className="font-bold">{testimonials[activeTestimonial].name}</p>
-                  <p className="text-sm text-gray-500">{testimonials[activeTestimonial].location}</p>
-                </div>
-                <span className="inline-block px-3 py-1 bg-green-50 text-brand-green text-sm font-bold rounded-full">
-                  Saved {testimonials[activeTestimonial].savings}
-                </span>
-              </div>
-            </div>
-
-            {/* Carousel controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={() => setActiveTestimonial(activeTestimonial === 0 ? testimonials.length - 1 : activeTestimonial - 1)}
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <div className="flex gap-2">
-                {testimonials.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveTestimonial(i)}
-                    className={`w-2.5 h-2.5 rounded-full transition-colors ${i === activeTestimonial ? 'bg-brand-blue' : 'bg-gray-300'}`}
-                  />
-                ))}
-              </div>
-              <button
-                onClick={() => setActiveTestimonial(activeTestimonial === testimonials.length - 1 ? 0 : activeTestimonial + 1)}
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-colors"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* G. Savings Calculator */}
+      {/* F. Savings Calculator */}
       <section className="py-24 bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
