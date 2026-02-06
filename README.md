@@ -1,10 +1,10 @@
-# Buy Unrepped
+# BuyUnrepped
 
-A real estate platform that empowers homebuyers to purchase properties directly from sellers without a traditional buyer's agent, saving the standard 3% buyer's agent commission.
+A real estate platform that empowers homebuyers to purchase properties directly from sellers without a traditional buyer's agent, saving the average 3% buyer's agent commission.
 
 ## About
 
-Buy Unrepped provides professional-grade tools and expert support for independent homebuyers who want to:
+BuyUnrepped provides professional-grade tools and expert support for independent homebuyers who want to:
 
 - **Save money** - Keep the 3% buyer's agent fee (typically $15,000+ on a $500,000 home)
 - **Maintain control** - Represent yourself with professional guidance
