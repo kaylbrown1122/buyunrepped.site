@@ -76,6 +76,23 @@ export default function Footer() {
                     </div>
                 </div>
 
+                {/* Equal Housing & Compliance */}
+                <div className="border-t border-white/10 pt-8 mb-8">
+                    <p className="text-sm font-semibold text-white mb-3">Equal Housing Opportunity.</p>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-4">
+                        BuyUnrepped is committed to full compliance with the Federal Fair Housing Act, the Tennessee Human Rights Act, and all applicable federal, state, and local fair housing laws. We provide equal professional service to all persons and do not discriminate on the basis of race, color, religion, sex, disability, familial status, national origin, sexual orientation, gender identity, or any other protected class.
+                    </p>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-1">
+                        BuyUnrepped is a licensed real estate brokerage in the State of Tennessee.
+                    </p>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-1">
+                        Firm License No. 267134 / Principal Broker: Kayla Brown / 2509 Cruzen St, Nashville, TN 37211
+                    </p>
+                    <p className="text-xs text-gray-500 leading-relaxed mt-4">
+                        All information contained on this website is deemed reliable but is not guaranteed and should be independently verified. Services are provided in accordance with Tennessee real estate law and regulations.
+                    </p>
+                </div>
+
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-xs text-gray-500">

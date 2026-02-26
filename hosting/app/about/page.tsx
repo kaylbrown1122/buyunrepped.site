@@ -3,7 +3,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
-import { FileText, MessageSquare, Calendar, Shield, DollarSign } from 'lucide-react';
+import { FileText, MessageSquare, Calendar, Shield, DollarSign, ClipboardCheck, Users } from 'lucide-react';
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -90,6 +90,16 @@ export default function AboutPage() {
                                 icon: <DollarSign className="w-5 h-5 text-brand-blue" />,
                                 title: 'SAVINGS!',
                                 description: "It's no secret that home prices are high, and interest rates will never be back in the 2s, 3s, or 4s. We aim to give consumers a way to increase their leverage without feeling lost in their purchase.",
+                            },
+                            {
+                                icon: <ClipboardCheck className="w-5 h-5 text-brand-blue" />,
+                                title: 'Compliant Forms',
+                                description: "REALTORs are trained on specific forms, and there's nothing scarier to a real estate professional than a legal document they've never seen. We're here to fix that! BuyUnrepped buyers will have TREC approved forms from start to finish.",
+                            },
+                            {
+                                icon: <Users className="w-5 h-5 text-brand-blue" />,
+                                title: 'Trusted Referrals',
+                                description: "Access trusted referrals — lenders, title companies, vendors who are active and effective in your market! Working with the same professionals that your top agents leverage will help you close on time and with fewer surprises.",
                             },
                         ].map((item, i) => (
                             <div key={i} className="flex items-start gap-4">

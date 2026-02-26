@@ -4,14 +4,15 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SectionBadge from './components/SectionBadge';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
-import { X, ChevronDown, Check, FileText, Clock, MessageSquare, FileCheck, Lock, BarChart3 } from 'lucide-react';
+import { X, ChevronDown, Check, FileText, Clock, MessageSquare, FileCheck, BarChart3, CalendarCheck } from 'lucide-react';
 import { useWaitlist } from './components/WaitlistModal';
 
 const faqs = [
   {
     question: "How much do I actually save?",
-    answer: "Typically, a buyer's agent takes 2.5% to 3% of the home price. On a $500,000 home, that is $15,000. By representing yourself with our tools, you can ask the seller to reduce the price by that amount.",
+    answer: "When a seller lists their home, they may agree to pay a commission that includes compensation for a buyer's agent. If you buy without an agent, that buyer's agent commission doesn't need to be paid. Smart buyers request this as a credit at closing or a reduction in the purchase price.",
   },
   {
     question: "Is this legal?",
@@ -19,7 +20,7 @@ const faqs = [
   },
   {
     question: "What if things get complicated?",
-    answer: "Our Full Support plan includes access to licensed real estate experts who can answer specific questions and help you navigate tricky inspection or appraisal issues.",
+    answer: "Our Full Strategy Pass includes access to our staffed licensed REALTORs who are on call to answer specific questions and help you navigate tricky inspection or appraisal issues. These calls are also available a la carte if you opt for the lesser Transaction Management membership.",
   },
   {
     question: "What documents do I need to buy a home without an agent?",
@@ -27,19 +28,19 @@ const faqs = [
   },
   {
     question: "How does BuyUnrepped make money?",
-    answer: "We charge a simple flat fee for our platform — either $299 for our DIY Toolkit or $999 for Full Support. No hidden commissions, no percentage-based fees. You keep the savings.",
+    answer: "We charge a simple flat fee for our platform. No hidden commissions, no percentage-based fees. You keep the savings.",
   },
 ];
 
 export default function LandingPage() {
   const { openModal } = useWaitlist();
-  const [sliderValue, setSliderValue] = useState(450000);
+  const [sliderValue, setSliderValue] = useState(750000);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [heroEmail, setHeroEmail] = useState('');
   const [heroStatus, setHeroStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const traditionalFee = sliderValue * 0.03;
-  const buyUnreppedFee = 500;
+  const buyUnreppedFee = 995;
   const savings = traditionalFee - buyUnreppedFee;
 
   return (
@@ -53,10 +54,10 @@ export default function LandingPage() {
             {/* Left content */}
             <div className="z-10">
               <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold leading-[1.08] mb-6 tracking-tight">
-                Buying unrepresented does not have to mean <span className="text-brand-blue">buying alone.</span>
+                Buying unrepresented does <em className="not-italic font-bold italic">not</em> have to mean <span className="text-brand-blue">buying alone.</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-500 mb-8 max-w-xl leading-relaxed">
-                BuyUnrepped supports confident buyers who choose not to use full-service representation, by helping transactions stay clear, professional, and predictable for everyone involved.
+                BuyUnrepped provides support and professional insight to confident buyers who choose to forego representation. We&apos;re not your agent, we&apos;re your advantage!
               </p>
 
               {heroStatus === 'success' ? (
@@ -187,20 +188,20 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-brand-navy">$15K+</p>
+              <p className="text-3xl md:text-4xl font-bold text-brand-navy">$18k+</p>
               <p className="text-sm text-gray-500 mt-1">Average Buyer Savings</p>
             </div>
             <div>
               <p className="text-3xl md:text-4xl font-bold text-brand-navy">100%</p>
-              <p className="text-sm text-gray-500 mt-1">Legal Compliance</p>
+              <p className="text-sm text-gray-500 mt-1">State Compliance</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-brand-navy">3%</p>
-              <p className="text-sm text-gray-500 mt-1">Commission You Keep</p>
+              <p className="text-3xl md:text-4xl font-bold text-brand-navy">8 Steps</p>
+              <p className="text-sm text-gray-500 mt-1">Structured Purchase Plan</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-brand-navy">24/7</p>
-              <p className="text-sm text-gray-500 mt-1">Expert Support</p>
+              <p className="text-3xl md:text-4xl font-bold text-brand-navy">1</p>
+              <p className="text-sm text-gray-500 mt-1">Dedicated Consulting Realtor</p>
             </div>
           </div>
         </div>
@@ -217,69 +218,23 @@ export default function LandingPage() {
                 Not every buyer needs the same level of assistance.
               </h2>
               <div className="text-lg text-gray-500 space-y-4 leading-relaxed">
-                <p>Some buyers prefer full-service support. Others prefer a more independent approach.</p>
-                <p>BuyUnrepped exists for buyers who choose to move forward unrepresented but still want a structured, informed, and well-managed transaction.</p>
-                <p>This approach benefits not only buyers, but also listing agents and sellers by reducing confusion, missed deadlines, and unnecessary friction.</p>
+                <p>You may not need a full service buyer&apos;s agent.</p>
+                <p>Some buyers want a concierge experience. Then there are people like us, who prefer a more independent approach. Semi-homemade, if you will.</p>
+                <p>BuyUnrepped exists for home buyers who choose to buy unrepresented, and still want the security of a structured, informed, and well-managed transaction.</p>
+                <p>Partnering with us benefits everyone involved in a transaction by reducing confusion, missed deadlines, and unnecessary friction.</p>
               </div>
             </div>
 
-            {/* Right — Purchase offer mockup card */}
+            {/* Right — Dashboard overview image */}
             <div className="relative z-0">
-              <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
-                {/* Dashboard Header */}
-                <div className="flex justify-between items-center mb-8">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-12 gap-6">
-                  {/* Suggestion Card */}
-                  <div className="col-span-12 md:col-span-8 bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="font-bold text-lg mb-1">Purchase Offer</h3>
-                        <p className="text-gray-400 text-xs">123 Berry St, Nashville TN</p>
-                      </div>
-                      <span className="px-2 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase rounded tracking-wider">Drafting</span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 mt-6">
-                      <div className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Offer Price</p>
-                        <p className="font-bold text-sm">$450,000</p>
-                      </div>
-                      <div className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-[10px] text-green-600 uppercase font-bold mb-1">Savings</p>
-                        <p className="font-bold text-green-600 text-sm">+$13,500</p>
-                      </div>
-                      <div className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Closing</p>
-                        <p className="font-bold text-sm">Oct 24</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right Sidebar Cards */}
-                  <div className="col-span-12 md:col-span-4 space-y-4">
-                    <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">$</div>
-                      <div>
-                        <p className="text-xs font-bold">Seller Agreed</p>
-                        <p className="text-[10px] text-gray-400">Save $12k fees</p>
-                      </div>
-                    </div>
-                    <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xs">%</div>
-                      <div>
-                        <p className="text-xs font-bold">Rates Dropped</p>
-                        <p className="text-[10px] text-gray-400">Lock in 5.2%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="/images/dashboard-overview.png"
+                alt="BuyUnrepped dashboard overview showing closing preparation, timeline, and tasks"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-2xl border border-gray-100"
+                unoptimized
+              />
             </div>
           </div>
 
@@ -306,27 +261,27 @@ export default function LandingPage() {
             {[
               {
                 title: 'Clear timelines',
-                description: 'Clear purchase timelines and defined next steps throughout the process.',
+                description: 'Defined milestones and next steps from contract to closing.',
               },
               {
-                title: 'Educational consultations',
-                description: 'Educational consultations focused on pricing, offer terms, and overall transaction strategy.',
+                title: 'Strategic consultations',
+                description: 'Focused guidance on pricing, offer structure, and negotiation positioning.',
               },
               {
-                title: 'Deadline tracking',
-                description: 'Support staying on track with contractual deadlines once under contract.',
+                title: 'Deadline management',
+                description: 'Structured tracking of critical contractual dates so nothing slips.',
               },
               {
-                title: 'Standardized forms',
-                description: 'Preparation and use of state-standardized REALTOR® forms that listing agents are familiar with and expect to see.',
+                title: 'State-compliant documentation',
+                description: 'Preparation and execution of standardized state REALTOR® forms listing agents expect.',
               },
               {
-                title: 'Professional access',
-                description: 'Optional access to licensed real estate professionals for consultative guidance when it makes sense.',
+                title: 'Licensed oversight',
+                description: 'On-demand access to real estate professionals when strategic input matters.',
               },
               {
-                title: 'Practical tools',
-                description: 'Tools and resources designed to support real-world residential transactions, not theory.',
+                title: 'Transaction-ready tools',
+                description: 'Practical resources built for real residential purchases, not theory.',
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
@@ -354,12 +309,10 @@ export default function LandingPage() {
                 Built with listing agents in mind
               </h2>
               <div className="text-lg text-gray-500 space-y-4 leading-relaxed mb-8">
-                <p>Unrepresented buyers are not going away.</p>
-                <p>BuyUnrepped helps ensure that when an unrepresented buyer enters a transaction, they are prepared, informed, and easier to work with.</p>
+                <p>If you&apos;re a listing agent, an unrepresented buyer can be, err, <em>tough</em> to manage.</p>
+                <p>BuyUnrepped acts as a stabilizing resource. Ensuring the buyer is using forms you&apos;re familiar with, while keeping them prepared, informed, and on schedule — so <em>you don&apos;t have to</em>.</p>
+                <p>BuyUnrepped is not after your commissions. We&apos;re here to fill a need for a group of buyers who currently have very few options.</p>
               </div>
-              <p className="text-gray-500 leading-relaxed">
-                BuyUnrepped is not competing for buyer-side commissions. It is a stabilizing resource when an unrepped buyer shows up.
-              </p>
             </div>
 
             {/* Right — benefits grid */}
@@ -373,6 +326,9 @@ export default function LandingPage() {
                   'Reduced confusion',
                   'Fewer avoidable issues',
                   'A smoother path to closing',
+                  'Forms you know and expect',
+                  'No dual agent gray area',
+                  'Less work!',
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="w-5 h-5 mt-0.5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
@@ -401,18 +357,18 @@ export default function LandingPage() {
             {[
               {
                 step: '01',
-                title: 'Decide your path',
-                description: 'Buyers choose whether a full-service agent makes sense or if an independent approach makes the most sense for their situation.',
+                title: 'Submit your offer',
+                description: 'Receive a professional human price analysis. Review strategy and options with our local agent. Sign your tailored offer. Submit it to the listing agent using a provided script!',
               },
               {
                 step: '02',
-                title: 'Use BuyUnrepped for support',
-                description: 'If moving forward unrepresented, BuyUnrepped provides structure, tools, and access to guidance to help buyers navigate each phase confidently.',
+                title: 'Use BuyUnrepped support',
+                description: 'Utilize our platform for self-guidance. On-demand assistance from our staff REALTORs and admin for your questions. Automated email and calendar reminders for deadlines. Use our scripts for transaction communication!',
               },
               {
                 step: '03',
                 title: 'Close with clarity',
-                description: 'Transactions stay organized, informed, and predictable for all parties involved.',
+                description: 'No surprises. Transactions stay organized, informed, and predictable for all parties involved.',
               },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 relative overflow-hidden hover:shadow-lg transition-shadow">
@@ -452,11 +408,15 @@ export default function LandingPage() {
               },
               {
                 title: 'Not a discount brokerage',
-                description: 'We do not offer reduced-commission buyer representation. BuyUnrepped provides structured, non-representational support — a fundamentally different service model built for a different type of buyer.',
+                description: 'Discount brokerages lower commission by lowering service. BuyUnrepped is different. We are built by top-tier agents who are accustomed to white-glove execution. The structure is streamlined, but the expertise is not discounted. You\u2019re not paying less for less. You\u2019re choosing a smarter model backed by top-tier expertise.',
               },
               {
                 title: 'Not legal representation',
                 description: 'BuyUnrepped does not provide legal advice or act as an attorney. We use state-standardized forms and established practices, but buyers should consult a licensed attorney for legal questions specific to their transaction.',
+              },
+              {
+                title: 'We don\u2019t represent you',
+                description: 'A traditional buyer agent would represent you and speak on your behalf, acting as a middle man to convey your wants and needs to the listing agent. With BuyUnrepped, we provide structure, preparation, and strategic guidance behind the scenes, while you maintain control of conversations, negotiations, and decisions for a supported, self-directed purchase.',
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
@@ -489,7 +449,7 @@ export default function LandingPage() {
               </h2>
               <ul className="space-y-5 mb-8">
                 {[
-                  'Generate compliant purchase agreements in minutes',
+                  'Informed and compliant purchase agreement',
                   'Access the same market data agents use',
                   'Expert support when you need it most',
                   'Secure document signatures electronically',
@@ -510,11 +470,11 @@ export default function LandingPage() {
             {/* Right - Feature cards */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: <FileText className="w-6 h-6 text-brand-blue" />, title: 'Legal Documents', desc: 'Every form you need, state-specific and legally approved.' },
+                { icon: <FileText className="w-6 h-6 text-brand-blue" />, title: 'REALTOR Forms', desc: 'Every form you need, state-specific and legally approved.' },
                 { icon: <Clock className="w-6 h-6 text-brand-blue" />, title: 'Market Data', desc: 'Access the same data agents use to determine fair market value.' },
                 { icon: <MessageSquare className="w-6 h-6 text-brand-blue" />, title: 'Expert Support', desc: 'Licensed experts available to answer your questions.' },
-                { icon: <FileCheck className="w-6 h-6 text-brand-blue" />, title: 'Smart Contracts', desc: 'Attorney-approved templates for Tennessee transactions.' },
-                { icon: <Lock className="w-6 h-6 text-brand-blue" />, title: 'Secure Data', desc: 'Bank-grade encryption for all your financial data.' },
+                { icon: <FileCheck className="w-6 h-6 text-brand-blue" />, title: 'Smart Scripts', desc: 'Agent-approved templates for Tennessee transactions.' },
+                { icon: <CalendarCheck className="w-6 h-6 text-brand-blue" />, title: 'Transaction Management', desc: 'Reminders and prompts to ensure you understand and hit every deadline.' },
                 { icon: <BarChart3 className="w-6 h-6 text-brand-blue" />, title: 'Cost Analysis', desc: 'Real-time closing cost and savings estimates.' },
               ].map((feature, i) => (
                 <div key={i} className="bg-white rounded-2xl p-6 hover:shadow-lg transition-shadow">
@@ -545,14 +505,14 @@ export default function LandingPage() {
               {/* Slider */}
               <div className="mb-6">
                 <div className="flex justify-between text-sm text-gray-500 mb-2">
-                  <span>$100K</span>
+                  <span>$250K</span>
                   <span className="font-bold text-brand-navy text-lg">${(sliderValue / 1000).toFixed(0)}K</span>
-                  <span>$1.5M</span>
+                  <span>$3M</span>
                 </div>
                 <input
                   type="range"
-                  min={100000}
-                  max={1500000}
+                  min={250000}
+                  max={3000000}
                   step={10000}
                   value={sliderValue}
                   onChange={(e) => setSliderValue(Number(e.target.value))}

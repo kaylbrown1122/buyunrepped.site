@@ -15,7 +15,7 @@ export default function CalculatorPage() {
     // Constants
     const SELLING_AGENT_RATE = 0.03;
     const BUYING_AGENT_RATE = 0.03;
-    const BUY_UNREPPED_FEE = 500;
+    const BUY_UNREPPED_FEE = 995;
 
     // Handler for input change
     const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,8 +65,8 @@ export default function CalculatorPage() {
                         <span className="text-brand-blue">save on your next home.</span>
                     </h1>
                     <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        Traditional real estate transactions cost 6% in agent fees.
-                        By buying unrepped, you can save the 3% buyer&apos;s agent commission.
+                        When a seller lists their home, they may agree to pay a commission that includes buyer&apos;s agent compensation.
+                        By buying unrepped, you can request that amount as a credit or price reduction.
                     </p>
                 </section>
 
@@ -122,7 +122,7 @@ export default function CalculatorPage() {
                                             <h3 className="font-bold text-brand-navy">Buying Agent Fee</h3>
                                         </div>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                            Typically paid by the seller, but priced into the home value. By representing yourself, you can negotiate this off the price.
+                                            Often included in the seller&apos;s listing agreement. By buying without an agent, you can request this amount as a credit at closing or a reduction in the purchase price.
                                         </p>
                                     </div>
 
@@ -191,7 +191,7 @@ export default function CalculatorPage() {
                                                 </div>
                                                 <div className="flex gap-4 text-[10px] uppercase font-bold text-gray-400 mt-2">
                                                     <span>Seller Agent (3%)</span>
-                                                    <span className="text-brand-blue">BuyUnrepped ($500)</span>
+                                                    <span className="text-brand-blue">BuyUnrepped ($995)</span>
                                                 </div>
                                             </div>
 
@@ -274,8 +274,8 @@ export default function CalculatorPage() {
                     <SectionBadge>How It Works</SectionBadge>
                     <h2 className="text-3xl font-bold mb-6 mt-4">How do you save the 3%?</h2>
                     <p className="text-gray-500 leading-relaxed mb-8">
-                        When a seller lists their home, they typically agree to pay a 6% commission: 3% to their agent and 3% to the buyer's agent.
-                        If you buy without an agent, that 3% buyer's commission doesn't need to be paid.
+                        When a seller lists their home, they may agree to pay a commission that includes compensation for a buyer&apos;s agent.
+                        If you buy without an agent, that buyer&apos;s agent compensation doesn&apos;t need to be paid.
                         <br /><br />
                         Smart buyers request this 3% as a credit at closing or a reduction in the purchase price.
                     </p>

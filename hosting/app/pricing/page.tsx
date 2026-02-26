@@ -141,7 +141,7 @@ export default function PricingPage() {
                         {[
                             {
                                 question: 'How much do I actually save?',
-                                answer: "Typically, a buyer's agent takes 2.5% to 3% of the home price. On a $500,000 home, that is $15,000. By representing yourself with our tools, you can ask the seller to reduce the price by that amount.",
+                                answer: "When a seller lists their home, they may agree to pay a commission that includes compensation for a buyer's agent. If you buy without an agent, that buyer's agent commission doesn't need to be paid. Smart buyers request this as a credit at closing or a reduction in the purchase price.",
                             },
                             {
                                 question: 'Is this legal?',
