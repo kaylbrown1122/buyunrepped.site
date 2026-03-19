@@ -54,10 +54,10 @@ export default function LandingPage() {
             {/* Left content */}
             <div className="z-10">
               <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold leading-[1.08] mb-6 tracking-tight">
-                Buying unrepresented does <em className="not-italic font-bold italic">not</em> have to mean <span className="text-brand-blue">buying alone.</span>
+                Buying a home without an agent doesn't mean <span className="text-brand-blue">buying alone.</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-500 mb-8 max-w-xl leading-relaxed">
-                BuyUnrepped provides support and professional insight to confident buyers who choose to forego representation. We&apos;re not your agent, we&apos;re your advantage!
+                BuyUnrepped provides docs and professional insight to confident buyers without representation. We&apos;re not your agent, we&apos;re your advantage!
               </p>
 
               {heroStatus === 'success' ? (
@@ -135,7 +135,7 @@ export default function LandingPage() {
 
                 <div className="grid grid-cols-12 gap-6">
                   {/* Suggestion Card */}
-                  <div className="col-span-12 md:col-span-8 bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                  <div className="col-span-12 bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <h3 className="font-bold text-lg mb-1">Purchase Offer</h3>
@@ -146,36 +146,19 @@ export default function LandingPage() {
                     <div className="grid grid-cols-3 gap-4 mt-6">
                       <div className="bg-gray-50 p-3 rounded-lg">
                         <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Offer Price</p>
-                        <p className="font-bold text-sm">$450,000</p>
+                        <p className="font-bold text-sm">$750,000</p>
                       </div>
                       <div className="bg-gray-50 p-3 rounded-lg">
                         <p className="text-[10px] text-green-600 uppercase font-bold mb-1">Savings</p>
-                        <p className="font-bold text-green-600 text-sm">+$13,500</p>
+                        <p className="font-bold text-green-600 text-sm">+$21,500</p>
                       </div>
                       <div className="bg-gray-50 p-3 rounded-lg">
                         <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Closing</p>
-                        <p className="font-bold text-sm">Oct 24</p>
+                        <p className="font-bold text-sm">May 5</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Right Sidebar Cards */}
-                  <div className="col-span-12 md:col-span-4 space-y-4">
-                    <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">$</div>
-                      <div>
-                        <p className="text-xs font-bold">Seller Agreed</p>
-                        <p className="text-[10px] text-gray-400">Save $12k fees</p>
-                      </div>
-                    </div>
-                    <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-xs">%</div>
-                      <div>
-                        <p className="text-xs font-bold">Rates Dropped</p>
-                        <p className="text-[10px] text-gray-400">Lock in 5.2%</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -200,8 +183,8 @@ export default function LandingPage() {
               <p className="text-sm text-gray-500 mt-1">Structured Purchase Plan</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-brand-navy">1</p>
-              <p className="text-sm text-gray-500 mt-1">Dedicated Consulting Realtor</p>
+              <p className="text-3xl md:text-4xl font-bold text-brand-navy">24/7</p>
+              <p className="text-sm text-gray-500 mt-1">Support</p>
             </div>
           </div>
         </div>
@@ -215,12 +198,11 @@ export default function LandingPage() {
             <div>
               <SectionBadge>Who This Is For</SectionBadge>
               <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-                Not every buyer needs the same level of assistance.
+                Full Service Representation isn&apos;t for Everyone&hellip; That&apos;s where we come in!
               </h2>
               <div className="text-lg text-gray-500 space-y-4 leading-relaxed">
-                <p>You may not need a full service buyer&apos;s agent.</p>
-                <p>Some buyers want a concierge experience. Then there are people like us, who prefer a more independent approach. Semi-homemade, if you will.</p>
-                <p>BuyUnrepped exists for home buyers who choose to buy unrepresented, and still want the security of a structured, informed, and well-managed transaction.</p>
+                <p>You may not need or want a Realtor to speak to the listing agent on your behalf, but everyone could use local experienced support behind the scenes. We do just that. You find the home, schedule a showing with the listing agent, and we help you formulate a tailored &mdash; Realtor friendly &mdash; offer and email template that you can submit. Once under contract, we map out all of your deadlines, help you coordinate inspections and keep your team in contact so you don&apos;t miss a beat.</p>
+                <p>Many consumers would be equally, if not more, successful in their home purchase if they just had someone to coordinate their deadlines and help them with their offer and transaction process&hellip; It&apos;s like having an agent in your pocket!</p>
                 <p>Partnering with us benefits everyone involved in a transaction by reducing confusion, missed deadlines, and unnecessary friction.</p>
               </div>
             </div>
