@@ -291,7 +291,7 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            [
+            {[
               {
                 step: '01',
                 title: 'Decide your path',
