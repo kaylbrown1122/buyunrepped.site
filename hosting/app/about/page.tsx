@@ -28,16 +28,19 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
                             <SectionBadge>Our Story</SectionBadge>
-                            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-8 leading-tight">About Us</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-8 leading-tight">Built by an Experienced Nashville Broker.</h2>
                             <div className="text-lg text-gray-500 space-y-6 leading-relaxed">
                                 <p>
-                                    Our founder and principal broker is <strong className="text-brand-navy">Kayla Brown</strong>. She has assisted in over 250 transactions throughout 8 active years as a full service agent in Nashville. She was proud to provide excellent service to her clients, but saw a gaping hole in the options available to consumers.
+                                    BuyUnrepped is founded by <strong className="text-brand-navy">Kayla Brown</strong>, Principal Broker and Realtor&reg;, who has assisted in over 200 transactions during 10 active years as a full-service agent in Nashville.
                                 </p>
                                 <p>
-                                    She felt that simpler/more decisive clients were subsidizing those with more complex needs, and she wanted to find a solution for that... so she trimmed the fat to find a way to provide amazing service to buyers, make life easier for the listing agents on the other side, and do it all for a fraction of the price!
+                                    Over the course of those transactions, Kayla began to notice a pattern: many buyers were highly capable and preferred to find homes themselves, yet the traditional brokerage model required them to pay for services they didn&apos;t always need.
                                 </p>
                                 <p>
-                                    We&apos;ve outsourced showings and given the BUYER control of their transaction. The buyer customer can still represent themselves, but now they have full transaction manager and experienced local broker in their pocket! The best part - all fees are flat. It doesn&apos;t matter if the home costs $400k or $2million - the price is the price.
+                                    BuyUnrepped was built to offer a better option. Buyers maintain control of their home search while still having an experienced local broker and full transaction management support when it matters most.
+                                </p>
+                                <p>
+                                    Pricing is flat fee — not commission based. Whether the home costs $400,000 or $2 million, the price is the same.
                                 </p>
                             </div>
                         </div>

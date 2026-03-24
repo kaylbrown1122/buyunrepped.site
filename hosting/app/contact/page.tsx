@@ -11,7 +11,7 @@ export default function ContactPage() {
         firstName: '',
         lastName: '',
         email: '',
-        interestedIn: 'Offer Generator',
+        interestedIn: 'Ready to Submit Offer',
         message: '',
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -31,7 +31,7 @@ export default function ContactPage() {
 
             if (response.ok) {
                 setStatus('success');
-                setFormData({ firstName: '', lastName: '', email: '', interestedIn: 'Offer Generator', message: '' });
+                setFormData({ firstName: '', lastName: '', email: '', interestedIn: 'Ready to Submit Offer', message: '' });
             } else {
                 setStatus('error');
             }
@@ -162,8 +162,8 @@ export default function ContactPage() {
                                                 onChange={(e) => setFormData({ ...formData, interestedIn: e.target.value })}
                                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all appearance-none bg-white"
                                             >
-                                                <option>Offer Generator</option>
-                                                <option>Full Support</option>
+                                                <option>Ready to Submit Offer</option>
+                                                <option>Full Strategy Pass</option>
                                                 <option>General Inquiry</option>
                                             </select>
                                             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">

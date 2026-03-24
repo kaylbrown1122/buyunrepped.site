@@ -15,7 +15,7 @@ export default function CalculatorPage() {
     // Constants
     const SELLING_AGENT_RATE = 0.03;
     const BUYING_AGENT_RATE = 0.03;
-    const BUY_UNREPPED_FEE = 995;
+    const BUY_UNREPPED_FEE = 3595;
 
     // Handler for input change
     const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,8 +65,8 @@ export default function CalculatorPage() {
                         <span className="text-brand-blue">save on your next home.</span>
                     </h1>
                     <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        When a seller lists their home, they may agree to pay a commission that includes buyer&apos;s agent compensation.
-                        By buying unrepped, you can request that amount as a credit or price reduction.
+                        In many transactions, sellers agree to pay compensation for a buyer&apos;s agent as part of their listing agreement.
+                        When you buy without an agent, that compensation may be available to you as a credit at closing or a reduction in the purchase price.
                     </p>
                 </section>
 
@@ -117,12 +117,12 @@ export default function CalculatorPage() {
                                     <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                                         <div className="flex items-center gap-3 mb-2">
                                             <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                                                <span className="text-brand-blue font-bold text-xs">3%</span>
+                                                <span className="text-brand-blue font-bold text-xs">%</span>
                                             </div>
-                                            <h3 className="font-bold text-brand-navy">Buying Agent Fee</h3>
+                                            <h3 className="font-bold text-brand-navy">Buyer Agent Commission</h3>
                                         </div>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                            Often included in the seller&apos;s listing agreement. By buying without an agent, you can request this amount as a credit at closing or a reduction in the purchase price.
+                                            When a seller agrees to pay buyer agent compensation, you may be able to request that amount as a credit at closing or a reduction in the purchase price.
                                         </p>
                                     </div>
 
@@ -134,7 +134,7 @@ export default function CalculatorPage() {
                                             <h3 className="font-bold text-brand-navy">BuyUnrepped Fee</h3>
                                         </div>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                            A flat ${BUY_UNREPPED_FEE} technology fee to generate your offer and manage the closing process professionally.
+                                            A flat upfront fee to generate your offer and manage the closing process professionally.
                                         </p>
                                     </div>
                                 </div>
@@ -168,8 +168,8 @@ export default function CalculatorPage() {
                                                     <div className="h-full bg-gray-300 w-1/2"></div> {/* Buying Agent */}
                                                 </div>
                                                 <div className="flex justify-between text-[10px] uppercase font-bold text-gray-400 mt-2">
-                                                    <span>Seller Agent (3%)</span>
-                                                    <span>Buyer Agent (3%)</span>
+                                                    <span>Seller Agent Commission</span>
+                                                    <span>Buyer Agent Commission</span>
                                                 </div>
                                             </div>
 
@@ -190,8 +190,8 @@ export default function CalculatorPage() {
                                                     ></div>
                                                 </div>
                                                 <div className="flex gap-4 text-[10px] uppercase font-bold text-gray-400 mt-2">
-                                                    <span>Seller Agent (3%)</span>
-                                                    <span className="text-brand-blue">BuyUnrepped ($995)</span>
+                                                    <span>Seller Agent Commission</span>
+                                                    <span className="text-brand-blue">BuyUnrepped Fee</span>
                                                 </div>
                                             </div>
 
@@ -237,19 +237,19 @@ export default function CalculatorPage() {
                                                 </div>
 
                                                 <div className="grid grid-cols-3 py-3 border-b border-gray-50 items-center">
-                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Selling Agent (3%)</div>
+                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Seller Agent Commission</div>
                                                     <div className="col-span-1 text-right text-sm font-bold text-gray-900">${sellingAgentFee.toLocaleString()}</div>
                                                     <div className="col-span-1 text-right text-sm font-bold text-gray-900">${sellingAgentFee.toLocaleString()}</div>
                                                 </div>
 
                                                 <div className="grid grid-cols-3 py-3 border-b border-gray-50 items-center">
-                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Buying Agent (3%)</div>
+                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Buyer Agent Commission</div>
                                                     <div className="col-span-1 text-right text-sm font-bold text-gray-900">${buyingAgentFee.toLocaleString()}</div>
                                                     <div className="col-span-1 text-right text-sm font-bold text-brand-blue">$0</div>
                                                 </div>
 
                                                 <div className="grid grid-cols-3 py-3 border-b border-gray-50 items-center">
-                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Platform Fee</div>
+                                                    <div className="col-span-1 text-sm font-medium text-gray-600">BuyUnrepped Fee</div>
                                                     <div className="col-span-1 text-right text-sm font-bold text-gray-900">$0</div>
                                                     <div className="col-span-1 text-right text-sm font-bold text-red-500">${BUY_UNREPPED_FEE}</div>
                                                 </div>
@@ -272,12 +272,12 @@ export default function CalculatorPage() {
                 {/* FAQ / Info Section */}
                 <section className="mt-24 max-w-4xl mx-auto px-4 text-center">
                     <SectionBadge>How It Works</SectionBadge>
-                    <h2 className="text-3xl font-bold mb-6 mt-4">How do you save the 3%?</h2>
+                    <h2 className="text-3xl font-bold mb-6 mt-4">How does buying unrepresented save you money?</h2>
                     <p className="text-gray-500 leading-relaxed mb-8">
-                        When a seller lists their home, they may agree to pay a commission that includes compensation for a buyer&apos;s agent.
-                        If you buy without an agent, that buyer&apos;s agent compensation doesn&apos;t need to be paid.
+                        When a seller agrees to pay buyer agent compensation as part of their listing, that amount doesn&apos;t have to go to an agent.
+                        If you buy without representation, you may be able to request it as a credit at closing or a reduction in the purchase price.
                         <br /><br />
-                        Smart buyers request this 3% as a credit at closing or a reduction in the purchase price.
+                        BuyUnrepped helps you navigate that conversation — professionally and with the right paperwork.
                     </p>
                     <Link href="/contact" className="text-brand-blue font-bold hover:underline">
                         Have questions? Talk to an expert

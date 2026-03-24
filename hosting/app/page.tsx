@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "What if things get complicated?",
-    answer: "Our Full Strategy Pass includes access to our staffed licensed REALTORs who are on call to answer specific questions and help you navigate tricky inspection or appraisal issues. These calls are also available a la carte if you opt for the lesser Transaction Management membership.",
+    answer: "Our Full Strategy Pass includes access to our staffed licensed REALTORs who are on call to answer specific questions and help you navigate tricky inspection or appraisal issues.",
   },
   {
     question: "What documents do I need to buy a home without an agent?",
@@ -40,7 +40,7 @@ export default function LandingPage() {
   const [heroStatus, setHeroStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const traditionalFee = sliderValue * 0.03;
-  const buyUnreppedFee = 995;
+  const buyUnreppedFee = 3595;
   const savings = traditionalFee - buyUnreppedFee;
 
   return (
@@ -280,51 +280,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* C2. For Listing Agents */}
-      <section className="py-24 bg-brand-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left — text */}
-            <div>
-              <SectionBadge>For Listing Agents</SectionBadge>
-              <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-                Built with listing agents in mind
-              </h2>
-              <div className="text-lg text-gray-500 space-y-4 leading-relaxed mb-8">
-                <p>If you&apos;re a listing agent, an unrepresented buyer can be, err, <em>tough</em> to manage.</p>
-                <p>BuyUnrepped acts as a stabilizing resource. Ensuring the buyer is using forms you&apos;re familiar with, while keeping them prepared, informed, and on schedule — so <em>you don&apos;t have to</em>.</p>
-                <p>BuyUnrepped is not after your commissions. We&apos;re here to fill a need for a group of buyers who currently have very few options.</p>
-              </div>
-            </div>
-
-            {/* Right — benefits grid */}
-            <div>
-              <p className="font-bold text-lg mb-6">For listing agents, this means:</p>
-              <ul className="space-y-4">
-                {[
-                  'Clearer communication',
-                  'Fewer missed deadlines',
-                  'Less back-and-forth',
-                  'Reduced confusion',
-                  'Fewer avoidable issues',
-                  'A smoother path to closing',
-                  'Forms you know and expect',
-                  'No dual agent gray area',
-                  'Less work!',
-                ].map((benefit, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 mt-0.5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-brand-blue" />
-                    </div>
-                    <span className="text-gray-700 font-medium">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* D. How It Works - 3-Step Process */}
       <section id="how-it-works" className="py-24 bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,21 +291,21 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[
+            [
               {
                 step: '01',
-                title: 'Submit your offer',
-                description: 'Receive a professional human price analysis. Review strategy and options with our local agent. Sign your tailored offer. Submit it to the listing agent using a provided script!',
+                title: 'Decide your path',
+                description: 'Buyers choose whether a full-service agent makes sense or if an independent approach makes the most sense for their situation.',
               },
               {
                 step: '02',
-                title: 'Use BuyUnrepped support',
-                description: 'Utilize our platform for self-guidance. On-demand assistance from our staff REALTORs and admin for your questions. Automated email and calendar reminders for deadlines. Use our scripts for transaction communication!',
+                title: 'Use BuyUnrepped for support',
+                description: 'If moving forward unrepresented, BuyUnrepped provides structure, tools, and access to guidance to help buyers navigate each phase confidently.',
               },
               {
                 step: '03',
                 title: 'Close with clarity',
-                description: 'No surprises. Transactions stay organized, informed, and predictable for all parties involved.',
+                description: 'Transactions stay organized, informed, and predictable for all parties involved.',
               },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 relative overflow-hidden hover:shadow-lg transition-shadow">
@@ -380,10 +335,6 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-8 max-w-5xl mx-auto mb-12">
             {[
-              {
-                title: 'Not a replacement for full-service buyer agents',
-                description: 'Full-service buyer agents provide dedicated advocacy, negotiation, and hands-on support throughout a transaction. BuyUnrepped does not replace that relationship — it serves buyers who have already decided not to use one.',
-              },
               {
                 title: 'Not anti-agent',
                 description: 'We respect the value that experienced agents bring to real estate. BuyUnrepped exists alongside the traditional model, not in opposition to it. Listing agents are key partners in every transaction we support.',
@@ -434,7 +385,6 @@ export default function LandingPage() {
                   'Informed and compliant purchase agreement',
                   'Access the same market data agents use',
                   'Expert support when you need it most',
-                  'Secure document signatures electronically',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="w-5 h-5 mt-0.5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
@@ -488,7 +438,11 @@ export default function LandingPage() {
               <div className="mb-6">
                 <div className="flex justify-between text-sm text-gray-500 mb-2">
                   <span>$250K</span>
-                  <span className="font-bold text-brand-navy text-lg">${(sliderValue / 1000).toFixed(0)}K</span>
+                  <span className="font-bold text-brand-navy text-lg">
+                    {sliderValue >= 1000000
+                      ? `$${(sliderValue / 1000000).toFixed(sliderValue % 1000000 === 0 ? 0 : 1)}M`
+                      : `$${(sliderValue / 1000).toFixed(0)}K`}
+                  </span>
                   <span>$3M</span>
                 </div>
                 <input
@@ -518,7 +472,7 @@ export default function LandingPage() {
               <div className="bg-brand-blue rounded-2xl p-6 text-white">
                 <span className="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full mb-3">BuyUnrepped</span>
                 <p className="text-3xl font-bold">${buyUnreppedFee.toLocaleString()}</p>
-                <p className="text-sm text-blue-100">Flat platform fee</p>
+                <p className="text-sm text-blue-100">BuyUnrepped fee</p>
               </div>
 
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">

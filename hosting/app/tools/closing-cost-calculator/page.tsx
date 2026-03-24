@@ -8,19 +8,19 @@ import CalculatorInputsPanel from './CalculatorInputs';
 import ResultsPanel from './ResultsPanel';
 import { CalculatorInputs, CalculatorResults, FeeCategory } from './types';
 import { calculate } from './calculate';
-import { DEFAULT_DOWN_PAYMENT_PERCENT, DEFAULT_INTEREST_RATE } from './defaults';
+import { DEFAULT_DOWN_PAYMENT_PERCENT, DEFAULT_INTEREST_RATE, DEFAULT_HOME_PRICE } from './defaults';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function ClosingCostCalculatorPage() {
   const [inputs, setInputs] = useState<CalculatorInputs>({
-    homePrice: 0,
+    homePrice: DEFAULT_HOME_PRICE,
     downPaymentType: 'percent',
     downPaymentValue: DEFAULT_DOWN_PAYMENT_PERCENT,
     loanType: 'conventional',
     interestRate: DEFAULT_INTEREST_RATE,
   });
-  const [displayPrice, setDisplayPrice] = useState('');
+  const [displayPrice, setDisplayPrice] = useState(DEFAULT_HOME_PRICE.toLocaleString());
   const [displayDown, setDisplayDown] = useState(DEFAULT_DOWN_PAYMENT_PERCENT.toString());
   const [results, setResults] = useState<CalculatorResults | null>(null);
 

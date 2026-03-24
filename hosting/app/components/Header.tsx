@@ -58,6 +58,12 @@ export default function Header() {
                             Tools
                         </Link>
                         <Link
+                            href="/for-agents"
+                            className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/for-agents' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
+                        >
+                            For Agents
+                        </Link>
+                        <Link
                             href="/contact"
                             className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/contact' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
                         >
@@ -90,6 +96,7 @@ export default function Header() {
                     <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">About</Link>
                     <Link href="/resources" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Resources</Link>
                     <Link href="/tools" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Tools</Link>
+                    <Link href="/for-agents" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">For Agents</Link>
                     <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Contact</Link>
                     <button onClick={() => { openModal(); setMobileOpen(false); }} className="w-full px-6 py-3 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all">
                         Join Early Access

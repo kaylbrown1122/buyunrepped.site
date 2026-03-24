@@ -10,9 +10,9 @@ export const TITLE_SEARCH_FEE = 300;
 export const ESCROW_CLOSING_FEE = 500;
 export const CREDIT_REPORT_FEE = 30;
 export const RECORDING_FEE = 125;
-export const DEFAULT_DOWN_PAYMENT_PERCENT = 20;
-export const DEFAULT_INTEREST_RATE = 6.5;
-export const DEFAULT_HOME_PRICE = 400000;
+export const DEFAULT_DOWN_PAYMENT_PERCENT = 10;
+export const DEFAULT_INTEREST_RATE = 6.2;
+export const DEFAULT_HOME_PRICE = 750000;
 
 // Insurance estimate rates
 export const HOMEOWNERS_INSURANCE_ANNUAL_RATE = 0.0035; // ~$1,400/yr on $400k

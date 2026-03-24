@@ -3,7 +3,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
-import { Check, X } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { useWaitlist } from '../components/WaitlistModal';
 
 export default function PricingPage() {
@@ -23,10 +23,10 @@ export default function PricingPage() {
                 </p>
                 <ul className="space-y-3 text-left max-w-xl mx-auto">
                     {[
-                        'Buyer agent fees are typically 2.5\u20133%',
                         'Choosing not to use full service can free up real buying power',
                         'That flexibility can matter in price, terms, or cash at closing',
                         'You still want a clean, professional process',
+                        'Flat fee — it doesn\'t matter if the home costs $400,000 or $2 million',
                     ].map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                             <div className="w-5 h-5 mt-0.5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
@@ -46,13 +46,13 @@ export default function PricingPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-                        {/* DIY Toolkit */}
+                        {/* Ready to Submit Offer */}
                         <div className="bg-white rounded-3xl border border-gray-100 p-8 shadow-sm hover:shadow-xl transition-shadow relative">
-                            <h3 className="text-2xl font-bold mb-2">DIY Toolkit</h3>
-                            <p className="text-sm text-gray-500 mb-8">Essential tools for the confident self-starter.</p>
+                            <h3 className="text-2xl font-bold mb-2">Ready to Submit Offer</h3>
+                            <p className="text-sm text-gray-500 mb-8">Everything you need to put in a professional, compliant offer.</p>
 
                             <div className="flex items-baseline gap-1 mb-8">
-                                <span className="text-5xl font-bold tracking-tight">$299</span>
+                                <span className="text-5xl font-bold tracking-tight">$995</span>
                                 <span className="text-gray-500 text-sm">/one-time</span>
                             </div>
 
@@ -62,42 +62,34 @@ export default function PricingPage() {
 
                             <ul className="space-y-4">
                                 {[
-                                    { included: true, text: 'Offer Generator' },
-                                    { included: true, text: 'Contract Templates' },
-                                    { included: true, text: 'Market Data Analysis' },
-                                    { included: true, text: 'Step-by-Step Checklist' },
-                                    { included: false, text: 'Negotiation Script Library' },
-                                    { included: false, text: 'Review by Licensed Expert' },
-                                    { included: false, text: 'Closing Coordinator' },
-                                    { included: false, text: 'Unlimited Offers' },
-                                ].map((feature, i) => (
-                                    <li key={i} className={`flex items-center gap-3 text-sm ${feature.included ? 'text-gray-800' : 'text-gray-400'}`}>
-                                        {feature.included ? (
-                                            <div className="w-5 h-5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
-                                                <Check className="w-3 h-3 text-brand-blue" />
-                                            </div>
-                                        ) : (
-                                            <div className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
-                                                <X className="w-3 h-3 text-gray-300" />
-                                            </div>
-                                        )}
-                                        {feature.text}
+                                    'Informed and compliant purchase agreement',
+                                    'REALTOR® forms — state-standardized',
+                                    'Smart scripts for submitting your offer',
+                                    'Market data access',
+                                    'Offer strategy guidance',
+                                    'Email support',
+                                ].map((text, i) => (
+                                    <li key={i} className="flex items-center gap-3 text-sm text-gray-800">
+                                        <div className="w-5 h-5 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
+                                            <Check className="w-3 h-3 text-brand-blue" />
+                                        </div>
+                                        {text}
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
-                        {/* Full Support */}
+                        {/* Full Strategy Pass */}
                         <div className="bg-brand-navy text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden transform md:-translate-y-4">
                             <div className="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                                 Most Popular
                             </div>
 
-                            <h3 className="text-2xl font-bold mb-2">Full Support</h3>
-                            <p className="text-sm text-gray-400 mb-8">Expert guidance from offer to closing table.</p>
+                            <h3 className="text-2xl font-bold mb-2">Full Strategy Pass</h3>
+                            <p className="text-sm text-gray-400 mb-8">Offer support plus full transaction coordination and app access.</p>
 
                             <div className="flex items-baseline gap-1 mb-8">
-                                <span className="text-5xl font-bold tracking-tight">$999</span>
+                                <span className="text-5xl font-bold tracking-tight">$3,595</span>
                                 <span className="text-gray-400 text-sm">/one-time</span>
                             </div>
 
@@ -107,20 +99,20 @@ export default function PricingPage() {
 
                             <ul className="space-y-4">
                                 {[
-                                    { included: true, text: 'Offer Generator' },
-                                    { included: true, text: 'Contract Templates' },
-                                    { included: true, text: 'Market Data Analysis' },
-                                    { included: true, text: 'Step-by-Step Checklist' },
-                                    { included: true, text: 'Negotiation Script Library' },
-                                    { included: true, text: 'Review by Licensed Expert' },
-                                    { included: true, text: 'Closing Coordinator' },
-                                    { included: true, text: 'Unlimited Offers' },
-                                ].map((feature, i) => (
+                                    'Everything in Ready to Submit Offer',
+                                    'Transaction coordination from contract to close',
+                                    'Self-guided app access',
+                                    'Deadline tracking and reminders',
+                                    'Licensed REALTOR® on-call support',
+                                    'Inspection and appraisal guidance',
+                                    'Closing coordination',
+                                    'Unlimited offers',
+                                ].map((text, i) => (
                                     <li key={i} className="flex items-center gap-3 text-sm text-white">
                                         <div className="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
                                             <Check className="w-3 h-3 text-brand-blue" />
                                         </div>
-                                        {feature.text}
+                                        {text}
                                     </li>
                                 ))}
                             </ul>
@@ -141,7 +133,7 @@ export default function PricingPage() {
                         {[
                             {
                                 question: 'How much do I actually save?',
-                                answer: "When a seller lists their home, they may agree to pay a commission that includes compensation for a buyer's agent. If you buy without an agent, that buyer's agent commission doesn't need to be paid. Smart buyers request this as a credit at closing or a reduction in the purchase price.",
+                                answer: "When a seller agrees to pay buyer agent compensation as part of their listing, that amount may be available to you as a credit at closing or a reduction in the purchase price. BuyUnrepped helps you navigate that conversation professionally.",
                             },
                             {
                                 question: 'Is this legal?',
@@ -149,7 +141,7 @@ export default function PricingPage() {
                             },
                             {
                                 question: 'What if things get complicated?',
-                                answer: 'Our Full Support plan includes access to licensed real estate experts who can answer specific questions and help you navigate tricky inspection or appraisal issues.',
+                                answer: 'Our Full Strategy Pass includes access to our staffed licensed REALTORs who are on call to answer specific questions and help you navigate tricky inspection or appraisal issues.',
                             },
                         ].map((faq, i) => (
                             <div key={i} className="flex items-start gap-4">

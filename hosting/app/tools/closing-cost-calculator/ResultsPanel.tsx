@@ -169,14 +169,11 @@ export default function ResultsPanel({ results, onToggleCategory, onOverrideItem
             <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-2">
               Estimated Closing Costs
             </p>
-            <div className="flex items-baseline gap-2 mb-1">
+            <div className="flex items-baseline gap-2 mb-6">
               <span className="text-5xl md:text-6xl font-bold text-white tracking-tight">
                 ${results.totalClosingCosts.toLocaleString()}
               </span>
             </div>
-            <p className="text-gray-400 text-sm mb-6">
-              {results.closingCostPercentage.toFixed(1)}% of home price
-            </p>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 rounded-xl p-4">
@@ -206,12 +203,21 @@ export default function ResultsPanel({ results, onToggleCategory, onOverrideItem
         </div>
 
         {/* Disclaimer */}
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800 mb-4">
           <p className="font-bold mb-1">Tennessee Estimate Only</p>
           <p className="text-amber-700 leading-relaxed">
             These figures are estimates based on typical Tennessee closing costs and tax rates.
             Actual costs vary by county, lender, and transaction specifics. Click any line item
             to adjust it. Consult your lender or closing attorney for exact figures.
+          </p>
+        </div>
+
+        {/* BuyUnrepped callout */}
+        <div className="bg-brand-navy rounded-xl p-6 text-white">
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">With BuyUnrepped Full Strategy Pass</p>
+          <p className="text-lg font-bold mb-1">Get expert support through every line item — for a flat $3,595.</p>
+          <p className="text-sm text-gray-400 leading-relaxed">
+            Transaction coordination, deadline tracking, licensed REALTOR® on-call support, and full closing coordination — from offer to keys.
           </p>
         </div>
       </div>
