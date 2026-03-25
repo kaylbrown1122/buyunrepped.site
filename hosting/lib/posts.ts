@@ -54,8 +54,14 @@ export function getPostBySlug(slug: string): Post {
 
 export async function getPostBySlugWithHtml(slug: string): Promise<PostWithHtml> {
   const post = getPostBySlug(slug);
-  const processedContent = await remark().use(gfm).use(html).process(post.content);
-  const contentHtml = processedContent.toString();
+
+  // remark-html strips raw HTML tags, so we protect <sup> tags with placeholders
+  const protected_content = post.content.replace(/<sup>(\d+)<\/sup>/g, 'SUPCITE_$1_END');
+  const processedContent = await remark().use(gfm).use(html).process(protected_content);
+  const contentHtml = processedContent
+    .toString()
+    .replace(/SUPCITE_(\d+)_END/g, '<sup>$1</sup>')
+    .replace(/<\/sup><sup>/g, ',');
 
   return {
     ...post,

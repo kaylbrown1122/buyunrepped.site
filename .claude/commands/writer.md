@@ -14,6 +14,7 @@ $ARGUMENTS
 
 - **Voice**: Second person ("you"), active voice, practical and educational
 - **Tone**: Confident but not salesy, helpful, straightforward - no fluff or filler
+- **Punctuation**: Do not use em dashes (—). Use commas, colons, parentheses, or rewrite the sentence instead.
 - **Structure**: H2/H3 heavy, short paragraphs (2-4 sentences), frequent use of bullet and numbered lists
 - **Tennessee focus**: Reference Tennessee laws, markets, counties, and conditions specifically
 - **Data-driven**: Include specific numbers, percentages, and dollar amounts with citations
@@ -34,7 +35,7 @@ readingTime: "[X min read]"
 
 ## Citation Format
 
-- In-text citations: Use `<sup>[1]</sup>` immediately after the claim or sentence
+- In-text citations: Use `<sup>1</sup>` immediately after the claim or sentence (no brackets around the number)
 - At the bottom of the post, include a sources section:
 
 ```markdown
