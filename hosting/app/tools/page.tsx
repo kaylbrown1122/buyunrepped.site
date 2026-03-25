@@ -29,16 +29,16 @@ const tools = [
   {
     title: 'Mortgage Payment Estimator',
     description: 'Calculate your monthly mortgage payment including principal, interest, taxes, and insurance.',
-    href: '#',
+    href: '/tools/mortgage-payment-estimator',
     icon: Home,
-    available: false,
+    available: true,
   },
   {
     title: 'Home Affordability Calculator',
     description: 'Find out how much home you can afford based on your income, debts, and down payment.',
-    href: '#',
+    href: '/tools/home-affordability-calculator',
     icon: DollarSign,
-    available: false,
+    available: true,
   },
 ];
 
