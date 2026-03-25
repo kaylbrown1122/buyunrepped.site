@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { getAllPosts } from '../../lib/posts';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -10,8 +10,18 @@ export const metadata = {
   description: 'Expert guides, tips, and insights for Tennessee home buyers looking to save on their next purchase.',
 };
 
-export default function ResourcesPage() {
-  const posts = getAllPosts();
+const POSTS_PER_PAGE = 9;
+
+export default async function ResourcesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page: pageParam } = await searchParams;
+  const allPosts = getAllPosts();
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
+  const page = Math.min(Math.max(1, parseInt(pageParam || '1', 10)), totalPages);
+  const posts = allPosts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
 
   return (
     <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
@@ -29,7 +39,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Posts Grid */}
-      <section className="pb-24">
+      <section className="pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
@@ -73,6 +83,62 @@ export default function ResourcesPage() {
           )}
         </div>
       </section>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <section className="pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-center gap-2">
+              {/* Prev */}
+              {page > 1 ? (
+                <Link
+                  href={page === 2 ? '/resources' : `/resources?page=${page - 1}`}
+                  className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:border-brand-blue hover:text-brand-blue transition-colors"
+                >
+                  <ChevronLeft className="w-4 h-4" /> Prev
+                </Link>
+              ) : (
+                <span className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-100 text-gray-300 cursor-not-allowed">
+                  <ChevronLeft className="w-4 h-4" /> Prev
+                </span>
+              )}
+
+              {/* Page numbers */}
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                <Link
+                  key={n}
+                  href={n === 1 ? '/resources' : `/resources?page=${n}`}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full text-sm font-bold transition-colors ${
+                    n === page
+                      ? 'bg-brand-blue text-white shadow-md'
+                      : 'border border-gray-200 bg-white hover:border-brand-blue hover:text-brand-blue'
+                  }`}
+                >
+                  {n}
+                </Link>
+              ))}
+
+              {/* Next */}
+              {page < totalPages ? (
+                <Link
+                  href={`/resources?page=${page + 1}`}
+                  className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:border-brand-blue hover:text-brand-blue transition-colors"
+                >
+                  Next <ChevronRight className="w-4 h-4" />
+                </Link>
+              ) : (
+                <span className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-100 text-gray-300 cursor-not-allowed">
+                  Next <ChevronRight className="w-4 h-4" />
+                </span>
+              )}
+            </div>
+
+            <p className="text-center text-sm text-gray-400 mt-4">
+              Showing {(page - 1) * POSTS_PER_PAGE + 1}–{Math.min(page * POSTS_PER_PAGE, allPosts.length)} of {allPosts.length} articles
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 bg-brand-cream">
