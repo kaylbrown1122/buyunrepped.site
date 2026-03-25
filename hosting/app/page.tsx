@@ -7,7 +7,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { X, ChevronDown, Check, FileText, Clock, MessageSquare, FileCheck, BarChart3, CalendarCheck } from 'lucide-react';
-import { useWaitlist } from './components/WaitlistModal';
 
 const faqs = [
   {
@@ -33,11 +32,8 @@ const faqs = [
 ];
 
 export default function LandingPage() {
-  const { openModal } = useWaitlist();
   const [sliderValue, setSliderValue] = useState(750000);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [heroEmail, setHeroEmail] = useState('');
-  const [heroStatus, setHeroStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const traditionalFee = sliderValue * 0.03;
   const buyUnreppedFee = 3595;
@@ -49,119 +45,26 @@ export default function LandingPage() {
 
       {/* A. Hero Section */}
       <section className="pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left content */}
-            <div className="z-10">
-              <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold leading-[1.08] mb-6 tracking-tight">
-                Buying a home without an agent doesn't mean <span className="text-brand-blue">buying alone.</span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-500 mb-8 max-w-xl leading-relaxed">
-                BuyUnrepped provides docs and professional insight to confident buyers without representation. We&apos;re not your agent, we&apos;re your advantage!
-              </p>
-
-              {heroStatus === 'success' ? (
-                <div className="flex items-center gap-3 px-5 py-4 bg-green-50 border border-green-200 rounded-full max-w-xl">
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <p className="text-sm font-medium text-green-700">You&apos;re on the list! We&apos;ll be in touch soon.</p>
-                </div>
-              ) : (
-                <form
-                  onSubmit={async (e) => {
-                    e.preventDefault();
-                    if (!heroEmail) return;
-                    setHeroStatus('loading');
-                    try {
-                      const res = await fetch('/api/waitlist', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email: heroEmail }),
-                      });
-                      if (res.ok) {
-                        setHeroStatus('success');
-                        setHeroEmail('');
-                      } else {
-                        setHeroStatus('error');
-                      }
-                    } catch {
-                      setHeroStatus('error');
-                    }
-                  }}
-                  className="flex flex-col sm:flex-row gap-3 max-w-xl"
-                >
-                  <input
-                    type="email"
-                    value={heroEmail}
-                    onChange={(e) => setHeroEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    required
-                    className="flex-1 px-5 py-4 rounded-full border border-gray-200 bg-white text-base outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 transition-all"
-                  />
-                  <button
-                    type="submit"
-                    disabled={heroStatus === 'loading'}
-                    className="px-8 py-4 bg-brand-blue text-white text-base font-bold rounded-full hover:bg-cyan-700 transition-all shadow-lg hover:shadow-xl text-center disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-                  >
-                    {heroStatus === 'loading' ? 'Joining...' : 'Join Early Access'}
-                  </button>
-                </form>
-              )}
-              {heroStatus === 'error' && (
-                <p className="text-red-500 text-sm mt-2">Something went wrong. Please try again.</p>
-              )}
-              <div className="mt-4">
-                <Link
-                  href="#how-it-works"
-                  className="text-brand-blue font-bold text-sm hover:underline"
-                >
-                  Learn how it works &rarr;
-                </Link>
-              </div>
-            </div>
-
-            {/* Right - Purchase offer mockup card */}
-            <div className="relative z-0">
-              <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
-                {/* Dashboard Header */}
-                <div className="flex justify-between items-center mb-8">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-12 gap-6">
-                  {/* Suggestion Card */}
-                  <div className="col-span-12 bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="font-bold text-lg mb-1">Purchase Offer</h3>
-                        <p className="text-gray-400 text-xs">123 Berry St, Nashville TN</p>
-                      </div>
-                      <span className="px-2 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase rounded tracking-wider">Drafting</span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 mt-6">
-                      <div className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Offer Price</p>
-                        <p className="font-bold text-sm">$750,000</p>
-                      </div>
-                      <div className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-[10px] text-green-600 uppercase font-bold mb-1">Savings</p>
-                        <p className="font-bold text-green-600 text-sm">+$21,500</p>
-                      </div>
-                      <div className="bg-gray-50 p-3 rounded-lg">
-                        <p className="text-[10px] text-gray-400 uppercase font-bold mb-1">Closing</p>
-                        <p className="font-bold text-sm">May 5</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold leading-[1.08] mb-6 tracking-tight">
+            Buying a home without an agent doesn't mean <span className="text-brand-blue">buying alone.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+            BuyUnrepped provides docs and professional insight to confident buyers without representation. We&apos;re not your agent, we&apos;re your advantage!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/schedule"
+              className="px-8 py-4 bg-brand-blue text-white text-base font-bold rounded-full hover:bg-cyan-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              Schedule a Call
+            </Link>
+            <Link
+              href="#how-it-works"
+              className="px-8 py-4 border-2 border-gray-200 text-brand-navy text-base font-bold rounded-full hover:border-brand-navy transition-all"
+            >
+              Learn how it works
+            </Link>
           </div>
         </div>
       </section>
@@ -394,9 +297,9 @@ export default function LandingPage() {
                   </li>
                 ))}
               </ul>
-              <button onClick={openModal} className="px-8 py-3 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors shadow-lg">
-                Join Early Access
-              </button>
+              <Link href="/schedule" className="inline-block px-8 py-3 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors shadow-lg">
+                Schedule a Call
+              </Link>
             </div>
 
             {/* Right - Feature cards */}
@@ -531,12 +434,12 @@ export default function LandingPage() {
               Join hundreds of Tennessee buyers who are taking control of their home purchase and keeping the 3% commission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={openModal}
-                className="px-8 py-4 bg-white text-brand-blue font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg"
+              <Link
+                href="/schedule"
+                className="px-8 py-4 bg-white text-brand-blue font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg text-center"
               >
-                Join Early Access
-              </button>
+                Schedule a Call
+              </Link>
               <Link
                 href="/pricing"
                 className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors text-center"
@@ -544,9 +447,6 @@ export default function LandingPage() {
                 View Pricing
               </Link>
             </div>
-            <p className="text-sm text-blue-200 mt-6">
-              No credit card required. Join early access today.
-            </p>
           </div>
         </div>
       </section>

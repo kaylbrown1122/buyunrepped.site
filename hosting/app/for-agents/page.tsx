@@ -4,10 +4,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Check } from 'lucide-react';
-import { useWaitlist } from '../components/WaitlistModal';
+import Link from 'next/link';
 
 export default function ForAgentsPage() {
-  const { openModal } = useWaitlist();
 
   return (
     <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
@@ -85,12 +84,12 @@ export default function ForAgentsPage() {
             <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
               We&apos;re happy to walk you through how BuyUnrepped supports your transactions.
             </p>
-            <button
-              onClick={openModal}
-              className="px-8 py-4 bg-white text-brand-blue font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg"
+            <Link
+              href="/schedule"
+              className="px-8 py-4 bg-white text-brand-blue font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg inline-block"
             >
-              Get Early Access
-            </button>
+              Schedule a Call
+            </Link>
           </div>
         </div>
       </section>

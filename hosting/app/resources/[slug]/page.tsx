@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { getPostSlugs, getPostBySlugWithHtml } from '../../../lib/posts';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { Metadata } from 'next';
-import { WaitlistButton } from '../../components/WaitlistModal';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -82,11 +81,12 @@ export default async function PostPage({ params }: PageProps) {
           <p className="text-gray-500 mb-6">
             Get access to all the tools you need to purchase your Tennessee home without paying agent fees.
           </p>
-          <WaitlistButton
+          <Link
+            href="/schedule"
             className="px-8 py-3 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors inline-block shadow-lg"
           >
-            Join Early Access
-          </WaitlistButton>
+            Schedule a Call
+          </Link>
         </div>
       </article>
 

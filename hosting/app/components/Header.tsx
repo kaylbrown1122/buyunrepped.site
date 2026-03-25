@@ -4,12 +4,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import { useWaitlist } from './WaitlistModal';
 import { useState } from 'react';
 
 export default function Header() {
     const pathname = usePathname();
-    const { openModal } = useWaitlist();
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
@@ -73,12 +71,12 @@ export default function Header() {
 
                     {/* CTA - right */}
                     <div className="flex-1 flex justify-end items-center gap-3">
-                        <button
-                            onClick={openModal}
+                        <Link
+                            href="/schedule"
                             className="hidden md:inline-flex px-6 py-2.5 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all shadow-md hover:shadow-lg"
                         >
-                            Join Early Access
-                        </button>
+                            Schedule a Call
+                        </Link>
                         <button
                             onClick={() => setMobileOpen(!mobileOpen)}
                             className="md:hidden p-2 text-brand-navy"
@@ -98,9 +96,9 @@ export default function Header() {
                     <Link href="/tools" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Tools</Link>
                     <Link href="/for-agents" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">For Agents</Link>
                     <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Contact</Link>
-                    <button onClick={() => { openModal(); setMobileOpen(false); }} className="w-full px-6 py-3 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all">
-                        Join Early Access
-                    </button>
+                    <Link href="/schedule" onClick={() => setMobileOpen(false)} className="block w-full px-6 py-3 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all text-center">
+                        Schedule a Call
+                    </Link>
                 </div>
             )}
         </header>

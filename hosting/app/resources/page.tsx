@@ -4,7 +4,6 @@ import SectionBadge from '../components/SectionBadge';
 import { getAllPosts } from '../../lib/posts';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import Link from 'next/link';
-import { WaitlistButton } from '../components/WaitlistModal';
 
 export const metadata = {
   title: 'Resources & Insights | BuyUnrepped',
@@ -83,11 +82,12 @@ export default function ResourcesPage() {
           <p className="text-gray-500 mb-8 max-w-xl mx-auto">
             Put these insights into action. Our platform gives you all the tools you need to buy your next home without paying agent fees.
           </p>
-          <WaitlistButton
+          <Link
+            href="/schedule"
             className="px-8 py-4 bg-brand-blue text-white text-base font-bold rounded-full hover:bg-cyan-700 transition-all shadow-lg hover:shadow-xl inline-block"
           >
-            Join Early Access
-          </WaitlistButton>
+            Schedule a Call
+          </Link>
         </div>
       </section>
 

@@ -4,10 +4,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Check } from 'lucide-react';
-import { useWaitlist } from '../components/WaitlistModal';
+import Link from 'next/link';
 
 export default function PricingPage() {
-    const { openModal } = useWaitlist();
     return (
         <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
             <Header />
@@ -56,9 +55,9 @@ export default function PricingPage() {
                                 <span className="text-gray-500 text-sm">/one-time</span>
                             </div>
 
-                            <button onClick={openModal} className="w-full py-4 rounded-full border-2 border-gray-200 font-bold hover:border-brand-navy hover:bg-gray-50 transition-colors mb-10">
-                                Join Early Access
-                            </button>
+                            <Link href="/schedule" className="block w-full py-4 rounded-full border-2 border-gray-200 font-bold hover:border-brand-navy hover:bg-gray-50 transition-colors mb-10 text-center">
+                                Schedule a Call
+                            </Link>
 
                             <ul className="space-y-4">
                                 {[
@@ -93,9 +92,9 @@ export default function PricingPage() {
                                 <span className="text-gray-400 text-sm">/one-time</span>
                             </div>
 
-                            <button onClick={openModal} className="w-full py-4 rounded-full bg-brand-blue text-white font-bold hover:bg-cyan-500 transition-colors mb-10 shadow-lg">
-                                Join Early Access
-                            </button>
+                            <Link href="/schedule" className="block w-full py-4 rounded-full bg-brand-blue text-white font-bold hover:bg-cyan-500 transition-colors mb-10 shadow-lg text-center">
+                                Schedule a Call
+                            </Link>
 
                             <ul className="space-y-4">
                                 {[
