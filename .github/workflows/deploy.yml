@@ -30,12 +30,9 @@ jobs:
 
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }} --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: hosting
 
       - name: Build Project
         run: vercel build ${{ github.ref == 'refs/heads/main' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: hosting
 
       - name: Deploy to Vercel
         run: vercel deploy --prebuilt ${{ github.ref == 'refs/heads/main' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: hosting
