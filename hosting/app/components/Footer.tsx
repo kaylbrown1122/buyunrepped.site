@@ -35,7 +35,7 @@ export default function Footer() {
                     </div>
 
                     {/* Link Columns */}
-                    <div className="md:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="md:col-span-9 grid grid-cols-2 md:grid-cols-3 gap-8">
                         <div>
                             <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Locations</h3>
                             <ul className="space-y-3">
@@ -51,11 +51,12 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Resources</h3>
+                            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Tools</h3>
                             <ul className="space-y-3">
-                                <li><Link href="/resources" className="text-sm text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+                                <li><Link href="/tools/closing-cost-calculator" className="text-sm text-gray-400 hover:text-white transition-colors">Closing Cost Calculator</Link></li>
+                                <li><Link href="/tools/mortgage-payment-estimator" className="text-sm text-gray-400 hover:text-white transition-colors">Mortgage Payment Estimator</Link></li>
+                                <li><Link href="/tools/home-affordability-calculator" className="text-sm text-gray-400 hover:text-white transition-colors">Home Affordability Calculator</Link></li>
                                 <li><Link href="/savings" className="text-sm text-gray-400 hover:text-white transition-colors">Savings Calculator</Link></li>
-                                <li><Link href="/tools" className="text-sm text-gray-400 hover:text-white transition-colors">Tools</Link></li>
                             </ul>
                         </div>
                         <div>
@@ -63,13 +64,8 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 <li><Link href="/about" className="text-sm text-gray-400 hover:text-white transition-colors">About Us</Link></li>
                                 <li><Link href="/contact" className="text-sm text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Legal</h3>
-                            <ul className="space-y-3">
-                                <li><Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</Link></li>
-                                <li><Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+                                <li><Link href="/guides" className="text-sm text-gray-400 hover:text-white transition-colors">Guides</Link></li>
+                                <li><Link href="/resources" className="text-sm text-gray-400 hover:text-white transition-colors">Blog</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -111,9 +107,13 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-xs text-gray-500">
-                        &copy; {new Date().getFullYear()} BuyUnrepped. All rights reserved.
-                    </p>
+                    <div className="flex items-center gap-4">
+                        <p className="text-xs text-gray-500">
+                            &copy; {new Date().getFullYear()} BuyUnrepped. All rights reserved.
+                        </p>
+                        <Link href="/terms" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">Terms of Service</Link>
+                        <Link href="/privacy" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">Privacy Policy</Link>
+                    </div>
                     <p className="text-xs text-gray-500">
                         Home buying built for the buyer, not the agent.
                     </p>

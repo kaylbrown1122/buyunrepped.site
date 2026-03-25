@@ -32,16 +32,10 @@ export default function Header() {
                     {/* Navigation - center */}
                     <nav className="hidden md:flex items-center space-x-8 flex-none">
                         <Link
-                            href="/"
-                            className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
+                            href="/guides"
+                            className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname.startsWith('/guides') ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
                         >
-                            How it Works
-                        </Link>
-                        <Link
-                            href="/about"
-                            className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/about' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
-                        >
-                            About
+                            Guides
                         </Link>
                         <Link
                             href="/resources"
@@ -62,10 +56,10 @@ export default function Header() {
                             For Agents
                         </Link>
                         <Link
-                            href="/contact"
-                            className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/contact' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
+                            href="/about"
+                            className={`text-xs font-bold uppercase tracking-wide transition-colors ${pathname === '/about' ? 'text-brand-navy' : 'text-gray-500 hover:text-brand-navy'}`}
                         >
-                            Contact
+                            About
                         </Link>
                     </nav>
 
@@ -90,12 +84,11 @@ export default function Header() {
             {/* Mobile menu */}
             {mobileOpen && (
                 <div className="md:hidden bg-brand-cream border-t border-gray-100 px-4 py-6 space-y-4">
-                    <Link href="/" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">How it Works</Link>
-                    <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">About</Link>
+                    <Link href="/guides" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Guides</Link>
                     <Link href="/resources" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Resources</Link>
                     <Link href="/tools" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Tools</Link>
                     <Link href="/for-agents" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">For Agents</Link>
-                    <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Contact</Link>
+                    <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">About</Link>
                     <Link href="/schedule" onClick={() => setMobileOpen(false)} className="block w-full px-6 py-3 bg-brand-blue text-white text-sm font-bold rounded-full hover:bg-cyan-700 transition-all text-center">
                         Schedule a Call
                     </Link>
