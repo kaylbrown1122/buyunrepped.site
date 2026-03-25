@@ -78,34 +78,45 @@ function WaitlistModal() {
     }, 200);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') handleClose();
+  };
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center" onKeyDown={handleKeyDown}>
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={handleClose}
+        aria-hidden="true"
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md mx-4 p-8 animate-in fade-in zoom-in-95 duration-200">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="waitlist-modal-title"
+        className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md mx-4 p-8 animate-in fade-in zoom-in-95 duration-200"
+      >
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
+          aria-label="Close modal"
+          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue rounded-lg"
         >
-          <X className="w-5 h-5" />
+          <X className="w-5 h-5" aria-hidden="true" />
         </button>
 
         {status === 'success' ? (
           <div className="text-center py-8">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+              <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold mb-2">You're on the list!</h2>
+            <h2 id="waitlist-modal-title" className="text-2xl font-bold mb-2">You're on the list!</h2>
             <p className="text-gray-500 mb-6">
               We'll notify you when BuyUnrepped is ready to help you save on your home purchase.
             </p>
@@ -119,7 +130,7 @@ function WaitlistModal() {
         ) : (
           <>
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-2">Join Early Access</h2>
+              <h2 id="waitlist-modal-title" className="text-2xl font-bold mb-2">Join Early Access</h2>
               <p className="text-gray-500">
                 Be the first to know when BuyUnrepped launches in Tennessee. Save thousands on your next home purchase.
               </p>
@@ -137,12 +148,15 @@ function WaitlistModal() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
                   required
+                  aria-required="true"
+                  aria-invalid={status === 'error'}
+                  aria-describedby={status === 'error' ? 'waitlist-error' : undefined}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                 />
               </div>
 
               {status === 'error' && (
-                <p className="text-red-500 text-sm">{errorMessage}</p>
+                <p id="waitlist-error" role="alert" className="text-red-500 text-sm">{errorMessage}</p>
               )}
 
               <button

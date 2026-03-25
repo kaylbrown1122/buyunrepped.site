@@ -28,7 +28,7 @@ export default async function ResourcesPage({
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
+      <section id="main-content" className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
         <SectionBadge>Resources</SectionBadge>
         <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
           Resources & <span className="text-brand-blue">Insights</span>
@@ -88,18 +88,19 @@ export default async function ResourcesPage({
       {totalPages > 1 && (
         <section className="pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center gap-2">
+            <nav aria-label="Pagination" className="flex items-center justify-center gap-2">
               {/* Prev */}
               {page > 1 ? (
                 <Link
                   href={page === 2 ? '/resources' : `/resources?page=${page - 1}`}
+                  aria-label="Go to previous page"
                   className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:border-brand-blue hover:text-brand-blue transition-colors"
                 >
-                  <ChevronLeft className="w-4 h-4" /> Prev
+                  <ChevronLeft className="w-4 h-4" aria-hidden="true" /> Prev
                 </Link>
               ) : (
-                <span className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-100 text-gray-300 cursor-not-allowed">
-                  <ChevronLeft className="w-4 h-4" /> Prev
+                <span aria-disabled="true" className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-100 text-gray-300 cursor-not-allowed">
+                  <ChevronLeft className="w-4 h-4" aria-hidden="true" /> Prev
                 </span>
               )}
 
@@ -108,6 +109,8 @@ export default async function ResourcesPage({
                 <Link
                   key={n}
                   href={n === 1 ? '/resources' : `/resources?page=${n}`}
+                  aria-label={`Page ${n}`}
+                  aria-current={n === page ? 'page' : undefined}
                   className={`w-10 h-10 flex items-center justify-center rounded-full text-sm font-bold transition-colors ${
                     n === page
                       ? 'bg-brand-blue text-white shadow-md'
@@ -122,16 +125,17 @@ export default async function ResourcesPage({
               {page < totalPages ? (
                 <Link
                   href={`/resources?page=${page + 1}`}
+                  aria-label="Go to next page"
                   className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:border-brand-blue hover:text-brand-blue transition-colors"
                 >
-                  Next <ChevronRight className="w-4 h-4" />
+                  Next <ChevronRight className="w-4 h-4" aria-hidden="true" />
                 </Link>
               ) : (
-                <span className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-100 text-gray-300 cursor-not-allowed">
-                  Next <ChevronRight className="w-4 h-4" />
+                <span aria-disabled="true" className="flex items-center gap-1 px-4 py-2 rounded-full text-sm font-bold border border-gray-100 text-gray-300 cursor-not-allowed">
+                  Next <ChevronRight className="w-4 h-4" aria-hidden="true" />
                 </span>
               )}
-            </div>
+            </nav>
 
             <p className="text-center text-sm text-gray-400 mt-4">
               Showing {(page - 1) * POSTS_PER_PAGE + 1}–{Math.min(page * POSTS_PER_PAGE, allPosts.length)} of {allPosts.length} articles

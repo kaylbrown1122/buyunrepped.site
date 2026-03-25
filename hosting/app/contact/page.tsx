@@ -45,7 +45,7 @@ export default function ContactPage() {
             <Header />
 
             {/* Hero */}
-            <section className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
+            <section id="main-content" className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
                 <SectionBadge>Contact</SectionBadge>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
                     Get in touch
@@ -101,8 +101,8 @@ export default function ContactPage() {
                         <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
                             {status === 'success' ? (
                                 <div className="text-center py-12">
-                                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                                        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
@@ -119,22 +119,26 @@ export default function ContactPage() {
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
-                                            <label className="block text-sm font-bold mb-2">First Name</label>
+                                            <label htmlFor="firstName" className="block text-sm font-bold mb-2">First Name</label>
                                             <input
                                                 type="text"
+                                                id="firstName"
                                                 placeholder="Jane"
                                                 required
+                                                aria-required="true"
                                                 value={formData.firstName}
                                                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all"
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-bold mb-2">Last Name</label>
+                                            <label htmlFor="lastName" className="block text-sm font-bold mb-2">Last Name</label>
                                             <input
                                                 type="text"
+                                                id="lastName"
                                                 placeholder="Doe"
                                                 required
+                                                aria-required="true"
                                                 value={formData.lastName}
                                                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all"
@@ -143,11 +147,13 @@ export default function ContactPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-bold mb-2">Email</label>
+                                        <label htmlFor="contactEmail" className="block text-sm font-bold mb-2">Email</label>
                                         <input
                                             type="email"
+                                            id="contactEmail"
                                             placeholder="jane@example.com"
                                             required
+                                            aria-required="true"
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all"
@@ -155,9 +161,10 @@ export default function ContactPage() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-bold mb-2">Interested In</label>
+                                        <label htmlFor="interestedIn" className="block text-sm font-bold mb-2">Interested In</label>
                                         <div className="relative">
                                             <select
+                                                id="interestedIn"
                                                 value={formData.interestedIn}
                                                 onChange={(e) => setFormData({ ...formData, interestedIn: e.target.value })}
                                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all appearance-none bg-white"
@@ -166,15 +173,16 @@ export default function ContactPage() {
                                                 <option>Full Strategy Pass</option>
                                                 <option>General Inquiry</option>
                                             </select>
-                                            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
-                                                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500" aria-hidden="true">
+                                                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-bold mb-2">Message</label>
+                                        <label htmlFor="message" className="block text-sm font-bold mb-2">Message</label>
                                         <textarea
+                                            id="message"
                                             rows={4}
                                             placeholder="How can we help you save?"
                                             value={formData.message}
@@ -184,7 +192,7 @@ export default function ContactPage() {
                                     </div>
 
                                     {status === 'error' && (
-                                        <p className="text-red-600 text-sm">Something went wrong. Please try again.</p>
+                                        <p id="contact-error" role="alert" className="text-red-600 text-sm">Something went wrong. Please try again.</p>
                                     )}
 
                                     <button

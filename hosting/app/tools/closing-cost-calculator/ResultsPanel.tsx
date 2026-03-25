@@ -57,10 +57,11 @@ function FeeItemRow({
       <div className="flex items-center gap-2">
         {editing ? (
           <div className="flex items-center gap-1">
-            <span className="text-sm text-gray-400">$</span>
+            <span className="text-sm text-gray-400" aria-hidden="true">$</span>
             <input
               type="text"
               autoFocus
+              aria-label={`Edit ${item.label} amount in dollars`}
               className="w-24 text-right text-sm font-bold text-brand-navy border border-brand-blue rounded px-2 py-1 focus:ring-1 focus:ring-brand-blue"
               value={editValue}
               onChange={(e) => setEditValue(e.target.value.replace(/[^0-9]/g, ''))}
@@ -74,8 +75,8 @@ function FeeItemRow({
         ) : (
           <button
             onClick={handleStartEdit}
+            aria-label={`Edit ${item.label}: $${displayValue.toLocaleString()}`}
             className={`text-sm font-bold text-right min-w-[80px] px-2 py-1 rounded hover:bg-gray-100 transition-colors ${item.overriddenValue !== null ? 'text-brand-blue' : 'text-brand-navy'}`}
-            title="Click to edit"
           >
             ${displayValue.toLocaleString()}
           </button>
@@ -83,10 +84,10 @@ function FeeItemRow({
         {item.overriddenValue !== null && (
           <button
             onClick={() => onReset(categoryId, item.id)}
+            aria-label={`Reset ${item.label} to default`}
             className="p-1 text-gray-400 hover:text-brand-blue transition-colors"
-            title="Reset to default"
           >
-            <RotateCcw className="w-3.5 h-3.5" />
+            <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
           </button>
         )}
       </div>
@@ -111,22 +112,24 @@ function CategoryAccordion({
     <div className="border border-gray-100 rounded-xl overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors"
+        aria-expanded={category.isExpanded}
+        aria-controls={`category-${category.id}`}
+        className="w-full flex items-center justify-between p-4 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-blue transition-colors"
       >
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full bg-blue-50 text-brand-blue flex items-center justify-center" aria-hidden="true">
             {CATEGORY_ICONS[category.id] || <DollarSign className="w-5 h-5" />}
           </div>
           <span className="font-bold text-brand-navy">{category.label}</span>
         </div>
         <div className="flex items-center gap-3">
           <span className="font-bold text-brand-navy">${total.toLocaleString()}</span>
-          <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform ${category.isExpanded ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform ${category.isExpanded ? 'rotate-180' : ''}`} aria-hidden="true" />
         </div>
       </button>
 
       {category.isExpanded && (
-        <div className="border-t border-gray-100 py-2 bg-gray-50/50">
+        <div id={`category-${category.id}`} className="border-t border-gray-100 py-2 bg-gray-50/50">
           {category.items.map((item) => (
             <FeeItemRow
               key={item.id}
@@ -162,8 +165,8 @@ export default function ResultsPanel({ results, onToggleCategory, onOverrideItem
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
         {/* Summary Card */}
         <div className="bg-gradient-to-br from-brand-navy to-black rounded-2xl p-8 text-white relative overflow-hidden mb-8">
-          <div className="absolute top-0 right-0 p-3 opacity-10">
-            <DollarSign className="w-32 h-32" />
+          <div className="absolute top-0 right-0 p-3 opacity-10" aria-hidden="true">
+            <DollarSign className="w-32 h-32" aria-hidden="true" />
           </div>
           <div className="relative z-10">
             <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-2">

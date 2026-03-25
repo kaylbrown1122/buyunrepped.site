@@ -73,9 +73,12 @@ export default function Header() {
                         </Link>
                         <button
                             onClick={() => setMobileOpen(!mobileOpen)}
-                            className="md:hidden p-2 text-brand-navy"
+                            className="md:hidden p-2 text-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-blue rounded-lg"
+                            aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                            aria-expanded={mobileOpen}
+                            aria-controls="mobile-menu"
                         >
-                            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            {mobileOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
                         </button>
                     </div>
                 </div>
@@ -83,7 +86,7 @@ export default function Header() {
 
             {/* Mobile menu */}
             {mobileOpen && (
-                <div className="md:hidden bg-brand-cream border-t border-gray-100 px-4 py-6 space-y-4">
+                <div id="mobile-menu" className="md:hidden bg-brand-cream border-t border-gray-100 px-4 py-6 space-y-4">
                     <Link href="/guides" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Guides</Link>
                     <Link href="/resources" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Resources</Link>
                     <Link href="/tools" onClick={() => setMobileOpen(false)} className="block text-sm font-bold text-gray-700 hover:text-brand-blue">Tools</Link>

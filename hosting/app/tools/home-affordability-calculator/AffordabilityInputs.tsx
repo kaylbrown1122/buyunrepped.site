@@ -123,6 +123,8 @@ export default function AffordabilityInputs({
               )}
               <input
                 type="text"
+                id="downPayment"
+                aria-label="Down payment amount"
                 className={`block w-full ${inputs.downPaymentType === 'dollar' ? 'pl-8' : 'pl-4'} pr-8 py-3 text-lg font-bold text-brand-navy bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all shadow-sm`}
                 value={displayDown}
                 onChange={onDownPaymentChange}
@@ -133,20 +135,22 @@ export default function AffordabilityInputs({
                 </div>
               )}
             </div>
-            <div className="flex rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+            <div className="flex rounded-xl border border-gray-200 overflow-hidden shadow-sm" role="group" aria-label="Down payment type">
               <button
                 type="button"
                 onClick={() => onDownPaymentTypeToggle('dollar')}
+                aria-pressed={inputs.downPaymentType === 'dollar'}
                 className={`px-4 py-3 text-sm font-bold transition-colors ${inputs.downPaymentType === 'dollar' ? 'bg-brand-blue text-white' : 'bg-white text-gray-400 hover:text-brand-navy'}`}
               >
-                $
+                <span aria-label="Dollar amount">$</span>
               </button>
               <button
                 type="button"
                 onClick={() => onDownPaymentTypeToggle('percent')}
+                aria-pressed={inputs.downPaymentType === 'percent'}
                 className={`px-4 py-3 text-sm font-bold transition-colors ${inputs.downPaymentType === 'percent' ? 'bg-brand-blue text-white' : 'bg-white text-gray-400 hover:text-brand-navy'}`}
               >
-                %
+                <span aria-label="Percentage">%</span>
               </button>
             </div>
           </div>
@@ -157,10 +161,11 @@ export default function AffordabilityInputs({
           <label className="block text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
             Loan Term
           </label>
-          <div className="flex rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+          <div className="flex rounded-xl border border-gray-200 overflow-hidden shadow-sm" role="group" aria-label="Loan term">
             <button
               type="button"
               onClick={() => onLoanTermChange(30)}
+              aria-pressed={inputs.loanTerm === 30}
               className={`flex-1 py-3 text-sm font-bold transition-colors ${inputs.loanTerm === 30 ? 'bg-brand-blue text-white' : 'bg-white text-gray-400 hover:text-brand-navy'}`}
             >
               30-year fixed
@@ -168,6 +173,7 @@ export default function AffordabilityInputs({
             <button
               type="button"
               onClick={() => onLoanTermChange(15)}
+              aria-pressed={inputs.loanTerm === 15}
               className={`flex-1 py-3 text-sm font-bold transition-colors ${inputs.loanTerm === 15 ? 'bg-brand-blue text-white' : 'bg-white text-gray-400 hover:text-brand-navy'}`}
             >
               15-year fixed

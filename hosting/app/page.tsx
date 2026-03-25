@@ -44,7 +44,7 @@ export default function LandingPage() {
       <Header />
 
       {/* A. Hero Section */}
-      <section className="pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden">
+      <section id="main-content" className="pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl lg:text-[76px] font-bold leading-[1.08] mb-6 tracking-tight">
             Buying a home without an agent doesn't mean <span className="text-brand-blue">buying alone.</span>
@@ -356,6 +356,13 @@ export default function LandingPage() {
                   value={sliderValue}
                   onChange={(e) => setSliderValue(Number(e.target.value))}
                   className="w-full"
+                  aria-label="Home price"
+                  aria-valuemin={250000}
+                  aria-valuemax={3000000}
+                  aria-valuenow={sliderValue}
+                  aria-valuetext={sliderValue >= 1000000
+                    ? `$${(sliderValue / 1000000).toFixed(sliderValue % 1000000 === 0 ? 0 : 1)} million`
+                    : `$${(sliderValue / 1000).toFixed(0)} thousand`}
                 />
               </div>
 
@@ -406,13 +413,15 @@ export default function LandingPage() {
               <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-blue transition-colors"
+                  aria-expanded={openFaq === i}
+                  aria-controls={`faq-answer-${i}`}
                 >
                   <span className="font-bold pr-4">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </button>
                 {openFaq === i && (
-                  <div className="px-5 pb-5">
+                  <div id={`faq-answer-${i}`} role="region" aria-label={faq.question} className="px-5 pb-5">
                     <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
