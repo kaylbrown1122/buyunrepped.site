@@ -191,6 +191,17 @@ At Memphis's median price point, FHA's 3.5% minimum down payment (for buyers wit
 
 In a market where the median home is $190,000 and down payments are a primary barrier to entry, $3,000 in savings is meaningful. It's a larger down payment, a rate buydown, or six months of property tax reserves sitting in your account.
 
+## Buying in a Different Tennessee City?
+
+Each Tennessee market has distinct neighborhoods, conditions, and closing costs. Compare your options:
+
+- [Nashville Home Buying Guide](/guides/nashville-home-buying-guide)
+- [Knoxville Home Buying Guide](/guides/knoxville-home-buying-guide)
+- [Chattanooga Home Buying Guide](/guides/chattanooga-home-buying-guide)
+- [Franklin and Brentwood Home Buying Guide](/guides/franklin-brentwood-home-buying-guide)
+
+Use our [closing cost calculator](/tools/closing-cost-calculator) to estimate your Shelby County cash-to-close before making an offer.
+
 ## How BuyUnrepped Helps Memphis Buyers
 
 Memphis's market is accessible, but the closing process, property tax structure, and inspection considerations are just as real here as in Nashville. Buyers who understand the full picture before they make an offer are better positioned at every step.

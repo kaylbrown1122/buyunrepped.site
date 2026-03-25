@@ -14,7 +14,7 @@ The honest answer: the settlement changed the rules, not the risks. You now have
 
 ## What the NAR Settlement Actually Changed
 
-If you need the full breakdown, we covered it in detail in our post on [what the NAR settlement means for home buyers](/resources/nar-settlement-home-buyers-2026). Here's the short version.
+If you need the full breakdown, we covered it in detail in our post on [what the NAR settlement means for home buyers](/resources/nar-settlement-home-buyers-2026). We also have a quick-reference [list of the key changes for buyers](/resources/nar-settlement-what-changed-buyers-listicle). Here's the short version.
 
 Three rule changes took effect on August 17, 2024:<sup>2</sup>
 
@@ -42,7 +42,7 @@ If the settlement was supposed to drive down buyer-agent fees, it hasn't worked,
 
 Buyer-agent commissions dipped slightly right after the settlement, then rebounded to pre-settlement levels within three quarters.<sup>4</sup> A Federal Reserve study examining nearly 30 years of commission data found that buyer agreement requirements had "no significant effect" on commission rates across 15 states.<sup>5</sup> Commission rates actually increased in 39 states from 2024 to 2025.<sup>6</sup>
 
-What does that mean in real dollars? At Tennessee's average rate of 2.7%, on a Nashville median-priced home (~$476K), you're looking at approximately **$12,852** for a buyer's agent.<sup>7</sup>
+What does that mean in real dollars? At Tennessee's average rate of 2.7%, on a [Nashville](/guides/nashville-home-buying-guide) median-priced home (~$476K), you're looking at approximately **$12,852** for a buyer's agent.<sup>7</sup>
 
 That's a significant amount of money. The question is whether it's money well spent.
 
@@ -56,7 +56,7 @@ The NAR's own 2025 Profile of Home Buyers and Sellers (covering July 2024–June
 
 Perhaps most telling: there was virtually no shift toward discount or alternative brokerage models. Fintech and flat-fee brokerage adoption was "practically flat."<sup>8</sup> Meanwhile, experienced agents with 5+ years gained 2.1% market share with sellers and 1.2% with buyers, suggesting the new transparency requirements are benefiting established professionals, not disrupting them.<sup>8</sup>
 
-The settlement gave buyers more information. Most are still choosing to hire an agent anyway.
+The settlement gave buyers more information. Most are still choosing to hire an agent anyway. If you're weighing this decision yourself, our post on [when you don't need a buyer's agent](/resources/when-you-dont-need-buyers-agent) breaks down the scenarios honestly.
 
 ## What a Buyer's Agent Actually Does for You
 
@@ -103,7 +103,7 @@ Handles contract review and closing documents. Tennessee doesn't require an atto
 **Fully unrepresented**
 You do everything yourself, home search, offer writing, negotiation, inspections, closing. Maximum savings, maximum risk.
 
-**Tip:** Tennessee's Non-Exclusive Buyer Representation Agreement (RF144) lets you work with an agent without a long-term commitment. Start there to evaluate an agent before locking into an exclusive agreement.
+**Tip:** Tennessee's Non-Exclusive Buyer Representation Agreement (RF144) lets you work with an agent without a long-term commitment. Start there to evaluate an agent before locking into an exclusive agreement. If you're buying at [Franklin and Brentwood](/guides/franklin-brentwood-home-buying-guide) price points ($700K+), the commission savings from going unrepresented easily top $17,000.
 
 ## 7 Tips for Tennessee Buyers Navigating the New Rules
 
@@ -111,15 +111,15 @@ You do everything yourself, home search, offer writing, negotiation, inspections
 
 **2. Negotiate fees in dollar amounts, not percentages.** The difference between 2% and 2.7% on a $476K Nashville home is $3,332. Ask for a flat fee or a lower rate, and get it in writing.<sup>10</sup>
 
-**3. Ask sellers to cover your agent's commission.** It's no longer on the MLS, but many Tennessee sellers still offer buyer-agent compensation as a concession. Your agent can inquire with the listing agent directly.<sup>7</sup>
+**3. Ask sellers to cover your agent's commission.** It's no longer on the MLS, but many Tennessee sellers still offer buyer-agent compensation as a concession. Your agent can inquire with the listing agent directly.<sup>7</sup> If you're going unrepresented, our guide on [negotiating directly with the seller's agent](/resources/negotiate-directly-sellers-agent) explains how to handle this conversation yourself.
 
 **4. Vet your agent before committing.** Check their license through the Tennessee Real Estate Commission (TREC). Review recent sales. Read online reviews. Ask how many transactions they've closed in the past 12 months.<sup>1</sup>
 
 **5. Watch for red flags in buyer agreements.** Avoid contracts with blanket dual agency clauses, binding arbitration requirements, or terms that allow agents to collect more than the negotiated fee.<sup>10</sup>
 
-**6. If going solo, hire a real estate attorney.** At $150–$350/hour, it's a fraction of a full commission and covers your legal bases. Pair it with a platform like BuyUnrepped for contracts and closing support.<sup>11</sup>
+**6. If going solo, hire a real estate attorney.** At $150–$350/hour, it's a fraction of a full commission and covers your legal bases. Pair it with a platform like BuyUnrepped for contracts and closing support.<sup>11</sup> Our complete [guide to buying without a buyer's agent](/guides/buying-without-buyers-agent) walks through every step of the process.
 
-**7. Factor in the true cost of mistakes.** Overpaying by 2–3% on a $476K home costs $9,500–$14,280. A missed inspection contingency could cost tens of thousands more. The cheapest option isn't always the cheapest outcome.<sup>9</sup>
+**7. Factor in the true cost of mistakes.** Overpaying by 2–3% on a $476K home costs $9,500–$14,280. A missed inspection contingency could cost tens of thousands more. The cheapest option isn't always the cheapest outcome.<sup>9</sup> Use our [closing cost calculator](/tools/closing-cost-calculator) to get a precise picture of your cash-to-close before making an offer.
 
 ## How BuyUnrepped Helps
 
@@ -129,8 +129,8 @@ Whether you're going fully solo or somewhere in between, we provide:
 
 - **State-approved Tennessee purchase agreement templates** so your contracts protect you
 - **Comparable sales data** so you don't overpay
-- **A [closing cost calculator](/savings)** to budget accurately for your specific purchase
-- **Step-by-step guidance** through the entire buying process
+- **A [closing cost calculator](/savings)**, [mortgage payment estimator](/tools/mortgage-payment-estimator), and [home affordability calculator](/tools/home-affordability-calculator) to budget accurately for your specific purchase
+- **Step-by-step guidance** through the entire buying process, including our [Tennessee NAR settlement guide](/guides/nar-settlement-guide-tennessee-buyers)
 - **Expert support** when you need it, without the percentage-based price tag
 
 The settlement gave you the right to negotiate. BuyUnrepped gives you a better option to negotiate *toward*.

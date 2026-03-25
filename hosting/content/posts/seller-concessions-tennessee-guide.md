@@ -58,17 +58,17 @@ After the settlement took effect, three things changed:
 2. **Closing cost concessions can still appear on the MLS.** Many listing services allow sellers to advertise a dollar amount or a yes/no indicator for buyer closing cost credits.<sup>1</sup>
 3. **MLS-advertised concessions cannot be conditioned on using a specific buyer's agent.** This means unrepresented buyers have equal access to any advertised concession.<sup>1</sup>
 
-The bottom line: the money sellers used to routinely earmark for buyer-agent commissions is still on the table. It's now a negotiation point rather than an automatic line item. For buyers who know how to ask, this creates real opportunity.
+The bottom line: the money sellers used to routinely earmark for buyer-agent commissions is still on the table. It's now a negotiation point rather than an automatic line item. For buyers who know how to ask, this creates real opportunity. See our [full breakdown of what the NAR settlement changed for buyers](/resources/nar-settlement-what-changed-buyers-listicle) for more context.
 
 ## Why This Matters for Unrepresented Buyers
 
-Without an agent, you're not asking the seller to fund a 2.5–3% buyer-agent commission. That changes the negotiation in your favor in two ways:
+Without an agent, you're not asking the seller to fund a 2.5–3% buyer-agent commission. Understanding [what buyer representation actually costs in Tennessee](/guides/buyer-agent-cost-tennessee) helps you quantify exactly what you're saving. That changes the negotiation in your favor in two ways:
 
 **Your offer looks cleaner.** Sellers like simplicity. An offer without agent-commission contingencies is one fewer line item to negotiate, which can make you more competitive, especially in multi-offer situations.
 
 **You have room to redirect that savings.** Instead of 3% going to a buyer's agent, you can ask for 3% in closing cost concessions. The seller's net cost stays roughly the same, you're just directing the money differently.
 
-And there's an important legal protection here: listing agents cannot refuse to present your offer just because you don't have an agent. NAR's Code of Ethics requires presenting all offers to the seller unless there's a written agreement stating otherwise.<sup>5</sup> Sellers who adopt blanket policies against unrepresented buyers face fair housing risks.<sup>5</sup>
+And there's an important legal protection here: listing agents cannot refuse to present your offer just because you don't have an agent. NAR's Code of Ethics requires presenting all offers to the seller unless there's a written agreement stating otherwise.<sup>5</sup> Sellers who adopt blanket policies against unrepresented buyers face fair housing risks.<sup>5</sup> For tactics on working these conversations effectively, see our guide on [negotiating directly with the seller's agent](/resources/negotiate-directly-sellers-agent).
 
 You don't need a real estate agent to negotiate a strong purchase agreement. Tennessee law allows a real estate attorney ($500–$1,500 flat fee) to handle contract review, negotiation, and closing representation, far less than a percentage-based commission.<sup>10</sup>
 
@@ -97,7 +97,7 @@ If you plan to refinance or move within a decade, concessions almost always win.
 
 The smartest use of seller concessions right now may be funding a temporary mortgage rate buydown.
 
-Here's how a **2-1 buydown** works: the seller provides funds (from the concession) that reduce your interest rate by 2 percentage points in year one and 1 point in year two. In year three, the rate returns to your original locked rate.<sup>8</sup>
+Here's how a **2-1 buydown** works: the seller provides funds (from the concession) that reduce your interest rate by 2 percentage points in year one and 1 point in year two. In year three, the rate returns to your original locked rate.<sup>8</sup> Use our [mortgage payment estimator](/tools/mortgage-payment-estimator) to model how different rate scenarios affect your monthly payment.
 
 The money goes into an escrow account and supplements your monthly payments during those first two years, exactly when cash is tightest after a home purchase.
 
@@ -119,7 +119,7 @@ Here's a practical, step-by-step approach to getting concessions into your purch
 
 **5. Consider the rate buydown pitch.** Instead of a generic "closing cost credit," request a specific concession to fund a 2-1 buydown. It sounds sophisticated, not desperate, and sellers often prefer it because it doesn't lower the sale price.<sup>8</sup>
 
-**6. Stack with THDA programs.** Tennessee's Great Choice Plus program offers up to $6,000 in forgivable down payment/closing cost assistance (or up to $15,000 as an amortizing loan). Combining THDA help with seller concessions could cover most or all of your out-of-pocket closing costs.<sup>9</sup>
+**6. Stack with THDA programs.** Tennessee's Great Choice Plus program offers up to $6,000 in forgivable down payment/closing cost assistance (or up to $15,000 as an amortizing loan). Combining THDA help with seller concessions could cover most or all of your out-of-pocket closing costs.<sup>9</sup> See our [Tennessee first-time home buyer guide](/guides/tennessee-first-time-home-buyer-guide) for a full breakdown of available programs.
 
 **7. Verify at closing.** Three business days before closing, you'll receive your Closing Disclosure. Check the "Seller Credit" line, it must match what you negotiated. If it doesn't, flag it immediately with your lender and closing attorney.<sup>11</sup>
 
@@ -134,11 +134,11 @@ Current market snapshot:<sup>12</sup>
 | Nashville | $481,000 | $14,430 | $28,860 |
 | Statewide | $394,400 | $11,832 | $23,664 |
 | Knoxville | $301,000 | $9,030 | $18,060 |
-| Memphis | $185,000 | $5,550 | $11,100 |
+| [Memphis](/guides/memphis-home-buying-guide) | $185,000 | $5,550 | $11,100 |
 
-Home prices across Tennessee flattened year-over-year, while inventory has risen, giving buyers more options and easing the competitive pressure that made concession requests difficult in prior years.<sup>12</sup>
+Home prices across Tennessee flattened year-over-year, while inventory has risen, giving buyers more options and easing the competitive pressure that made concession requests difficult in prior years.<sup>12</sup> This applies across all major markets, from [Chattanooga](/guides/chattanooga-home-buying-guide) (which saw 85% inventory growth year-over-year) to [Franklin and Brentwood](/guides/franklin-brentwood-home-buying-guide) at the higher end of the price spectrum.
 
-Average buyer closing costs in Tennessee run 2–5% of the purchase price, roughly $7,900–$19,700 on a median-priced home.<sup>3</sup> Even a 3% concession covers a significant chunk of that, and if you're using an FHA or USDA loan, the 6% cap gives you room to cover nearly all of it.
+Average buyer closing costs in Tennessee run 2–5% of the purchase price, roughly $7,900–$19,700 on a median-priced home.<sup>3</sup> Even a 3% concession covers a significant chunk of that, and if you're using an FHA or USDA loan, the 6% cap gives you room to cover nearly all of it. Use our [closing cost calculator](/tools/closing-cost-calculator) to see your exact cash-to-close before deciding how much to request.
 
 ## How BuyUnrepped Helps
 

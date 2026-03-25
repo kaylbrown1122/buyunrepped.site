@@ -249,6 +249,15 @@ For a full list of what to ask and what to avoid, see our post on [questions to 
 
 If a listing agent pressures you to sign a buyer-broker agreement with them, decline. You're not required to. Under the post-NAR settlement rules, you only need a buyer representation agreement if the agent is representing you. A listing agent showing you a property they represent is not representing you, and no agreement is required for them to show you the home.<sup>18</sup>
 
+## Buying in a Different Tennessee City?
+
+Each Tennessee market has distinct neighborhoods, conditions, and closing costs. Compare what unrepresented buying looks like across the state:
+
+- [Memphis Home Buying Guide](/guides/memphis-home-buying-guide)
+- [Knoxville Home Buying Guide](/guides/knoxville-home-buying-guide)
+- [Chattanooga Home Buying Guide](/guides/chattanooga-home-buying-guide)
+- [Franklin and Brentwood Home Buying Guide](/guides/franklin-brentwood-home-buying-guide)
+
 ## How BuyUnrepped Helps Nashville Buyers
 
 Going unrepresented in Nashville's market is increasingly common. Going without professional support is not the same thing, and it's not what we recommend.

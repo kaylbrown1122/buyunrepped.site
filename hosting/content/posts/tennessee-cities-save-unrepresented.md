@@ -51,6 +51,8 @@ The market itself is more balanced than you might expect from a luxury market. F
 
 The practical comparison: a flat-fee real estate attorney handles your contract review and closing for $300–$600 in review fees, or $500–$1,500 for full closing representation. Against a $27,000 buyer agent commission, the math is difficult to argue with.
 
+For neighborhood breakdowns, jumbo loan requirements, and Williamson County closing costs, see our [Franklin and Brentwood home buyer's guide](/guides/franklin-brentwood-home-buying-guide).
+
 ### 2. Nashville, Up to $18,900 in Potential Savings
 
 Nashville's market requires two separate data points to describe accurately. The Davidson County-wide median sale price in December 2025 was approximately **$484,000**. Single-family homes in Nashville proper hit a median of **$630,000** that same month.<sup>1</sup> The number that applies to your purchase depends entirely on where and what you're buying.
@@ -60,6 +62,8 @@ At $484,000, you're looking at a buyer agent commission of **$12,100 to $14,520*
 The market context tilts toward buyers more than many people realize. Nashville's housing inventory rose 18–21% year-over-year, and single-family months of supply sits at 4.47, a balanced market. The condo segment is a different story entirely: condo supply has reached **8.23 months** in Nashville, which is a genuine buyer's market by any definition. If you're buying a Nashville condo, you have substantial negotiating room.<sup>1</sup>
 
 Six Davidson County zip codes still carry median prices under $400,000, which means even in Nashville's "affordable" pockets, going unrepresented saves $10,000–$12,000. For a full walkthrough of what [going without an agent](/resources/buying-home-without-buyers-agent-guide) actually looks like step by step, see our complete guide.
+
+Our [Nashville home buyer's guide](/guides/nashville-home-buying-guide) covers all Davidson County neighborhoods, school zones, and closing cost details.
 
 ### 3. Murfreesboro, Up to $13,500 in Potential Savings
 
@@ -78,6 +82,8 @@ The data confirms it: **51.9% of active Knoxville listings carry price reduction
 For unrepresented buyers, this environment has a specific implication: don't anchor on the list price. The actual closed-sale price is what matters for your offer, your comp research, and your savings calculation. At $314,000, the buyer agent commission runs **$7,850 to $9,420**: savings that are real regardless of what the listing originally asked.
 
 Knoxville also showed Q3 2025 quarterly price appreciation of +1.9% per MTSU data, solid underlying demand even as sellers scramble to reprice. The market is active, not dying. It's just negotiable.<sup>3</sup>
+
+Our [Knoxville home buyer's guide](/guides/knoxville-home-buying-guide) covers Knox County neighborhoods, radon testing requirements, and closing costs.
 
 ### 5. Clarksville, Up to $9,420 in Potential Savings
 
@@ -99,6 +105,8 @@ The market shift in Chattanooga is real and recent. Bidding wars have become rar
 
 Neighborhood granularity matters here. North Shore and Southside average closer to 28 days, more competitive sub-markets where you'll need to move decisively. East Chattanooga averages 32 days. Hixson and Red Bank sit at 42 days. The 85% inventory surge plays out differently depending on which part of the city you're targeting.<sup>5</sup>
 
+Our [Chattanooga home buyer's guide](/guides/chattanooga-home-buying-guide) covers Hamilton County neighborhoods, the Tennessee-Georgia border considerations, and closing costs.
+
 ### 7. Memphis, Up to $6,900 in Potential Savings
 
 Memphis carries the lowest dollar savings on this list, with a representative median home price of approximately **$230,000**. Buyer agent commission at 2.5% is **$5,750**; at 3%, **$6,900**.<sup>12</sup>
@@ -109,11 +117,13 @@ Memphis is also the only city in this analysis showing a quarterly price decline
 
 The $5,750–$6,900 in savings is real even if it's smaller in absolute terms. A flat-fee attorney handles your contract and closing for a fraction of that amount. The rest stays with you.
 
+Our [Memphis home buyer's guide](/guides/memphis-home-buying-guide) covers Shelby County neighborhoods, the county's high property tax structure, and down payment assistance programs.
+
 ## How to Actually Capture the Savings: 4 Steps
 
 Knowing what a buyer agent commission costs in your city is step one. Getting that money into your pocket requires the right approach.
 
-1. **Ask upfront whether the seller is offering buyer-agent compensation.** Contact the listing agent directly and ask. If the seller is offering it, you can negotiate to redirect that amount to a closing cost credit instead of to an agent. If the seller isn't offering it, that's already a cleaner starting point for your offer price.
+1. **Ask upfront whether the seller is offering buyer-agent compensation.** Contact the listing agent directly and ask. If the seller is offering it, you can negotiate to redirect that amount to a closing cost credit instead of to an agent. If the seller isn't offering it, that's already a cleaner starting point for your offer price. Our guide on [negotiating directly with the seller's agent](/resources/negotiate-directly-sellers-agent) walks through exactly how to handle these conversations.
 
 2. **Hire a Tennessee [real estate attorney](/resources/buying-home-without-buyers-agent-guide) instead of an agent.** A flat-fee contract review costs $300–$600. Full closing representation runs $500–$1,500. That range covers every market on this list and protects you on the legal and contract side. Compare it to the $7,750–$27,000 in buyer agent commissions outlined above.
 

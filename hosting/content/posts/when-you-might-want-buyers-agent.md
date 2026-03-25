@@ -16,7 +16,7 @@ Here are the six situations where going unrepresented carries meaningful risk.
 
 ## How We Think About This
 
-Our position isn't "never use an agent." It's "pay for what you actually need."
+Our position isn't "never use an agent." It's "pay for what you actually need." For the full picture, read our companion post on [when you don't need a buyer's agent](/resources/when-you-dont-need-buyers-agent).
 
 There's a spectrum of options between fully solo and a traditional 3% commission:
 
@@ -25,7 +25,7 @@ There's a spectrum of options between fully solo and a traditional 3% commission
 - **Flat-fee or hourly agent**: writes your offer and manages the contract for a set fee
 - **Traditional full-commission agent**: full service, highest cost
 
-Since the [August 2024 NAR settlement](/resources/buyers-agent-after-nar-settlement), buyers must now negotiate agent fees explicitly, commissions are no longer advertised on the MLS and written buyer agreements are required before touring homes. That transparency is useful. It also means you have to decide upfront what you're willing to pay.<sup>2</sup>
+Since the [August 2024 NAR settlement](/resources/buyers-agent-after-nar-settlement), buyers must now negotiate agent fees explicitly, commissions are no longer advertised on the MLS and written buyer agreements are required before touring homes. That transparency is useful. It also means you have to decide upfront what you're willing to pay.<sup>2</sup> Our [Tennessee NAR settlement guide](/guides/nar-settlement-guide-tennessee-buyers) explains what changed and what it means for buyers here specifically.
 
 For context on what commissions look like today, see our post on [buyer agent commissions in 2026](/resources/buyer-agent-commissions-2026).
 
@@ -33,7 +33,7 @@ Most Tennessee buyers can navigate a standard purchase with BuyUnrepped Full Sup
 
 ## Situation 1: Highly Competitive Market With Multi-Offer Dynamics
 
-In 2025, over 70% of Nashville and Knoxville listings received multiple offers.<sup>3</sup> The Nashville median sale price sits at $481,000. In markets like this, how your offer is presented, and who presents it, matters.
+In 2025, over 70% of [Nashville](/guides/nashville-home-buying-guide) and [Knoxville](/guides/knoxville-home-buying-guide) listings received multiple offers.<sup>3</sup> The Nashville median sale price sits at $481,000. In markets like this, how your offer is presented, and who presents it, matters.
 
 Listing agents have established relationships with buyer's agents they've worked with before. They know which agents submit clean paperwork, hit deadlines, and close without drama. An unknown buyer walking in unrepresented doesn't carry that credibility. That's not unfair, it's how relationship-driven markets work.
 
@@ -67,7 +67,7 @@ If you already know the home you're pursuing has significant issues, foundation 
 
 ## Situation 3: Relocating From Out of State With No Local Knowledge
 
-Tennessee ranked in the top 5 destination states for movers in 2024.<sup>7</sup> Roughly 80% of Tennessee's population growth is coming from out of state, with the largest groups arriving from California (17,000+ movers), Illinois, Florida, Virginia, and New York.<sup>7</sup> In Chattanooga alone, 47% of home searches come from out-of-state buyers.<sup>3</sup>
+Tennessee ranked in the top 5 destination states for movers in 2024.<sup>7</sup> Roughly 80% of Tennessee's population growth is coming from out of state, with the largest groups arriving from California (17,000+ movers), Illinois, Florida, Virginia, and New York.<sup>7</sup> In [Chattanooga](/guides/chattanooga-home-buying-guide) alone, 47% of home searches come from out-of-state buyers.<sup>3</sup>
 
 The problem isn't finding homes, Zillow works from anywhere. The problem is knowing what you're actually buying. Tennessee has 95 counties with wildly different market conditions. What you don't know from a listing:
 
@@ -82,7 +82,7 @@ A buyer's agent who lives and works in that market knows these things without Go
 
 ## Situation 4: Rural Area With Limited Comparable Sales Data
 
-Tennessee has 72 rural counties out of 95.<sup>5</sup> In rural Tennessee, the data problem is real. Land prices range from $5,000 per acre in Hancock County to $400,000 per acre in Williamson County, an 80x spread.<sup>5</sup> And if comparable sales are sparse, pricing a property accurately becomes genuinely hard.
+Tennessee has 72 rural counties out of 95.<sup>5</sup> In rural Tennessee, the data problem is real. Land prices range from $5,000 per acre in Hancock County to $400,000 per acre in Williamson County, an 80x spread.<sup>5</sup> Buyers targeting [Williamson County (Franklin and Brentwood)](/guides/franklin-brentwood-home-buying-guide) should review the specific market dynamics and jumbo loan requirements there. And if comparable sales are sparse, pricing a property accurately becomes genuinely hard.
 
 If you're using USDA financing, this matters even more. USDA loan requirements demand comps from the last 6–12 months within a reasonable proximity to the subject property.<sup>6</sup> In a low-transaction county, that's sometimes impossible to satisfy.
 
@@ -98,7 +98,7 @@ Missed contingency deadlines are expensive. Earnest money deposits in Tennessee 
 
 Who's most at risk here: single-income professionals with demanding jobs, parents with young children, and buyers managing a simultaneous sale. If you're coordinating selling your current home while buying a new one, the administrative load compounds quickly.
 
-**A cost-effective option before a full-commission agent:** A transaction coordinator charges $500–$1,500 flat and handles the administrative side of the deal, managing documents, tracking deadlines, coordinating with all parties. That's not a percentage-based commission. BuyUnrepped Full Support is built specifically for the time-constrained buyer who needs an organized professional in their corner without paying $14,900 for it.
+**A cost-effective option before a full-commission agent:** A transaction coordinator charges $500–$1,500 flat and handles the administrative side of the deal, managing documents, tracking deadlines, coordinating with all parties. That's not a percentage-based commission. BuyUnrepped Full Support is built specifically for the time-constrained buyer who needs an organized professional in their corner without paying $14,900 for it. Use our [closing cost calculator](/tools/closing-cost-calculator) and [mortgage payment estimator](/tools/mortgage-payment-estimator) to budget accurately before your offer goes in.
 
 ## Situation 6: First-Time Buyer Without an Experienced Support System
 
@@ -108,7 +108,7 @@ Seventy-six percent of first-time buyers credited their agent with helping them 
 
 The affordability context in Tennessee makes this harder: 83 of 95 Tennessee counties exceed affordable housing thresholds.<sup>3</sup> First-time buyers are often stretching financially, which makes every error more consequential.
 
-**One thing to check before hiring a full-commission agent:** Tennessee's THDA Great Choice Plus program offers up to $15,000 in down payment assistance for buyers who meet income requirements (640 credit score minimum, DTI ≤ 45%).<sup>11</sup> An experienced agent or housing counselor familiar with THDA programs can be valuable here.
+**One thing to check before hiring a full-commission agent:** Tennessee's THDA Great Choice Plus program offers up to $15,000 in down payment assistance for buyers who meet income requirements (640 credit score minimum, DTI ≤ 45%).<sup>11</sup> Our [Tennessee first-time home buyer guide](/guides/tennessee-first-time-home-buyer-guide) covers all available state and local programs. An experienced agent or housing counselor familiar with THDA programs can be valuable here.
 
 BuyUnrepped Full Support is a genuine middle ground for first-time buyers who have some professional support network, an attorney, an accountant, a family member who has bought homes before, but don't have an agent mentor to walk them through the process. If you have zero support network and are buying for the first time, that's when a traditional buyer's agent provides clear value.
 

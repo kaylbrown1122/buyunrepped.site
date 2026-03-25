@@ -8,7 +8,7 @@ readingTime: "12 min read"
 
 Tennessee's median home price hit a record $353,000 in 2024, the 13th consecutive year of increases.<sup>4</sup> At that price, a single missed deadline or misread clause can cost you thousands in forfeited earnest money, unrecoverable repair bills, or a deal you can't exit. And unlike states with mandatory attorney-review windows, Tennessee gives you no cooling-off period. The moment both parties sign, you're in a binding contract.<sup>4</sup>
 
-Tennessee's standard residential Purchase and Sale Agreement, the RF401 form, is a multi-page, deadline-driven document. In most transactions, the seller's agent is the one who prepared the contract template. After the August 2024 NAR settlement, more buyers are going unrepresented than ever before. Most have never held an RF401 in their hands.
+Tennessee's standard residential Purchase and Sale Agreement, the RF401 form, is a multi-page, deadline-driven document. In most transactions, the seller's agent is the one who prepared the contract template. After the August 2024 NAR settlement, more buyers are going unrepresented than ever before. For context on whether you're a good candidate to go unrepresented, see our post on [when you don't need a buyer's agent](/resources/when-you-dont-need-buyers-agent) or our [Tennessee NAR settlement guide](/guides/nar-settlement-guide-tennessee-buyers). Most have never held an RF401 in their hands.
 
 This post is their decoder ring.
 
@@ -68,7 +68,7 @@ There's also a critical document distinction most buyers miss. Your pre-approval
 
 A common trap: the lender is slow to issue the commitment letter, the contingency deadline approaches, and the buyer doesn't realize they needed to formally exercise or request a written extension before the deadline passed. Once that deadline expires without action, the contingency protection is gone.
 
-**Protective action:** Know your exact financing contingency deadline from day one. Understand the difference between pre-approval and a commitment letter. If the letter won't be ready before the deadline, request a written extension, signed by both parties, before the deadline passes. And if you're budgeting carefully, read our guide on [seller concessions to cover closing costs](/resources/seller-concessions-tennessee-guide) before you finalize your offer structure.
+**Protective action:** Know your exact financing contingency deadline from day one. Understand the difference between pre-approval and a commitment letter. If the letter won't be ready before the deadline, request a written extension, signed by both parties, before the deadline passes. And if you're budgeting carefully, read our guide on [seller concessions to cover closing costs](/resources/seller-concessions-tennessee-guide) and use our [closing cost calculator](/tools/closing-cost-calculator) before you finalize your offer structure.
 
 ---
 
@@ -76,7 +76,7 @@ A common trap: the lender is slow to issue the commitment letter, the contingenc
 
 The appraisal contingency is your protection if the home appraises below your offer price. But many buyers either omit it entirely to strengthen their offer, or sign an appraisal gap coverage clause without fully understanding what they've committed to.<sup>9</sup>
 
-Nashville-Davidson metro home prices rose 65.43% over the past five years. In fast-appreciating markets, and in sub-markets with limited comparable sales, like East Nashville's mix of older bungalows, renovated infill, and new construction, appraisals routinely lag contract prices because closed comparables don't yet reflect today's pricing.<sup>9</sup>
+[Nashville-Davidson](/guides/nashville-home-buying-guide) metro home prices rose 65.43% over the past five years. In fast-appreciating markets, and in sub-markets with limited comparable sales, like East Nashville's mix of older bungalows, renovated infill, and new construction, appraisals routinely lag contract prices because closed comparables don't yet reflect today's pricing.<sup>9</sup>
 
 When an appraisal comes in below your purchase price, you face exactly three options:
 
@@ -227,7 +227,7 @@ Have a real estate attorney review any leaseback addendum before you sign.
 
 Every one of the red flags above is navigable, if you know it exists. The problem is that most unrepresented buyers don't find out about them until after something goes wrong.
 
-The listing agent in your transaction has a fiduciary duty to the seller. Tennessee law permits a listing agent to serve as a "facilitator" for unrepresented buyers, a neutral role that involves providing information but carries no duty of advocacy. If you ask the listing agent to explain a contract clause, you are asking someone whose professional obligation runs to the other side of the deal.<sup>7</sup>
+The listing agent in your transaction has a fiduciary duty to the seller. Tennessee law permits a listing agent to serve as a "facilitator" for unrepresented buyers, a neutral role that involves providing information but carries no duty of advocacy. If you ask the listing agent to explain a contract clause, you are asking someone whose professional obligation runs to the other side of the deal.<sup>7</sup> Our guide on [negotiating directly with the seller's agent](/resources/negotiate-directly-sellers-agent) explains how to handle these interactions effectively.
 
 Tennessee also has no attorney-review cooling-off period. Unlike buyers in New York, New Jersey, or several other states, Tennessee buyers get no automatic window after signing to have an attorney review the deal and raise objections. Once signed, you're bound, and the only exits are the contingencies you negotiated.<sup>11</sup>
 

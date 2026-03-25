@@ -32,7 +32,7 @@ That gap, between the commission and the attorney cost, is money that could cove
 
 ### 1. You're Buying Directly from a Builder
 
-Tennessee has **298 active builders** currently selling new construction statewide.<sup>12</sup> Nashville new construction starts at **$400,000**; East Tennessee ranges from **$280,000 to $450,000**.<sup>12</sup> And every one of those builders has an on-site sales representative whose job, full stop, is to sell you a home at the highest price with the most upgrades.<sup>11</sup>
+Tennessee has **298 active builders** currently selling new construction statewide.<sup>12</sup> [Nashville](/guides/nashville-home-buying-guide) new construction starts at **$400,000**; East Tennessee ranges from **$280,000 to $450,000**.<sup>12</sup> And every one of those builders has an on-site sales representative whose job, full stop, is to sell you a home at the highest price with the most upgrades.<sup>11</sup>
 
 Here's the part builders don't advertise: when you don't have a buyer's agent, the commission savings typically stay with the builder, not you. Builders rarely reduce their pricing because you came without representation.<sup>11</sup>
 
@@ -68,7 +68,7 @@ Tennessee's housing market has shifted materially in buyers' favor. The statewid
 
 That matters for unrepresented buyers specifically. In a hot seller's market, going without an agent is a real disadvantage: you have less access to real-time data, no agent relationships with listing agents, and no one to move fast on your behalf. In a buyer's market, those disadvantages shrink considerably. Sellers are more willing to wait. You have time to do your research.
 
-The case is strongest in slower Tennessee markets. Memphis, with a **$185,000 median home price**<sup>10</sup> and historically longer market times, offers far more runway for an unrepresented buyer than Nashville at $481,000 in a more competitive corridor.
+The case is strongest in slower Tennessee markets. [Memphis](/guides/memphis-home-buying-guide), with a **$185,000 median home price**<sup>10</sup> and historically longer market times, offers far more runway for an unrepresented buyer than Nashville at $481,000 in a more competitive corridor. Similarly, [Chattanooga](/guides/chattanooga-home-buying-guide) has seen 85% inventory growth year-over-year, making it one of the most negotiation-friendly markets in the state.
 
 **Practical leverage signals to look for:** the home has been listed for 30+ days, there's already been a price reduction, area inventory is growing, or the seller is relocating on a deadline. Any of these suggest a seller who is motivated and negotiable. Use that to your advantage, including requesting [seller concessions](/resources/seller-concessions-tennessee-guide) to cover closing costs.
 
@@ -129,7 +129,7 @@ Use this table as a gut check before you decide:
 
 Going unrepresented doesn't mean going unprotected. Three things are non-negotiable regardless of your situation: a **real estate attorney** to review your contracts, an **independent home inspection** before you close, and **mortgage pre-approval** before you make an offer. Those protections cost a fraction of a buyer's agent commission and cover the highest-risk parts of the transaction.<sup>7,8</sup>
 
-If you want a deeper walkthrough of the mechanics, contracts, contingencies, inspection negotiations, and closing, our [complete guide to buying without a buyer's agent](/resources/buying-home-without-buyers-agent-guide) covers every step. And if you're still weighing the decision, [do you still need a buyer's agent after the NAR settlement?](/resources/buyers-agent-after-nar-settlement) lays out the honest pros and cons.
+If you want a deeper walkthrough of the mechanics, contracts, contingencies, inspection negotiations, and closing, our [complete guide to buying without a buyer's agent](/resources/buying-home-without-buyers-agent-guide) covers every step. The [step-by-step buying guide](/guides/buying-without-buyers-agent) goes even deeper with city-specific closing costs and checklists. And if you're still weighing the decision, [do you still need a buyer's agent after the NAR settlement?](/resources/buyers-agent-after-nar-settlement) lays out the honest pros and cons.
 
 ## How BuyUnrepped Helps
 
@@ -139,7 +139,7 @@ That's what BuyUnrepped is built for. Professional-grade tools and guidance at a
 
 - **Tennessee-specific purchase agreement templates** so your contracts protect you from the first offer forward
 - **Comparable sales data** to replace what an agent's CMA would provide
-- **Flat-fee pricing**: know your exact cost upfront, with no 3.10% surprises at closing
+- **Flat-fee pricing**: know your exact cost upfront, with no 3.10% surprises at closing. Use our [closing cost calculator](/tools/closing-cost-calculator) and [home affordability calculator](/tools/home-affordability-calculator) to see your full picture before you make an offer.
 - **Step-by-step closing coordination** so nothing falls through the cracks between contract and keys
 - **Expert support when you need it**, without tying the cost to a commission
 
@@ -151,9 +151,9 @@ There's one more Tennessee-specific reason this matters: since commission rebate
 
 The right question isn't "should I use a buyer's agent?" It's "what specific value would an agent add to my specific situation, and is it worth the commission?"
 
-For the 8 types of buyers described above, that value is limited enough that the cost doesn't justify itself. The NAR settlement made the fee visible. Now it's your decision whether to pay it.
+For the 8 types of buyers described above, that value is limited enough that the cost doesn't justify itself. The NAR settlement made the fee visible. Now it's your decision whether to pay it. Our [Tennessee NAR settlement guide](/guides/nar-settlement-guide-tennessee-buyers) covers the full context for Tennessee buyers specifically.
 
-[Use our savings calculator](/savings) to see exactly what a buyer's agent commission would cost on your purchase, then decide.
+[Use our savings calculator](/savings) to see exactly what a buyer's agent commission would cost on your purchase, then decide. Our [mortgage payment estimator](/tools/mortgage-payment-estimator) can help you model how redirecting that commission savings into a rate buydown would affect your monthly payment.
 
 ---
 

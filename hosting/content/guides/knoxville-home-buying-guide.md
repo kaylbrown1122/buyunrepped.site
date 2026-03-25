@@ -190,6 +190,17 @@ For a full overview of loan programs available statewide, see our post on [Tenne
 
 In a market where entry-level inventory is limited and prices have appreciated significantly, keeping $5,000–$6,000 that would otherwise go to a buyer's agent can mean the difference between a larger down payment that eliminates PMI, or a mortgage rate buydown that saves you money every month for years.
 
+## Buying in a Different Tennessee City?
+
+Each Tennessee market has distinct neighborhoods, conditions, and closing costs. Compare your options:
+
+- [Nashville Home Buying Guide](/guides/nashville-home-buying-guide)
+- [Memphis Home Buying Guide](/guides/memphis-home-buying-guide)
+- [Chattanooga Home Buying Guide](/guides/chattanooga-home-buying-guide)
+- [Franklin and Brentwood Home Buying Guide](/guides/franklin-brentwood-home-buying-guide)
+
+Use our [closing cost calculator](/tools/closing-cost-calculator) to estimate your Knox County cash-to-close before making an offer.
+
 ## How BuyUnrepped Helps Knoxville Buyers
 
 Knoxville's market moves faster than Memphis and has more neighborhood complexity than most Tennessee markets. Buyers who understand the specific characteristics of their target neighborhoods, and who have professional support without paying a full commission, are the ones positioned to make smart offers and close confidently.

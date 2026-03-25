@@ -20,9 +20,9 @@ Once you're under contract, your Tennessee purchase agreement gives you a **7–
 
 One thing to understand clearly before you start: **the seller's disclosure is not a warranty.** Under TCA §66-5-201–210, sellers disclose what they know, not what's actually wrong with the property.<sup>6</sup> A seller who hasn't noticed the rust on the HVAC air handler isn't required to disclose it. That's what the inspection is for. As a Memphis real estate attorney summarized it: "Sellers are only required to disclose based on the information they have."<sup>6</sup>
 
-Tennessee inspection costs run **$325–$700** depending on home size and city. Nashville averages $535–$565 for a 2,500 sq. ft. home; Chattanooga runs $350–$550; Knoxville around $325. That's the foundation inspection, add-ons for radon, termites, sewer, and mold are separate line items. Nationally, **88% of buyers use a professional inspector**, and only 14% waived inspections recently, the lowest waiver rate in five years.<sup>11</sup> There's a reason for that.
+Tennessee inspection costs run **$325–$700** depending on home size and city. [Nashville](/guides/nashville-home-buying-guide) averages $535–$565 for a 2,500 sq. ft. home; [Chattanooga](/guides/chattanooga-home-buying-guide) runs $350–$550; [Knoxville](/guides/knoxville-home-buying-guide) around $325. That's the foundation inspection, add-ons for radon, termites, sewer, and mold are separate line items. Nationally, **88% of buyers use a professional inspector**, and only 14% waived inspections recently, the lowest waiver rate in five years.<sup>11</sup> There's a reason for that.
 
-For a full walkthrough of how the [inspection contingency](/resources/buying-home-without-buyers-agent-guide) fits into the unrepresented buying process, see our complete guide to buying without a buyer's agent.
+For a full walkthrough of how the [inspection contingency](/resources/buying-home-without-buyers-agent-guide) fits into the unrepresented buying process, see our complete guide to buying without a buyer's agent. For city-specific inspection cost details, see our guides for [Franklin and Brentwood](/guides/franklin-brentwood-home-buying-guide) and [Memphis](/guides/memphis-home-buying-guide).
 
 ## The 9 Tennessee Home Inspection Issues That Kill Deals
 
@@ -158,7 +158,7 @@ When sellers make repairs themselves, especially under time pressure before clos
 
 A **closing credit** is almost always the better path. You receive the money at closing and hire your own contractor after you take possession. You control the quality, the timeline, and the materials.<sup>10</sup>
 
-One important constraint: seller credits under most loan programs can only be applied to closing costs, not your down payment. Confirm the credit amount is within your loan's concession cap before you negotiate. The [seller concessions guide](/resources/seller-concessions-tennessee-guide) breaks down the limits for conventional, FHA, VA, and USDA loans.
+One important constraint: seller credits under most loan programs can only be applied to closing costs, not your down payment. Confirm the credit amount is within your loan's concession cap before you negotiate. The [seller concessions guide](/resources/seller-concessions-tennessee-guide) breaks down the limits for conventional, FHA, VA, and USDA loans. Before you negotiate, use our [mortgage payment estimator](/tools/mortgage-payment-estimator) to understand how a credit applied toward a rate buydown would affect your monthly costs.
 
 ### Step 4: Submit a Focused Repair Proposal in Writing
 
@@ -220,7 +220,7 @@ Both organizations hold members to standards of practice and ethics beyond the s
 
 **One timing note**: during the spring and summer buying season, inspectors in Nashville, Knoxville, and Chattanooga can have one- to two-week wait times. If your inspection period is 7 days, a booked-solid inspector means you blow your deadline. Identify your inspector before you go under contract, not after.
 
-Do not use the inspector recommended by the listing agent. Find your own. The listing agent's incentive is to close the deal, that doesn't align with your need for an objective assessment.
+Do not use the inspector recommended by the listing agent. Find your own. The listing agent's incentive is to close the deal, that doesn't align with your need for an objective assessment. For guidance on how to work with listing agents as an unrepresented buyer, see our guide on [negotiating directly with the seller's agent](/resources/negotiate-directly-sellers-agent).
 
 ## How BuyUnrepped Helps
 
@@ -230,8 +230,8 @@ That's exactly what BuyUnrepped is built to provide:
 
 - **Tennessee-specific purchase agreements** with properly structured inspection contingency language and Repair Proposal formatting, so your deadlines are clear and your rights stay intact from day one
 - **Step-by-step guidance through the Resolution Period**: so you know what to submit, when, and how to frame your requests in a way sellers take seriously
-- **Closing cost calculators and market data**: so you can evaluate whether a proposed credit actually makes the deal work, or whether you're better off walking
-- **Flat-fee pricing**: keep the $7,000–$14,000 you would have paid a buyer's agent, and redirect it toward the repairs you negotiate
+- **Closing cost calculators and market data**: use our [closing cost calculator](/tools/closing-cost-calculator) to evaluate whether a proposed credit actually makes the deal work, or whether you're better off walking
+- **Flat-fee pricing**: keep the $7,000–$14,000 you would have paid a buyer's agent, and redirect it toward the repairs you negotiate. Not sure if you even need an agent? See our post on [when you don't need a buyer's agent](/resources/when-you-dont-need-buyers-agent).
 
 Inspections are where deals either get saved or fall apart. With the right framework, you don't need a buyer's agent to navigate them, you need a clear process and the right documents.
 

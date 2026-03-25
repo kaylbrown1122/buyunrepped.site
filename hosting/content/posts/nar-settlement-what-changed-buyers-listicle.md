@@ -8,7 +8,7 @@ readingTime: "7 min read"
 
 The NAR settlement was called the biggest shake-up in real estate in decades. The reality is more nuanced, some things changed dramatically, some barely moved, and one surprise went the wrong direction entirely.
 
-This is the fast-reference version: eight specific changes, in plain English, with the numbers that matter for Tennessee buyers. For the full breakdown of the settlement history and the pending Eighth Circuit appeal, see [our complete guide](/resources/nar-settlement-home-buyers-2026).<sup>1</sup><sup>2</sup>
+This is the fast-reference version: eight specific changes, in plain English, with the numbers that matter for Tennessee buyers. For the full breakdown of the settlement history and the pending Eighth Circuit appeal, see [our complete guide](/resources/nar-settlement-home-buyers-2026) or our [Tennessee buyer's NAR settlement guide](/guides/nar-settlement-guide-tennessee-buyers).<sup>1</sup><sup>2</sup>
 
 Effective August 17, 2024, here's what actually changed.
 
@@ -67,7 +67,7 @@ Here's what the data shows after 18 months under the new rules:
 
 Tennessee's average buyer-agent rate sits at **3.10%**: well above the 2.43% national average.<sup>8</sup> On a $386,700 Tennessee median-priced home, that's $11,988. Discuss compensation in dollar amounts, not percentages. Propose a flat fee. The new rules make this conversation expected, not awkward.
 
-See the full commission cost breakdown by Tennessee market in our [buyer agent commissions guide](/resources/buyer-agent-commissions-2026).
+See the full commission cost breakdown by Tennessee market in our [buyer agent commissions guide](/resources/buyer-agent-commissions-2026). Our [guide to buyer agent costs in Tennessee](/guides/buyer-agent-cost-tennessee) goes deeper on what you actually get for that fee.
 
 ## #4: Sellers Can Still Offer to Pay Buyer Agents, Just Not on the MLS
 
@@ -120,7 +120,7 @@ For Tennessee buyers, the paperwork side isn't new. The real shift is financial 
 Two Tennessee-specific dynamics make that negotiation especially high-stakes:
 
 1. **Tennessee's commission rates are above average.** At 3.10% for buyer's agents versus 2.43% nationally, there's more to save per transaction here than in most states.<sup>8</sup>
-2. **Tennessee's no-income-tax status keeps attracting buyers.** Ongoing in-migration from California, Illinois, and Georgia, particularly into Nashville and Knoxville, sustains demand and adds competitive pressure, especially in those markets.<sup>10</sup>
+2. **Tennessee's no-income-tax status keeps attracting buyers.** Ongoing in-migration from California, Illinois, and Georgia, particularly into [Nashville](/guides/nashville-home-buying-guide) and [Knoxville](/guides/knoxville-home-buying-guide), sustains demand and adds competitive pressure, especially in those markets.<sup>10</sup>
 
 The opportunity is proportionally larger in Tennessee. So is the cost of not negotiating.
 
@@ -137,7 +137,7 @@ What to watch in 2026:
 - **Eighth Circuit ruling (expected late summer/fall 2026).** The appeals court heard oral arguments on January 14, 2026. A reversal is considered unlikely, but a ruling against the settlement could reshape the landscape. Current rule changes remain fully in force during the appeal.<sup>9</sup>
 - **DOJ antitrust investigation.** The Department of Justice maintains an active investigation into NAR practices. Additional regulatory changes could follow independent of the settlement outcome.<sup>9</sup>
 
-Don't wait for the market to lower commissions on your behalf. The buyers who save are the ones who negotiate, or skip the full-commission agent entirely.
+Don't wait for the market to lower commissions on your behalf. The buyers who save are the ones who negotiate, or skip the full-commission agent entirely. Our post on [when you don't need a buyer's agent](/resources/when-you-dont-need-buyers-agent) breaks down exactly who those buyers are.
 
 ## How BuyUnrepped Helps
 
@@ -149,7 +149,7 @@ BuyUnrepped is built for Tennessee buyers who want professional support without 
 
 - **State-approved Tennessee purchase agreement templates** so your contracts protect you
 - **Step-by-step closing coordination** so nothing falls through the cracks
-- **Comparable sales data and closing cost calculators** to replace the research an agent would provide
+- **Comparable sales data and [closing cost calculator](/tools/closing-cost-calculator)** to replace the research an agent would provide
 - **Expert support when you need it**: at a fraction of the traditional commission
 
 The settlement made commissions visible. BuyUnrepped makes them optional.

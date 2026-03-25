@@ -182,6 +182,17 @@ For the full fee breakdown, see our [Tennessee closing costs guide](/resources/t
 
 On a $720,000 home, $15,000 in savings is a meaningful financial outcome. It could fund a mortgage rate buydown that lowers your payment by $200–$300/month for the life of the loan. It could cover your entire closing cost obligation without relying on seller concessions. Or it could simply stay in your account as the emergency fund that every new homeowner needs.
 
+## Buying in a Different Tennessee City?
+
+Each Tennessee market has distinct neighborhoods, conditions, and closing costs. Compare your options:
+
+- [Nashville Home Buying Guide](/guides/nashville-home-buying-guide)
+- [Memphis Home Buying Guide](/guides/memphis-home-buying-guide)
+- [Knoxville Home Buying Guide](/guides/knoxville-home-buying-guide)
+- [Chattanooga Home Buying Guide](/guides/chattanooga-home-buying-guide)
+
+Use our [closing cost calculator](/tools/closing-cost-calculator) to estimate your Williamson County cash-to-close, and our [home affordability calculator](/tools/home-affordability-calculator) to model what you qualify for at these price points.
+
 ## How BuyUnrepped Helps Franklin and Brentwood Buyers
 
 Williamson County's market is more complex than a standard Tennessee transaction. Subdivision covenants, HOA structures, school zone verification, jumbo loan requirements, and new construction contracts all add layers that benefit from professional support, even for experienced buyers.

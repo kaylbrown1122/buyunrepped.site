@@ -186,6 +186,17 @@ For a full overview of statewide loan programs, see our post on [Tennessee loan 
 
 In a market where Chattanooga's appeal continues to attract buyers competing for limited inventory, having $5,000–$6,500 more in your pocket means a stronger down payment, a mortgage rate buydown, or simply a better financial position on day one of ownership.
 
+## Buying in a Different Tennessee City?
+
+Each Tennessee market has distinct neighborhoods, conditions, and closing costs. Compare your options:
+
+- [Nashville Home Buying Guide](/guides/nashville-home-buying-guide)
+- [Memphis Home Buying Guide](/guides/memphis-home-buying-guide)
+- [Knoxville Home Buying Guide](/guides/knoxville-home-buying-guide)
+- [Franklin and Brentwood Home Buying Guide](/guides/franklin-brentwood-home-buying-guide)
+
+Use our [closing cost calculator](/tools/closing-cost-calculator) to estimate your Hamilton County cash-to-close before making an offer.
+
 ## How BuyUnrepped Helps Chattanooga Buyers
 
 Chattanooga's geographic complexity, multi-municipality structure, and the Tennessee-Georgia border all make this a market where professional support matters, even for buyers going without a traditional agent.
