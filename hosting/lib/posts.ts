@@ -55,12 +55,14 @@ export function getPostBySlug(slug: string): Post {
 export async function getPostBySlugWithHtml(slug: string): Promise<PostWithHtml> {
   const post = getPostBySlug(slug);
 
-  // remark-html strips raw HTML tags, so we protect <sup> tags with placeholders
-  const protected_content = post.content.replace(/<sup>(\d+)<\/sup>/g, 'SUPCITE_$1_END');
+  // remark-html strips raw HTML tags, so we protect <sup> tags with placeholders.
+  // The placeholder must start with punctuation (;) so CommonMark's bold-closing rule
+  // still works when ** is preceded by punctuation like . or ".
+  const protected_content = post.content.replace(/<sup>(\d+,?\d*)<\/sup>/g, ';SUPCITE$1;');
   const processedContent = await remark().use(gfm).use(html).process(protected_content);
   const contentHtml = processedContent
     .toString()
-    .replace(/SUPCITE_(\d+)_END/g, '<sup>$1</sup>')
+    .replace(/;SUPCITE([\d,]+);/g, '<sup>$1</sup>')
     .replace(/<\/sup><sup>/g, ',');
 
   return {

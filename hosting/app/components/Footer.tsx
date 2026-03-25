@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
                     {/* Brand Column */}
-                    <div className="md:col-span-4 space-y-6">
+                    <div className="md:col-span-3 space-y-6">
                         <Link href="/" className="flex items-center gap-2">
                             <div className="bg-white/10 p-1.5 rounded-lg">
                                 <Home className="w-5 h-5 text-white" />
@@ -35,7 +35,21 @@ export default function Footer() {
                     </div>
 
                     {/* Link Columns */}
-                    <div className="md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div className="md:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div>
+                            <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Locations</h3>
+                            <ul className="space-y-3">
+                                <li><Link href="/locations/nashville" className="text-sm text-gray-400 hover:text-white transition-colors">Nashville</Link></li>
+                                <li><Link href="/locations/franklin" className="text-sm text-gray-400 hover:text-white transition-colors">Franklin</Link></li>
+                                <li><Link href="/locations/murfreesboro" className="text-sm text-gray-400 hover:text-white transition-colors">Murfreesboro</Link></li>
+                                <li><Link href="/locations/knoxville" className="text-sm text-gray-400 hover:text-white transition-colors">Knoxville</Link></li>
+                                <li><Link href="/locations/chattanooga" className="text-sm text-gray-400 hover:text-white transition-colors">Chattanooga</Link></li>
+                                <li><Link href="/locations/clarksville" className="text-sm text-gray-400 hover:text-white transition-colors">Clarksville</Link></li>
+                                <li><Link href="/locations/memphis" className="text-sm text-gray-400 hover:text-white transition-colors">Memphis</Link></li>
+                                <li><Link href="/locations/johnson-city" className="text-sm text-gray-400 hover:text-white transition-colors">Johnson City</Link></li>
+                                <li><Link href="/locations/jackson" className="text-sm text-gray-400 hover:text-white transition-colors">Jackson</Link></li>
+                            </ul>
+                        </div>
                         <div>
                             <h3 className="text-sm font-bold text-white tracking-wider uppercase mb-4">Resources</h3>
                             <ul className="space-y-3">

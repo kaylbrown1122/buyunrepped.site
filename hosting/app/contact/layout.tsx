@@ -1,0 +1,11 @@
+export const metadata = {
+  title: 'Contact BuyUnrepped | Tennessee Home Buying Support',
+  description: 'Get in touch with BuyUnrepped. Questions about buying a home in Tennessee without a buyer\'s agent? We\'re here to help.',
+  alternates: {
+    canonical: 'https://buyunrepped.com/contact',
+  },
+};
+
+export default function ContactLayout({ children }: { children: React.ReactNode }) {
+  return children;
+}
