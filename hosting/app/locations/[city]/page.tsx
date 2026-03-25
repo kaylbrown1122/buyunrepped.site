@@ -665,12 +665,17 @@ const cities: Record<string, CityData> = {
   },
 };
 
+interface PageProps {
+  params: Promise<{ city: string }>;
+}
+
 export function generateStaticParams() {
   return Object.keys(cities).map((city) => ({ city }));
 }
 
-export function generateMetadata({ params }: { params: { city: string } }) {
-  const city = cities[params.city];
+export async function generateMetadata({ params }: PageProps) {
+  const { city: citySlug } = await params;
+  const city = cities[citySlug];
   if (!city) return {};
 
   const savings = Math.round(city.medianPrice * 0.03);
@@ -700,8 +705,9 @@ export function generateMetadata({ params }: { params: { city: string } }) {
   };
 }
 
-export default function CityPage({ params }: { params: { city: string } }) {
-  const city = cities[params.city];
+export default async function CityPage({ params }: PageProps) {
+  const { city: citySlug } = await params;
+  const city = cities[citySlug];
   if (!city) notFound();
 
   const savings = Math.round(city.medianPrice * 0.03);
