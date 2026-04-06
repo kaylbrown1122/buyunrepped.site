@@ -20,7 +20,7 @@ export const metadata = {
     'save on home purchase Tennessee',
     'FSBO buyer Tennessee',
   ],
-  authors: [{ name: 'Kayla Brown', url: 'https://buyunrepped.com/about' }],
+  authors: [{ name: 'Kayla Brown', url: 'https://www.buyunrepped.com/about' }],
   creator: 'BuyUnrepped',
   publisher: 'BuyUnrepped',
   robots: {
@@ -34,13 +34,13 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://buyunrepped.com',
+    url: 'https://www.buyunrepped.com',
     siteName: 'BuyUnrepped',
     title: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
     description: 'Tennessee home buyers: skip the buyer\'s agent and save thousands. Flat-fee support from a licensed Nashville broker. Professional forms, offer strategy, and transaction coordination.',
     images: [
       {
-        url: 'https://buyunrepped.com/images/og-default.png',
+        url: 'https://www.buyunrepped.com/images/og-default.png',
         width: 1200,
         height: 630,
         alt: 'BuyUnrepped - Home Buying Built for the Buyer',
@@ -51,11 +51,11 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
     description: 'Tennessee home buyers: skip the buyer\'s agent and save thousands. Flat-fee support from a licensed Nashville broker.',
-    images: ['https://buyunrepped.com/images/og-default.png'],
+    images: ['https://www.buyunrepped.com/images/og-default.png'],
     creator: '@buyunrepped',
   },
   alternates: {
-    canonical: 'https://buyunrepped.com',
+    canonical: 'https://www.buyunrepped.com',
   },
 };
 
@@ -64,8 +64,8 @@ const organizationSchema = {
   '@type': 'ProfessionalService',
   name: 'BuyUnrepped',
   description: 'Flat-fee home buying support for unrepresented buyers in Tennessee. Licensed broker assistance without traditional buyer agent commissions.',
-  url: 'https://buyunrepped.com',
-  logo: 'https://buyunrepped.com/images/logo.png',
+  url: 'https://www.buyunrepped.com',
+  logo: 'https://www.buyunrepped.com/images/logo.png',
   founder: {
     '@type': 'Person',
     name: 'Kayla Brown',

@@ -4,10 +4,10 @@ export const metadata = {
   openGraph: {
     title: 'Pricing | Flat-Fee Home Buying Support in Tennessee',
     description: 'Starting at $995 — professional home buying support without the 3% buyer agent commission. Flat fee regardless of home price.',
-    url: 'https://buyunrepped.com/pricing',
+    url: 'https://www.buyunrepped.com/pricing',
   },
   alternates: {
-    canonical: 'https://buyunrepped.com/pricing',
+    canonical: 'https://www.buyunrepped.com/pricing',
   },
 };
 

@@ -4,10 +4,10 @@ export const metadata = {
   openGraph: {
     title: 'About BuyUnrepped | Nashville Broker Kayla Brown',
     description: 'Founded by a Nashville Principal Broker with 10+ years of experience. Learn how BuyUnrepped helps Tennessee buyers purchase homes on their own terms.',
-    url: 'https://buyunrepped.com/about',
+    url: 'https://www.buyunrepped.com/about',
   },
   alternates: {
-    canonical: 'https://buyunrepped.com/about',
+    canonical: 'https://www.buyunrepped.com/about',
   },
 };
 

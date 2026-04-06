@@ -5,7 +5,7 @@ import SectionBadge from '../../components/SectionBadge';
 import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-const BASE_URL = 'https://buyunrepped.com';
+const BASE_URL = 'https://www.buyunrepped.com';
 
 interface PriceRange {
   type: string;

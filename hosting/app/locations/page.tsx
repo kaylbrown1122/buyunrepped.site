@@ -10,10 +10,10 @@ export const metadata = {
   openGraph: {
     title: 'Tennessee Locations | BuyUnrepped',
     description: 'Buy a home without a buyer\'s agent in Nashville, Franklin, Murfreesboro, Knoxville, Chattanooga, Clarksville, and Memphis. Flat-fee support statewide.',
-    url: 'https://buyunrepped.com/locations',
+    url: 'https://www.buyunrepped.com/locations',
   },
   alternates: {
-    canonical: 'https://buyunrepped.com/locations',
+    canonical: 'https://www.buyunrepped.com/locations',
   },
 };
 
