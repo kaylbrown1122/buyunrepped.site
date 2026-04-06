@@ -112,10 +112,10 @@ export default function AffordabilityCalculatorPage() {
 
       <main className="pb-20">
         {/* Hero */}
-        <section className="pt-20 pb-16 text-center max-w-4xl mx-auto px-4">
+        <section className="pt-12 sm:pt-20 pb-10 sm:pb-16 text-center max-w-4xl mx-auto px-4">
           <SectionBadge>Home Affordability Calculator</SectionBadge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4 leading-tight">
-            How much home <br />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 mt-4 leading-tight">
+            How much home{' '}
             <span className="text-brand-blue">can you afford?</span>
           </h1>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">

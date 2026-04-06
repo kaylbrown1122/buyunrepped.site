@@ -44,7 +44,7 @@ function ScenarioCard({
 
   return (
     <div
-      className={`rounded-2xl p-6 border-2 transition-all ${
+      className={`rounded-2xl p-4 sm:p-6 border-2 transition-all ${
         isRecommended
           ? 'border-brand-blue bg-brand-blue/5'
           : 'border-gray-100 bg-gray-50/50'
@@ -73,7 +73,7 @@ function ScenarioCard({
 
       <div className="mb-4">
         <p className="text-xs text-gray-400 uppercase tracking-wider font-bold mb-1">Max Home Price</p>
-        <p className={`text-3xl font-bold ${isRecommended ? 'text-brand-navy' : 'text-gray-600'}`}>
+        <p className={`text-2xl sm:text-3xl font-bold ${isRecommended ? 'text-brand-navy' : 'text-gray-600'}`}>
           {fmt(scenario.maxHomePrice)}
         </p>
       </div>
@@ -109,7 +109,7 @@ function ScenarioCard({
 export default function AffordabilityResultsPanel({ results }: Props) {
   if (!results) {
     return (
-      <div className="lg:col-span-7 p-8 md:p-12 bg-white flex flex-col justify-center min-h-[700px]">
+      <div className="lg:col-span-7 p-4 sm:p-8 lg:p-12 bg-white flex flex-col justify-center min-h-[300px] lg:min-h-[700px]">
         <div className="flex flex-col items-center justify-center text-center h-full opacity-50">
           <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
             <DollarSign className="w-10 h-10 text-gray-300" />
@@ -127,11 +127,11 @@ export default function AffordabilityResultsPanel({ results }: Props) {
   const fmt = (n: number) => `$${n.toLocaleString()}`;
 
   return (
-    <div className="lg:col-span-7 p-8 md:p-12 bg-white flex flex-col justify-center">
+    <div className="lg:col-span-7 p-4 sm:p-8 lg:p-12 bg-white flex flex-col justify-center">
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 space-y-6">
 
         {/* Header summary */}
-        <div className="bg-gradient-to-br from-brand-navy to-black rounded-2xl p-8 text-white relative overflow-hidden">
+        <div className="bg-gradient-to-br from-brand-navy to-black rounded-2xl p-5 sm:p-8 text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 p-3 opacity-10">
             <TrendingUp className="w-32 h-32" />
           </div>
@@ -139,29 +139,29 @@ export default function AffordabilityResultsPanel({ results }: Props) {
             <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-2">
               Your Affordability Range
             </p>
-            <div className="flex items-baseline gap-3 mb-1">
-              <span className="text-4xl md:text-5xl font-bold tracking-tight">
+            <div className="flex items-baseline gap-2 sm:gap-3 mb-1 flex-wrap">
+              <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
                 {fmt(conservative.maxHomePrice)}
               </span>
               <span className="text-gray-400 text-lg">–</span>
-              <span className="text-3xl font-bold text-gray-300">
+              <span className="text-2xl sm:text-3xl font-bold text-gray-300">
                 {fmt(stretch.maxHomePrice)}
               </span>
             </div>
             <p className="text-gray-400 text-sm mt-1">Conservative to stretch</p>
 
-            <div className="grid grid-cols-3 gap-3 mt-6">
-              <div className="bg-white/10 rounded-xl p-4">
-                <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Monthly Income</p>
-                <p className="text-lg font-bold">{fmt(grossMonthlyIncome)}</p>
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-5 sm:mt-6">
+              <div className="bg-white/10 rounded-xl p-2 sm:p-4">
+                <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1 leading-tight">Monthly Income</p>
+                <p className="text-sm sm:text-lg font-bold truncate">{fmt(grossMonthlyIncome)}</p>
               </div>
-              <div className="bg-white/10 rounded-xl p-4">
-                <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Monthly Debts</p>
-                <p className="text-lg font-bold">{fmt(monthlyDebts)}</p>
+              <div className="bg-white/10 rounded-xl p-2 sm:p-4">
+                <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1 leading-tight">Monthly Debts</p>
+                <p className="text-sm sm:text-lg font-bold truncate">{fmt(monthlyDebts)}</p>
               </div>
-              <div className="bg-white/10 rounded-xl p-4">
-                <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Down Payment</p>
-                <p className="text-lg font-bold">{fmt(results.downPaymentAmount)}</p>
+              <div className="bg-white/10 rounded-xl p-2 sm:p-4">
+                <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1 leading-tight">Down Payment</p>
+                <p className="text-sm sm:text-lg font-bold truncate">{fmt(results.downPaymentAmount)}</p>
                 <p className="text-xs text-gray-400">{results.downPaymentPercent.toFixed(1)}%</p>
               </div>
             </div>

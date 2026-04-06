@@ -54,9 +54,10 @@ function InputField({
         <input
           type="text"
           id={id}
-          className={`block w-full ${prefix ? (large ? 'pl-10' : 'pl-8') : 'pl-4'} ${suffix ? 'pr-8' : 'pr-4'} ${large ? 'py-4 text-3xl md:text-4xl' : 'py-3 text-lg'} font-bold text-brand-navy bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all shadow-sm`}
+          className={`block w-full ${prefix ? (large ? 'pl-10' : 'pl-8') : 'pl-4'} ${suffix ? 'pr-8' : 'pr-4'} ${large ? 'py-4 text-2xl sm:text-3xl md:text-4xl' : 'py-3 text-lg'} font-bold text-brand-navy bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all shadow-sm`}
           placeholder={placeholder}
           value={value}
+          inputMode="decimal"
           onChange={onChange}
         />
         {suffix && (
@@ -84,7 +85,7 @@ export default function AffordabilityInputs({
   onInsuranceChange,
 }: Props) {
   return (
-    <div className="lg:col-span-5 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-gray-100 bg-gray-50/30 flex flex-col justify-center">
+    <div className="lg:col-span-5 p-4 sm:p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-gray-100 bg-gray-50/30 flex flex-col justify-center">
       <div className="space-y-6">
 
         {/* Annual Income */}
@@ -127,6 +128,7 @@ export default function AffordabilityInputs({
                 aria-label="Down payment amount"
                 className={`block w-full ${inputs.downPaymentType === 'dollar' ? 'pl-8' : 'pl-4'} pr-8 py-3 text-lg font-bold text-brand-navy bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all shadow-sm`}
                 value={displayDown}
+                inputMode="decimal"
                 onChange={onDownPaymentChange}
               />
               {inputs.downPaymentType === 'percent' && (
