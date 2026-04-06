@@ -24,11 +24,11 @@ export const metadata = {
   creator: 'BuyUnrepped',
   publisher: 'BuyUnrepped',
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   },
   openGraph: {
