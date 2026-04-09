@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   title: 'Home Buying Guides for Tennessee | BuyUnrepped',
   description:
     'Comprehensive guides for Tennessee home buyers: going unrepresented, city-specific playbooks, first-time buyer resources, and more.',
+  openGraph: {
+    title: 'Home Buying Guides for Tennessee | BuyUnrepped',
+    description: 'Comprehensive guides for Tennessee home buyers: going unrepresented, city-specific playbooks, first-time buyer resources, and more.',
+    url: 'https://www.buyunrepped.com/guides',
+  },
+  alternates: {
+    canonical: 'https://www.buyunrepped.com/guides',
+  },
 };
 
 const CATEGORY_ORDER = ['Guides', 'Finance', 'Market Insights'];

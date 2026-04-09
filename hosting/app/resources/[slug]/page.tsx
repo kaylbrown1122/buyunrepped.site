@@ -20,6 +20,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.frontmatter.title} | BuyUnrepped`,
     description: post.frontmatter.description,
+    openGraph: {
+      type: 'article',
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      url: `https://www.buyunrepped.com/resources/${slug}`,
+      publishedTime: post.frontmatter.date,
+      authors: ['https://www.buyunrepped.com/about'],
+    },
+    alternates: {
+      canonical: `https://www.buyunrepped.com/resources/${slug}`,
+    },
   };
 }
 

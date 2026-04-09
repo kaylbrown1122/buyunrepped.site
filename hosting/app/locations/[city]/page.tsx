@@ -698,6 +698,14 @@ export async function generateMetadata({ params }: PageProps) {
       title: `Buy a Home in ${city.name}, TN Without a Buyer's Agent`,
       description: `Save up to $${formattedSavings} when buying a home in ${city.name}. Flat-fee support from a licensed TN broker — no buyer's agent commission required.`,
       url: `${BASE_URL}/locations/${city.slug}`,
+      images: [
+        {
+          url: 'https://www.buyunrepped.com/images/og-default.png',
+          width: 1200,
+          height: 630,
+          alt: 'BuyUnrepped - Home Buying Built for the Buyer',
+        },
+      ],
     },
     alternates: {
       canonical: `${BASE_URL}/locations/${city.slug}`,
