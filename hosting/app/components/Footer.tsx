@@ -15,16 +15,12 @@ function EqualHousingIcon() {
 
 const brokerageFields: [string, React.ReactNode][] = [
     ['Firm Legal Name', 'BuyUnrepped'],
-    ['DBA', 'BuyUnrepped'],
     ['Firm License No.', '267134'],
     ['Firm Phone', <a key="phone" href="tel:6152083390" className="hover:text-white transition-colors">615-208-3390</a>],
     ['Firm Address', '2509 Cruzen St, Nashville, TN 37211'],
     ['State of Licensure', 'Tennessee'],
-    ['Principal Broker', 'Kayla Brown'],
-    ['Broker License No.', '339134'],
-    ['Agent License No.', '339134'],
+    ['Principal Broker', 'Kayla Brown · License #339134'],
     ['Entity Type', 'Licensed Tennessee Real Estate Brokerage'],
-    ['Supervision', 'Under Principal Broker Kayla Brown (Lic. #339134)'],
     ['IDX Listings', 'Not currently in use on this site'],
 ];
 
@@ -35,7 +31,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
                     {/* Brand Column */}
-                    <div className="md:col-span-4 space-y-6">
+                    <div className="md:col-span-5 space-y-6">
                         <Link href="/" className="flex items-center gap-2.5">
                             <div className="bg-white/10 p-1.5 rounded-lg">
                                 <Home className="size-5 text-white" />
@@ -43,7 +39,7 @@ export default function Footer() {
                             <span className="text-xl font-semibold text-white tracking-tight">BuyUnrepped</span>
                         </Link>
                         <p className="text-sm text-gray-400 text-pretty max-w-xs">
-                            Empowering Tennessee home buyers to purchase directly, negotiate better, and save the buyer agent commission.
+                            Licensed Tennessee brokerage: offer prep and transaction coordination for buyers who stay unrepresented.
                         </p>
                         <div className="flex gap-2">
                             <a
@@ -79,29 +75,7 @@ export default function Footer() {
                     </div>
 
                     {/* Link Columns */}
-                    <div className="md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
-                        <div>
-                            <p className="text-xs font-semibold text-white/50 tracking-widest uppercase mb-4">Locations</p>
-                            <ul role="list" className="space-y-2.5">
-                                {[
-                                    ['Nashville', '/locations/nashville'],
-                                    ['Franklin', '/locations/franklin'],
-                                    ['Murfreesboro', '/locations/murfreesboro'],
-                                    ['Knoxville', '/locations/knoxville'],
-                                    ['Chattanooga', '/locations/chattanooga'],
-                                    ['Clarksville', '/locations/clarksville'],
-                                    ['Memphis', '/locations/memphis'],
-                                    ['Johnson City', '/locations/johnson-city'],
-                                    ['Jackson', '/locations/jackson'],
-                                ].map(([label, href]) => (
-                                    <li key={href}>
-                                        <Link href={href} className="text-sm font-normal text-gray-400 hover:text-white transition-colors">
-                                            {label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                    <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
                         <div>
                             <p className="text-xs font-semibold text-white/50 tracking-widest uppercase mb-4">Tools</p>
                             <ul role="list" className="space-y-2.5">
@@ -160,7 +134,7 @@ export default function Footer() {
 
                     {/* Credentials */}
                     <div className="flex flex-wrap gap-2 mb-8">
-                        {['TREC Approved', 'GNAR · TAR · NAR Member', 'Realtracs Access', 'Award-Winning Principal Broker'].map((badge) => (
+                        {['TREC licensed brokerage', 'Realtracs access'].map((badge) => (
                             <span
                                 key={badge}
                                 className="px-3 py-1 border border-white/10 text-gray-400 text-xs font-normal rounded-full"
@@ -198,7 +172,7 @@ export default function Footer() {
                         <Link href="/privacy" className="text-sm font-normal text-gray-500 hover:text-gray-300 transition-colors">Privacy</Link>
                     </div>
                     <p className="text-sm text-gray-600">
-                        Home buying built for the buyer, not the agent.
+                        Tennessee · Firm license #267134
                     </p>
                 </div>
             </div>

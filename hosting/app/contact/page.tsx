@@ -11,7 +11,7 @@ export default function ContactPage() {
         firstName: '',
         lastName: '',
         email: '',
-        interestedIn: 'Ready to Submit Offer',
+        interestedIn: 'Offer Package',
         message: '',
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -31,7 +31,7 @@ export default function ContactPage() {
 
             if (response.ok) {
                 setStatus('success');
-                setFormData({ firstName: '', lastName: '', email: '', interestedIn: 'Ready to Submit Offer', message: '' });
+                setFormData({ firstName: '', lastName: '', email: '', interestedIn: 'Offer Package', message: '' });
             } else {
                 setStatus('error');
             }
@@ -41,7 +41,7 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
+        <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
             <Header />
 
             {/* Hero */}
@@ -107,7 +107,7 @@ export default function ContactPage() {
                                         </svg>
                                     </div>
                                     <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
-                                    <p className="text-gray-500 mb-6">We'll get back to you as soon as possible.</p>
+                                    <p className="text-gray-500 mb-6">We&apos;ll get back to you as soon as possible.</p>
                                     <button
                                         onClick={() => setStatus('idle')}
                                         className="text-brand-blue font-semibold hover:underline"
@@ -169,9 +169,9 @@ export default function ContactPage() {
                                                 onChange={(e) => setFormData({ ...formData, interestedIn: e.target.value })}
                                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all appearance-none bg-white"
                                             >
-                                                <option>Ready to Submit Offer</option>
-                                                <option>Full Strategy Pass</option>
-                                                <option>General Inquiry</option>
+                                                <option>Offer Package</option>
+                                                <option>Transaction Management</option>
+                                                <option>General inquiry</option>
                                             </select>
                                             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500" aria-hidden="true">
                                                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                                         <textarea
                                             id="message"
                                             rows={4}
-                                            placeholder="How can we help you save?"
+                                            placeholder="Your message"
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all resize-none"
@@ -198,7 +198,7 @@ export default function ContactPage() {
                                     <button
                                         type="submit"
                                         disabled={status === 'loading'}
-                                        className="w-full py-4 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full min-h-[48px] rounded-xl bg-brand-gold py-4 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d] disabled:cursor-not-allowed disabled:opacity-50"
                                     >
                                         {status === 'loading' ? 'Sending...' : 'Send Message'}
                                     </button>
