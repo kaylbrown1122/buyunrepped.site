@@ -11,18 +11,18 @@ export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 border-b border-gray-200/80 bg-brand-cream/90 backdrop-blur-md">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex h-[4.25rem] items-center">
-                    {/* Logo - left */}
-                    <div className="flex-1">
-                        <Link href="/" className="w-fit block">
+        <header className="sticky top-0 z-50 w-full min-w-0 border-b border-gray-200/80 bg-brand-cream/90 backdrop-blur-md">
+            <div className="max-w-7xl mx-auto min-w-0 px-4 sm:px-6 lg:px-8">
+                <div className="flex h-[4.25rem] w-full min-w-0 items-center">
+                    {/* Logo - left: basis-0 + min-w-0 so flex can’t collapse or clip the mark */}
+                    <div className="flex min-h-0 min-w-0 flex-1 basis-0 items-center">
+                        <Link href="/" className="block w-fit min-w-0 max-w-full">
                             <Image
                                 src="/images/buyunrepped-cropped.png"
                                 alt="BuyUnrepped"
                                 width={4249}
                                 height={1200}
-                                className="h-11 w-auto max-w-none shrink-0 object-contain object-left sm:h-12"
+                                className="h-11 w-auto max-w-full object-contain object-left sm:h-12"
                                 priority
                                 unoptimized
                             />
@@ -64,7 +64,7 @@ export default function Header() {
                     </nav>
 
                     {/* CTA - right */}
-                    <div className="flex-1 flex justify-end items-center gap-3">
+                    <div className="flex min-h-0 min-w-0 flex-1 basis-0 items-center justify-end gap-3">
                         <Link
                             href="/contact"
                             className="hidden min-h-[40px] items-center justify-center rounded-md bg-[#f7c74a] px-5 py-2 text-sm font-semibold text-brand-navy shadow-sm transition-colors hover:bg-[#e8b93d] md:inline-flex"

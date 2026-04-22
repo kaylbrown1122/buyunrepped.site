@@ -9,78 +9,6 @@ import { useState } from 'react';
 const BUYUNREPPED_FLAT = 3490;
 const COMPARISON_RATE = 0.03;
 
-type ImageVariant = 'find' | 'engage' | 'close';
-
-const variantBox: Record<ImageVariant, string> = {
-  find: 'aspect-[16/10] max-sm:aspect-[2/1] lg:aspect-[5/4] lg:max-h-[min(340px,38vh)]',
-  engage: 'aspect-[5/4] sm:aspect-[4/3] lg:max-h-[min(320px,36vh)]',
-  close: 'aspect-[3/2] lg:aspect-[5/4] lg:max-h-[min(300px,34vh)]',
-};
-
-function BreakoutImage({
-  src,
-  alt,
-  variant = 'engage',
-}: {
-  src: string;
-  alt: string;
-  variant?: ImageVariant;
-}) {
-  return (
-    <figure className="w-full min-w-0 overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm">
-      <div className={`relative w-full ${variantBox[variant]}`}>
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover object-center"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
-        />
-      </div>
-    </figure>
-  );
-}
-
-/** Story beats: find home → engage → close. Matches earlier editorial layout; styled for this page. */
-function EditorialSplit({
-  imageSide,
-  caption,
-  src,
-  alt,
-  variant = 'engage',
-  children,
-}: {
-  imageSide: 'left' | 'right';
-  caption: string;
-  src: string;
-  alt: string;
-  variant?: ImageVariant;
-  children: React.ReactNode;
-}) {
-  const imageOnLeft = imageSide === 'left';
-  const captionAlign = imageSide === 'right' ? 'lg:text-right' : '';
-
-  return (
-    <div className="grid items-start gap-8 sm:gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-      <div
-        className={`min-w-0 ${imageOnLeft ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}`}
-      >
-        <div className="max-sm:w-screen max-sm:ml-[calc(50%-50vw)] max-sm:max-w-[100vw] sm:ml-0 sm:w-full lg:mx-auto lg:max-w-[min(100%,26rem)] xl:max-w-[28rem]">
-          <BreakoutImage src={src} alt={alt} variant={variant} />
-        </div>
-        <p
-          className={`mt-3 px-4 text-[11px] leading-relaxed text-gray-400 sm:px-0 ${captionAlign}`}
-        >
-          {caption}
-        </p>
-      </div>
-      <div className={`min-w-0 ${imageOnLeft ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
-        <div className="text-[15px] leading-relaxed text-gray-600">{children}</div>
-      </div>
-    </div>
-  );
-}
-
 export default function LandingPage() {
   const [sliderValue, setSliderValue] = useState(750000);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -120,15 +48,19 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
+    <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
       <Header />
 
-      <main id="main-content">
+      <main id="main-content" className="overflow-x-hidden">
 
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section
           aria-labelledby="hero-heading"
           className="relative overflow-hidden bg-brand-navy"
+          style={{
+            background:
+              'radial-gradient(ellipse at 60% 40%, #24709d 0%, #1b5373 50%, #0a1f2c 100%)',
+          }}
         >
           {/* Dot-grid texture */}
           <div
@@ -143,7 +75,7 @@ export default function LandingPage() {
           {/* Gold top accent */}
           <div className="absolute left-0 top-0 h-[3px] w-full bg-brand-gold" aria-hidden />
 
-          <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8 lg:py-36">
+          <div className="relative mx-auto max-w-7xl px-4 pt-10 pb-20 sm:px-6 md:pt-14 md:pb-28 lg:px-8 lg:pt-[4.5rem] lg:pb-36">
             <div className="grid items-center gap-12 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px] lg:gap-20">
 
               {/* Left copy */}
@@ -213,7 +145,13 @@ export default function LandingPage() {
               </div>
 
               {/* Right: pricing card */}
-              <div className="rounded-2xl border border-white/10 bg-white/[0.07] p-7 backdrop-blur-sm lg:p-8">
+              <div
+                className="rounded-2xl border border-white/10 p-7 backdrop-blur-sm lg:p-8"
+                style={{
+                  background:
+                    'linear-gradient(160deg, rgba(57, 182, 255, 0.12) 0%, rgba(27, 83, 115, 0.22) 100%)',
+                }}
+              >
                 <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
                   Flat fee — no commission
                 </p>
@@ -243,7 +181,7 @@ export default function LandingPage() {
                       $2,495
                     </p>
                   </div>
-                  <div className="flex items-start justify-between gap-4 rounded-xl bg-brand-gold/[0.15] px-4 py-4 mt-3">
+                  <div className="flex items-center justify-between gap-4 rounded-xl border-l-4 border-brand-gold bg-white/[0.08] px-4 py-4 mt-2">
                     <p className="font-bold text-brand-gold">All in, combined</p>
                     <p className="shrink-0 text-[1.5rem] font-extrabold text-brand-gold">
                       $3,490
@@ -262,12 +200,16 @@ export default function LandingPage() {
 
         {/* ── STATS BAR ────────────────────────────────────────────────────── */}
         <div
-          className="border-b border-gray-100 bg-brand-gray"
+          className="relative overflow-hidden border-b border-gray-100 bg-brand-gray"
           role="region"
           aria-label="Kayla Brown experience and BuyUnrepped model metrics"
         >
+          <div
+            className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-brand-navy/10 to-transparent pointer-events-none"
+            aria-hidden
+          />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-10 py-10 md:flex-row md:items-stretch md:gap-0 md:py-10">
+            <div className="flex flex-col gap-10 py-24 md:flex-row md:items-stretch md:gap-0 md:py-32">
               <div className="flex flex-1 flex-col justify-center md:border-r md:border-gray-200 md:pr-10 lg:pr-14">
                 <p
                   id="stats-experience-heading"
@@ -277,7 +219,7 @@ export default function LandingPage() {
                 </p>
                 <div className="mt-6 grid min-h-[7rem] grid-cols-2 items-center gap-6 sm:gap-8">
                   <div className="flex h-full flex-col justify-center text-center md:text-left">
-                    <p className="text-[2rem] font-extrabold leading-none text-brand-navy sm:text-[2.25rem] md:text-4xl">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">
                       $100M+
                     </p>
                     <p className="mt-2 text-[14px] leading-snug text-gray-400">
@@ -285,7 +227,7 @@ export default function LandingPage() {
                     </p>
                   </div>
                   <div className="flex h-full flex-col justify-center text-center md:text-left">
-                    <p className="text-[2rem] font-extrabold leading-none text-brand-navy sm:text-[2.25rem] md:text-4xl">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">
                       175+
                     </p>
                     <p className="mt-2 text-[14px] leading-snug text-gray-400">
@@ -303,7 +245,7 @@ export default function LandingPage() {
                 </p>
                 <div className="mt-6 grid min-h-[7rem] grid-cols-2 items-center gap-6 sm:gap-8">
                   <div className="flex h-full flex-col justify-center text-center md:text-left">
-                    <p className="text-[2rem] font-extrabold leading-none text-brand-navy sm:text-[2.25rem] md:text-4xl">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">
                       $3,490
                     </p>
                     <p className="mt-2 text-[14px] leading-snug text-gray-400">
@@ -311,7 +253,7 @@ export default function LandingPage() {
                     </p>
                   </div>
                   <div className="flex h-full flex-col justify-center text-center md:text-left">
-                    <p className="text-[2rem] font-extrabold leading-none text-brand-navy sm:text-[2.25rem] md:text-4xl">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">
                       $10K+
                     </p>
                     <p className="mt-2 text-[14px] leading-snug text-gray-400">
@@ -324,74 +266,101 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* ── FIND THE HOME (story + photo) ───────────────────────────────── */}
-        <section className="border-b border-gray-100 bg-white py-16 md:py-24" aria-label="Find the home">
+        {/* ── STEPS 1–3 (three cards) ───────────────────────────────────────── */}
+        <section
+          className="border-b border-gray-100 bg-brand-gray py-12 md:py-16"
+          aria-label="Steps: find the home, engage BuyUnrepped, and close"
+        >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <EditorialSplit
-              imageSide="right"
-              variant="find"
-              src="/images/lifestyle-couple-viewing-home.png"
-              alt="Couple viewing a home from the sidewalk"
-              caption="Illustration only—not a specific property."
-            >
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Step 1</p>
-              <p className="mt-2 text-lg font-extrabold text-brand-navy sm:text-xl">Find the home</p>
-              <p className="mt-3">
-                <span className="font-semibold text-brand-navy">You lead the search.</span> Tour, ask questions, and
-                decide what is worth pursuing—often working directly with the listing side. When you are ready to move,
-                the next step is a contract path that stays organized.
-              </p>
-            </EditorialSplit>
-          </div>
-        </section>
-
-        {/* ── ENGAGE BUYUNREPPED (story + photo) ─────────────────────────── */}
-        <section className="border-b border-gray-100 bg-brand-gray py-16 md:py-24" aria-label="Engage BuyUnrepped">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <EditorialSplit
-              imageSide="left"
-              variant="engage"
-              src="/images/lifestyle-couple-laptop.png"
-              alt="Couple reviewing a home purchase on a laptop at home"
-              caption="Illustration only—not clients or a specific transaction."
-            >
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Step 2</p>
-              <p className="mt-2 text-lg font-extrabold text-brand-navy sm:text-xl">Engage BuyUnrepped</p>
-              <p className="mt-3">
-                <span className="font-semibold text-brand-navy">Choose a tier and confirm scope in writing.</span> We align
-                disclosures, Tennessee-appropriate forms, and the workflow to your stage—while you keep control of
-                negotiations and relationships you want to lead.
-              </p>
-            </EditorialSplit>
-          </div>
-        </section>
-
-        {/* ── CLOSE (story + photo) ───────────────────────────────────────── */}
-        <section className="border-b border-gray-100 bg-white py-16 md:py-24" aria-label="Close">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <EditorialSplit
-              imageSide="right"
-              variant="close"
-              src="/images/lifestyle-sold.png"
-              alt="Couple with a sold sign in front of a home"
-              caption="Illustration only—not a specific sale or outcome."
-            >
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Step 3</p>
-              <p className="mt-2 text-lg font-extrabold text-brand-navy sm:text-xl">Close</p>
-              <p className="mt-3">
-                <span className="font-semibold text-brand-navy">Target: settlement with a defensible file.</span> Clear
-                terms, organized contingencies, and fewer avoidable surprises at the closing table—still within
-                non-representational support.
-              </p>
-            </EditorialSplit>
+            <ol className="grid list-none gap-8 lg:grid-cols-3 lg:gap-8">
+              <li>
+                <div className="overflow-hidden rounded-2xl border border-gray-100 border-l-4 border-l-brand-gold bg-white p-6 shadow-sm">
+                  <div className="relative mx-auto h-56 w-full max-w-[11rem] overflow-hidden rounded-xl border border-gray-200 bg-gray-50 lg:mx-0">
+                    <Image
+                      src="/images/lifestyle-couple-viewing-home.png"
+                      alt="Couple viewing a home from the sidewalk"
+                      fill
+                      className="object-cover object-center"
+                      sizes="224px"
+                    />
+                  </div>
+                  <p className="mt-2 text-[11px] leading-snug text-gray-400">
+                    Illustration only—not a specific property.
+                  </p>
+                  <p className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-gold">
+                    Step 1
+                  </p>
+                  <p className="mt-2 text-lg font-extrabold text-brand-navy sm:text-xl">Find the home</p>
+                  <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+                    <span className="font-semibold text-brand-navy">You lead the search.</span> Tour, ask questions, and
+                    decide what is worth pursuing—often working directly with the listing side. When you are ready to move,
+                    the next step is a contract path that stays organized.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="overflow-hidden rounded-2xl border border-gray-100 border-l-4 border-l-brand-gold bg-white p-6 shadow-sm">
+                  <div className="relative mx-auto h-56 w-full max-w-[11rem] overflow-hidden rounded-xl border border-gray-200 bg-gray-50 lg:mx-0">
+                    <Image
+                      src="/images/lifestyle-couple-laptop.png"
+                      alt="Couple reviewing a home purchase on a laptop at home"
+                      fill
+                      className="object-cover object-center"
+                      sizes="224px"
+                    />
+                  </div>
+                  <p className="mt-2 text-[11px] leading-snug text-gray-400">
+                    Illustration only—not clients or a specific transaction.
+                  </p>
+                  <p className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-gold">
+                    Step 2
+                  </p>
+                  <p className="mt-2 text-lg font-extrabold text-brand-navy sm:text-xl">Engage BuyUnrepped</p>
+                  <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+                    <span className="font-semibold text-brand-navy">Choose a tier and confirm scope in writing.</span> We
+                    align disclosures, Tennessee-appropriate forms, and the workflow to your stage—while you keep control
+                    of negotiations and relationships you want to lead.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="overflow-hidden rounded-2xl border border-gray-100 border-l-4 border-l-brand-gold bg-white p-6 shadow-sm">
+                  <div className="relative mx-auto h-56 w-full max-w-[11rem] overflow-hidden rounded-xl border border-gray-200 bg-gray-50 lg:mx-0">
+                    <Image
+                      src="/images/lifestyle-sold.png"
+                      alt="Couple with a sold sign in front of a home"
+                      fill
+                      className="object-cover object-center"
+                      sizes="224px"
+                    />
+                  </div>
+                  <p className="mt-2 text-[11px] leading-snug text-gray-400">
+                    Illustration only—not a specific sale or outcome.
+                  </p>
+                  <p className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-gold">
+                    Step 3
+                  </p>
+                  <p className="mt-2 text-lg font-extrabold text-brand-navy sm:text-xl">Close</p>
+                  <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+                    <span className="font-semibold text-brand-navy">Target: settlement with a defensible file.</span> Clear
+                    terms, organized contingencies, and fewer avoidable surprises at the closing table—still within
+                    non-representational support.
+                  </p>
+                </div>
+              </li>
+            </ol>
           </div>
         </section>
 
         {/* ── THREE OPTIONS ───────────────────────────────────────────────── */}
         <section
-          className="border-b border-gray-100 bg-brand-gray py-16 md:py-24"
+          className="relative overflow-hidden border-b border-gray-100 bg-brand-gray py-16 md:py-24"
           aria-labelledby="options-heading"
         >
+          <div
+            className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-gray-100/80 to-transparent pointer-events-none"
+            aria-hidden
+          />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">The model</p>
@@ -407,8 +376,8 @@ export default function LandingPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-0 rounded-2xl border border-gray-200 bg-white shadow-sm md:grid-cols-3 md:divide-x md:divide-gray-100">
-              <article className="px-6 py-10 md:px-8">
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              <article className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
                 <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">
                   Full-service representation
                 </h3>
@@ -418,7 +387,7 @@ export default function LandingPage() {
                 </p>
                 <p className="mt-4 text-[13px] text-gray-400">Best when you want full advocacy as your agent.</p>
               </article>
-              <article className="border-t border-gray-100 px-6 py-10 md:border-t-0 md:px-8">
+              <article className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
                 <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">On your own</h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
                   You coordinate everything—offer through closing—without a buyer&apos;s agent and without a
@@ -426,13 +395,22 @@ export default function LandingPage() {
                 </p>
                 <p className="mt-4 text-[13px] text-gray-400">Higher execution risk when details slip.</p>
               </article>
-              <article className="border-t border-brand-gold/30 bg-brand-gold/[0.09] px-6 py-10 ring-1 ring-inset ring-brand-gold/25 md:border-t-0 md:px-8 md:rounded-r-2xl">
-                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-brand-navy">BuyUnrepped</h3>
-                <p className="mt-4 text-[15px] leading-relaxed text-gray-700">
+              <article
+                className="relative overflow-hidden rounded-2xl p-6 ring-2 ring-brand-gold"
+                style={{
+                  background:
+                    'linear-gradient(160deg, #24709d 0%, #1b5373 50%, #0a1f2c 100%)',
+                }}
+              >
+                <span className="absolute right-4 top-4 rounded-full bg-brand-gold px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-brand-navy">
+                  Best fit
+                </span>
+                <h3 className="pr-20 text-xs font-bold uppercase tracking-[0.14em] text-white">BuyUnrepped</h3>
+                <p className="mt-4 text-[15px] leading-relaxed text-white">
                   Unrepresented in the traditional sense, but supported: standardized documentation, sequencing, and
                   licensed oversight within your tier—not buyer agency.
                 </p>
-                <p className="mt-4 text-[13px] font-medium text-brand-navy/80">
+                <p className="mt-4 text-[13px] font-medium text-white/60">
                   Control of the conversation + professional structure.
                 </p>
               </article>
@@ -721,26 +699,40 @@ export default function LandingPage() {
 
         {/* ── SAVINGS CALCULATOR ───────────────────────────────────────────── */}
         <section
-          className="border-b border-gray-100 bg-white py-20 md:py-28"
+          className="relative overflow-hidden border-b border-white/10 py-20 md:py-28"
           aria-labelledby="savings-heading"
+          style={{
+            background:
+              'radial-gradient(ellipse at 60% 40%, #24709d 0%, #1b5373 50%, #0a1f2c 100%)',
+          }}
         >
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="pointer-events-none absolute inset-0 opacity-[0.04]" aria-hidden>
+            <div
+              className="h-full w-full"
+              style={{
+                backgroundImage:
+                  'radial-gradient(circle at 1.5px 1.5px, white 1.5px, transparent 0)',
+                backgroundSize: '28px 28px',
+              }}
+            />
+          </div>
+          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
                 Planning comparison
               </p>
               <h2
                 id="savings-heading"
-                className="mt-3 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl"
+                className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
               >
                 How much could you save?
               </h2>
-              <p className="mt-4 mx-auto max-w-xl text-[1rem] leading-relaxed text-gray-500">
+              <p className="mx-auto mt-4 max-w-xl text-[1rem] leading-relaxed text-white/60">
                 Slide to your purchase price. Traditional buyer-side compensation is often 3%. BuyUnrepped is $3,490 all in.
               </p>
             </div>
 
-            <div className="mt-12 rounded-3xl border border-gray-100 bg-white p-8 shadow-sm lg:p-12">
+            <div className="mt-12 rounded-3xl border border-white/10 bg-white p-8 shadow-xl shadow-black/20 lg:p-12">
               <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
                 <div>
                   <label
@@ -768,7 +760,7 @@ export default function LandingPage() {
                     step={10000}
                     value={sliderValue}
                     onChange={(e) => setSliderValue(Number(e.target.value))}
-                    className="mt-4 w-full"
+                    className="mt-4 w-full accent-brand-navy"
                     aria-valuemin={250000}
                     aria-valuemax={3000000}
                     aria-valuenow={sliderValue}
@@ -788,8 +780,8 @@ export default function LandingPage() {
                       ${assumedBuyerSide.toLocaleString()}
                     </p>
                   </div>
-                  <div className="rounded-2xl border-2 border-brand-navy/20 bg-brand-navy/5 p-5 text-center">
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-brand-navy/50">
+                  <div className="rounded-2xl border-2 border-brand-gold/40 bg-brand-navy/5 p-5 text-center ring-1 ring-brand-gold/30">
+                    <p className="text-[10px] font-bold uppercase tracking-wide text-brand-navy/60">
                       BuyUnrepped
                     </p>
                     <p className="mt-2 text-xl font-extrabold tabular-nums text-brand-navy">
@@ -850,13 +842,13 @@ export default function LandingPage() {
                   <div key={item.q}>
                     <button
                       type="button"
-                      className="flex w-full items-start justify-between gap-6 p-6 text-left font-semibold text-brand-navy transition-colors hover:bg-brand-gray"
+                      className="flex w-full items-start justify-between gap-6 p-6 text-left text-[16px] font-semibold text-brand-navy transition-colors hover:bg-brand-gray"
                       onClick={() => setOpenFaq(open ? null : i)}
                       aria-expanded={open}
                       aria-controls={`faq-panel-${i}`}
                       id={`faq-trigger-${i}`}
                     >
-                      <span className="text-[15px]">{item.q}</span>
+                      <span>{item.q}</span>
                       <span
                         className={`mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-navy/8 text-brand-navy transition-transform duration-200 ${
                           open ? 'rotate-45' : ''
@@ -866,18 +858,19 @@ export default function LandingPage() {
                         +
                       </span>
                     </button>
-                    {open && (
+                    <div
+                      id={`faq-panel-${i}`}
+                      aria-hidden={!open}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}
+                    >
                       <div
-                        id={`faq-panel-${i}`}
+                        className={`border-l-4 bg-brand-cream px-6 pb-6 pt-1 transition-colors ${open ? 'border-brand-gold' : 'border-transparent'}`}
                         role="region"
                         aria-labelledby={`faq-trigger-${i}`}
-                        className="bg-brand-cream px-6 pb-6"
                       >
-                        <p className="text-[15px] leading-relaxed text-gray-600">
-                          {item.a}
-                        </p>
+                        <p className="text-[15px] leading-relaxed text-gray-600">{item.a}</p>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}
@@ -889,6 +882,10 @@ export default function LandingPage() {
         <section
           className="relative overflow-hidden bg-brand-navy py-24 md:py-32"
           aria-labelledby="cta-heading"
+          style={{
+            background:
+              'radial-gradient(ellipse at 30% 70%, #24709d 0%, #1b5373 55%, #0a1f2c 100%)',
+          }}
         >
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.03]"
