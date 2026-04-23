@@ -7,10 +7,10 @@ import Script from 'next/script';
 
 export default function SchedulePage() {
   return (
-    <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
+    <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
       <Header />
 
-      <section className="pt-16 pb-8 md:pt-20">
+      <section id="main-content" className="pt-16 pb-8 md:pt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-10 items-start">
             {/* Left column: heading + info */}
@@ -20,11 +20,11 @@ export default function SchedulePage() {
                 Talk to Kayla
               </h1>
               <p className="text-lg text-gray-500 leading-relaxed mb-8">
-                This call is your starting point. We'll review your situation, walk through how BuyUnrepped works, and figure out the best path forward for your home purchase.
+                This call is your starting point. We&apos;ll review your situation, walk through how BuyUnrepped works, and figure out the best path forward for your home purchase.
               </p>
 
               <div className="mb-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-brand-blue mb-3">What we'll cover</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-brand-blue mb-3">What we&apos;ll cover</p>
                 <ul className="space-y-2">
                   {[
                     'How the BuyUnrepped model works',
