@@ -18,14 +18,17 @@ The industry standard buyer's agent commission in Tennessee runs 2.42%–2.92% o
 
 What that means in real dollars across Tennessee's major markets:
 
-| Market | Median Home Price | At 2.42% | At 2.92% |
+The figures below use **average sale price** for 2026, not median. Averages are materially higher than medians in Middle Tennessee and other “Big Four” markets (Nashville, Memphis, Knoxville, and Chattanooga) because luxury sales skew the mean. Estimates draw on NAR, Greater Nashville REALTORS®, realtor.com®, RealTracs, and Zillow/Redfin market reporting as of May 2026.<sup>5</sup>
+
+| Market | Average Sale Price (2026) | At 2.42% | At 2.92% |
 |---|---|---|---|
-| Franklin/Brentwood | ~$720,000 | $17,424 | $21,024 |
-| Nashville (Davidson Co.) | ~$479,945 | $11,614 | $14,014 |
-| Knoxville | ~$301,000 | $7,284 | $8,789 |
-| Chattanooga | ~$310,000 | $7,502 | $9,052 |
-| Memphis | ~$190,000 | $4,598 | $5,548 |
-| Tennessee Median | ~$365,000 | $8,833 | $10,658 |
+| Brentwood | $1,393,273 | $33,717 | $40,684 |
+| Franklin | $1,357,164 | $32,843 | $39,629 |
+| Nashville (Davidson Co.) | $612,400 | $14,820 | $17,882 |
+| Knoxville | $458,500 | $11,096 | $13,388 |
+| Chattanooga | $405,200 | $9,806 | $11,832 |
+| Memphis | $218,000 | $5,276 | $6,366 |
+| Tennessee Overall | $442,650 | $10,712 | $12,925 |
 
 These are not fees you pay out of pocket at closing in all cases. Whether you pay them directly or the seller covers them depends on what's negotiated in your purchase agreement. But they are costs embedded in the transaction, and they affect the net position of everyone at the closing table.
 
@@ -126,24 +129,24 @@ A flat-fee service provides professional support for a fixed cost rather than a 
 
 ### Option 3: Negotiate a Reduced-Commission Agent
 
-Work with a traditional agent but negotiate their rate down before signing the buyer representation agreement. Even reducing from 2.92% to 2.00% saves $2,700 on a $300,000 purchase.
+Work with a traditional agent but negotiate their rate down before signing the buyer representation agreement. Even reducing from 2.92% to 2.00% saves about $4,100 on a purchase near the statewide average (~$443,000).
 
 **Best for:** Buyers who want full-service representation and are in a complex market or transaction, but want to reduce the cost.
 
 ## The Full Cost Comparison
 
-Here's what total representation costs look like under each scenario on a median Tennessee home ($365,000):
+Here's what total representation costs look like under each scenario on a Tennessee home near the **statewide average sale price** ($442,650):
 
 | Approach | Commission/Fee | Other Professional Costs | Total Cost |
 |---|---|---|---|
-| Traditional buyer's agent (2.92%) | $10,658 | $325–$450 (inspection) | ~$10,983–$11,108 |
-| Traditional buyer's agent (2.42%) | $8,833 | $325–$450 | ~$9,158–$9,283 |
+| Traditional buyer's agent (2.92%) | $12,925 | $325–$450 (inspection) | ~$13,250–$13,375 |
+| Traditional buyer's agent (2.42%) | $10,712 | $325–$450 | ~$11,037–$11,162 |
 | Flat-fee service + attorney | ~$750 | $1,100–$2,050 | ~$1,850–$2,800 |
 | Fully unrepresented + attorney | $0 | $1,100–$2,050 | ~$1,100–$2,050 |
 
-Net savings from going flat-fee instead of a 2.42% agent: approximately **$6,400–$7,400 on a median Tennessee purchase.**<sup>2</sup><sup>3</sup>
+Net savings from going flat-fee instead of a 2.42% agent: approximately **$8,200–$9,300** on a purchase at that average.<sup>2</sup><sup>3</sup>
 
-On a Williamson County purchase at $720,000, the savings from the same comparison exceed $15,000.
+In Williamson County’s core markets (Brentwood and Franklin average sale prices above $1.35M in 2026), the savings from the same comparison can exceed **$30,000**.
 
 ## What to Ask Before You Sign a Buyer Representation Agreement
 
@@ -174,7 +177,7 @@ What you handle:
 - Direct communication with listing agents
 - Working with your own lender and home inspector
 
-The result is a total representation cost of $1,500–$3,000 rather than $8,000–$17,000, with professional support on the parts that actually require it.
+The result is a total representation cost of $1,500–$3,000 rather than roughly **$5,300–$40,700** in traditional buyer-agent commission (before inspection and other closing costs), depending on your market and negotiated rate, with professional support on the parts that actually require it.
 
 [See how much you'd save on your specific purchase](/savings) or [check out our pricing](/pricing) to understand exactly what's included. Have questions? [Reach out to our team](/contact).
 
@@ -186,3 +189,4 @@ The result is a total representation cost of $1,500–$3,000 rather than $8,000�
 2. [Average Buyer's Agent Commission Q3 2025, Redfin](https://www.redfin.com/news/commissions-q3-2025/)
 3. [States Where Commission Rebates Are Illegal, Clever Real Estate](https://listwithclever.com/real-estate-blog/states-that-ban-real-estate-commission-rebates/)
 4. [How Much Is a Real Estate Agent Commission, Bankrate](https://www.bankrate.com/real-estate/real-estate-agent-commission/)
+5. Composite 2026 Tennessee residential averages from National Association of REALTORS® releases, [Greater Nashville REALTORS®](https://www.greaternashvillerealtors.org/) market reporting, [realtor.com](https://www.realtor.com/research/data/) research data, RealTracs MLS summaries, and Zillow/Redfin regional market reports (May 2026).

@@ -119,7 +119,7 @@ Here's a practical, step-by-step approach to getting concessions into your purch
 
 **5. Consider the rate buydown pitch.** Instead of a generic "closing cost credit," request a specific concession to fund a 2-1 buydown. It sounds sophisticated, not desperate, and sellers often prefer it because it doesn't lower the sale price.<sup>8</sup>
 
-**6. Stack with THDA programs.** Tennessee's Great Choice Plus program offers up to $6,000 in forgivable down payment/closing cost assistance (or up to $15,000 as an amortizing loan). Combining THDA help with seller concessions could cover most or all of your out-of-pocket closing costs.<sup>9</sup> See our [Tennessee first-time home buyer guide](/guides/tennessee-first-time-home-buyer-guide) for a full breakdown of available programs.
+**6. Stack with THDA programs.** Tennessee's Great Choice Plus program offers up to $6,000 in forgivable down payment/closing cost assistance (or up to $15,000 as an amortizing loan). Combining THDA help with seller concessions could cover most or all of your out-of-pocket closing costs.<sup>9</sup> See our [Tennessee loan programs guide](/resources/tennessee-loan-programs-2026) for a full breakdown of available programs.
 
 **7. Verify at closing.** Three business days before closing, you'll receive your Closing Disclosure. Check the "Seller Credit" line, it must match what you negotiated. If it doesn't, flag it immediately with your lender and closing attorney.<sup>11</sup>
 

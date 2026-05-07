@@ -108,7 +108,7 @@ Seventy-six percent of first-time buyers credited their agent with helping them 
 
 The affordability context in Tennessee makes this harder: 83 of 95 Tennessee counties exceed affordable housing thresholds.<sup>3</sup> First-time buyers are often stretching financially, which makes every error more consequential.
 
-**One thing to check before hiring a full-commission agent:** Tennessee's THDA Great Choice Plus program offers up to $15,000 in down payment assistance for buyers who meet income requirements (640 credit score minimum, DTI ≤ 45%).<sup>11</sup> Our [Tennessee first-time home buyer guide](/guides/tennessee-first-time-home-buyer-guide) covers all available state and local programs. An experienced agent or housing counselor familiar with THDA programs can be valuable here.
+**One thing to check before hiring a full-commission agent:** Tennessee's THDA Great Choice Plus program offers up to $15,000 in down payment assistance for buyers who meet income requirements (640 credit score minimum, DTI ≤ 45%).<sup>11</sup> Our [Tennessee loan programs guide](/resources/tennessee-loan-programs-2026) covers THDA and other state and local options in depth. An experienced agent or housing counselor familiar with THDA programs can be valuable here.
 
 BuyUnrepped Full Support is a genuine middle ground for first-time buyers who have some professional support network, an attorney, an accountant, a family member who has bought homes before, but don't have an agent mentor to walk them through the process. If you have zero support network and are buying for the first time, that's when a traditional buyer's agent provides clear value.
 

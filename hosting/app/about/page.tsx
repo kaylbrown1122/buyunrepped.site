@@ -2,6 +2,7 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SectionBadge from '../components/SectionBadge';
 import Image from 'next/image';
 
 const scopeColumns = [
@@ -37,7 +38,7 @@ export default function AboutPage() {
       <main id="main-content">
         <section className="border-b border-gray-100 px-4 pb-16 pt-20 text-center sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
-            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">About</p>
+            <SectionBadge>About</SectionBadge>
             <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl md:text-[2.5rem]">
               Built by an Experienced Nashville Broker.
             </h1>
