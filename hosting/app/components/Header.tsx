@@ -3,13 +3,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
     const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = useState(false);
-    const sellerActive = pathname === '/sellers' || pathname === '/bu-seller-intake' || pathname === '/questionnaires';
 
     return (
         <header className="sticky top-0 z-50 w-full min-w-0 border-b border-gray-200/80 bg-brand-cream/90 backdrop-blur-md">
@@ -50,26 +49,6 @@ export default function Header() {
                         >
                             Tools
                         </Link>
-                        <div className="group relative">
-                            <Link
-                                href="/sellers"
-                                className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${sellerActive ? 'text-brand-navy' : 'text-gray-600 hover:text-brand-navy'}`}
-                            >
-                                Sellers
-                                <ChevronDown className="size-3.5" aria-hidden="true" />
-                            </Link>
-                            <div className="invisible absolute left-1/2 top-full z-50 mt-3 w-64 -translate-x-1/2 rounded-xl border border-gray-200 bg-white p-2 opacity-0 shadow-xl shadow-brand-navy/10 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                                <Link href="/sellers" className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-brand-cream hover:text-brand-navy">
-                                    Agent Matchmaking
-                                </Link>
-                                <Link href="/questionnaires?tab=seller" className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-brand-cream hover:text-brand-navy">
-                                    Seller Questionnaire
-                                </Link>
-                                <Link href="/bu-seller-intake" className="block rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-brand-cream hover:text-brand-navy">
-                                    Listing Pilot
-                                </Link>
-                            </div>
-                        </div>
                         <Link
                             href="/for-agents"
                             className={`text-sm font-medium transition-colors ${pathname === '/for-agents' ? 'text-brand-navy' : 'text-gray-600 hover:text-brand-navy'}`}
@@ -111,9 +90,6 @@ export default function Header() {
                     <Link href="/guides" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Guides</Link>
                     <Link href="/resources" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Resources</Link>
                     <Link href="/tools" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Tools</Link>
-                    <Link href="/sellers" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Sellers</Link>
-                    <Link href="/questionnaires?tab=seller" onClick={() => setMobileOpen(false)} className="block pl-4 text-sm font-medium text-gray-600 hover:text-brand-navy">Seller Questionnaire</Link>
-                    <Link href="/bu-seller-intake" onClick={() => setMobileOpen(false)} className="block pl-4 text-sm font-medium text-gray-600 hover:text-brand-navy">Listing Pilot</Link>
                     <Link href="/for-agents" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">For Agents</Link>
                     <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">About</Link>
                     <Link href="/contact" onClick={() => setMobileOpen(false)} className="block w-full rounded-md bg-[#f7c74a] py-3 text-center text-sm font-semibold text-brand-navy transition-colors hover:bg-[#e8b93d]">

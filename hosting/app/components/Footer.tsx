@@ -10,12 +10,6 @@ const companyLinks: [string, string][] = [
   ['Blog', '/resources'],
 ];
 
-const sellerLinks: [string, string][] = [
-  ['Agent Matchmaking', '/sellers'],
-  ['Seller Questionnaire', '/questionnaires?tab=seller'],
-  ['Listing Pilot', '/bu-seller-intake'],
-];
-
 const socialClass =
   'flex size-8 items-center justify-center rounded-full border border-white/15 text-gray-300 transition-colors hover:border-white/30 hover:bg-white/5 hover:text-white';
 
@@ -67,7 +61,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <nav className="grid grid-cols-2 gap-6 sm:gap-8 md:col-span-7 md:grid-cols-3">
+          <nav className="grid grid-cols-2 gap-6 sm:gap-8 md:col-span-7 md:grid-cols-2">
             <div>
               <p className="text-sm font-semibold text-white">BuyUnrepped</p>
               <address className="mt-2 space-y-1.5 not-italic text-sm leading-relaxed text-gray-400">
@@ -100,23 +94,11 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-widest text-white/50">Sellers</p>
-              <ul role="list" className="mt-2 space-y-1.5">
-                {sellerLinks.map(([label, href]) => (
-                  <li key={href}>
-                    <Link href={href} className="text-sm text-gray-400 transition-colors hover:text-white">
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </nav>
         </div>
       </div>
 
-      <div className="border-t border-white/[0.08]">
+      <div className="border-t border-white/8">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-3 sm:flex-row sm:px-6 lg:px-8">
           <p className="text-center text-xs text-gray-500 sm:text-left">
             © {new Date().getFullYear()} BuyUnrepped · Tennessee · Firm license #267134
