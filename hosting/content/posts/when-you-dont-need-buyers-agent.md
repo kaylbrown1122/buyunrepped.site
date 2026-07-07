@@ -1,7 +1,7 @@
 ---
 title: "8 Situations Where Going Unrepresented Might Actually Make Sense"
 date: "2026-03-24"
-description: "Sometimes full buyer representation isn’t the right fit. Here are eight situations where staying unrepresented—with structured support—can make sense."
+description: "Sometimes full buyer representation isn’t the right fit. Here are eight situations where staying unrepresented, with structured support, can make sense."
 category: "Strategy"
 readingTime: "7 min read"
 ---

@@ -218,9 +218,9 @@ export default function ResultsPanel({ results, onToggleCategory, onOverrideItem
         {/* BuyUnrepped callout */}
         <div className="bg-brand-navy rounded-xl p-6 text-white">
           <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">With BuyUnrepped Full Strategy Pass</p>
-          <p className="text-lg font-bold mb-1">Get expert support through every line item — for a flat $3,595.</p>
+          <p className="text-lg font-bold mb-1">Get expert support through every line item, for a flat $3,595.</p>
           <p className="text-sm text-gray-400 leading-relaxed">
-            Transaction coordination, deadline tracking, licensed REALTOR® on-call support, and full closing coordination — from offer to keys.
+            Transaction coordination, deadline tracking, licensed REALTOR® on-call support, and full closing coordination, from offer to keys.
           </p>
         </div>
       </div>

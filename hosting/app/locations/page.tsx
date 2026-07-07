@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Tennessee Locations | Buy a Home Without a Buyer\'s Agent | BuyUnrepped',
-  description: 'BuyUnrepped serves home buyers across Tennessee — Nashville, Franklin, Murfreesboro, Knoxville, Chattanooga, Clarksville, and Memphis. Buy without a buyer\'s agent and save thousands with flat-fee support.',
+  description: 'BuyUnrepped serves home buyers across Tennessee, Nashville, Franklin, Murfreesboro, Knoxville, Chattanooga, Clarksville, and Memphis. Buy without a buyer\'s agent and save thousands with flat-fee support.',
   openGraph: {
     title: 'Tennessee Locations | BuyUnrepped',
     description: 'Buy a home without a buyer\'s agent in Nashville, Franklin, Murfreesboro, Knoxville, Chattanooga, Clarksville, and Memphis. Flat-fee support statewide.',

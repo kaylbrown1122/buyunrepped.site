@@ -149,8 +149,8 @@ export default function ClosingCostCalculatorPage() {
             <span className="text-brand-blue">closing costs.</span>
           </h1>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Get a detailed breakdown of what you&apos;ll need at the closing table —
-            from lender fees to state taxes — customized for Tennessee buyers.
+            Get a detailed breakdown of what you&apos;ll need at the closing table  - 
+            from lender fees to state taxes, customized for Tennessee buyers.
           </p>
         </section>
 

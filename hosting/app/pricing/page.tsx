@@ -6,6 +6,7 @@ import { Check, HelpCircle, Home, ClipboardCheck } from 'lucide-react';
 import Link from 'next/link';
 import { getAppUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL, TRANSACTION_FEE_SPLIT, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
+import Reveal from '../components/Reveal';
 
 const startHereCards = [
   {
@@ -34,7 +35,7 @@ const startHereCards = [
 const pricingFaqs = [
   {
     q: 'How does the flat fee compare to a traditional commission?',
-    a: "Traditional buyer-side compensation is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped is $3,490 all in for both tiers combined—compare that to a percentage-based buyer-side line item.",
+    a: "Traditional buyer-side compensation is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped is $3,490 all in for both tiers combined. Compare that to a percentage-based buyer-side line item.",
   },
   {
     q: 'What does the Offer Package include?',
@@ -46,7 +47,7 @@ const pricingFaqs = [
   },
   {
     q: 'When is $995 due? When is the coordination fee due?',
-    a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted—not at signup.`,
+    a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted, not at signup.`,
   },
   {
     q: 'Where is BuyUnrepped available?',
@@ -66,7 +67,7 @@ const pricingFaqs = [
   },
   {
     q: 'Is there a free or lite offer option?',
-    a: 'No. BuyUnrepped offers a single $995 offer package at signup—no free estimate or lite tier.',
+    a: 'No. BuyUnrepped offers a single $995 offer package at signup, with no free estimate or lite tier.',
   },
 ] as const;
 
@@ -84,7 +85,7 @@ export default function PricingPage() {
               Offer Package and Transaction Management
             </h1>
             <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
-              Flat fee — no commission.
+              Flat fee, no commission.
             </p>
           </div>
 
@@ -182,7 +183,7 @@ export default function PricingPage() {
             <div className="mt-10 rounded-2xl border border-gray-200 bg-brand-gray p-8">
               <h2 className="text-xl font-bold text-brand-navy">Fee timing</h2>
               <p className="mt-2 text-[14px] text-gray-500">
-                Total up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()} — not one SKU at offer time.
+                Total up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()}, not one SKU at offer time.
               </p>
               <div className="mt-6 overflow-x-auto">
                 <table className="w-full min-w-[320px] text-left text-[14px]">
@@ -202,7 +203,7 @@ export default function PricingPage() {
                     <tr className="border-b border-gray-100">
                       <td className="py-4 pr-4 font-semibold text-brand-navy">Transaction (full)</td>
                       <td className="py-4 pr-4">${TRANSACTION_FEE_FULL.toLocaleString()}</td>
-                      <td className="py-4">After acceptance — coordination fee</td>
+                      <td className="py-4">After acceptance, coordination fee</td>
                     </tr>
                     <tr>
                       <td className="py-4 pr-4 font-semibold text-brand-navy">Transaction (split)</td>
@@ -237,7 +238,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        <section className="border-b border-gray-100 bg-brand-gray py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 bg-brand-gray py-16 md:py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-2xl font-extrabold text-brand-navy sm:text-3xl">Questions</h2>
             <div className="mt-10 space-y-8">
@@ -249,7 +250,7 @@ export default function PricingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
       </main>
 
       <Footer />

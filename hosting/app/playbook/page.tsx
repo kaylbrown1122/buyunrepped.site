@@ -8,6 +8,7 @@ import { Copy, Check, Instagram } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAppUrl } from '../../lib/appUrl';
+import Reveal from '../components/Reveal';
 
 /* ── Instagram reel link ────────────────────────────────────────────── */
 function ReelLink({ href }: { href: string }) {
@@ -34,7 +35,7 @@ function ScriptBlock({ children }: { children: string }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
-      /* clipboard unavailable — no-op */
+      /* clipboard unavailable, no-op */
     }
   };
 
@@ -90,7 +91,7 @@ export default function PlaybookPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">
             You&apos;re approved. You know your title company. Now it&apos;s time to talk to a listing agent. From
-            scheduling the showing, to asking about the property, to submitting an actual offer — we&apos;ve got you
+            scheduling the showing, to asking about the property, to submitting an actual offer, we&apos;ve got you
             covered.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -133,42 +134,42 @@ export default function PlaybookPage() {
         {/* Body */}
         <div className="max-w-2xl space-y-12">
           {/* Schedule */}
-          <section id="schedule" className="scroll-mt-24">
+          <Reveal as="section" id="schedule" className="scroll-mt-24">
             <h2 className="text-2xl font-bold tracking-tight">Schedule the showing</h2>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              First, confirm you&apos;ve got the right agent. If they say yes, you&apos;re the listing agent —
+              First, confirm you&apos;ve got the right agent. If they say yes, you&apos;re the listing agent,
               you&apos;re off to the races.
             </p>
             <ScriptBlock>
               Hi [agent name], my name is [your name]. Are you the listing agent for [property address]? If so,
-              I&apos;d love to set up a showing — I won&apos;t be represented by an agent on this purchase. Do you have
+              I&apos;d love to set up a showing, I won&apos;t be represented by an agent on this purchase. Do you have
               any availability on [ideal showing days]?
             </ScriptBlock>
-          </section>
+          </Reveal>
 
           {/* Driver's license */}
-          <section id="drivers-license" className="scroll-mt-24">
+          <Reveal as="section" id="drivers-license" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">The agent asked for my driver&apos;s license. Should I be worried?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              They may ask for a photo of your ID plus pre-approval or proof of funds. This is common practice — it
+              They may ask for a photo of your ID plus pre-approval or proof of funds. This is common practice, it
               helps the agent protect their own safety and their seller&apos;s. Don&apos;t get weird about it! If you can
               afford to buy the house, show them.
             </p>
-          </section>
+          </Reveal>
 
           {/* Loved it */}
-          <section id="loved-it" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold tracking-tight">You loved the property — what to say before the offer</h2>
+          <Reveal as="section" id="loved-it" className="scroll-mt-24">
+            <h2 className="text-2xl font-bold tracking-tight">You loved the property, what to say before the offer</h2>
             <div className="mt-5 space-y-3">
               <Bubble who="You">
-                Hi again! Thank you so much for taking the time to meet today — I really appreciate it. Do you currently
+                Hi again! Thank you so much for taking the time to meet today, I really appreciate it. Do you currently
                 have any offers?
               </Bubble>
               <Bubble who="Agent" note>
                 They&apos;ll say yes or no. It doesn&apos;t change your response.
               </Bubble>
               <Bubble who="You">
-                Great, thank you! I plan to submit an offer as soon as possible — please let me know if you accept
+                Great, thank you! I plan to submit an offer as soon as possible, please let me know if you accept
                 anything before I can get my ducks in a row. Could you send over any disclosures or association
                 documents you have?
               </Bubble>
@@ -183,45 +184,45 @@ export default function PlaybookPage() {
             <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
               After that last response, you should be just about ready to put your offer together.
             </p>
-          </section>
+          </Reveal>
 
           {/* Agent time */}
-          <section id="agent-time" className="scroll-mt-24">
+          <Reveal as="section" id="agent-time" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">The listing agent isn&apos;t available when I want?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Be extra polite and try to find a time that works for both of you. This is all very new to the industry,
-              and listing agents aren&apos;t used to showing their own listings yet. An agent may be wary of you — please
+              and listing agents aren&apos;t used to showing their own listings yet. An agent may be wary of you, please
               don&apos;t take offense. You&apos;re building trust from a blank slate, so allow for flexibility. They have
               lives too. And keep in mind: a lot of agents don&apos;t love working with unrepresented buyers. That
-              doesn&apos;t make them bad people — it&apos;s just new. Be patient.
+              doesn&apos;t make them bad people, it&apos;s just new. Be patient.
             </p>
-          </section>
+          </Reveal>
 
           {/* Can't reach */}
-          <section id="cant-reach" className="scroll-mt-24">
+          <Reveal as="section" id="cant-reach" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">I can&apos;t get ahold of the agent. What do I do?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               The good (and bad) news: if the agent is unresponsive to you, they&apos;d probably be unresponsive to a
               buyer&apos;s agent too. Your next best bet is to call the agent&apos;s broker or office and let them know
-              you can&apos;t reach the agent. <strong className="font-semibold text-brand-navy">Don&apos;t be a jerk</strong> —
+              you can&apos;t reach the agent. <strong className="font-semibold text-brand-navy">Don&apos;t be a jerk</strong>,
               maybe their info is wrong online, maybe they&apos;re on vacation, maybe there was a death in the family. The
               broker should be able to help. If the broker isn&apos;t helpful, that&apos;s not a great sign. Occasionally
-              you&apos;ll hit MLS-only listings that are genuinely hard to contact — if you really want in on one of
+              you&apos;ll hit MLS-only listings that are genuinely hard to contact, if you really want in on one of
               those, a traditional agent might have better luck (though they&apos;ll often run into the same wall).
             </p>
-          </section>
+          </Reveal>
 
           {/* Won't answer */}
-          <section id="wont-answer" className="scroll-mt-24">
+          <Reveal as="section" id="wont-answer" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">I reached the agent, but they won&apos;t answer my questions.</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              It happens — and it usually doesn&apos;t matter whether you&apos;re a buyer or an agent. Sometimes people
+              It happens, and it usually doesn&apos;t matter whether you&apos;re a buyer or an agent. Sometimes people
               are just rude. All you can do is move forward, make the offer, and hope for the best.
             </p>
-          </section>
+          </Reveal>
 
           {/* Multiple offers */}
-          <section id="multiple-offers" className="scroll-mt-24">
+          <Reveal as="section" id="multiple-offers" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">They said they have multiple offers. Are they lying?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Tough love: you don&apos;t know that they are. Our brokers have been humbled enough times that we rarely
@@ -229,46 +230,46 @@ export default function PlaybookPage() {
               they have an offer in hand, we think it&apos;s safest to believe them. This applies to new construction
               too.
             </p>
-          </section>
+          </Reveal>
 
           {/* What wins */}
-          <section id="what-wins" className="scroll-mt-24">
+          <Reveal as="section" id="what-wins" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">How do I know what will win in multiple offers?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              You&apos;ve already got leverage by not needing buyer-agent compensation — that&apos;s good. Sometimes you
+              You&apos;ve already got leverage by not needing buyer-agent compensation, that&apos;s good. Sometimes you
               can just ask the agent directly.
             </p>
             <ScriptBlock>
               Listen, I don&apos;t want to waste anyone&apos;s time. Can you tell me what it&apos;d take to secure this
               home?
             </ScriptBlock>
-          </section>
+          </Reveal>
 
           {/* Commission */}
-          <section id="commission" className="scroll-mt-24">
+          <Reveal as="section" id="commission" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">When should I mention commission?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Don&apos;t. What a listing agent gets paid is between them and their seller, and it shouldn&apos;t affect
               the terms of your offer. By not using an agent, you simply have more leverage than a buyer who is.
             </p>
-          </section>
+          </Reveal>
 
           {/* Pre-approval */}
-          <section id="preapproval" className="scroll-mt-24">
+          <Reveal as="section" id="preapproval" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">My pre-approval is higher than my comfort budget. Will that hurt my negotiating power?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Mixed responses on this one. First: a letter tailored to the property address from your local lender always
-              bodes well — it shows you&apos;re working with someone responsive. As for the amount, we&apos;re of the
+              bodes well, it shows you&apos;re working with someone responsive. As for the amount, we&apos;re of the
               mindset that a home is worth what you&apos;re <em>willing</em> to pay, not what you can technically afford.
               So the number you put on the letter can change with the situation. Multiple offers? Show the agent how much
-              buying power you have — it makes them more confident you&apos;ll close. Home&apos;s been sitting a week and
+              buying power you have, it makes them more confident you&apos;ll close. Home&apos;s been sitting a week and
               you&apos;re the only one in the ring? Have your lender tailor the letter to your offer price. Lenders do
               this for agents all the time; they want your offer accepted and won&apos;t mind.
             </p>
-          </section>
+          </Reveal>
 
           {/* Cash */}
-          <section id="cash" className="scroll-mt-24">
+          <Reveal as="section" id="cash" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">I&apos;m paying cash and don&apos;t have a lender. What do I use?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Great position to be in. It comes down to your privacy comfort. If you just need something for the showing
@@ -276,24 +277,24 @@ export default function PlaybookPage() {
               little more time, have your financial advisor or banker write a letter stating you have readily available
               funds in excess of the property value.
             </p>
-          </section>
+          </Reveal>
 
           {/* Wear */}
-          <section id="wear" className="scroll-mt-24">
+          <Reveal as="section" id="wear" className="scroll-mt-24">
             <h3 className="text-xl font-bold tracking-tight">What do I wear to the showing?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              Whatever you want — just be respectful. Remember, you&apos;re coming to the listing agent with a blank
+              Whatever you want, just be respectful. Remember, you&apos;re coming to the listing agent with a blank
               slate, so you have to earn credibility. You don&apos;t need a suit, but leave the pajama pants at home and
               keep it tidy. One note: they may ask you to remove your shoes or wear booties. If you&apos;re in stilettos,
-              bring heel protectors or be ready to take them off — no one wants to come home to a swiss-cheese floor.
+              bring heel protectors or be ready to take them off, no one wants to come home to a swiss-cheese floor.
             </p>
-          </section>
+          </Reveal>
 
           {/* Do's & don'ts */}
-          <section id="dos-donts" className="scroll-mt-24">
+          <Reveal as="section" id="dos-donts" className="scroll-mt-24">
             <h2 className="text-2xl font-bold tracking-tight">At the showing: do&apos;s &amp; don&apos;ts</h2>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              Don&apos;t get it twisted — the listing agent works for the seller. Agents weigh everything when they
+              Don&apos;t get it twisted, the listing agent works for the seller. Agents weigh everything when they
               advise on offers. If they have one buyer who seems indifferent and difficult, and another who&apos;s
               genuinely excited, they&apos;ll have more faith in the one who clearly <em>wants</em> it. Moral: it&apos;s
               okay to show that you love the home.
@@ -304,7 +305,7 @@ export default function PlaybookPage() {
                 <ul className="mt-3 space-y-2 text-[14px] leading-relaxed text-gray-600">
                   <li>Compliment the home.</li>
                   <li>If you have questions, ask them.</li>
-                  <li>Keep a little distance from the agent, but don&apos;t wander off unless they suggest it — they don&apos;t know you yet, and that&apos;s okay. Don&apos;t take it personally.</li>
+                  <li>Keep a little distance from the agent, but don&apos;t wander off unless they suggest it, they don&apos;t know you yet, and that&apos;s okay. Don&apos;t take it personally.</li>
                   <li>Be kind if the agent knows less about the home than you expected.</li>
                 </ul>
               </div>
@@ -312,20 +313,20 @@ export default function PlaybookPage() {
                 <h4 className="text-sm font-bold uppercase tracking-wide text-red-600">Don&apos;t</h4>
                 <ul className="mt-3 space-y-2 text-[14px] leading-relaxed text-gray-600">
                   <li>Don&apos;t linger for an hour. A typical showing takes under 30 minutes.</li>
-                  <li>Don&apos;t discuss price here — let the offer speak.</li>
+                  <li>Don&apos;t discuss price here, let the offer speak.</li>
                   <li>Don&apos;t talk commission. It&apos;s not your business.</li>
                   <li>Don&apos;t diss the seller, the home, or the style. Not cool.</li>
-                  <li>Don&apos;t say anything you wouldn&apos;t want repeated — even outside. Cameras are everywhere.</li>
+                  <li>Don&apos;t say anything you wouldn&apos;t want repeated, even outside. Cameras are everywhere.</li>
                 </ul>
               </div>
             </div>
-          </section>
+          </Reveal>
 
           {/* Homes.com */}
-          <section id="find-homes" className="scroll-mt-24">
+          <Reveal as="section" id="find-homes" className="scroll-mt-24">
             <h2 className="text-2xl font-bold tracking-tight">Find the listing agent via Homes.com</h2>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              We&apos;re not affiliated with Homes.com and this isn&apos;t an ad — but we love them for their
+              We&apos;re not affiliated with Homes.com and this isn&apos;t an ad, but we love them for their
               transparency. They connect you to the listing agent directly.
             </p>
             <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white">
@@ -342,21 +343,21 @@ export default function PlaybookPage() {
               <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">Note</span>
               <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
                 If you use the &ldquo;Send a Message&rdquo; button, it routes through Homes.com&apos;s system and can look
-                a little spammy on the agent&apos;s end — they get <strong className="font-semibold text-brand-navy">so
+                a little spammy on the agent&apos;s end, they get <strong className="font-semibold text-brand-navy">so
                 much spam</strong>, and this feature isn&apos;t common enough for agents to expect it yet. If you
-                don&apos;t hear back, use the agent&apos;s listed contact info directly — circled above, in the listing
+                don&apos;t hear back, use the agent&apos;s listed contact info directly, circled above, in the listing
                 details.
               </p>
             </div>
-          </section>
+          </Reveal>
 
           {/* Zillow */}
-          <section id="find-zillow" className="scroll-mt-24">
+          <Reveal as="section" id="find-zillow" className="scroll-mt-24">
             <h2 className="text-2xl font-bold tracking-tight">Find the listing agent via Zillow (a little tougher)</h2>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Look for the agent&apos;s own contact info on the listing. If you click the big &ldquo;Request a
               Showing&rdquo; or &ldquo;Contact Agent&rdquo; buttons, your info goes to agents <em>paying</em> Zillow for
-              buyer leads — <strong className="font-semibold text-brand-navy">not the listing agent</strong>. Selling
+              buyer leads, <strong className="font-semibold text-brand-navy">not the listing agent</strong>. Selling
               leads is how Zillow makes money. We&apos;re not knocking it, just explaining it.
             </p>
             <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white">
@@ -372,21 +373,21 @@ export default function PlaybookPage() {
             <div className="mt-4 rounded-xl border border-gray-200 bg-white p-5">
               <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">Note</span>
               <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
-                We&apos;re here to help you buy without a traditional buyer&apos;s agent — not to waste the time of
+                We&apos;re here to help you buy without a traditional buyer&apos;s agent, not to waste the time of
                 hard-working agents paying for leads. If you don&apos;t intend to hire any of the agents behind that
-                &ldquo;Request a Showing&rdquo; button, reach out to the listing agent directly instead — their name
+                &ldquo;Request a Showing&rdquo; button, reach out to the listing agent directly instead, their name
                 and number are circled above, in the &ldquo;Listing Provided by&rdquo; line.
               </p>
             </div>
             <ReelLink href="https://www.instagram.com/reel/DJ1tYO5NOki/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          </section>
+          </Reveal>
 
           {/* Redfin */}
-          <section id="find-redfin" className="scroll-mt-24">
+          <Reveal as="section" id="find-redfin" className="scroll-mt-24">
             <h2 className="text-2xl font-bold tracking-tight">Find the listing agent via Redfin</h2>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
               Redfin is a search tool <em>and</em> a brokerage, which creates a mismatch: request a tour or start an
-              offer through the site, and you&apos;re usually connected with a Redfin agent — not the actual listing
+              offer through the site, and you&apos;re usually connected with a Redfin agent, not the actual listing
               agent. The real listing agent&apos;s name and contact info are further down the page, in the listing
               details.
             </p>
@@ -403,7 +404,7 @@ export default function PlaybookPage() {
             <div className="mt-4 rounded-xl border border-gray-200 bg-white p-5">
               <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">Note</span>
               <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
-                Don&apos;t use &ldquo;Start an offer&rdquo; — it looks like the fastest path, but it does not go to the
+                Don&apos;t use &ldquo;Start an offer&rdquo;, it looks like the fastest path, but it does not go to the
                 listing agent.
               </p>
             </div>
@@ -427,7 +428,7 @@ export default function PlaybookPage() {
               </p>
             </div>
             <ReelLink href="https://www.instagram.com/reel/DJ4LUtMN_be/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          </section>
+          </Reveal>
 
           {/* Vendor list cross-link */}
           <div className="rounded-2xl border border-brand-gold/40 bg-brand-cream p-6">
@@ -446,7 +447,7 @@ export default function PlaybookPage() {
 
           {/* Disclaimer */}
           <p className="border-t border-gray-200 pt-8 text-[13px] leading-relaxed text-gray-400">
-            Educational only — not legal advice. Listing agents represent sellers. BuyUnrepped is a licensed Tennessee
+            Educational only, not legal advice. Listing agents represent sellers. BuyUnrepped is a licensed Tennessee
             brokerage; our flat-fee services do not include buyer agency or negotiation on your behalf.
           </p>
         </div>

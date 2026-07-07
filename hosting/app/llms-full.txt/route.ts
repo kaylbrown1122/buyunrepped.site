@@ -7,16 +7,16 @@ export async function GET() {
 
   const header = `# BuyUnrepped
 
-> BuyUnrepped is a Tennessee-based licensed real estate brokerage that helps home buyers purchase property without traditional full-service agent representation. We offer flat-fee pricing ($299–$999) with structured, non-representational support — saving buyers thousands in commission costs.
+> BuyUnrepped is a Tennessee-based licensed real estate brokerage that helps home buyers purchase property without traditional full-service agent representation. We offer flat-fee pricing ($299–$999) with structured, non-representational support, saving buyers thousands in commission costs.
 
 BuyUnrepped does not act as the buyer's agent or enter into a buyer agency relationship. Instead, we provide tools, templates, and licensed expert access so buyers can navigate the home purchase process independently.
 
 ## Pages
 
 - [About](https://buyunrepped.com/about): Our story, founder Kayla Brown, and mission to make home buying more affordable in Tennessee
-- [Pricing](https://buyunrepped.com/pricing): Two flat-fee packages — DIY Toolkit ($299) and Full Support ($999) — with feature comparison
+- [Pricing](https://buyunrepped.com/pricing): Two flat-fee packages, DIY Toolkit ($299) and Full Support ($999), with feature comparison
 - [Savings Calculator](https://buyunrepped.com/savings): Interactive calculator showing how much buyers save vs. traditional agent commissions
-- [Contact](https://buyunrepped.com/contact): Get in touch — email team@buyunrepped.com or visit our Nashville office
+- [Contact](https://buyunrepped.com/contact): Get in touch, email team@buyunrepped.com or visit our Nashville office
 
 ## Legal
 

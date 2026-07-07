@@ -72,7 +72,7 @@ export default function AffordabilityCalculatorPage() {
   const handleDownPaymentTypeToggle = useCallback((type: 'percent' | 'dollar') => {
     setInputs((prev) => {
       if (type === prev.downPaymentType) return prev;
-      // When switching from % to $, we don't know the home price yet — keep value as-is
+      // When switching from % to $, we don't know the home price yet, keep value as-is
       if (type === 'dollar') {
         const dollars = results
           ? Math.round(results.conservative.maxHomePrice * (prev.downPaymentValue / 100))
@@ -120,7 +120,7 @@ export default function AffordabilityCalculatorPage() {
           </h1>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
             Enter your income, debts, and down payment to see your personalized
-            home price range — based on standard lender guidelines.
+            home price range, based on standard lender guidelines.
           </p>
         </section>
 
@@ -156,7 +156,7 @@ export default function AffordabilityCalculatorPage() {
             Lenders use two ratios to evaluate your mortgage application. The front-end ratio
             limits your monthly housing costs (principal, interest, taxes, and insurance) to
             28% of your gross monthly income. The back-end ratio limits your total monthly
-            debt obligations — including the new mortgage — to 36–43% of gross income.
+            debt obligations, including the new mortgage, to 36–43% of gross income.
             The lower of these two limits determines your maximum loan. Reducing existing
             debts before buying is one of the most effective ways to increase your buying power.
           </p>

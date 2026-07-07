@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { TrendingUp, ClipboardCheck, Search, Calendar, MessageSquare, Home } from 'lucide-react';
 import { getAppUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
+import Reveal from '../components/Reveal';
 
 const services = [
   {
@@ -15,7 +16,7 @@ const services = [
   {
     icon: <ClipboardCheck className="size-6 text-brand-blue" />,
     title: 'Contracts Done Right',
-    body: 'All Tennessee-approved forms, completed correctly — nothing missed, nothing ambiguous.',
+    body: 'All Tennessee-approved forms, completed correctly, nothing missed, nothing ambiguous.',
   },
   {
     icon: <Search className="size-6 text-brand-blue" />,
@@ -25,7 +26,7 @@ const services = [
   {
     icon: <Calendar className="size-6 text-brand-blue" />,
     title: 'Transaction Coordination',
-    body: 'Deadlines, title, lender, closing — all tracked so nothing falls through.',
+    body: 'Deadlines, title, lender, closing, all tracked so nothing falls through.',
   },
   {
     icon: <MessageSquare className="size-6 text-brand-blue" />,
@@ -38,7 +39,7 @@ const steps = [
   {
     num: '01',
     title: 'You find the home',
-    body: 'Zillow, Realtracs, listing agents — however you prefer to search. You set up showings directly. We’re not involved at this stage.',
+    body: 'Zillow, Realtracs, listing agents, however you prefer to search. You set up showings directly. We’re not involved at this stage.',
   },
   {
     num: '02',
@@ -48,7 +49,7 @@ const steps = [
   {
     num: '03',
     title: 'You submit directly',
-    body: 'You communicate with the listing agent. That’s the model — you’re in control, we’ve prepared you thoroughly for this moment.',
+    body: 'You communicate with the listing agent. That’s the model, you’re in control, we’ve prepared you thoroughly for this moment.',
   },
   {
     num: '04',
@@ -60,7 +61,7 @@ const steps = [
 const notFor = [
   {
     title: 'Buyers who want full-service representation',
-    body: "If you want a licensed agent who owes you fiduciary duties and speaks on your behalf, you need a buyer's agent — that's a completely legitimate path.",
+    body: "If you want a licensed agent who owes you fiduciary duties and speaks on your behalf, you need a buyer's agent, that's a completely legitimate path.",
   },
   {
     title: 'Buyers uncomfortable communicating directly with listing agents',
@@ -68,7 +69,7 @@ const notFor = [
   },
   {
     title: 'Buyers who want someone negotiating on their behalf',
-    body: 'We consult, coordinate, and manage. We do not negotiate or act as your agent — there’s an important, intentional legal distinction there.',
+    body: 'We consult, coordinate, and manage. We do not negotiate or act as your agent, there’s an important, intentional legal distinction there.',
   },
 ];
 
@@ -77,7 +78,7 @@ export default function StartLandingPage() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
-      {/* Minimal top bar — logo only, no site nav, to keep ad traffic focused */}
+      {/* Minimal top bar, logo only, no site nav, to keep ad traffic focused */}
       <div className="border-b border-gray-100 bg-white/95 py-4 backdrop-blur-sm">
         <div className="mx-auto flex max-w-5xl items-center justify-center px-4 sm:px-6">
           <Link href="/" className="block">
@@ -121,7 +122,7 @@ export default function StartLandingPage() {
             <span className="text-brand-gold">without being on your own.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-[1.1rem] leading-relaxed text-white/70">
-            BuyUnrepped is a licensed Tennessee real estate brokerage. We consult, coordinate, and manage — we do
+            BuyUnrepped is a licensed Tennessee real estate brokerage. We consult, coordinate, and manage, we do
             not speak on your behalf. Our goal is to make sure you&apos;re a great unrepresented buyer.
           </p>
           <p className="mx-auto mt-3 max-w-xl text-[14px] italic text-white/50">
@@ -150,7 +151,7 @@ export default function StartLandingPage() {
 
       <main>
         {/* The problem */}
-        <section className="border-b border-gray-100 bg-white py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-brand-navy sm:text-3xl">
               You don&apos;t need a full-service agent. But you also shouldn&apos;t go in{' '}
@@ -163,33 +164,33 @@ export default function StartLandingPage() {
             </p>
             <div className="mt-6 space-y-3 rounded-2xl border border-gray-200 bg-brand-gray p-6">
               <p className="text-[15px] leading-relaxed text-gray-700">
-                <strong className="font-semibold text-brand-navy">The listing agent represents the seller</strong> — not you.
+                <strong className="font-semibold text-brand-navy">The listing agent represents the seller</strong>, not you.
               </p>
               <p className="text-[15px] leading-relaxed text-gray-700">
-                <strong className="font-semibold text-brand-navy">The contract still matters</strong> — every word of it.
+                <strong className="font-semibold text-brand-navy">The contract still matters</strong>, every word of it.
               </p>
               <p className="text-[15px] leading-relaxed text-gray-700">
-                <strong className="font-semibold text-brand-navy">Deadlines still matter</strong> — missing one can cost you the deal.
+                <strong className="font-semibold text-brand-navy">Deadlines still matter</strong>, missing one can cost you the deal.
               </p>
               <p className="text-[15px] leading-relaxed text-gray-700">
-                <strong className="font-semibold text-brand-navy">Strategy still matters</strong> — how you offer determines what you pay.
+                <strong className="font-semibold text-brand-navy">Strategy still matters</strong>, how you offer determines what you pay.
               </p>
             </div>
             <p className="mt-6 text-[1.05rem] leading-relaxed text-gray-600">
-              That&apos;s where most unrepresented buyers get exposed. Not because they couldn&apos;t do it — but
+              That&apos;s where most unrepresented buyers get exposed. Not because they couldn&apos;t do it, but
               because they didn&apos;t have the right structure behind them.
             </p>
           </div>
-        </section>
+        </Reveal>
 
         {/* Positioning */}
-        <section className="border-b border-gray-100 bg-brand-cream py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 bg-brand-cream py-16 md:py-20">
           <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-brand-navy sm:text-3xl">
               This is where BuyUnrepped fits.
             </h2>
             <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-600">
-              We stay behind the scenes — helping you structure your offer, understand your options, and move
+              We stay behind the scenes, helping you structure your offer, understand your options, and move
               through the transaction correctly.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -207,13 +208,13 @@ export default function StartLandingPage() {
               </div>
             </div>
             <p className="mt-6 text-[14px] italic text-gray-500">
-              We consult, coordinate, and manage — we do not represent you or speak on your behalf.
+              We consult, coordinate, and manage, we do not represent you or speak on your behalf.
             </p>
           </div>
-        </section>
+        </Reveal>
 
         {/* Services */}
-        <section className="border-b border-gray-100 bg-white py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
             <h2 className="text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl">
               We don&apos;t represent you. <span className="text-brand-gold">We support you.</span>
@@ -233,10 +234,10 @@ export default function StartLandingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
 
         {/* How it works */}
-        <section id="how" className="scroll-mt-8 border-b border-gray-100 bg-brand-cream py-16 md:py-20">
+        <Reveal as="section" id="how" className="scroll-mt-8 border-b border-gray-100 bg-brand-cream py-16 md:py-20">
           <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl">
               Simple. Structured. Clear.
@@ -258,10 +259,11 @@ export default function StartLandingPage() {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
 
         {/* Pricing */}
-        <section
+        <Reveal
+          as="section"
           className="border-b border-gray-100 bg-brand-navy py-16 md:py-20"
           style={{ background: 'radial-gradient(ellipse at 30% 70%, #24709d 0%, #1b5373 55%, #0a1f2c 100%)' }}
         >
@@ -328,10 +330,10 @@ export default function StartLandingPage() {
               {BUYUNREPPED_MAX_TOTAL.toLocaleString()} all in. Compare to ~3% buyer-side commission.
             </p>
           </div>
-        </section>
+        </Reveal>
 
         {/* Differentiation */}
-        <section className="border-b border-gray-100 bg-white py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl">
               Why this works
@@ -361,10 +363,10 @@ export default function StartLandingPage() {
               Same transaction. <strong className="font-semibold text-brand-navy">Different structure. Different cost.</strong>
             </p>
           </div>
-        </section>
+        </Reveal>
 
         {/* Who this is not for */}
-        <section className="border-b border-gray-100 bg-brand-cream py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 bg-brand-cream py-16 md:py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl">
               This is not for everyone.
@@ -381,13 +383,14 @@ export default function StartLandingPage() {
               ))}
             </div>
             <p className="mt-8 text-center text-[15px] italic text-gray-600">
-              If you want control with <em className="not-italic font-semibold text-brand-navy">professional support behind the scenes</em> — you&apos;ll fit here.
+              If you want control with <em className="not-italic font-semibold text-brand-navy">professional support behind the scenes</em>, you&apos;ll fit here.
             </p>
           </div>
-        </section>
+        </Reveal>
 
         {/* Final CTA */}
-        <section
+        <Reveal
+          as="section"
           className="relative overflow-hidden bg-brand-navy py-16 md:py-20"
           style={{ background: 'radial-gradient(ellipse at 60% 40%, #24709d 0%, #1b5373 50%, #0a1f2c 100%)' }}
         >
@@ -421,10 +424,10 @@ export default function StartLandingPage() {
               </Link>
             </div>
           </div>
-        </section>
+        </Reveal>
       </main>
 
-      {/* Minimal landing-page footer — licensing + EHO only, no site nav */}
+      {/* Minimal landing-page footer, licensing + EHO only, no site nav */}
       <footer className="bg-white py-8">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-[13px] font-semibold text-brand-navy">
@@ -435,7 +438,7 @@ export default function StartLandingPage() {
             <a href="tel:6152083390" className="text-brand-blue hover:underline">615-208-3390</a> · 2509 Cruzen St, Nashville, TN 37211
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-[11px] leading-relaxed text-gray-400">
-            BuyUnrepped is a licensed Tennessee real estate brokerage. We consult, coordinate, and manage — we do
+            BuyUnrepped is a licensed Tennessee real estate brokerage. We consult, coordinate, and manage, we do
             not represent buyers or speak on their behalf. All services are provided under the supervision of
             Principal Broker Kayla Brown (Lic. #339134). Full-service buyer agents continue to play an important
             role in many transactions; BuyUnrepped exists to support a different, but equally legitimate, buyer

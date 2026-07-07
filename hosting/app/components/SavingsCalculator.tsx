@@ -119,7 +119,7 @@ export default function SavingsCalculator() {
       </div>
 
       <p className="mt-2.5 text-[9px] leading-snug text-gray-400">
-        Illustration only—not whole transaction cost. Seller compensation, concessions, and lender/title
+        Illustration only - not whole transaction cost. Seller compensation, concessions, and lender/title
         charges vary.
       </p>
     </div>

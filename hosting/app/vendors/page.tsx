@@ -6,6 +6,8 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import Link from 'next/link';
 import { Star, Lock } from 'lucide-react';
+import { useSpamGuard } from '../../lib/useSpamGuard';
+import Reveal from '../components/Reveal';
 
 const VENDOR_SOURCE = 'buyers_vendor_list';
 const UNLOCK_KEY = 'bu_vendor_list_unlocked';
@@ -118,6 +120,7 @@ export default function VendorsPage() {
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const spamGuard = useSpamGuard();
 
   useEffect(() => {
     if (window.localStorage.getItem(UNLOCK_KEY) === 'true') {
@@ -139,17 +142,21 @@ export default function VendorsPage() {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ firstName, lastName, email, source: VENDOR_SOURCE }),
+        body: JSON.stringify({ firstName, lastName, email, source: VENDOR_SOURCE, ...spamGuard.getPayload() }),
       });
 
-      if (!response.ok) throw new Error('Failed to submit');
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        spamGuard.refreshChallenge();
+        throw new Error(data?.error || 'Failed to submit');
+      }
 
       window.localStorage.setItem(UNLOCK_KEY, 'true');
       setUnlocked(true);
       setStatus('idle');
-    } catch {
+    } catch (err) {
       setStatus('error');
-      setErrorMessage('Something went wrong. Please try again.');
+      setErrorMessage(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
     }
   };
 
@@ -164,7 +171,7 @@ export default function VendorsPage() {
             Kayla&apos;s go-to <span className="text-brand-gold">title, lenders &amp; warranty</span> notes
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">
-            Middle Tennessee partners and contacts Kayla reaches for often — not endorsements of every transaction
+            Middle Tennessee partners and contacts Kayla reaches for often, not endorsements of every transaction
             outcome, and not a substitute for your own due diligence.
           </p>
         </div>
@@ -185,6 +192,7 @@ export default function VendorsPage() {
             </div>
 
             <form onSubmit={handleSubmit} className="mx-auto mt-8 max-w-md space-y-4">
+              <input {...spamGuard.honeypotFieldProps} />
               <div>
                 <label htmlFor="vendor-name" className="mb-1.5 block text-sm font-semibold text-gray-700">Name</label>
                 <input
@@ -234,6 +242,24 @@ export default function VendorsPage() {
                 </label>
               </div>
 
+              {spamGuard.question && (
+                <div>
+                  <label htmlFor="vendor-captcha" className="mb-1.5 block text-sm font-semibold text-gray-700">
+                    Quick check: {spamGuard.question}
+                  </label>
+                  <input
+                    id="vendor-captcha"
+                    type="text"
+                    inputMode="numeric"
+                    value={spamGuard.captchaAnswer}
+                    onChange={(e) => spamGuard.setCaptchaAnswer(e.target.value)}
+                    autoComplete="off"
+                    required
+                    className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none transition-all focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
+                  />
+                </div>
+              )}
+
               {status === 'error' && (
                 <p role="alert" className="text-sm text-red-600">{errorMessage}</p>
               )}
@@ -250,7 +276,7 @@ export default function VendorsPage() {
         ) : (
           <div className="space-y-16">
             {/* Title companies */}
-            <section aria-labelledby="vendor-titles-heading">
+            <Reveal as="section" aria-labelledby="vendor-titles-heading">
               <h2 id="vendor-titles-heading" className="text-2xl font-bold tracking-tight">Title companies</h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
                 Closing teams Kayla trusts to communicate clearly and run a tight file. Always confirm fees, wire
@@ -275,20 +301,20 @@ export default function VendorsPage() {
                   </a>
                 ))}
               </div>
-            </section>
+            </Reveal>
 
             {/* Lenders */}
-            <section aria-labelledby="vendor-lenders-heading">
+            <Reveal as="section" aria-labelledby="vendor-lenders-heading">
               <h2 id="vendor-lenders-heading" className="text-2xl font-bold tracking-tight">Lenders</h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
                 Loan officers who understand Middle Tennessee files and pick up the phone. Shop rates and programs
-                with at least two sources — use this as a starting point for conversations, not a single quote.
+                with at least two sources, use this as a starting point for conversations, not a single quote.
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {lenders.map((l) => (
                   <div key={l.name} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
                     <h3 className="text-[15px] font-bold leading-snug text-brand-navy">
-                      {l.name} <span className="font-medium text-gray-400">— {l.company}</span>
+                      {l.name} <span className="font-medium text-gray-400"> · {l.company}</span>
                     </h3>
                     <p className="mt-1 text-[12px] font-semibold uppercase tracking-wide text-gray-400">{l.kind}</p>
                     <p className="mt-2 text-[13px] leading-relaxed text-gray-600">
@@ -309,22 +335,22 @@ export default function VendorsPage() {
                   </div>
                 ))}
               </div>
-            </section>
+            </Reveal>
 
             {/* Warranty */}
-            <section aria-labelledby="vendor-warranty-heading">
+            <Reveal as="section" aria-labelledby="vendor-warranty-heading">
               <h2 id="vendor-warranty-heading" className="text-2xl font-bold tracking-tight">Home warranty selection</h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
                 The right warranty depends on the age of major systems, what your inspection flagged, and how long
-                you plan to own the home — there isn&apos;t one SKU that fits every deal.
+                you plan to own the home, there isn&apos;t one SKU that fits every deal.
               </p>
               <div className="mt-5 rounded-2xl border border-gray-200 bg-brand-cream p-6">
                 <p className="text-[14px] leading-relaxed text-gray-600">
                   Kayla typically walks buyers through a short checklist: structural vs. systems coverage,
                   trade-call fees, caps and exclusions, and whether the seller is offering a plan as part of your
-                  contract. Comparing options side by side —{' '}
+                  contract. Comparing options side by side,{' '}
                   <strong className="font-semibold text-brand-navy">Achosa</strong> and{' '}
-                  <strong className="font-semibold text-brand-navy">2-10</strong> are the usual starting points —
+                  <strong className="font-semibold text-brand-navy">2-10</strong> are the usual starting points and
                   usually surfaces the best questions to ask before you bind coverage.
                 </p>
                 <p className="mt-3 text-[14px] leading-relaxed text-gray-600">
@@ -335,11 +361,11 @@ export default function VendorsPage() {
                   and Kayla will help you pressure-test the option that fits <em>that</em> house.
                 </p>
               </div>
-            </section>
+            </Reveal>
 
             <p className="border-t border-gray-200 pt-8 text-[13px] leading-relaxed text-gray-400">
               Educational reference only. BuyUnrepped does not receive compensation for listings on this page unless
-              disclosed separately in writing. Vendors, programs, and licensing change — verify details directly
+              disclosed separately in writing. Vendors, programs, and licensing change, verify details directly
               before you engage any third party. Not legal or tax advice.
             </p>
           </div>

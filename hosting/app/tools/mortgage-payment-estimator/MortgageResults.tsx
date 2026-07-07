@@ -170,7 +170,7 @@ export default function MortgageResultsPanel({ results }: Props) {
           <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">With BuyUnrepped Full Strategy Pass</p>
           <p className="text-lg font-bold mb-1">Buy confidently without paying a buyer&apos;s agent commission.</p>
           <p className="text-sm text-gray-400 leading-relaxed">
-            Get expert support, transaction coordination, and licensed REALTOR® on-call help — for a flat $3,595.
+            Get expert support, transaction coordination, and licensed REALTOR® on-call help, for a flat $3,595.
             That&apos;s thousands less than a traditional buyer&apos;s agent.
           </p>
         </div>

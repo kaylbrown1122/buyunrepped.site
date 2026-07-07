@@ -10,7 +10,7 @@ import Link from 'next/link';
 const faqs = [
   {
     question: 'Is BuyUnrepped acting as the buyer\'s agent?',
-    answer: 'No. BuyUnrepped is a coaching and guidance service — not licensed buyer representation. We do not enter into a buyer agency agreement, we do not negotiate on behalf of the buyer, and we do not insert ourselves into the agent relationship. There is no dual agency.',
+    answer: 'No. BuyUnrepped is a coaching and guidance service, not licensed buyer representation. We do not enter into a buyer agency agreement, we do not negotiate on behalf of the buyer, and we do not insert ourselves into the agent relationship. There is no dual agency.',
   },
   {
     question: 'Will this affect my commission?',
@@ -18,11 +18,11 @@ const faqs = [
   },
   {
     question: 'What forms does BuyUnrepped use?',
-    answer: 'We use standard Tennessee Association of Realtors (TAR) forms — the same forms you already know and work with. No custom paperwork, no surprises.',
+    answer: 'We use standard Tennessee Association of Realtors (TAR) forms, the same forms you already know and work with. No custom paperwork, no surprises.',
   },
   {
     question: 'What if a buyer I\'m working with wants to use BuyUnrepped?',
-    answer: 'Send them our way. A buyer who\'s prepared, deadline-aware, and using familiar forms is better for your transaction. BuyUnrepped exists to fill a gap — not to compete with you.',
+    answer: 'Send them our way. A buyer who\'s prepared, deadline-aware, and using familiar forms is better for your transaction. BuyUnrepped exists to fill a gap, not to compete with you.',
   },
 ];
 
@@ -31,7 +31,7 @@ const painPoints = [
     icon: <AlertTriangle className="w-6 h-6 text-amber-500" />,
     bg: 'bg-amber-50',
     title: 'You end up doing their job',
-    description: 'Explaining forms, chasing signatures, answering basic process questions — without any additional compensation.',
+    description: 'Explaining forms, chasing signatures, answering basic process questions, without any additional compensation.',
   },
   {
     icon: <Clock className="w-6 h-6 text-red-500" />,
@@ -52,7 +52,7 @@ const steps = [
     step: '01',
     icon: <FileText className="w-6 h-6 text-brand-blue" />,
     title: 'Buyer signs up with BuyUnrepped',
-    description: 'The buyer enrolls and gets access to our structured purchase program — forms, timelines, and guidance built for Tennessee transactions.',
+    description: 'The buyer enrolls and gets access to our structured purchase program, forms, timelines, and guidance built for Tennessee transactions.',
   },
   {
     step: '02',
@@ -64,7 +64,7 @@ const steps = [
     step: '03',
     icon: <MessageSquare className="w-6 h-6 text-brand-blue" />,
     title: 'You get a prepared counterpart',
-    description: 'By closing, you\'re working with an informed, deadline-aware buyer who arrived at the table ready — not one you had to carry.',
+    description: 'By closing, you\'re working with an informed, deadline-aware buyer who arrived at the table ready, not one you had to carry.',
   },
 ];
 
@@ -83,7 +83,7 @@ export default function ForAgentsPage() {
             Unrepresented buyers don&apos;t have to be a headache.
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            BuyUnrepped prepares, informs, and keeps unrepped buyers on schedule — so you can focus on closing, not babysitting.
+            BuyUnrepped prepares, informs, and keeps unrepped buyers on schedule, so you can focus on closing, not babysitting.
           </p>
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function ForAgentsPage() {
               We know how this usually goes
             </h2>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              When an unrepresented buyer shows up, the burden typically falls on you — without any extra compensation or protection.
+              When an unrepresented buyer shows up, the burden typically falls on you, without any extra compensation or protection.
             </p>
           </div>
 
@@ -123,7 +123,7 @@ export default function ForAgentsPage() {
               How BuyUnrepped helps
             </h2>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              We step in before the problems start — so by the time a buyer reaches you, the heavy lifting is already done.
+              We step in before the problems start, so by the time a buyer reaches you, the heavy lifting is already done.
             </p>
           </div>
 
@@ -156,10 +156,10 @@ export default function ForAgentsPage() {
               </h2>
               <div className="text-lg text-gray-500 space-y-5 leading-relaxed">
                 <p>
-                  BuyUnrepped is not after your commissions. We&apos;re not a buyer&apos;s agent. We&apos;re a stabilizing resource — one that exists specifically because unrepresented buyers are not going away.
+                  BuyUnrepped is not after your commissions. We&apos;re not a buyer&apos;s agent. We&apos;re a stabilizing resource, one that exists specifically because unrepresented buyers are not going away.
                 </p>
                 <p>
-                  When a buyer comes to you prepared — with the right forms, an understanding of the timeline, and someone keeping them accountable — your job gets easier. Deals are more likely to close. Friction drops. Everyone wins.
+                  When a buyer comes to you prepared, with the right forms, an understanding of the timeline, and someone keeping them accountable, your job gets easier. Deals are more likely to close. Friction drops. Everyone wins.
                 </p>
                 <p>
                   We use standard TAR forms throughout. No surprises, no unfamiliar paperwork. Just a smoother path from contract to close.
@@ -178,7 +178,7 @@ export default function ForAgentsPage() {
                   'Reduced confusion about forms and next steps',
                   'TAR forms you already know and expect',
                   'No dual agency gray area',
-                  'No commission conflict — we don\'t touch your fee',
+                  'No commission conflict, we don\'t touch your fee',
                   'A buyer who shows up prepared',
                   'A smoother, faster path to closing',
                   'Less work',
@@ -205,7 +205,7 @@ export default function ForAgentsPage() {
               Common questions from agents
             </h2>
             <p className="text-lg text-gray-500">
-              We get it — a new player in a transaction raises questions. Here are the honest answers.
+              We get it, a new player in a transaction raises questions. Here are the honest answers.
             </p>
           </div>
 
@@ -239,7 +239,7 @@ export default function ForAgentsPage() {
               Have questions about how it works?
             </h2>
             <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-              We&apos;re happy to walk you through how BuyUnrepped supports your transactions — and why listing agents across Tennessee are glad it exists.
+              We&apos;re happy to walk you through how BuyUnrepped supports your transactions, and why listing agents across Tennessee are glad it exists.
             </p>
             <Link
               href="/schedule"

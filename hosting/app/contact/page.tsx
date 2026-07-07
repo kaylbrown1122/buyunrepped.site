@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { getAppUrl } from '../../lib/appUrl';
+import { useSpamGuard } from '../../lib/useSpamGuard';
 
 const INTEREST_OPTIONS = [
     'Offer Package',
@@ -27,6 +28,8 @@ export default function ContactPage() {
         marketingOptIn: false,
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
+    const spamGuard = useSpamGuard();
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -49,6 +52,7 @@ export default function ContactPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('loading');
+        setErrorMessage('');
 
         try {
             const response = await fetch('/api/contact', {
@@ -56,16 +60,20 @@ export default function ContactPage() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, ...spamGuard.getPayload() }),
             });
 
             if (response.ok) {
                 setStatus('success');
                 setFormData({ firstName: '', lastName: '', email: '', interestedIn: 'Offer Package', message: '', marketingOptIn: false });
             } else {
+                const data = await response.json().catch(() => null);
+                spamGuard.refreshChallenge();
+                setErrorMessage(data?.error || 'Something went wrong. Please try again.');
                 setStatus('error');
             }
         } catch {
+            setErrorMessage('Something went wrong. Please try again.');
             setStatus('error');
         }
     };
@@ -84,7 +92,7 @@ export default function ContactPage() {
                     Have questions about how to buy without an agent? We&apos;re here to help you navigate the process.
                 </p>
                 <p className="mt-4 text-[15px] font-semibold text-brand-navy">
-                    Kayla Brown, CEO — primary public contact
+                    Kayla Brown, CEO, primary public contact
                 </p>
                 <a
                     href="mailto:info@buyunrepped.com"
@@ -165,6 +173,7 @@ export default function ContactPage() {
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-6">
+                                    <input {...spamGuard.honeypotFieldProps} />
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
                                             <label htmlFor="firstName" className="block text-sm font-bold mb-2">First Name</label>
@@ -251,8 +260,27 @@ export default function ContactPage() {
                                         </span>
                                     </label>
 
+                                    {spamGuard.question && (
+                                        <div>
+                                            <label htmlFor="contact-captcha" className="block text-sm font-bold mb-2">
+                                                Quick check: {spamGuard.question}
+                                            </label>
+                                            <input
+                                                type="text"
+                                                inputMode="numeric"
+                                                id="contact-captcha"
+                                                value={spamGuard.captchaAnswer}
+                                                onChange={(e) => spamGuard.setCaptchaAnswer(e.target.value)}
+                                                autoComplete="off"
+                                                required
+                                                aria-required="true"
+                                                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all"
+                                            />
+                                        </div>
+                                    )}
+
                                     {status === 'error' && (
-                                        <p id="contact-error" role="alert" className="text-red-600 text-sm">Something went wrong. Please try again.</p>
+                                        <p id="contact-error" role="alert" className="text-red-600 text-sm">{errorMessage}</p>
                                     )}
 
                                     <button

@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { X } from 'lucide-react';
+import { useSpamGuard } from '../../lib/useSpamGuard';
 
 interface WaitlistContextType {
   isOpen: boolean;
@@ -40,6 +41,7 @@ function WaitlistModal() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const spamGuard = useSpamGuard();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,7 +57,7 @@ function WaitlistModal() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ firstName, lastName, email }),
+        body: JSON.stringify({ firstName, lastName, email, ...spamGuard.getPayload() }),
       });
 
       if (response.ok) {
@@ -64,11 +66,13 @@ function WaitlistModal() {
         setLastName('');
         setEmail('');
       } else {
-        throw new Error('Failed to submit');
+        const data = await response.json().catch(() => null);
+        spamGuard.refreshChallenge();
+        throw new Error(data?.error || 'Failed to submit');
       }
-    } catch {
+    } catch (err) {
       setStatus('error');
-      setErrorMessage('Something went wrong. Please try again.');
+      setErrorMessage(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
     }
   };
 
@@ -138,12 +142,13 @@ function WaitlistModal() {
             <div className="text-center mb-8">
               <h2 id="waitlist-modal-title" className="text-2xl font-bold mb-2">Stay in the loop</h2>
               <p className="text-gray-500">
-                BuyUnrepped is live in Tennessee today—with more states on the way. Drop your email and
+                BuyUnrepped is live in Tennessee today, with more states on the way. Drop your email and
                 we&apos;ll keep you posted on new locations and buyer tips.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              <input {...spamGuard.honeypotFieldProps} />
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="waitlist-first-name" className="block text-sm font-bold text-gray-700 mb-2">
@@ -194,6 +199,25 @@ function WaitlistModal() {
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                 />
               </div>
+
+              {spamGuard.question && (
+                <div>
+                  <label htmlFor="waitlist-captcha" className="block text-sm font-bold text-gray-700 mb-2">
+                    Quick check: {spamGuard.question}
+                  </label>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    id="waitlist-captcha"
+                    value={spamGuard.captchaAnswer}
+                    onChange={(e) => spamGuard.setCaptchaAnswer(e.target.value)}
+                    autoComplete="off"
+                    required
+                    aria-required="true"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
+                  />
+                </div>
+              )}
 
               {status === 'error' && (
                 <p id="waitlist-error" role="alert" className="text-red-500 text-sm">{errorMessage}</p>

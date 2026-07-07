@@ -80,7 +80,7 @@ export default function GuidesPage() {
               <h3 className="mt-1 text-xl font-bold leading-snug text-white">The buyer playbook: what to say, do, and expect before the offer</h3>
               <p className="mt-1.5 max-w-xl text-sm text-white/70">
                 Copy-paste scripts for scheduling a showing, talking to listing agents, and handling multiple
-                offers — plus what to wear and how to find the agent on Zillow or Homes.com.
+                offers, plus what to wear and how to find the agent on Zillow or Homes.com.
               </p>
             </div>
           </div>

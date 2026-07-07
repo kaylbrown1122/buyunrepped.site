@@ -252,7 +252,7 @@ export default function AffordabilityResultsPanel({ results }: Props) {
           <p className="text-lg font-bold mb-1">Buy up to your budget without paying a buyer&apos;s agent commission.</p>
           <p className="text-sm text-gray-400 leading-relaxed">
             A traditional 3% buyer&apos;s agent commission on a {fmt(conservative.maxHomePrice)} home
-            is {fmt(Math.round(conservative.maxHomePrice * 0.03))}. Keep it with BuyUnrepped — flat $3,595.
+            is {fmt(Math.round(conservative.maxHomePrice * 0.03))}. Keep it with BuyUnrepped, flat $3,595.
           </p>
         </div>
 

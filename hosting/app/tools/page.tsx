@@ -8,10 +8,10 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Home Buying Tools | BuyUnrepped',
   description:
-    'Free tools for Tennessee home buyers — closing cost calculator, savings estimator, and more. Make smarter decisions with BuyUnrepped.',
+    'Free tools for Tennessee home buyers, closing cost calculator, savings estimator, and more. Make smarter decisions with BuyUnrepped.',
   openGraph: {
     title: 'Home Buying Tools | BuyUnrepped',
-    description: 'Free tools for Tennessee home buyers — closing cost calculator, savings estimator, and more.',
+    description: 'Free tools for Tennessee home buyers, closing cost calculator, savings estimator, and more.',
     url: 'https://www.buyunrepped.com/tools',
   },
   alternates: {

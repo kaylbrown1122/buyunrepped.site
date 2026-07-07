@@ -17,11 +17,11 @@ export default function LandingPage() {
   const faqs = [
     {
       q: "Do I need a buyer's agent in Tennessee?",
-      a: "No. Buyers are not required to use a buyer's agent. You can purchase a home directly in Tennessee. BuyUnrepped gives you the structure and licensed oversight you'd otherwise miss—without the commission.",
+      a: "No. Buyers are not required to use a buyer's agent. You can purchase a home directly in Tennessee. BuyUnrepped gives you the structure and licensed oversight you'd otherwise miss, without the commission.",
     },
     {
       q: 'Is BuyUnrepped representing me as my agent?',
-      a: "No. BuyUnrepped consults, coordinates, and manages behind the scenes—on a non-representational basis scoped to the tier you purchase. We do not act as a buyer's agent, do not speak for you in negotiations, and do not owe buyer agency fiduciary duties. If you want full representation, you should hire a traditional buyer's agent. (This is not legal advice—consult a licensed attorney for legal questions.)",
+      a: "No. BuyUnrepped consults, coordinates, and manages behind the scenes, on a non-representational basis scoped to the tier you purchase. We do not act as a buyer's agent, do not speak for you in negotiations, and do not owe buyer agency fiduciary duties. If you want full representation, you should hire a traditional buyer's agent. (This is not legal advice. Consult a licensed attorney for legal questions.)",
     },
     {
       q: 'What do I do vs what does BuyUnrepped do?',
@@ -29,7 +29,7 @@ export default function LandingPage() {
     },
     {
       q: 'How does the flat fee compare to a traditional commission?',
-      a: "Traditional buyer-side compensation is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped charges a flat $995 for the Offer Package, with an optional $2,495 for Transaction Guidance if your offer is accepted and you'd like our help through closing—either way, the cost doesn't move with the home's price.",
+      a: "Traditional buyer-side compensation is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped charges a flat $995 for the Offer Package, with an optional $2,495 for Transaction Guidance if your offer is accepted and you'd like our help through closing. Either way, the cost doesn't move with the home's price.",
     },
     {
       q: "What's included in each tier?",
@@ -37,11 +37,11 @@ export default function LandingPage() {
     },
     {
       q: 'When is $995 due? When is the coordination fee due?',
-      a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted—not at signup. Split billing ($1,295 at contract upload + $1,295 at closing or within 60 days) may be offered for the same total.`,
+      a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted, not at signup. Split billing ($1,295 at contract upload + $1,295 at closing or within 60 days) may be offered for the same total.`,
     },
     {
       q: 'Who is behind BuyUnrepped?',
-      a: 'Kayla Brown, CEO and Principal Broker—a licensed Tennessee broker with 175+ transactions and $100M+ in Middle Tennessee sales—is the sole public point of contact. All services are provided under her supervision through BuyUnrepped (Firm Lic. #267134). Email info@buyunrepped.com or use the contact form with questions.',
+      a: 'Kayla Brown, CEO and Principal Broker, is a licensed Tennessee broker with 175+ transactions and $100M+ in Middle Tennessee sales. She is the sole public point of contact. All services are provided under her supervision through BuyUnrepped (Firm Lic. #267134). Email info@buyunrepped.com or use the contact form with questions.',
     },
     {
       q: 'Where is BuyUnrepped available?',
@@ -96,7 +96,7 @@ export default function LandingPage() {
           {/* Gold top accent */}
           <div className="absolute left-0 top-0 h-[3px] w-full bg-brand-gold" aria-hidden />
 
-          <div className="relative mx-auto max-w-7xl px-4 pt-10 pb-20 sm:px-6 md:pt-14 md:pb-28 lg:px-8 lg:pt-[4.5rem] lg:pb-36">
+          <div className="relative mx-auto max-w-7xl px-4 pt-[1.2718125rem] pb-[1.2544rem] sm:px-6 md:pt-[1.7805375rem] md:pb-[1.75616rem] lg:px-8 lg:pt-[2.2892625rem] lg:pb-[2.25792rem]">
             <div className="grid origin-top items-center gap-12 scale-[0.95] lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px] lg:gap-20">
 
               {/* Left copy */}
@@ -126,7 +126,7 @@ export default function LandingPage() {
                 <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.06] px-5 py-4">
                   <p className="text-[13px] leading-relaxed text-white/75">
                     Pay for the offer upfront, then pay for transaction guidance once you&apos;re under
-                    contract or at closing—with no obligatory buyer-agency relationship.
+                    contract or at closing, with no obligatory buyer-agency relationship.
                   </p>
                 </div>
 
@@ -167,7 +167,7 @@ export default function LandingPage() {
                 }}
               >
                 <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
-                  Flat fee — no commission
+                  Flat fee, no commission
                 </p>
 
                 <div className="mt-2 space-y-0">
@@ -261,7 +261,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ── THREE OPTIONS (positioning — where BuyUnrepped fits) ─────────── */}
+        {/* ── THREE OPTIONS (positioning, where BuyUnrepped fits) ─────────── */}
         <section
           className="border-b border-gray-100 bg-brand-cream py-12 md:py-16"
           aria-labelledby="options-heading"
@@ -273,11 +273,11 @@ export default function LandingPage() {
                 id="options-heading"
                 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl"
               >
-                Three ways to buy
+                Now, there are 3 ways to buy a home.
               </h2>
               <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
-                Same market—different roles, risks, and support. BuyUnrepped is the middle path: unrepresented, but not
-                unstructured.
+                Before BuyUnrepped, the consumer had 2 options: hire a buyer&apos;s agent, or go it alone... We&apos;re
+                the new (and much needed) middle ground.
               </p>
             </div>
 
@@ -305,7 +305,7 @@ export default function LandingPage() {
                 <h3 className="pr-20 text-xs font-bold uppercase tracking-[0.14em] text-white">BuyUnrepped</h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-white">
                   Unrepresented in the traditional sense, but supported: standardized documentation, sequencing, and
-                  licensed oversight within your tier—not buyer agency.
+                  licensed oversight within your tier, not buyer agency.
                 </p>
                 <p className="mt-4 text-[13px] font-medium text-white/60">
                   Control of the conversation + professional structure.
@@ -314,7 +314,7 @@ export default function LandingPage() {
               <article className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
                 <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">On your own</h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
-                  You coordinate everything—offer through closing—without a buyer&apos;s agent and without a
+                  You coordinate everything, from offer through closing, without a buyer&apos;s agent and without a
                   brokerage-backed workflow.
                 </p>
                 <p className="mt-4 text-[13px] text-gray-400">Higher execution risk when details slip.</p>
@@ -408,7 +408,7 @@ export default function LandingPage() {
                 <span className="text-brand-gold">$28,500</span> on a $950,000 home.
               </h2>
               <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-gray-500">
-                Since the 2024 commission changes, that fee is increasingly yours to pay—for someone to
+                Since the 2024 commission changes, that fee is increasingly yours to pay for someone to
                 write an offer and relay messages. BuyUnrepped is flat: ${OFFER_FEE.toLocaleString()} to build
                 and submit your offer, ${TRANSACTION_FEE_FULL.toLocaleString()} only if it&apos;s accepted and you
                 want full coordination. Slide to your price.
@@ -455,7 +455,7 @@ export default function LandingPage() {
                     Buying in Tennessee? Start today.
                   </h2>
                   <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-                    Anyone can buy a Tennessee home with BuyUnrepped—wherever you live now. Not in TN yet, or
+                    Anyone can buy a Tennessee home with BuyUnrepped, wherever you live now. Not in TN yet, or
                     just exploring? Leave your email and we&apos;ll tell you the moment we launch in your state,
                     plus tips to buy for less.
                   </p>

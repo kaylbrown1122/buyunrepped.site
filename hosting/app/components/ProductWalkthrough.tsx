@@ -74,11 +74,11 @@ const steps: Step[] = [
     n: 5,
     phase: 'Submit',
     title: 'Send your offer to the listing agent',
-    body: 'You send the offer to the listing agent from your own email account. BuyUnrepped prepares the packet and draft message—we never contact the listing side on your behalf.',
-    img: '/images/product/buyunrepped-app-send-offer-email.png',
-    width: 1600,
-    height: 1012,
-    alt: 'BuyUnrepped screen with drafted offer email for the buyer to send to the listing agent',
+    body: 'You send the offer to the listing agent from your own email account. BuyUnrepped prepares the packet and draft message. We never contact the listing side on your behalf.',
+    img: '/images/product/buyunrepped-app-send-offer-modal.png',
+    width: 1024,
+    height: 726,
+    alt: 'BuyUnrepped Send your offer modal with email draft and document attachment steps for the listing agent',
     owner: 'you',
     ownerLabel: 'You send, we prepare',
   },
@@ -98,7 +98,7 @@ const steps: Step[] = [
     n: 7,
     phase: 'The decision point',
     title: 'Respond to a counteroffer',
-    body: 'You choose how to respond—accept, counter, keep negotiating directly, or walk away. BuyUnrepped tracks your decision and keeps your file aligned with the path you pick.',
+    body: 'You choose how to respond: accept, counter, keep negotiating directly, or walk away. BuyUnrepped tracks your decision and keeps your file aligned with the path you pick.',
     img: '/images/product/buyunrepped-app-counter-offer-response.png',
     width: 1600,
     height: 1123,
@@ -236,7 +236,7 @@ export default function ProductWalkthrough() {
           <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
             BuyUnrepped is a guided system for buying a home without a traditional buyer&apos;s agent. You stay in
             control of the property, the terms, and the communication. The app, the workflow, and your licensed broker
-            support handle the structure behind the scenes — from offer prep to submission to closing coordination.
+            support handle the structure behind the scenes, from offer prep to submission to closing coordination.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <OwnerPill owner="you" label="You keep control" />

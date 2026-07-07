@@ -277,7 +277,7 @@ export default function CalculatorPage() {
                         When a seller agrees to pay buyer agent compensation as part of their listing, that amount doesn&apos;t have to go to an agent.
                         If you buy without representation, you may be able to request it as a credit at closing or a reduction in the purchase price.
                         <br /><br />
-                        BuyUnrepped helps you navigate that conversation — professionally and with the right paperwork.
+                        BuyUnrepped helps you navigate that conversation, professionally and with the right paperwork.
                     </p>
                     <Link href="/contact" className="text-brand-blue font-bold hover:underline">
                         Have questions? Talk to an expert

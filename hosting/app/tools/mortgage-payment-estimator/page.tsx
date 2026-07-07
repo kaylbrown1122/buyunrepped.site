@@ -142,7 +142,7 @@ export default function MortgageEstimatorPage() {
             <span className="text-brand-blue">mortgage payment.</span>
           </h1>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            See your full PITI payment — principal, interest, taxes, and insurance —
+            See your full PITI payment, principal, interest, taxes, and insurance  - 
             before you make an offer.
           </p>
         </section>
@@ -180,7 +180,7 @@ export default function MortgageEstimatorPage() {
           <h2 className="text-3xl font-bold mb-6 mt-4">What goes into a mortgage payment?</h2>
           <p className="text-gray-500 leading-relaxed mb-8">
             Most buyers focus on the interest rate, but your true monthly payment includes principal,
-            interest, property taxes, and homeowners insurance — known as PITI. If your down payment
+            interest, property taxes, and homeowners insurance, known as PITI. If your down payment
             is less than 20%, lenders also require private mortgage insurance (PMI) until you build
             enough equity. In Tennessee, the effective property tax rate averages around 0.64%, which
             is among the lowest in the country.

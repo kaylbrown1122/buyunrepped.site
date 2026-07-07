@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAppUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL } from '../../lib/fees';
+import Reveal from '../components/Reveal';
 
 const areasServed = [
   { county: 'Davidson County', cities: 'Nashville' },
@@ -79,7 +80,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section
+        <Reveal
+          as="section"
           id="what-is-buyunrepped"
           className="border-b border-gray-100 bg-brand-gray py-16 md:py-20"
           aria-labelledby="what-is-buyunrepped-heading"
@@ -139,9 +141,9 @@ export default function AboutPage() {
               real estate license law.
             </p>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="border-b border-gray-100 py-16 md:py-24">
+        <Reveal as="section" className="border-b border-gray-100 py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
               <div className="text-lg leading-relaxed text-gray-600">
@@ -155,7 +157,7 @@ export default function AboutPage() {
                   still having an experienced local broker and full transaction management support when it matters most.
                 </p>
                 <p className="mt-6">
-                  Pricing is flat fee — not commission based. Whether the home costs $400,000 or $2 million, the price is
+                  Pricing is flat fee, not commission based. Whether the home costs $400,000 or $2 million, the price is
                   the same.
                 </p>
               </div>
@@ -164,25 +166,25 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="border-b border-gray-100 bg-brand-cream py-16 md:py-24" aria-labelledby="about-origin-heading">
+        <Reveal as="section" className="border-b border-gray-100 bg-brand-cream py-16 md:py-24" aria-labelledby="about-origin-heading">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">The origin story</p>
             <h2 id="about-origin-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl">
-              Why I do this — the real version
+              Why I do this, the real version
             </h2>
             <blockquote className="mt-6 border-l-4 border-brand-gold pl-5 text-[1.15rem] font-medium italic leading-relaxed text-brand-navy">
-              &ldquo;Dental school was the plan — until it wasn&apos;t. Cancer brought me home. Buying our first home
+              &ldquo;Dental school was the plan, until it wasn&apos;t. Cancer brought me home. Buying our first home
               while I was in treatment is what hooked me on the transaction. Real estate became the career;
               challenging how the industry serves buyers became the mission.&rdquo;
             </blockquote>
             <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-gray-600">
               <p>
                 I have a degree in Microbiology with a minor in Chemistry, and I was about a year into dental
-                school — on track toward orthodontics — when I was diagnosed with a rare cancer called Ewing&apos;s
+                school, on track toward orthodontics, when I was diagnosed with a rare cancer called Ewing&apos;s
                 Sarcoma. I came back to Nashville for treatment. During that season, my then-fiancé and I bought
-                our first home. That&apos;s when I fell in love with the real estate transaction — and realized I
+                our first home. That&apos;s when I fell in love with the real estate transaction, and realized I
                 wasn&apos;t going back to the path I&apos;d mapped out.
               </p>
               <p>
@@ -193,7 +195,7 @@ export default function AboutPage() {
               <p>
                 Over 175+ transactions and $100M+ in Middle Tennessee sales, I&apos;ve built genuine relationships
                 with lenders, inspectors, attorneys, title companies, and agents across this market. I know who
-                does excellent work and who doesn&apos;t. The through-line has always been honesty — and a
+                does excellent work and who doesn&apos;t. The through-line has always been honesty, and a
                 willingness to say what others won&apos;t.
               </p>
               <p>
@@ -211,9 +213,9 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="border-b border-gray-100 bg-white py-16 md:py-20" aria-labelledby="about-areas-heading">
+        <Reveal as="section" className="border-b border-gray-100 bg-white py-16 md:py-20" aria-labelledby="about-areas-heading">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Where I&apos;ve worked</p>
             <h2 id="about-areas-heading" className="mt-2 text-2xl font-extrabold text-brand-navy sm:text-3xl">
@@ -230,9 +232,9 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="border-b border-gray-100 bg-white py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Pricing</p>
             <h2 className="mt-2 text-2xl font-extrabold text-brand-navy sm:text-3xl">How it works</h2>
@@ -243,7 +245,7 @@ export default function AboutPage() {
                 <span className="font-semibold text-brand-navy">
                   ${TRANSACTION_FEE_FULL.toLocaleString()} coordination fee
                 </span>{' '}
-                unlocks transaction management through closing—not commission-based, flat fee pricing.
+                unlocks transaction management through closing with flat-fee pricing, not commission-based pricing.
               </p>
               <p>
                 Split billing ($1,295 at contract upload + $1,295 at closing or within 60 days) may be offered for
@@ -251,9 +253,9 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="border-b border-gray-100 bg-brand-gray py-16 md:py-24" aria-labelledby="about-scope-heading">
+        <Reveal as="section" className="border-b border-gray-100 bg-brand-gray py-16 md:py-24" aria-labelledby="about-scope-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
               <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Scope</p>
@@ -302,15 +304,15 @@ export default function AboutPage() {
                   sheet promise.
                 </p>
                 <p>
-                  Deliverables after payment: offer packet prep, strategy consult, and—after acceptance—transaction
+                  Deliverables after payment: offer packet prep, strategy consult, and, after acceptance, transaction
                   coordination through closing prep.
                 </p>
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="border-b border-gray-100 py-16 md:py-20">
+        <Reveal as="section" className="border-b border-gray-100 py-16 md:py-20">
           <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-4 px-4 sm:px-6">
             <a
               href={appUrl}
@@ -327,7 +329,7 @@ export default function AboutPage() {
               Questions → contact
             </Link>
           </div>
-        </section>
+        </Reveal>
       </main>
 
       <Footer />
