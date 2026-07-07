@@ -2,35 +2,11 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Check, HelpCircle, Home, ClipboardCheck } from 'lucide-react';
+import { Check, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { getAppUrl } from '../../lib/appUrl';
-import { OFFER_FEE, TRANSACTION_FEE_FULL, TRANSACTION_FEE_SPLIT, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
+import { OFFER_FEE, TRANSACTION_FEE_FULL, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
 import Reveal from '../components/Reveal';
-
-const startHereCards = [
-  {
-    icon: <HelpCircle className="size-5 text-brand-blue" />,
-    title: 'Just starting',
-    body: 'Understand the process before you jump in.',
-    cta: 'Learn first',
-    href: '/guides',
-  },
-  {
-    icon: <Home className="size-5 text-brand-blue" />,
-    title: 'Found a home',
-    body: "Let's build your offer the right way.",
-    cta: 'Build your offer',
-    external: true,
-  },
-  {
-    icon: <ClipboardCheck className="size-5 text-brand-blue" />,
-    title: 'Already under contract',
-    body: 'We will help you finish strong.',
-    cta: 'Set up your transaction',
-    href: '/pricing#transaction-management',
-  },
-] as const;
 
 const pricingFaqs = [
   {
@@ -69,6 +45,10 @@ const pricingFaqs = [
     q: 'Is there a free or lite offer option?',
     a: 'No. BuyUnrepped offers a single $995 offer package at signup, with no free estimate or lite tier.',
   },
+  {
+    q: 'What if I need to cancel, or want a refund?',
+    a: "Cancellation and refund specifics depend on where you are in the process. Reach out before you pay if you want terms confirmed for your situation — email info@buyunrepped.com.",
+  },
 ] as const;
 
 export default function PricingPage() {
@@ -89,52 +69,20 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-5xl" aria-labelledby="start-here-heading">
-            <p id="start-here-heading" className="text-center text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400">
-              Where are you right now?
-            </p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              {startHereCards.map((card) => (
-                <div key={card.title} className="rounded-2xl border border-gray-200 bg-brand-gray p-5">
-                  <span className="flex size-9 items-center justify-center rounded-full bg-brand-blue/10">
-                    {card.icon}
-                  </span>
-                  <h3 className="mt-3 text-[15px] font-bold text-brand-navy">{card.title}</h3>
-                  <p className="mt-1 text-[13px] leading-relaxed text-gray-500">{card.body}</p>
-                  {'external' in card && card.external ? (
-                    <a
-                      href={appUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-brand-blue hover:underline"
-                    >
-                      {card.cta} →
-                    </a>
-                  ) : (
-                    <Link
-                      href={'href' in card ? card.href : '#'}
-                      className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-brand-blue hover:underline"
-                    >
-                      {card.cta} →
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mx-auto mt-16 max-w-5xl">
+          <div className="mx-auto mt-12 max-w-5xl">
             <div className="grid gap-6 md:grid-cols-2 md:gap-8">
               <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
                 <h2 className="text-xl font-bold text-brand-navy">Offer Package</h2>
                 <p className="mt-1 text-sm text-gray-500">Strategy, forms, CMA + BPO</p>
                 <p className="mt-6 text-4xl font-extrabold tracking-tight text-brand-navy">$995</p>
-                <Link
-                  href="/schedule"
+                <a
+                  href={appUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Schedule a call
-                </Link>
+                  Start Now
+                </a>
                 <ul className="mt-8 space-y-3 text-[14px] leading-relaxed text-gray-600">
                   {[
                     'Ready-to-submit offer using Tennessee forms',
@@ -154,12 +102,14 @@ export default function PricingPage() {
                 <h2 className="text-xl font-bold text-brand-navy">Transaction Management</h2>
                 <p className="mt-1 text-sm text-gray-500">Contract through closing</p>
                 <p className="mt-6 text-4xl font-extrabold tracking-tight text-brand-navy">$2,495</p>
-                <Link
-                  href="/schedule"
+                <a
+                  href={appUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Schedule a call
-                </Link>
+                  Start Now
+                </a>
                 <ul className="mt-8 space-y-3 text-[14px] leading-relaxed text-gray-600">
                   {[
                     'Full coordination from contract through closing',
@@ -178,6 +128,87 @@ export default function PricingPage() {
             <div className="mt-6 rounded-2xl border border-brand-gold/30 bg-brand-gold/[0.09] px-6 py-5 text-center ring-1 ring-inset ring-brand-gold/25">
               <p className="text-sm font-semibold text-brand-navy">All in, combined</p>
               <p className="mt-1 text-3xl font-extrabold text-brand-navy">$3,490</p>
+              <p className="mt-1 text-[12px] text-gray-500">
+                Two separate charges, ${OFFER_FEE.toLocaleString()} then ${TRANSACTION_FEE_FULL.toLocaleString()},
+                not one combined invoice.
+              </p>
+            </div>
+
+            <div className="mt-6 rounded-2xl border border-brand-gold/40 bg-brand-cream p-6 sm:p-7">
+              <div className="flex items-start gap-4">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold">
+                  <ShieldCheck className="size-5" aria-hidden />
+                </span>
+                <div>
+                  <h2 className="text-[15px] font-bold text-brand-navy">Not the right fit? We&apos;ll tell you.</h2>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-gray-600">
+                    If your situation calls for full-service representation — a complex negotiation, an unusual
+                    financing picture, more hand-holding than a flat fee covers — we&apos;ll say so and connect you
+                    with a full-service buyer&apos;s agent instead. We&apos;re not trying to upsell everyone into
+                    self-representation regardless of fit.
+                  </p>
+                  <Link
+                    href="/agent-match"
+                    className="mt-2.5 inline-flex items-center gap-1 text-[13px] font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
+                  >
+                    See how agent matching works →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Scope</p>
+              <h2 className="mt-2 text-xl font-bold text-brand-navy sm:text-2xl">What&apos;s included</h2>
+              <p className="mt-2 text-[14px] leading-relaxed text-gray-500">
+                Transaction setup starts the moment your offer is accepted. Full coordination support activates
+                once you add Transaction Guidance.
+              </p>
+
+              <div className="mt-8 grid gap-8 sm:grid-cols-2 sm:gap-10">
+                <div>
+                  <h3 className="border-b border-gray-200 pb-2.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
+                    Before you submit your offer
+                  </h3>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                    <li>
+                      Guided lender, title, and warranty selection from our vetted network — see{' '}
+                      <Link href="/vendors" className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue">
+                        our picks
+                      </Link>
+                    </li>
+                    <li>Tennessee property intake and address confirmation</li>
+                    <li>Onboarding disclosures and guided questionnaire</li>
+                    <li>Tennessee offer documents based on your 1:1 broker call</li>
+                    <li>Strategy call scheduling and broker review</li>
+                    <li>Pricing guidance, broker price opinion, and supporting property data</li>
+                    <li>Cash buyer? A fast qualification check keeps your offer competitive</li>
+                    <li>Submission prep so your offer package is ready to send</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="border-b border-gray-200 pb-2.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
+                    After your offer is accepted
+                  </h3>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                    <li>Transaction setup inside your dashboard</li>
+                    <li>Contract timeline tracking and next-step guidance</li>
+                    <li>Document organization and key-date reminders</li>
+                    <li>Coordination support through inspections, escrow, and closing prep</li>
+                    <li>Third-party repair quotes after inspection through our BossCat partnership (~2 business days)</li>
+                    <li>Closing-day checklist, including wire-fraud safety guidance</li>
+                    <li>Termination-notice drafting if the deal falls through</li>
+                    <li>&quot;Ask Kayla&quot; bookable broker calls — quick questions, post-inspection strategy, final walkthrough help</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p className="mt-6 text-[13px] leading-relaxed text-gray-400">
+                Appraisal appeals are available as a separate paid add-on. A missed or late-cancelled strategy call may
+                carry a $200 rescheduling fee. BuyUnrepped supports the process and coordination of your purchase
+                within the scope you select. We do not act as your buyer&apos;s agent, negotiate on your behalf, or
+                provide legal advice.
+              </p>
             </div>
 
             <div className="mt-10 rounded-2xl border border-gray-200 bg-brand-gray p-8">
@@ -200,19 +231,10 @@ export default function PricingPage() {
                       <td className="py-4 pr-4">${OFFER_FEE.toLocaleString()}</td>
                       <td className="py-4">Upfront at signup in the app</td>
                     </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-4 pr-4 font-semibold text-brand-navy">Transaction (full)</td>
+                    <tr>
+                      <td className="py-4 pr-4 font-semibold text-brand-navy">Transaction</td>
                       <td className="py-4 pr-4">${TRANSACTION_FEE_FULL.toLocaleString()}</td>
                       <td className="py-4">After acceptance, coordination fee</td>
-                    </tr>
-                    <tr>
-                      <td className="py-4 pr-4 font-semibold text-brand-navy">Transaction (split)</td>
-                      <td className="py-4 pr-4">
-                        ${TRANSACTION_FEE_SPLIT[0].toLocaleString()} + ${TRANSACTION_FEE_SPLIT[1].toLocaleString()}
-                      </td>
-                      <td className="py-4">
-                        Contract upload + closing or within 60 days (same total when offered)
-                      </td>
                     </tr>
                   </tbody>
                 </table>

@@ -247,10 +247,7 @@ export default function AboutPage() {
                 </span>{' '}
                 unlocks transaction management through closing with flat-fee pricing, not commission-based pricing.
               </p>
-              <p>
-                Split billing ($1,295 at contract upload + $1,295 at closing or within 60 days) may be offered for
-                the same total. Early access · Middle Tennessee.
-              </p>
+              <p>Early access · Middle Tennessee.</p>
             </div>
           </div>
         </Reveal>

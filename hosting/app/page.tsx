@@ -37,7 +37,7 @@ export default function LandingPage() {
     },
     {
       q: 'When is $995 due? When is the coordination fee due?',
-      a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted, not at signup. Split billing ($1,295 at contract upload + $1,295 at closing or within 60 days) may be offered for the same total.`,
+      a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted, not at signup.`,
     },
     {
       q: 'Who is behind BuyUnrepped?',
@@ -408,17 +408,19 @@ export default function LandingPage() {
                   label: 'Found a home',
                   desc: "Let's build your offer the right way",
                   cta: 'Build your offer',
-                  href: '/contact',
+                  href: appUrl,
+                  external: true,
                   featured: true,
                 },
                 {
                   label: 'Already under contract',
                   desc: "We'll help you finish strong",
                   cta: 'Set up your transaction',
-                  href: '/contact',
+                  href: appUrl,
+                  external: true,
                   featured: false,
                 },
-              ].map(({ label, desc, cta, href, featured }) => (
+              ].map(({ label, desc, cta, href, featured, external }) => (
                 <div
                   key={label}
                   className={`rounded-xl border p-6 transition-colors ${
@@ -436,16 +438,31 @@ export default function LandingPage() {
                   <p className="mt-1.5 text-[14px] leading-relaxed text-white/55">
                     {desc}
                   </p>
-                  <Link
-                    href={href}
-                    className={`mt-4 inline-flex items-center gap-1 text-[13px] font-semibold transition-colors ${
-                      featured
-                        ? 'text-brand-gold hover:text-white'
-                        : 'text-white/60 hover:text-white'
-                    }`}
-                  >
-                    {cta} →
-                  </Link>
+                  {external ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`mt-4 inline-flex items-center gap-1 text-[13px] font-semibold transition-colors ${
+                        featured
+                          ? 'text-brand-gold hover:text-white'
+                          : 'text-white/60 hover:text-white'
+                      }`}
+                    >
+                      {cta} →
+                    </a>
+                  ) : (
+                    <Link
+                      href={href}
+                      className={`mt-4 inline-flex items-center gap-1 text-[13px] font-semibold transition-colors ${
+                        featured
+                          ? 'text-brand-gold hover:text-white'
+                          : 'text-white/60 hover:text-white'
+                      }`}
+                    >
+                      {cta} →
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
@@ -502,24 +519,6 @@ export default function LandingPage() {
               act as your buyer&apos;s agent, negotiate on your behalf, or provide legal advice.
             </p>
 
-            <div className="mt-8 border-t border-gray-200 pt-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
-                What&apos;s included (CMA &amp; deliverables)
-              </p>
-              <h3 className="mt-1.5 text-lg font-extrabold text-brand-navy">
-                Honest scope after ${OFFER_FEE.toLocaleString()}
-              </h3>
-              <div className="mt-3 max-w-2xl space-y-2.5 text-[14px] leading-relaxed text-gray-500">
-                <p>
-                  CMA data from Realtracs/MLS where available; otherwise public records. No universal MLS agent
-                  sheet promise.
-                </p>
-                <p>
-                  Deliverables after payment: offer packet prep, strategy consult, and, after acceptance, transaction
-                  coordination through closing prep.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -621,35 +620,6 @@ export default function LandingPage() {
                 );
               })}
             </div>
-          </div>
-        </section>
-
-        {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-        <section
-          className="relative overflow-hidden bg-brand-navy py-12 md:py-14"
-          aria-labelledby="cta-heading"
-          style={{
-            background:
-              'radial-gradient(ellipse at 30% 70%, #24709d 0%, #1b5373 55%, #0a1f2c 100%)',
-          }}
-        >
-          <div className="absolute left-0 bottom-0 h-[3px] w-full bg-brand-gold" aria-hidden />
-
-          <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-4 text-center sm:px-6 lg:px-8">
-            <h2
-              id="cta-heading"
-              className="text-xl font-extrabold text-white sm:text-2xl"
-            >
-              Found the perfect home?
-            </h2>
-            <a
-              href={appUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d] hover:shadow-md"
-            >
-              Start your offer today →
-            </a>
           </div>
         </section>
       </main>

@@ -5,9 +5,7 @@ import {
   BUYER_AGENT_PCT_DEFAULT,
   OFFER_FEE,
   TRANSACTION_FEE_FULL,
-  TRANSACTION_FEE_SPLIT,
   buyUnreppedTotalFull,
-  buyUnreppedTotalSplit,
   savings,
   traditionalBuyerSide,
 } from '../../lib/fees';
@@ -22,43 +20,20 @@ function formatPrice(value: number): string {
 
 export default function SavingsCalculator() {
   const [price, setPrice] = useState(950_000);
-  const [mode, setMode] = useState<'full' | 'split'>('full');
 
   const traditional = traditionalBuyerSide(price);
-  const buyUnreppedTotal = mode === 'full' ? buyUnreppedTotalFull() : buyUnreppedTotalSplit();
-  const youKeep = savings(price, mode);
+  const buyUnreppedTotal = buyUnreppedTotalFull();
+  const youKeep = savings(price);
   const pctLabel = `${(BUYER_AGENT_PCT_DEFAULT * 100).toFixed(0)}%`;
 
   return (
     <div className="mt-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <label
-          className="text-[9px] font-bold uppercase tracking-[0.16em] text-gray-400"
-          htmlFor="savings-price-slider"
-        >
-          Purchase price (illustrative)
-        </label>
-        <div className="inline-flex rounded-lg border border-gray-200 p-0.5">
-          <button
-            type="button"
-            onClick={() => setMode('full')}
-            className={`rounded-md px-2.5 py-1 text-[11px] font-semibold transition-colors ${
-              mode === 'full' ? 'bg-brand-navy text-white' : 'text-gray-500 hover:text-brand-navy'
-            }`}
-          >
-            Pay in full
-          </button>
-          <button
-            type="button"
-            onClick={() => setMode('split')}
-            className={`rounded-md px-2.5 py-1 text-[11px] font-semibold transition-colors ${
-              mode === 'split' ? 'bg-brand-navy text-white' : 'text-gray-500 hover:text-brand-navy'
-            }`}
-          >
-            Split billing
-          </button>
-        </div>
-      </div>
+      <label
+        className="text-[9px] font-bold uppercase tracking-[0.16em] text-gray-400"
+        htmlFor="savings-price-slider"
+      >
+        Purchase price (illustrative)
+      </label>
 
       <div className="mt-2 flex items-baseline justify-between gap-2">
         <span className="text-[11px] text-gray-400">$250K</span>
@@ -100,10 +75,7 @@ export default function SavingsCalculator() {
             ${buyUnreppedTotal.toLocaleString()}
           </p>
           <p className="mt-0.5 text-[9px] leading-tight text-gray-500">
-            ${OFFER_FEE.toLocaleString()} offer
-            {mode === 'full'
-              ? ` · $${TRANSACTION_FEE_FULL.toLocaleString()} after`
-              : ` · $${TRANSACTION_FEE_SPLIT[0].toLocaleString()}+$${TRANSACTION_FEE_SPLIT[1].toLocaleString()}`}
+            ${OFFER_FEE.toLocaleString()} offer · ${TRANSACTION_FEE_FULL.toLocaleString()} after
           </p>
         </div>
 
