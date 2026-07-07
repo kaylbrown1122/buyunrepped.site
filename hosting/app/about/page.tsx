@@ -8,6 +8,25 @@ import Link from 'next/link';
 import { getAppUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL } from '../../lib/fees';
 
+const areasServed = [
+  { county: 'Davidson County', cities: 'Nashville' },
+  { county: 'Cheatham County', cities: 'Ashland City' },
+  { county: 'Robertson County', cities: 'Springfield' },
+  { county: 'Sumner County', cities: 'Gallatin, Hendersonville, Cottontown' },
+  { county: 'Wilson County', cities: 'Lebanon, Mt. Juliet' },
+  { county: 'Williamson County', cities: 'Franklin, Brentwood, Spring Hill' },
+  { county: 'Rutherford County', cities: 'Murfreesboro, Smyrna, La Vergne' },
+  { county: 'Maury County', cities: 'Columbia, Spring Hill' },
+  { county: 'Dickson County', cities: 'Dickson, White Bluff' },
+] as const;
+
+const credentials = [
+  { label: 'Licensed since', value: 'Tennessee Real Estate Broker, License #339134' },
+  { label: 'Brokerage', value: 'BuyUnrepped, Firm License #267134' },
+  { label: 'Education', value: 'B.S. Microbiology, minor in Chemistry' },
+  { label: 'Volume', value: '$100M+ facilitated in Middle Tennessee' },
+] as const;
+
 const scopeColumns = [
   {
     title: 'Offer preparation',
@@ -60,6 +79,68 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section
+          id="what-is-buyunrepped"
+          className="border-b border-gray-100 bg-brand-gray py-16 md:py-20"
+          aria-labelledby="what-is-buyunrepped-heading"
+        >
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Quick facts</p>
+            <h2 id="what-is-buyunrepped-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl">
+              What is BuyUnrepped?
+            </h2>
+            <p className="mt-3 max-w-2xl text-[1.05rem] leading-relaxed text-gray-600">
+              BuyUnrepped is a licensed Tennessee real estate brokerage that helps buyers purchase homes without
+              hiring a traditional buyer&apos;s agent. Also known as: unrepresented buyer support, buying without a
+              realtor, flat-fee buyer assistance.
+            </p>
+
+            <div className="mt-10 grid gap-10 sm:grid-cols-3">
+              <div>
+                <h3 className="border-b border-gray-200 pb-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
+                  What we do
+                </h3>
+                <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                  <li>Offer strategy and pricing analysis</li>
+                  <li>Contract preparation using Tennessee forms</li>
+                  <li>Inspection guidance and repair decisions</li>
+                  <li>Deadline tracking and transaction coordination</li>
+                  <li>Direct access to a licensed broker</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="border-b border-gray-200 pb-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
+                  What we don&apos;t do
+                </h3>
+                <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                  <li>Represent you as a buyer&apos;s agent</li>
+                  <li>Negotiate or speak on your behalf</li>
+                  <li>Charge a commission</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="border-b border-gray-200 pb-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
+                  Who this is for
+                </h3>
+                <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                  <li>Buyers who want control</li>
+                  <li>Buyers comfortable communicating directly</li>
+                  <li>Buyers who want to avoid commission</li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="mt-10 max-w-2xl text-[14px] leading-relaxed text-gray-500">
+              BuyUnrepped is a member of the <strong className="font-semibold text-brand-navy">National Association
+              of REALTORS® (NAR)</strong>, the <strong className="font-semibold text-brand-navy">Tennessee
+              Association of REALTORS® (TAR)</strong>, and the <strong className="font-semibold text-brand-navy">
+              Greater Nashville Association of REALTORS® (GNAR)</strong>. Our forms and brokerage policies are
+              guided by those associations&apos; standards and the REALTOR® Code of Ethics, alongside Tennessee
+              real estate license law.
+            </p>
+          </div>
+        </section>
+
         <section className="border-b border-gray-100 py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
@@ -82,6 +163,72 @@ export default function AboutPage() {
                 <Image src="/images/kayla-buyunrepped.png" alt="Kayla Brown" fill className="object-cover" />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="border-b border-gray-100 bg-brand-cream py-16 md:py-24" aria-labelledby="about-origin-heading">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">The origin story</p>
+            <h2 id="about-origin-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl">
+              Why I do this — the real version
+            </h2>
+            <blockquote className="mt-6 border-l-4 border-brand-gold pl-5 text-[1.15rem] font-medium italic leading-relaxed text-brand-navy">
+              &ldquo;Dental school was the plan — until it wasn&apos;t. Cancer brought me home. Buying our first home
+              while I was in treatment is what hooked me on the transaction. Real estate became the career;
+              challenging how the industry serves buyers became the mission.&rdquo;
+            </blockquote>
+            <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-gray-600">
+              <p>
+                I have a degree in Microbiology with a minor in Chemistry, and I was about a year into dental
+                school — on track toward orthodontics — when I was diagnosed with a rare cancer called Ewing&apos;s
+                Sarcoma. I came back to Nashville for treatment. During that season, my then-fiancé and I bought
+                our first home. That&apos;s when I fell in love with the real estate transaction — and realized I
+                wasn&apos;t going back to the path I&apos;d mapped out.
+              </p>
+              <p>
+                The same critical thinking and problem-solving that made me strong in a lab translated to
+                negotiations and contracts: every variable matters, every detail has a consequence, and
+                preparation is everything.
+              </p>
+              <p>
+                Over 175+ transactions and $100M+ in Middle Tennessee sales, I&apos;ve built genuine relationships
+                with lenders, inspectors, attorneys, title companies, and agents across this market. I know who
+                does excellent work and who doesn&apos;t. The through-line has always been honesty — and a
+                willingness to say what others won&apos;t.
+              </p>
+              <p>
+                BuyUnrepped is where that becomes a disruptor&apos;s playbook: buyers deserve real structure and
+                licensed support even when they don&apos;t want a traditional buyer&apos;s agent.
+              </p>
+            </div>
+
+            <div className="mt-10 grid grid-cols-2 gap-6 border-t border-gray-200 pt-8 sm:grid-cols-4">
+              {credentials.map((c) => (
+                <div key={c.label}>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue">{c.label}</p>
+                  <p className="mt-1.5 text-[13px] leading-snug text-gray-600">{c.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-gray-100 bg-white py-16 md:py-20" aria-labelledby="about-areas-heading">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Where I&apos;ve worked</p>
+            <h2 id="about-areas-heading" className="mt-2 text-2xl font-extrabold text-brand-navy sm:text-3xl">
+              Areas served
+            </h2>
+            <p className="mt-3 text-[1.05rem] leading-relaxed text-gray-500">
+              I&apos;ve sold homes across all of these Middle Tennessee counties.
+            </p>
+            <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+              {areasServed.map((area) => (
+                <li key={area.county} className="text-[14px] leading-relaxed text-gray-600">
+                  <span className="font-semibold text-brand-navy">{area.county}:</span> {area.cities}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
