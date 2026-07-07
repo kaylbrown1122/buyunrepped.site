@@ -1,8 +1,10 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
+import ToolCards from '../components/ToolCards';
 import Link from 'next/link';
 import { getAllGuides } from '../../lib/guides';
+import { getAllPosts } from '../../lib/posts';
 import { Clock, ArrowRight, MessageSquareText } from 'lucide-react';
 import { Metadata } from 'next';
 
@@ -21,6 +23,21 @@ export const metadata: Metadata = {
 };
 
 const CATEGORY_ORDER = ['Guides', 'Finance', 'Market Insights'];
+const FEATURED_POST_SLUGS = [
+  'tennessee-move-up-home-buyer-guide',
+  'buyer-agent-cost-tennessee',
+  'nar-settlement-guide-tennessee-buyers',
+  'buyer-agent-commission-secrets',
+  'nar-settlement-what-changed-buyers-listicle',
+  'purchase-agreement-red-flags',
+  'questions-ask-listing-agent-unrepresented',
+  'negotiate-directly-sellers-agent',
+  'tennessee-closing-costs-fees-guide',
+  'tennessee-home-inspection-issues',
+  'buyer-broker-agreements-explained',
+  'nar-settlement-home-buyers-2026',
+  'seller-concessions-tennessee-guide',
+];
 
 function categoryColor(category: string) {
   switch (category) {
@@ -35,6 +52,7 @@ function categoryColor(category: string) {
 
 export default function GuidesPage() {
   const guides = getAllGuides();
+  const posts = getAllPosts();
 
   const grouped = CATEGORY_ORDER.reduce<Record<string, typeof guides>>((acc, cat) => {
     const matches = guides.filter((g) => g.frontmatter.category === cat);
@@ -48,6 +66,13 @@ export default function GuidesPage() {
     if (!grouped[cat]) grouped[cat] = [];
     if (!grouped[cat].includes(g)) grouped[cat].push(g);
   });
+
+  const featuredPosts = FEATURED_POST_SLUGS.map((slug) => posts.find((post) => post.slug === slug)).filter(
+    (post): post is (typeof posts)[number] => Boolean(post)
+  );
+
+  const remainingPosts = posts.filter((post) => !FEATURED_POST_SLUGS.includes(post.slug));
+  const orderedPosts = [...featuredPosts, ...remainingPosts];
 
   return (
     <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
@@ -90,8 +115,23 @@ export default function GuidesPage() {
         </Link>
       </section>
 
+      {/* Tools */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="max-w-3xl mb-8">
+          <SectionBadge>Tools</SectionBadge>
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 leading-tight">
+            Free tools for smarter home buying.
+          </h2>
+          <p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
+            Crunch the numbers before you make an offer. Our calculators help Tennessee buyers
+            understand costs, savings, and affordability.
+          </p>
+        </div>
+        <ToolCards />
+      </section>
+
       {/* Guide grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {Object.entries(grouped).map(([category, categoryGuides]) => (
           <div key={category} className="mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 pb-3 border-b border-gray-200">
@@ -127,6 +167,53 @@ export default function GuidesPage() {
             </div>
           </div>
         ))}
+      </section>
+
+      {/* Blog posts */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+        <div className="max-w-3xl mb-10">
+          <SectionBadge>Blog Posts</SectionBadge>
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 leading-tight">
+            Expert breakdowns for Tennessee buyers
+          </h2>
+          <p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
+            Deep dives on commissions, contracts, negotiations, closing costs, and what changed
+            after the NAR settlement.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {orderedPosts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/resources/${post.slug}`}
+              className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <span className="px-3 py-1 bg-brand-blue/10 text-brand-blue text-xs font-bold rounded-full uppercase tracking-wider">
+                  {post.frontmatter.category}
+                </span>
+                <span className="text-xs text-gray-400">{post.frontmatter.readingTime}</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-brand-blue transition-colors">
+                {post.frontmatter.title}
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                {post.frontmatter.description}
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-gray-400">
+                  {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </span>
+                <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-brand-blue group-hover:translate-x-1 transition-all" />
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
 
       {/* Bottom CTA */}
