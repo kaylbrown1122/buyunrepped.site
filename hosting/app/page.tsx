@@ -212,99 +212,29 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ── STATS BAND (credibility numbers) ─────────────────────────────── */}
+        {/* ── CREDIBILITY BAND (experience + brokerage, unified) ───────────── */}
         <section
           className="border-b border-gray-100 bg-white py-12 md:py-16"
-          aria-label="Kayla Brown experience and BuyUnrepped model metrics"
+          aria-label="Kayla Brown broker experience and BuyUnrepped brokerage credentials"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-10 md:flex-row md:items-stretch md:gap-0">
-              <div className="flex flex-1 flex-col justify-center md:border-r md:border-gray-200 md:pr-10 lg:pr-14">
-                <p className="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue md:text-left">
-                  Experience · Kayla Brown
-                </p>
-                <div className="mt-6 grid grid-cols-2 items-start gap-6 sm:gap-8">
-                  <div className="text-center md:text-left">
-                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">$100M+</p>
-                    <p className="mt-2 text-[14px] leading-snug text-gray-500">Middle Tennessee transaction volume</p>
-                  </div>
-                  <div className="text-center md:text-left">
-                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">175+</p>
-                    <p className="mt-2 text-[14px] leading-snug text-gray-500">Transactions facilitated</p>
-                  </div>
-                </div>
+            <p className="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
+              Experience you&apos;re buying into · Kayla Brown, Principal Broker
+            </p>
+
+            <div className="mx-auto mt-8 grid max-w-3xl grid-cols-2 gap-8 sm:gap-12">
+              <div className="text-center">
+                <p className="text-4xl font-extrabold tracking-tight text-brand-navy sm:text-5xl md:text-6xl">$100M+</p>
+                <p className="mt-2 text-[14px] leading-snug text-gray-500">Middle Tennessee transaction volume</p>
               </div>
-              <div className="flex flex-1 flex-col justify-center md:pl-10 lg:pl-14">
-                <p className="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue md:text-left">
-                  BuyUnrepped model
-                </p>
-                <div className="mt-6 grid grid-cols-2 items-start gap-6 sm:gap-8">
-                  <div className="text-center md:text-left">
-                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">$3,490</p>
-                    <p className="mt-2 text-[14px] leading-snug text-gray-500">All-in flat fee</p>
-                  </div>
-                  <div className="text-center md:text-left">
-                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">$0</p>
-                    <p className="mt-2 text-[14px] leading-snug text-gray-500">Buyer-agent commission</p>
-                  </div>
-                </div>
+              <div className="text-center">
+                <p className="text-4xl font-extrabold tracking-tight text-brand-navy sm:text-5xl md:text-6xl">175+</p>
+                <p className="mt-2 text-[14px] leading-snug text-gray-500">Transactions facilitated</p>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* ── THE PROBLEM + SAVINGS (why you need it) ──────────────────────── */}
-        <section
-          id="savings"
-          className="border-b border-gray-100 bg-brand-gray py-8 md:py-10"
-          aria-labelledby="savings-heading"
-        >
-          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-brand-blue">
-                Why buyers are done overpaying
-              </p>
-              <h2
-                id="savings-heading"
-                className="mx-auto mt-2 max-w-xl text-xl font-extrabold tracking-tight text-brand-navy sm:text-2xl"
-              >
-                A buyer&apos;s agent costs about 3%. That&apos;s{' '}
-                <span className="text-brand-gold">$28,500</span> on a $950,000 home.
-              </h2>
-              <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-gray-500">
-                Since the 2024 commission changes, that fee is increasingly yours to pay—for someone to
-                write an offer and relay messages. BuyUnrepped is flat: ${OFFER_FEE.toLocaleString()} to build
-                and submit your offer, ${TRANSACTION_FEE_FULL.toLocaleString()} only if it&apos;s accepted and you
-                want full coordination. Slide to your price.
-              </p>
-            </div>
-
-            <SavingsCalculator />
-
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href={appUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-brand-gold px-5 py-2 text-[13px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
-              >
-                Start your offer
-              </a>
-              <Link
-                href="/pricing"
-                className="inline-flex min-h-[40px] items-center justify-center rounded-lg border border-brand-navy/20 px-5 py-2 text-[13px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-white"
-              >
-                See full pricing
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── BROKERAGE TRUST STRIP (early proof) ──────────────────────────── */}
-        <div className="border-b border-gray-100 bg-white py-8">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:text-left">
-              <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
+            <div className="mx-auto mt-10 flex max-w-3xl flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 sm:flex-row sm:text-left">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center">
                 <Image
                   src="/images/buyunrepped-cropped.png"
                   alt=""
@@ -314,11 +244,11 @@ export default function LandingPage() {
                   sizes="(max-width: 640px) 120px, 140px"
                   aria-hidden
                 />
-                <p className="text-[13px] text-gray-500">
+                <p className="text-center text-[13px] text-gray-500 sm:text-left">
                   Built and run by{' '}
                   <span className="font-semibold text-brand-navy">Kayla Brown</span>
                   {' '}
-                  · Licensed Tennessee Principal Broker · Lic. #339134
+                  · Licensed Tennessee Principal Broker · Broker Lic. #339134 · Firm Lic. #267134
                 </p>
               </div>
               <Link
@@ -329,14 +259,11 @@ export default function LandingPage() {
               </Link>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* ── PRODUCT WALKTHROUGH (real app, screen by screen) ─────────────── */}
-        <ProductWalkthrough />
-
-        {/* ── THREE OPTIONS ───────────────────────────────────────────────── */}
+        {/* ── THREE OPTIONS (positioning — where BuyUnrepped fits) ─────────── */}
         <section
-          className="border-b border-gray-100 bg-white py-12 md:py-16"
+          className="border-b border-gray-100 bg-brand-cream py-12 md:py-16"
           aria-labelledby="options-heading"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -407,8 +334,11 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* ── PRODUCT WALKTHROUGH (real app, screen by screen) ─────────────── */}
+        <ProductWalkthrough />
+
         {/* ── WHAT'S INCLUDED ──────────────────────────────────────────────── */}
-        <section className="border-b border-gray-100 bg-brand-cream py-12 md:py-16" aria-labelledby="included-heading">
+        <section className="border-b border-gray-100 bg-white py-12 md:py-16" aria-labelledby="included-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
               <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Scope</p>
@@ -456,6 +386,53 @@ export default function LandingPage() {
               BuyUnrepped supports the process and coordination of your purchase within the scope you select. We do not
               act as your buyer&apos;s agent, negotiate on your behalf, or provide legal advice.
             </p>
+          </div>
+        </section>
+
+        {/* ── THE PROBLEM + SAVINGS (the payoff, once you know the product) ── */}
+        <section
+          id="savings"
+          className="border-b border-gray-100 bg-brand-gray py-8 md:py-10"
+          aria-labelledby="savings-heading"
+        >
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-brand-blue">
+                Why buyers are done overpaying
+              </p>
+              <h2
+                id="savings-heading"
+                className="mx-auto mt-2 max-w-xl text-xl font-extrabold tracking-tight text-brand-navy sm:text-2xl"
+              >
+                A buyer&apos;s agent costs about 3%. That&apos;s{' '}
+                <span className="text-brand-gold">$28,500</span> on a $950,000 home.
+              </h2>
+              <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-gray-500">
+                Since the 2024 commission changes, that fee is increasingly yours to pay—for someone to
+                write an offer and relay messages. BuyUnrepped is flat: ${OFFER_FEE.toLocaleString()} to build
+                and submit your offer, ${TRANSACTION_FEE_FULL.toLocaleString()} only if it&apos;s accepted and you
+                want full coordination. Slide to your price.
+              </p>
+            </div>
+
+            <SavingsCalculator />
+
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-brand-gold px-5 py-2 text-[13px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
+              >
+                Start your offer
+              </a>
+              <Link
+                href="/pricing"
+                className="inline-flex min-h-[40px] items-center justify-center rounded-lg border border-brand-navy/20 px-5 py-2 text-[13px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-white"
+              >
+                See full pricing
+              </Link>
+            </div>
           </div>
         </section>
 
