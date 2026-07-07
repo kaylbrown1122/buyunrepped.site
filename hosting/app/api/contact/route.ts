@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '../../../lib/supabaseAdmin';
 import { saveMarketingContact } from '../../../lib/marketingContact';
+import { sendContactWelcomeEmail } from '../../../lib/contactWelcomeEmail';
 import { verifyChallenge } from '../../../lib/spamGuard';
 
 const CONTACT_SOURCE = 'website_contact';
@@ -37,7 +38,7 @@ async function saveContactSubmission(input: {
   return { ok: true };
 }
 
-async function notifyDiscord(input: {
+async function notifySlack(input: {
   firstName: string;
   lastName: string;
   email: string;
@@ -45,28 +46,40 @@ async function notifyDiscord(input: {
   message?: string;
   marketingOptIn: boolean;
 }): Promise<void> {
-  if (!process.env.DISCORD_CONTACT_WEBHOOK_URL) {
+  const webhookUrl = process.env.SLACK_CONTACT_WEBHOOK_URL;
+  if (!webhookUrl) {
     return;
   }
 
-  await fetch(process.env.DISCORD_CONTACT_WEBHOOK_URL, {
+  const name = `${input.firstName} ${input.lastName}`;
+
+  await fetch(webhookUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      embeds: [
+      text: `New contact form submission from ${name} (${input.email})`,
+      blocks: [
         {
-          title: 'New Contact Form Submission',
-          color: 0x0891b2,
+          type: 'header',
+          text: { type: 'plain_text', text: 'New Contact Form Submission', emoji: true },
+        },
+        {
+          type: 'section',
           fields: [
-            { name: 'Name', value: `${input.firstName} ${input.lastName}`, inline: true },
-            { name: 'Email', value: input.email, inline: true },
-            { name: 'Interested In', value: input.interestedIn || 'Not specified', inline: true },
-            { name: 'Marketing opt-in', value: input.marketingOptIn ? 'Yes' : 'No', inline: true },
-            { name: 'Message', value: input.message || 'No message provided' },
+            { type: 'mrkdwn', text: `*Name:*\n${name}` },
+            { type: 'mrkdwn', text: `*Email:*\n${input.email}` },
+            { type: 'mrkdwn', text: `*Interested In:*\n${input.interestedIn || 'Not specified'}` },
+            { type: 'mrkdwn', text: `*Marketing opt-in:*\n${input.marketingOptIn ? 'Yes' : 'No'}` },
           ],
-          timestamp: new Date().toISOString(),
+        },
+        {
+          type: 'section',
+          text: {
+            type: 'mrkdwn',
+            text: `*Message:*\n${input.message || '_No message provided_'}`,
+          },
         },
       ],
     }),
@@ -138,7 +151,17 @@ export async function POST(request: Request) {
       }
     }
 
-    await notifyDiscord(payload);
+    await notifySlack(payload);
+
+    if (payload.marketingOptIn) {
+      const emailResult = await sendContactWelcomeEmail({
+        firstName: payload.firstName,
+        email: payload.email,
+      });
+      if (!emailResult.ok) {
+        console.error('Contact welcome email failed:', emailResult.error);
+      }
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
