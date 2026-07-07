@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Check } from 'lucide-react';
 import Link from 'next/link';
+import { getAppUrl } from '../../lib/appUrl';
+import { OFFER_FEE, TRANSACTION_FEE_FULL, TRANSACTION_FEE_SPLIT, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
 
 const pricingFaqs = [
   {
@@ -18,9 +20,34 @@ const pricingFaqs = [
     q: 'What does Transaction Management include?',
     a: 'The $2,495 Transaction Management includes full coordination from contract through closing, platform access with templates and self-guided assistance, and direct broker support when you need it most.',
   },
+  {
+    q: 'When is $995 due? When is the coordination fee due?',
+    a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted—not at signup.`,
+  },
+  {
+    q: 'Where is BuyUnrepped available?',
+    a: 'Early access · Middle Tennessee. We are rolling out in phases across the Nashville metro and surrounding counties.',
+  },
+  {
+    q: 'What data sources power the CMA?',
+    a: 'Realtracs/MLS where we have access; otherwise public records. We do not promise a universal MLS agent sheet on every property.',
+  },
+  {
+    q: 'How should I read the savings calculator?',
+    a: 'The calculator uses an ~3% buyer-side fee illustration. It compares that line item to BuyUnrepped flat fees, not your full transaction cost.',
+  },
+  {
+    q: 'Who is the public point of contact?',
+    a: 'Kayla Brown, CEO and Principal Broker. Email info@buyunrepped.com.',
+  },
+  {
+    q: 'Is there a free or lite offer option?',
+    a: 'No. BuyUnrepped offers a single $995 offer package at signup—no free estimate or lite tier.',
+  },
 ] as const;
 
 export default function PricingPage() {
+  const appUrl = getAppUrl();
   return (
     <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
       <Header />
@@ -92,6 +119,62 @@ export default function PricingPage() {
             <div className="mt-6 rounded-2xl border border-brand-gold/30 bg-brand-gold/[0.09] px-6 py-5 text-center ring-1 ring-inset ring-brand-gold/25">
               <p className="text-sm font-semibold text-brand-navy">All in, combined</p>
               <p className="mt-1 text-3xl font-extrabold text-brand-navy">$3,490</p>
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-gray-200 bg-brand-gray p-8">
+              <h2 className="text-xl font-bold text-brand-navy">Fee timing</h2>
+              <p className="mt-2 text-[14px] text-gray-500">
+                Total up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()} — not one SKU at offer time.
+              </p>
+              <div className="mt-6 overflow-x-auto">
+                <table className="w-full min-w-[320px] text-left text-[14px]">
+                  <thead>
+                    <tr className="border-b border-gray-200 text-[11px] font-bold uppercase tracking-wide text-gray-400">
+                      <th className="pb-3 pr-4">Stage</th>
+                      <th className="pb-3 pr-4">Amount</th>
+                      <th className="pb-3">When due</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-600">
+                    <tr className="border-b border-gray-100">
+                      <td className="py-4 pr-4 font-semibold text-brand-navy">Offer package</td>
+                      <td className="py-4 pr-4">${OFFER_FEE.toLocaleString()}</td>
+                      <td className="py-4">Upfront at signup in the app</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-4 pr-4 font-semibold text-brand-navy">Transaction (full)</td>
+                      <td className="py-4 pr-4">${TRANSACTION_FEE_FULL.toLocaleString()}</td>
+                      <td className="py-4">After acceptance — coordination fee</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 pr-4 font-semibold text-brand-navy">Transaction (split)</td>
+                      <td className="py-4 pr-4">
+                        ${TRANSACTION_FEE_SPLIT[0].toLocaleString()} + ${TRANSACTION_FEE_SPLIT[1].toLocaleString()}
+                      </td>
+                      <td className="py-4">
+                        Contract upload + closing or within 60 days (same total when offered)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
+              >
+                Start in the app
+              </a>
+              <Link
+                href="/#savings"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50"
+              >
+                See savings calculator
+              </Link>
             </div>
           </div>
         </section>

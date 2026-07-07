@@ -4,6 +4,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import Image from 'next/image';
+import Link from 'next/link';
+import { getAppUrl } from '../../lib/appUrl';
+import { OFFER_FEE, TRANSACTION_FEE_FULL } from '../../lib/fees';
 
 const scopeColumns = [
   {
@@ -31,6 +34,8 @@ const scopeColumns = [
 ] as const;
 
 export default function AboutPage() {
+  const appUrl = getAppUrl();
+
   return (
     <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
       <Header />
@@ -45,6 +50,12 @@ export default function AboutPage() {
             <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
               BuyUnrepped is founded by Kayla Brown, Principal Broker and Realtor®, who has assisted in 175+
               transactions during 10 active years as a full-service agent in Nashville.
+            </p>
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-blue/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-brand-blue">
+              Kayla Brown, CEO · Principal Broker
+            </p>
+            <p className="mt-3 text-[13px] font-semibold uppercase tracking-[0.14em] text-gray-400">
+              Early access · Middle Tennessee
             </p>
           </div>
         </section>
@@ -70,6 +81,27 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-gray-100">
                 <Image src="/images/kayla-buyunrepped.png" alt="Kayla Brown" fill className="object-cover" />
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-gray-100 bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Pricing</p>
+            <h2 className="mt-2 text-2xl font-extrabold text-brand-navy sm:text-3xl">How it works</h2>
+            <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-gray-600">
+              <p>
+                <span className="font-semibold text-brand-navy">${OFFER_FEE.toLocaleString()} upfront</span> for the
+                offer package when you start in the app. After acceptance, the{' '}
+                <span className="font-semibold text-brand-navy">
+                  ${TRANSACTION_FEE_FULL.toLocaleString()} coordination fee
+                </span>{' '}
+                unlocks transaction management through closing—not commission-based, flat fee pricing.
+              </p>
+              <p>
+                Split billing ($1,295 at contract upload + $1,295 at closing or within 60 days) may be offered for
+                the same total. Early access · Middle Tennessee.
+              </p>
             </div>
           </div>
         </section>
@@ -109,6 +141,44 @@ export default function AboutPage() {
             <p className="mt-12 max-w-2xl text-[13px] leading-relaxed text-gray-400">
               Non-representational support is not legal advice. For legal questions, consult a licensed attorney.
             </p>
+
+            <div className="mt-16 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
+                What&apos;s included (CMA &amp; deliverables)
+              </p>
+              <h3 className="mt-2 text-xl font-extrabold text-brand-navy sm:text-2xl">
+                Honest scope after ${OFFER_FEE.toLocaleString()}
+              </h3>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-gray-600">
+                <p>
+                  CMA data from Realtracs/MLS where available; otherwise public records. No universal MLS agent
+                  sheet promise.
+                </p>
+                <p>
+                  Deliverables after payment: offer packet prep, strategy consult, and—after acceptance—transaction
+                  coordination through closing prep.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-gray-100 py-16 md:py-20">
+          <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-4 px-4 sm:px-6">
+            <a
+              href={appUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-8 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
+            >
+              Start in the app
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50"
+            >
+              Questions → contact
+            </Link>
           </div>
         </section>
       </main>

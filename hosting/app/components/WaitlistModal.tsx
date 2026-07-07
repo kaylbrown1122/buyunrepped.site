@@ -35,6 +35,8 @@ export function WaitlistProvider({ children }: { children: ReactNode }) {
 
 function WaitlistModal() {
   const { isOpen, closeModal } = useWaitlist();
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -42,7 +44,7 @@ function WaitlistModal() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!email) return;
+    if (!firstName || !lastName || !email) return;
 
     setStatus('loading');
     setErrorMessage('');
@@ -53,11 +55,13 @@ function WaitlistModal() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ firstName, lastName, email }),
       });
 
       if (response.ok) {
         setStatus('success');
+        setFirstName('');
+        setLastName('');
         setEmail('');
       } else {
         throw new Error('Failed to submit');
@@ -73,6 +77,8 @@ function WaitlistModal() {
     // Reset state after animation
     setTimeout(() => {
       setStatus('idle');
+      setFirstName('');
+      setLastName('');
       setEmail('');
       setErrorMessage('');
     }, 200);
@@ -130,13 +136,47 @@ function WaitlistModal() {
         ) : (
           <>
             <div className="text-center mb-8">
-              <h2 id="waitlist-modal-title" className="text-2xl font-bold mb-2">Join Early Access</h2>
+              <h2 id="waitlist-modal-title" className="text-2xl font-bold mb-2">Stay in the loop</h2>
               <p className="text-gray-500">
-                Be the first to know when BuyUnrepped launches in Tennessee. Save thousands on your next home purchase.
+                BuyUnrepped is live in Tennessee today—with more states on the way. Drop your email and
+                we&apos;ll keep you posted on new locations and buyer tips.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="waitlist-first-name" className="block text-sm font-bold text-gray-700 mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="waitlist-first-name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="Jane"
+                    required
+                    aria-required="true"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="waitlist-last-name" className="block text-sm font-bold text-gray-700 mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="waitlist-last-name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    placeholder="Doe"
+                    required
+                    aria-required="true"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
+                  />
+                </div>
+              </div>
+
               <div>
                 <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">
                   Email Address

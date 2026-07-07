@@ -5,14 +5,17 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { getAppUrl } from '../../lib/appUrl';
 
 export default function ContactPage() {
+    const appUrl = getAppUrl();
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
         interestedIn: 'Offer Package',
         message: '',
+        marketingOptIn: false,
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -31,7 +34,7 @@ export default function ContactPage() {
 
             if (response.ok) {
                 setStatus('success');
-                setFormData({ firstName: '', lastName: '', email: '', interestedIn: 'Offer Package', message: '' });
+                setFormData({ firstName: '', lastName: '', email: '', interestedIn: 'Offer Package', message: '', marketingOptIn: false });
             } else {
                 setStatus('error');
             }
@@ -53,6 +56,24 @@ export default function ContactPage() {
                 <p className="text-xl text-gray-500">
                     Have questions about how to buy without an agent? We&apos;re here to help you navigate the process.
                 </p>
+                <p className="mt-4 text-[15px] font-semibold text-brand-navy">
+                    Kayla Brown, CEO — primary public contact
+                </p>
+                <a
+                    href="mailto:info@buyunrepped.com"
+                    className="mt-2 inline-block text-lg font-bold text-brand-blue hover:underline"
+                >
+                    info@buyunrepped.com
+                </a>
+                <p className="mt-2 text-gray-500">+1 (615) 208-3390 · 2509 Cruzen St, Nashville, TN 37211</p>
+                <a
+                    href={appUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
+                >
+                    Start in the app
+                </a>
             </section>
 
             <section className="pb-24">
@@ -69,7 +90,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg mb-1">Email</h4>
-                                        <p className="text-gray-500">info@buyunrepped.com</p>
+                                        <a href="mailto:info@buyunrepped.com" className="text-brand-blue font-semibold hover:underline">info@buyunrepped.com</a>
                                     </div>
                                 </div>
 
@@ -172,6 +193,8 @@ export default function ContactPage() {
                                                 <option>Offer Package</option>
                                                 <option>Transaction Management</option>
                                                 <option>General inquiry</option>
+                                                <option>Offer question</option>
+                                                <option>Transaction question</option>
                                             </select>
                                             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500" aria-hidden="true">
                                                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -191,6 +214,18 @@ export default function ContactPage() {
                                         ></textarea>
                                     </div>
 
+                                    <label className="flex items-start gap-3 cursor-pointer">
+                                        <input
+                                            type="checkbox"
+                                            checked={formData.marketingOptIn}
+                                            onChange={(e) => setFormData({ ...formData, marketingOptIn: e.target.checked })}
+                                            className="mt-1 h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue"
+                                        />
+                                        <span className="text-sm text-gray-600">
+                                            Also send me BuyUnrepped updates and buyer tips by email.
+                                        </span>
+                                    </label>
+
                                     {status === 'error' && (
                                         <p id="contact-error" role="alert" className="text-red-600 text-sm">Something went wrong. Please try again.</p>
                                     )}
@@ -209,6 +244,10 @@ export default function ContactPage() {
                     </div>
                 </div>
             </section>
+
+            <p className="mx-auto max-w-7xl px-4 pb-12 text-center text-[12px] text-gray-400 sm:px-6 lg:px-8">
+                In-app messages may route to your coordination team as the product grows.
+            </p>
 
             <Footer />
         </div>
