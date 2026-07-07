@@ -8,6 +8,8 @@ const companyLinks: [string, string][] = [
   ['Contact', '/contact'],
   ['Guides', '/guides'],
   ['Blog', '/resources'],
+  ['Agent Matchmaking', '/agent-match'],
+  ['Vendor List', '/vendors'],
 ];
 
 const socialClass =

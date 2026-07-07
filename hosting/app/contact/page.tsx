@@ -1,11 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { getAppUrl } from '../../lib/appUrl';
+
+const INTEREST_OPTIONS = [
+    'Offer Package',
+    'Transaction Management',
+    'Agent Matchmaking',
+    'General inquiry',
+    'Offer question',
+    'Transaction question',
+];
 
 export default function ContactPage() {
     const appUrl = getAppUrl();
@@ -18,6 +27,24 @@ export default function ContactPage() {
         marketingOptIn: false,
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const interest = params.get('interest');
+        const role = params.get('role');
+        if (interest && INTEREST_OPTIONS.includes(interest)) {
+            setFormData((prev) => ({
+                ...prev,
+                interestedIn: interest,
+                message:
+                    role === 'seller'
+                        ? "I'm a seller interested in agent matchmaking. "
+                        : role === 'buyer'
+                          ? "I'm a buyer interested in full-service agent matchmaking. "
+                          : prev.message,
+            }));
+        }
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -190,11 +217,9 @@ export default function ContactPage() {
                                                 onChange={(e) => setFormData({ ...formData, interestedIn: e.target.value })}
                                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all appearance-none bg-white"
                                             >
-                                                <option>Offer Package</option>
-                                                <option>Transaction Management</option>
-                                                <option>General inquiry</option>
-                                                <option>Offer question</option>
-                                                <option>Transaction question</option>
+                                                {INTEREST_OPTIONS.map((opt) => (
+                                                    <option key={opt}>{opt}</option>
+                                                ))}
                                             </select>
                                             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500" aria-hidden="true">
                                                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
