@@ -18,7 +18,7 @@ interface TitleCompany {
 
 const titleCompanies: TitleCompany[] = [
   { name: 'Magnolia Title & Escrow', rating: 5.0, href: 'https://magnoliatitle.com/' },
-  { name: 'Chapman & Rosenthal', rating: 4.8, href: 'https://www.wagonwheeltitle.com/' },
+  { name: 'Chapman & Rosenthal', rating: 4.8, href: 'https://chapmanrosenthal.com/' },
   { name: 'Windmill Title', rating: 4.6, href: 'https://www.windmilltitle.com/' },
   { name: 'Wilson Berry Title', rating: 5.0, href: 'https://wilsonberrytitle.com/' },
   { name: 'Cedar City Title', rating: 5.0, href: 'https://cedarcitytitle.com/' },
