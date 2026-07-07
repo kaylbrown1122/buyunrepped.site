@@ -117,10 +117,10 @@ export default function LandingPage() {
                 </h1>
 
                 <p className="mt-7 max-w-xl text-[1.125rem] leading-relaxed text-white/65 md:text-[1.2rem]">
-                  BuyUnrepped helps homebuyers make strong offers and close smoothly without paying a
-                  traditional buyer&apos;s agent commission. You stay in control of the property, the terms,
-                  and the communication. We provide our proprietary app, the state Realtor docs, licensed offer
-                  and strategy guidance, and admin support from offer to closing for a tiered flat fee.
+                  BuyUnrepped bridges the gap between full-service buyer&apos;s agent and full DIY real
+                  estate. You control the property, the terms, and all communication with the listing side.
+                  We provide our proprietary app, state Realtor forms, licensed offer and strategy guidance,
+                  and administrative support through closing with transparent, flat-fee pricing.
                 </p>
 
                 <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.06] px-5 py-4">
@@ -149,10 +149,10 @@ export default function LandingPage() {
                     Start in the app
                   </a>
                   <Link
-                    href="/contact"
+                    href="/pricing"
                     className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/25 px-7 py-3 text-[1rem] font-medium text-white/85 transition-colors hover:border-white/40 hover:bg-white/[0.07]"
                   >
-                    Questions about fees
+                    View Pricing
                   </Link>
                 </div>
 
