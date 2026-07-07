@@ -51,7 +51,9 @@ function categoryColor(category: string) {
 }
 
 export default function GuidesPage() {
-  const guides = getAllGuides();
+  const guides = getAllGuides().filter(
+    (guide) => !guide.frontmatter.title.toLowerCase().startsWith('the complete guide to')
+  );
   const posts = getAllPosts();
 
   const grouped = CATEGORY_ORDER.reduce<Record<string, typeof guides>>((acc, cat) => {
