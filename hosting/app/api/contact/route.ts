@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '../../../lib/supabaseAdmin';
 import { saveMarketingContact } from '../../../lib/marketingContact';
+import { verifyChallenge } from '../../../lib/spamGuard';
 
 const CONTACT_SOURCE = 'website_contact';
 
@@ -74,8 +75,29 @@ async function notifyDiscord(input: {
 
 export async function POST(request: Request) {
   try {
-    const { firstName, lastName, email, interestedIn, message, marketingOptIn } =
-      await request.json();
+    const {
+      firstName,
+      lastName,
+      email,
+      interestedIn,
+      message,
+      marketingOptIn,
+      captchaToken,
+      captchaAnswer,
+      honeypot,
+    } = await request.json();
+
+    const guardResult = verifyChallenge({ token: captchaToken, answer: captchaAnswer, honeypot });
+    if (!guardResult.ok) {
+      if (guardResult.reason === 'honeypot') {
+        console.warn('Contact submission blocked: honeypot triggered');
+        return NextResponse.json({ success: true });
+      }
+      return NextResponse.json(
+        { error: 'Verification failed. Please try again.' },
+        { status: 400 }
+      );
+    }
 
     if (!firstName || !lastName || !email) {
       return NextResponse.json(

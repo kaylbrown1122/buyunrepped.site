@@ -8,6 +8,22 @@
   }
 }
 
+/* Scroll-reveal: fade + slide up on first viewport intersection */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+  }
+}
+
 /* Superscript citations in prose */
 .prose sup {
   font-size: 0.65em;

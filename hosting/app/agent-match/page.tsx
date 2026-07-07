@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import Link from 'next/link';
 import { Handshake, MessageSquare, UserCheck, ArrowRightLeft } from 'lucide-react';
+import Reveal from '../components/Reveal';
 
 const steps = [
   {
@@ -15,7 +16,7 @@ const steps = [
   {
     icon: <UserCheck className="size-5 text-brand-blue" />,
     title: 'I review and curate',
-    body: "I identify 1–3 agents from my trusted network who are genuinely well-suited for your property and situation — not just whoever's available.",
+    body: "I identify 1–3 agents from my trusted network who are genuinely well-suited for your property and situation, not just whoever's available.",
   },
   {
     icon: <ArrowRightLeft className="size-5 text-brand-blue" />,
@@ -25,7 +26,7 @@ const steps = [
   {
     icon: <Handshake className="size-5 text-brand-blue" />,
     title: 'You take it from there',
-    body: 'Interview your match, ask hard questions, and decide. My job is the connection — the relationship and transaction are between you and your agent.',
+    body: 'Interview your match, ask hard questions, and decide. My job is the connection, the relationship and transaction are between you and your agent.',
   },
 ];
 
@@ -47,7 +48,7 @@ export default function AgentMatchPage() {
             <strong className="font-semibold text-brand-navy">sellers</strong>, Kayla connects you with listing
             agents who fit your property, your neighborhood, and your goals. For{' '}
             <strong className="font-semibold text-brand-navy">buyers</strong> who want a full-service buyer&apos;s
-            agent — not BuyUnrepped&apos;s flat-fee model — she helps you find someone skilled, ethical, and
+            agent, not BuyUnrepped&apos;s flat-fee model, she helps you find someone skilled, ethical, and
             well-matched to how you buy. Over a decade building relationships across this market means every
             introduction is based on fit and track record.
           </p>
@@ -56,7 +57,7 @@ export default function AgentMatchPage() {
             <h2 className="text-sm font-bold uppercase tracking-wide text-brand-navy">My promise to you</h2>
             <p className="mt-2 text-[15px] leading-relaxed text-gray-600">
               This is a merit-based match. I connect you with agents based on their track record, local expertise,
-              and fit with your specific situation — and I&apos;m always upfront about how it works, including
+              and fit with your specific situation, and I&apos;m always upfront about how it works, including
               referral-fee disclosure.
             </p>
           </div>
@@ -79,7 +80,7 @@ export default function AgentMatchPage() {
       </section>
 
       {/* Process */}
-      <section className="border-t border-gray-100 bg-brand-gray py-16 md:py-20">
+      <Reveal as="section" className="border-t border-gray-100 bg-brand-gray py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">The process</p>
           <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl">
@@ -116,7 +117,7 @@ export default function AgentMatchPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </Reveal>
 
       <Footer />
     </div>

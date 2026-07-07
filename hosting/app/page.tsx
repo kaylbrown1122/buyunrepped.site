@@ -212,187 +212,10 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ── CREDIBILITY BAND (experience + brokerage, unified) ───────────── */}
-        <section
-          className="border-b border-gray-100 bg-white py-12 md:py-16"
-          aria-label="Kayla Brown broker experience and BuyUnrepped brokerage credentials"
-        >
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
-              Experience you&apos;re buying into · Kayla Brown, Principal Broker
-            </p>
-
-            <div className="mx-auto mt-8 grid max-w-3xl grid-cols-2 gap-8 sm:gap-12">
-              <div className="text-center">
-                <p className="text-4xl font-extrabold tracking-tight text-brand-navy sm:text-5xl md:text-6xl">$100M+</p>
-                <p className="mt-2 text-[14px] leading-snug text-gray-500">Middle Tennessee transaction volume</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-extrabold tracking-tight text-brand-navy sm:text-5xl md:text-6xl">175+</p>
-                <p className="mt-2 text-[14px] leading-snug text-gray-500">Transactions facilitated</p>
-              </div>
-            </div>
-
-            <div className="mx-auto mt-10 flex max-w-3xl flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 sm:flex-row sm:text-left">
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center">
-                <Image
-                  src="/images/buyunrepped-cropped.png"
-                  alt=""
-                  width={4249}
-                  height={1200}
-                  className="h-8 w-auto max-w-none shrink-0 object-contain object-left opacity-90 sm:h-9"
-                  sizes="(max-width: 640px) 120px, 140px"
-                  aria-hidden
-                />
-                <p className="text-center text-[13px] text-gray-500 sm:text-left">
-                  Built and run by{' '}
-                  <span className="font-semibold text-brand-navy">Kayla Brown</span>
-                  {' '}
-                  · Licensed Tennessee Principal Broker · Broker Lic. #339134 · Firm Lic. #267134
-                </p>
-              </div>
-              <Link
-                href="/about"
-                className="shrink-0 text-[13px] font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-brand-blue"
-              >
-                About the brokerage →
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── THREE OPTIONS (positioning, where BuyUnrepped fits) ─────────── */}
-        <section
-          className="border-b border-gray-100 bg-brand-cream py-12 md:py-16"
-          aria-labelledby="options-heading"
-        >
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">The model</p>
-              <h2
-                id="options-heading"
-                className="mt-2 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl"
-              >
-                Now, there are 3 ways to buy a home.
-              </h2>
-              <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
-                Before BuyUnrepped, the consumer had 2 options: hire a buyer&apos;s agent, or go it alone... We&apos;re
-                the new (and much needed) middle ground.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              <article className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">
-                  Full-service representation
-                </h3>
-                <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
-                  A buyer&apos;s agent represents you, advises on strategy, and typically manages much of the dialogue
-                  with the listing side.
-                </p>
-                <p className="mt-4 text-[13px] text-gray-400">Best when you want full advocacy as your agent.</p>
-              </article>
-              <article
-                className="relative overflow-hidden rounded-2xl p-6 ring-2 ring-brand-gold"
-                style={{
-                  background:
-                    'linear-gradient(160deg, #24709d 0%, #1b5373 50%, #0a1f2c 100%)',
-                }}
-              >
-                <span className="absolute right-4 top-4 rounded-full bg-brand-gold px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-brand-navy">
-                  Best fit
-                </span>
-                <h3 className="pr-20 text-xs font-bold uppercase tracking-[0.14em] text-white">BuyUnrepped</h3>
-                <p className="mt-4 text-[15px] leading-relaxed text-white">
-                  Unrepresented in the traditional sense, but supported: standardized documentation, sequencing, and
-                  licensed oversight within your tier, not buyer agency.
-                </p>
-                <p className="mt-4 text-[13px] font-medium text-white/60">
-                  Control of the conversation + professional structure.
-                </p>
-              </article>
-              <article className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">On your own</h3>
-                <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
-                  You coordinate everything, from offer through closing, without a buyer&apos;s agent and without a
-                  brokerage-backed workflow.
-                </p>
-                <p className="mt-4 text-[13px] text-gray-400">Higher execution risk when details slip.</p>
-              </article>
-            </div>
-
-            <p className="mt-10 text-[15px] text-gray-600">
-              Not sure which model fits?{' '}
-              <Link
-                href="/contact"
-                className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
-              >
-                Reach out
-              </Link>
-              .
-            </p>
-          </div>
-        </section>
-
-        {/* ── PRODUCT WALKTHROUGH (real app, screen by screen) ─────────────── */}
-        <ProductWalkthrough />
-
-        {/* ── WHAT'S INCLUDED ──────────────────────────────────────────────── */}
-        <section className="border-b border-gray-100 bg-white py-12 md:py-16" aria-labelledby="included-heading">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Scope</p>
-              <h2
-                id="included-heading"
-                className="mt-2 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl"
-              >
-                What&apos;s included
-              </h2>
-              <p className="mt-3 text-[1.05rem] leading-relaxed text-gray-500">
-                BuyUnrepped is designed around the actual stages of the purchase. Here&apos;s what&apos;s included before
-                submission, and what becomes available after acceptance.
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:gap-12">
-              <div>
-                <h3 className="border-b border-gray-200 pb-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
-                  Before you submit your offer
-                </h3>
-                <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
-                  <li>Tennessee property intake and address confirmation</li>
-                  <li>Onboarding disclosures and guided questionnaire</li>
-                  <li>Tennessee offer documents based on your 1:1 broker call</li>
-                  <li>Strategy call scheduling and broker review</li>
-                  <li>Pricing guidance, broker price opinion, and supporting property data</li>
-                  <li>Submission prep so your offer package is ready to send</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="border-b border-gray-200 pb-3 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
-                  After your offer is accepted
-                </h3>
-                <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
-                  <li>Transaction setup inside your dashboard</li>
-                  <li>Contract timeline tracking and next-step guidance</li>
-                  <li>Document organization and key-date reminders</li>
-                  <li>Coordination support through inspections, escrow, appraisal, and closing prep</li>
-                  <li>Licensed broker support where it counts</li>
-                </ul>
-              </div>
-            </div>
-
-            <p className="mt-8 max-w-3xl text-[13px] leading-relaxed text-gray-400">
-              BuyUnrepped supports the process and coordination of your purchase within the scope you select. We do not
-              act as your buyer&apos;s agent, negotiate on your behalf, or provide legal advice.
-            </p>
-          </div>
-        </section>
-
-        {/* ── THE PROBLEM + SAVINGS (the payoff, once you know the product) ── */}
+        {/* ── THE PROBLEM + SAVINGS (first proof, directly under hero) ─────── */}
         <section
           id="savings"
-          className="border-b border-gray-100 bg-brand-gray py-8 md:py-10"
+          className="border-b border-gray-100 bg-white py-16 md:py-20"
           aria-labelledby="savings-heading"
         >
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -428,7 +251,7 @@ export default function LandingPage() {
               </a>
               <Link
                 href="/pricing"
-                className="inline-flex min-h-[40px] items-center justify-center rounded-lg border border-brand-navy/20 px-5 py-2 text-[13px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-white"
+                className="inline-flex min-h-[40px] items-center justify-center rounded-lg border border-brand-navy/20 px-5 py-2 text-[13px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-brand-gray"
               >
                 See full pricing
               </Link>
@@ -436,43 +259,305 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* ── BROKER TRUST STRIP (slim credibility band) ───────────────────── */}
+        <section
+          className="border-b border-brand-navy/20 bg-brand-navy py-6 md:py-7"
+          aria-label="Kayla Brown broker experience and BuyUnrepped brokerage credentials"
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <p className="text-center text-[9px] font-bold uppercase tracking-[0.2em] text-brand-blue">
+              Experience you&apos;re buying into · Kayla Brown, Principal Broker
+            </p>
+
+            <div className="mx-auto mt-4 flex max-w-3xl items-center justify-center gap-8 sm:gap-14">
+              <div className="text-center">
+                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">$100M+</p>
+                <p className="mt-1 text-[12px] leading-snug text-white/55">Middle Tennessee transaction volume</p>
+              </div>
+              <div className="hidden h-10 w-px bg-white/15 sm:block" aria-hidden />
+              <div className="text-center">
+                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">175+</p>
+                <p className="mt-1 text-[12px] leading-snug text-white/55">Transactions facilitated</p>
+              </div>
+            </div>
+
+            <div className="mx-auto mt-5 flex max-w-4xl flex-col items-center justify-between gap-3 border-t border-white/10 pt-5 sm:flex-row sm:text-left">
+              <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center">
+                <Image
+                  src="/images/buyunrepped-cropped.png"
+                  alt=""
+                  width={4249}
+                  height={1200}
+                  className="h-7 w-auto max-w-none shrink-0 object-contain object-left opacity-90"
+                  sizes="(max-width: 640px) 120px, 140px"
+                  aria-hidden
+                />
+                <p className="text-center text-[12px] text-white/55 sm:text-left">
+                  Built and run by{' '}
+                  <span className="font-semibold text-white/85">Kayla Brown</span>
+                  {' '}
+                  · Licensed Tennessee Principal Broker · Broker Lic. #339134 · Firm Lic. #267134
+                </p>
+              </div>
+              <Link
+                href="/about"
+                className="shrink-0 text-[12px] font-semibold text-white/70 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/40"
+              >
+                About the brokerage →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PRODUCT WALKTHROUGH (real app, screen by screen) ─────────────── */}
+        <ProductWalkthrough />
+
+        {/* ── THREE OPTIONS (positioning, where BuyUnrepped fits) ─────────── */}
+        <section
+          className="border-b border-gray-100 bg-white py-14 md:py-16"
+          aria-labelledby="options-heading"
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">The model</p>
+              <h2
+                id="options-heading"
+                className="mt-2 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl"
+              >
+                Now, there are 3 ways to buy a home.
+              </h2>
+              <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
+                Before BuyUnrepped, the consumer had 2 options: hire a buyer&apos;s agent, or go it alone... We&apos;re
+                the new (and much needed) middle ground.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              <article className="rounded-xl border border-gray-200 bg-brand-gray/60 p-5">
+                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">
+                  Full-service representation
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+                  A buyer&apos;s agent represents you, advises on strategy, and typically manages much of the dialogue
+                  with the listing side.
+                </p>
+                <p className="mt-3 text-[13px] text-gray-400">Best when you want full advocacy as your agent.</p>
+              </article>
+              <article className="rounded-xl border border-brand-gold/50 bg-brand-gold/[0.08] p-5 ring-1 ring-brand-gold/30">
+                <span className="inline-flex rounded-full bg-brand-gold px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-brand-navy">
+                  Best fit
+                </span>
+                <h3 className="mt-3 text-xs font-bold uppercase tracking-[0.14em] text-brand-navy">BuyUnrepped</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-gray-700">
+                  Unrepresented in the traditional sense, but supported: standardized documentation, sequencing, and
+                  licensed oversight within your tier, not buyer agency.
+                </p>
+                <p className="mt-3 text-[13px] font-medium text-gray-500">
+                  Control of the conversation + professional structure.
+                </p>
+              </article>
+              <article className="rounded-xl border border-gray-200 bg-brand-gray/60 p-5">
+                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">On your own</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+                  You coordinate everything, from offer through closing, without a buyer&apos;s agent and without a
+                  brokerage-backed workflow.
+                </p>
+                <p className="mt-3 text-[13px] text-gray-400">Higher execution risk when details slip.</p>
+              </article>
+            </div>
+
+            <p className="mt-8 text-[15px] text-gray-600">
+              Not sure which model fits?{' '}
+              <Link
+                href="/contact"
+                className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
+              >
+                Reach out
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
+
+        {/* ── WHERE ARE YOU (routing choice) ───────────────────────────────── */}
+        <section
+          className="border-b border-brand-navy/20 bg-brand-navy py-12 md:py-14"
+          aria-labelledby="stage-heading"
+        >
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2
+                id="stage-heading"
+                className="text-2xl font-extrabold text-white sm:text-3xl"
+              >
+                Where are you right now?
+              </h2>
+              <p className="mt-2 text-[15px] text-white/50">Start where you are.</p>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {[
+                {
+                  label: 'Just starting',
+                  desc: 'Understand the process before you jump in',
+                  cta: 'Learn first',
+                  href: '/guides',
+                  featured: false,
+                },
+                {
+                  label: 'Found a home',
+                  desc: "Let's build your offer the right way",
+                  cta: 'Build your offer',
+                  href: '/contact',
+                  featured: true,
+                },
+                {
+                  label: 'Already under contract',
+                  desc: "We'll help you finish strong",
+                  cta: 'Set up your transaction',
+                  href: '/contact',
+                  featured: false,
+                },
+              ].map(({ label, desc, cta, href, featured }) => (
+                <div
+                  key={label}
+                  className={`rounded-xl border p-6 transition-colors ${
+                    featured
+                      ? 'border-brand-gold/50 bg-brand-gold/10'
+                      : 'border-white/10 bg-white/[0.03] hover:border-white/20'
+                  }`}
+                >
+                  {featured && (
+                    <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold">
+                      ★ Most common
+                    </p>
+                  )}
+                  <h3 className="text-lg font-bold text-white">{label}</h3>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-white/55">
+                    {desc}
+                  </p>
+                  <Link
+                    href={href}
+                    className={`mt-4 inline-flex items-center gap-1 text-[13px] font-semibold transition-colors ${
+                      featured
+                        ? 'text-brand-gold hover:text-white'
+                        : 'text-white/60 hover:text-white'
+                    }`}
+                  >
+                    {cta} →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── WHAT'S INCLUDED ──────────────────────────────────────────────── */}
+        <section className="border-b border-gray-100 bg-brand-gray py-10 md:py-12" aria-labelledby="included-heading">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Scope</p>
+              <h2
+                id="included-heading"
+                className="mt-2 text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl"
+              >
+                What&apos;s included
+              </h2>
+              <p className="mt-2 text-[1rem] leading-relaxed text-gray-500">
+                BuyUnrepped is designed around the actual stages of the purchase. Here&apos;s what&apos;s included before
+                submission, and what becomes available after acceptance.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-8 sm:grid-cols-2 sm:gap-10">
+              <div>
+                <h3 className="border-b border-gray-200 pb-2.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
+                  Before you submit your offer
+                </h3>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                  <li>Tennessee property intake and address confirmation</li>
+                  <li>Onboarding disclosures and guided questionnaire</li>
+                  <li>Tennessee offer documents based on your 1:1 broker call</li>
+                  <li>Strategy call scheduling and broker review</li>
+                  <li>Pricing guidance, broker price opinion, and supporting property data</li>
+                  <li>Submission prep so your offer package is ready to send</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="border-b border-gray-200 pb-2.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy">
+                  After your offer is accepted
+                </h3>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                  <li>Transaction setup inside your dashboard</li>
+                  <li>Contract timeline tracking and next-step guidance</li>
+                  <li>Document organization and key-date reminders</li>
+                  <li>Coordination support through inspections, escrow, appraisal, and closing prep</li>
+                  <li>Licensed broker support where it counts</li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="mt-6 max-w-2xl text-[13px] leading-relaxed text-gray-400">
+              BuyUnrepped supports the process and coordination of your purchase within the scope you select. We do not
+              act as your buyer&apos;s agent, negotiate on your behalf, or provide legal advice.
+            </p>
+
+            <div className="mt-8 border-t border-gray-200 pt-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
+                What&apos;s included (CMA &amp; deliverables)
+              </p>
+              <h3 className="mt-1.5 text-lg font-extrabold text-brand-navy">
+                Honest scope after ${OFFER_FEE.toLocaleString()}
+              </h3>
+              <div className="mt-3 max-w-2xl space-y-2.5 text-[14px] leading-relaxed text-gray-500">
+                <p>
+                  CMA data from Realtracs/MLS where available; otherwise public records. No universal MLS agent
+                  sheet promise.
+                </p>
+                <p>
+                  Deliverables after payment: offer packet prep, strategy consult, and, after acceptance, transaction
+                  coordination through closing prep.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── UNIVERSAL CAPTURE (start now, or stay in touch) ──────────────── */}
         <section
-          className="border-b border-gray-100 bg-brand-cream py-16 md:py-20"
+          className="border-b border-gray-100 bg-white py-10 md:py-12"
           aria-labelledby="capture-heading"
         >
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl border border-brand-gold/40 bg-white p-8 shadow-sm md:p-12">
-              <div className="grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
-                    Live in Tennessee · expanding
-                  </p>
-                  <h2
-                    id="capture-heading"
-                    className="mt-2 text-2xl font-extrabold tracking-tight text-brand-navy sm:text-[1.75rem]"
-                  >
-                    Buying in Tennessee? Start today.
-                  </h2>
-                  <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-                    Anyone can buy a Tennessee home with BuyUnrepped, wherever you live now. Not in TN yet, or
-                    just exploring? Leave your email and we&apos;ll tell you the moment we launch in your state,
-                    plus tips to buy for less.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-3">
-                  <a
-                    href={appUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-[52px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[1rem] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d] hover:shadow-md"
-                  >
-                    Start your offer
-                  </a>
-                  <WaitlistButton className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 py-3 text-[1rem] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-brand-gray">
-                    Keep me posted →
-                  </WaitlistButton>
-                </div>
+            <div className="grid items-center gap-6 md:grid-cols-[1.4fr_auto] md:gap-10">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
+                  Live in Tennessee · expanding
+                </p>
+                <h2
+                  id="capture-heading"
+                  className="mt-2 text-xl font-extrabold tracking-tight text-brand-navy sm:text-2xl"
+                >
+                  Buying in Tennessee? Start today.
+                </h2>
+                <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
+                  Anyone can buy a Tennessee home with BuyUnrepped, wherever you live now. Not in TN yet, or
+                  just exploring? Leave your email and we&apos;ll tell you the moment we launch in your state,
+                  plus tips to buy for less.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2.5 sm:min-w-[220px]">
+                <a
+                  href={appUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 py-2.5 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
+                >
+                  Start your offer
+                </a>
+                <WaitlistButton className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-6 py-2.5 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-brand-gray">
+                  Keep me posted →
+                </WaitlistButton>
               </div>
             </div>
           </div>
@@ -480,30 +565,30 @@ export default function LandingPage() {
 
         {/* ── FAQ ──────────────────────────────────────────────────────────── */}
         <section
-          className="border-b border-gray-100 bg-white py-16 md:py-20"
+          className="border-b border-gray-100 bg-brand-gray py-12 md:py-16"
           aria-labelledby="faq-heading"
         >
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2
                 id="faq-heading"
-                className="text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl"
+                className="text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl"
               >
                 Questions and answers
               </h2>
-              <p className="mt-4 text-[1rem] text-gray-500">
+              <p className="mt-3 text-[15px] text-gray-500">
                 Straight answers before you move forward.
               </p>
             </div>
 
-            <div className="mt-12 divide-y divide-gray-200 overflow-hidden rounded-2xl bg-white shadow-sm">
+            <div className="mt-8 divide-y divide-gray-200 overflow-hidden rounded-xl border border-gray-200 bg-white">
               {faqs.map((item, i) => {
                 const open = openFaq === i;
                 return (
                   <div key={item.q}>
                     <button
                       type="button"
-                      className="flex w-full items-start justify-between gap-6 p-6 text-left text-[16px] font-semibold text-brand-navy transition-colors hover:bg-brand-gray"
+                      className="flex w-full items-start justify-between gap-6 p-5 text-left text-[15px] font-semibold text-brand-navy transition-colors hover:bg-brand-gray/60"
                       onClick={() => setOpenFaq(open ? null : i)}
                       aria-expanded={open}
                       aria-controls={`faq-panel-${i}`}
@@ -525,11 +610,11 @@ export default function LandingPage() {
                       className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}
                     >
                       <div
-                        className={`border-l-4 bg-brand-cream px-6 pb-6 pt-1 transition-colors ${open ? 'border-brand-gold' : 'border-transparent'}`}
+                        className={`border-l-4 bg-brand-cream px-5 pb-5 pt-1 transition-colors ${open ? 'border-brand-gold' : 'border-transparent'}`}
                         role="region"
                         aria-labelledby={`faq-trigger-${i}`}
                       >
-                        <p className="text-[15px] leading-relaxed text-gray-600">{item.a}</p>
+                        <p className="text-[14px] leading-relaxed text-gray-600">{item.a}</p>
                       </div>
                     </div>
                   </div>
@@ -541,7 +626,7 @@ export default function LandingPage() {
 
         {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
         <section
-          className="relative overflow-hidden bg-brand-navy py-10 md:py-12"
+          className="relative overflow-hidden bg-brand-navy py-12 md:py-14"
           aria-labelledby="cta-heading"
           style={{
             background:
@@ -550,10 +635,10 @@ export default function LandingPage() {
         >
           <div className="absolute left-0 bottom-0 h-[3px] w-full bg-brand-gold" aria-hidden />
 
-          <div className="relative mx-auto flex max-w-4xl flex-col items-center justify-between gap-5 px-4 sm:px-6 md:flex-row md:gap-8 lg:px-8">
+          <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-4 text-center sm:px-6 lg:px-8">
             <h2
               id="cta-heading"
-              className="text-center text-xl font-extrabold text-white sm:text-2xl md:text-left"
+              className="text-xl font-extrabold text-white sm:text-2xl"
             >
               Found the perfect home?
             </h2>
@@ -561,7 +646,7 @@ export default function LandingPage() {
               href={appUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 min-h-[44px] items-center justify-center rounded-xl bg-brand-gold px-7 py-2.5 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d] hover:shadow-md"
+              className="inline-flex shrink-0 min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d] hover:shadow-md"
             >
               Start your offer today →
             </a>

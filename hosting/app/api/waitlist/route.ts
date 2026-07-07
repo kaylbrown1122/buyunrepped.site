@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { saveMarketingContact } from '../../../lib/marketingContact';
+import { verifyChallenge } from '../../../lib/spamGuard';
 
 const WAITLIST_SOURCE = 'website_waitlist';
 
@@ -40,7 +41,20 @@ async function notifyDiscord(
 
 export async function POST(request: Request) {
   try {
-    const { email, firstName, lastName, source } = await request.json();
+    const { email, firstName, lastName, source, captchaToken, captchaAnswer, honeypot } =
+      await request.json();
+
+    const guardResult = verifyChallenge({ token: captchaToken, answer: captchaAnswer, honeypot });
+    if (!guardResult.ok) {
+      if (guardResult.reason === 'honeypot') {
+        console.warn('Waitlist submission blocked: honeypot triggered');
+        return NextResponse.json({ success: true });
+      }
+      return NextResponse.json(
+        { error: 'Verification failed. Please try again.' },
+        { status: 400 }
+      );
+    }
 
     if (!email || typeof email !== 'string') {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });

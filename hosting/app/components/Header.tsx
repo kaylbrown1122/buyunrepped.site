@@ -4,15 +4,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getAppUrl } from '../../lib/appUrl';
 
 export default function Header() {
     const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 40);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     return (
-        <header className="sticky top-0 z-50 w-full min-w-0 border-b border-gray-200/80 bg-brand-cream/90 backdrop-blur-md">
+        <header
+            className={`sticky top-0 z-50 w-full min-w-0 border-b border-gray-200/80 bg-white/95 backdrop-blur-md transition-shadow ${scrolled ? 'shadow-[0_2px_20px_rgba(21,59,82,.08)]' : ''}`}
+        >
             <div className="max-w-7xl mx-auto min-w-0 px-4 sm:px-6 lg:px-8">
                 <div className="flex h-[4.25rem] w-full min-w-0 items-center">
                     {/* Logo - left: basis-0 + min-w-0 so flex can’t collapse or clip the mark */}
@@ -95,7 +105,7 @@ export default function Header() {
 
             {/* Mobile menu */}
             {mobileOpen && (
-                <div id="mobile-menu" className="md:hidden bg-brand-cream border-t border-gray-100 px-4 py-6 space-y-4">
+                <div id="mobile-menu" className="md:hidden border-t border-gray-100 bg-white px-4 py-6 space-y-4">
                     <Link href="/guides" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Guides</Link>
                     <Link href="/resources" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Resources</Link>
                     <Link href="/tools" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Tools</Link>

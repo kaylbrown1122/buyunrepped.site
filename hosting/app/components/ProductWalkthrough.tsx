@@ -138,8 +138,8 @@ function OwnerPill({ owner, label }: { owner: Owner; label: string }) {
   const isYou = owner === 'you';
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[12px] font-semibold ${
-        isYou ? 'bg-brand-blue/10 text-brand-navy' : 'bg-brand-green/12 text-[#187a49]'
+      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${
+        isYou ? 'bg-brand-blue/8 text-brand-navy/80' : 'bg-brand-green/10 text-[#187a49]/90'
       }`}
     >
       <span
@@ -167,7 +167,7 @@ function BrowserFrame({
   pending?: boolean;
 }) {
   return (
-    <figure className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_2px_4px_rgba(14,44,61,0.05),0_30px_60px_-30px_rgba(14,44,61,0.4)]">
+    <figure className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_8px_40px_-16px_rgba(14,44,61,0.18)]">
       <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-100 px-3.5 py-2.5">
         <span className="flex gap-1.5" aria-hidden>
           <span className="size-2.5 rounded-full bg-[#ff5f57]" />
@@ -219,11 +219,11 @@ export default function ProductWalkthrough() {
   return (
     <section
       id="how-it-works"
-      className="border-b border-gray-100 bg-brand-gray py-20 md:py-28"
+      className="border-b border-gray-100 bg-white py-24 md:py-32 lg:py-36"
       aria-labelledby="walkthrough-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
             The product · screen by screen
           </p>
@@ -233,26 +233,26 @@ export default function ProductWalkthrough() {
           >
             See exactly how BuyUnrepped works
           </h2>
-          <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
+          <p className="mx-auto mt-4 max-w-xl text-[1.05rem] leading-relaxed text-gray-500">
             BuyUnrepped is a guided system for buying a home without a traditional buyer&apos;s agent. You stay in
             control of the property, the terms, and the communication. The app, the workflow, and your licensed broker
             support handle the structure behind the scenes, from offer prep to submission to closing coordination.
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
             <OwnerPill owner="you" label="You keep control" />
             <OwnerPill owner="we" label="We handle the structure" />
           </div>
         </div>
 
-        <ol className="mt-16 space-y-14 lg:space-y-24">
+        <ol className="mt-20 space-y-20 lg:mt-24 lg:space-y-28">
           {steps.map((s, i) => {
             const flip = i % 2 === 1;
             return (
-              <li key={s.n} className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+              <li key={s.n} className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 xl:gap-20">
                 <div className={flip ? 'lg:order-2' : ''}>
                   <StepMedia step={s} />
                 </div>
-                <div className={flip ? 'lg:order-1 lg:text-right' : ''}>
+                <div className={`${flip ? 'lg:order-1 lg:text-right' : ''} lg:py-2`}>
                   <div className={`flex items-center gap-3 ${flip ? 'lg:justify-end' : ''}`}>
                     <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-navy text-[14px] font-bold tabular-nums text-white">
                       {s.n}
@@ -264,10 +264,12 @@ export default function ProductWalkthrough() {
                   <h3 className="mt-4 text-2xl font-extrabold tracking-tight text-brand-navy sm:text-[1.75rem]">
                     {s.title}
                   </h3>
-                  <p className={`mt-3 max-w-xl text-[15px] leading-relaxed text-gray-600 ${flip ? 'lg:ml-auto' : ''}`}>
+                  <p
+                    className={`mt-3 max-w-sm text-[15px] leading-relaxed text-gray-600 ${flip ? 'lg:ml-auto' : ''}`}
+                  >
                     {s.body}
                   </p>
-                  <div className={`mt-5 ${flip ? 'lg:flex lg:justify-end' : ''}`}>
+                  <div className={`mt-4 ${flip ? 'lg:flex lg:justify-end' : ''}`}>
                     <OwnerPill owner={s.owner} label={s.ownerLabel} />
                   </div>
                 </div>
