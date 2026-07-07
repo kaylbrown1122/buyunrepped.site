@@ -4,9 +4,25 @@ import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check, Instagram } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAppUrl } from '../../lib/appUrl';
+
+/* ── Instagram reel link ────────────────────────────────────────────── */
+function ReelLink({ href }: { href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
+    >
+      <Instagram className="size-4 text-brand-blue" aria-hidden />
+      Watch the Instagram reel
+    </a>
+  );
+}
 
 /* ── Copy-to-clipboard script block ─────────────────────────────────── */
 function ScriptBlock({ children }: { children: string }) {
@@ -55,6 +71,7 @@ const toc = [
   { id: 'dos-donts', label: "At the showing: do's & don'ts" },
   { id: 'find-homes', label: 'Find the agent via Homes.com' },
   { id: 'find-zillow', label: 'Find the agent via Zillow' },
+  { id: 'find-redfin', label: 'Find the agent via Redfin' },
 ];
 
 export default function PlaybookPage() {
@@ -311,13 +328,24 @@ export default function PlaybookPage() {
               We&apos;re not affiliated with Homes.com and this isn&apos;t an ad — but we love them for their
               transparency. They connect you to the listing agent directly.
             </p>
+            <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white">
+              <Image
+                src="/images/playbook/find-agent-homes-com.png"
+                alt="Homes.com listing page with the paid-lead 'Send a Message' card crossed out and the real Listing Agent / Co-Listing Agent panel circled"
+                width={2372}
+                height={1238}
+                className="w-full"
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            </div>
             <div className="mt-4 rounded-xl border border-gray-200 bg-white p-5">
               <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">Note</span>
               <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
                 If you use the &ldquo;Send a Message&rdquo; button, it routes through Homes.com&apos;s system and can look
                 a little spammy on the agent&apos;s end — they get <strong className="font-semibold text-brand-navy">so
                 much spam</strong>, and this feature isn&apos;t common enough for agents to expect it yet. If you
-                don&apos;t hear back, use the agent&apos;s listed contact info directly.
+                don&apos;t hear back, use the agent&apos;s listed contact info directly — circled above, in the listing
+                details.
               </p>
             </div>
           </section>
@@ -331,14 +359,74 @@ export default function PlaybookPage() {
               buyer leads — <strong className="font-semibold text-brand-navy">not the listing agent</strong>. Selling
               leads is how Zillow makes money. We&apos;re not knocking it, just explaining it.
             </p>
+            <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white">
+              <Image
+                src="/images/playbook/find-agent-zillow.png"
+                alt="Zillow listing page with the 'Request a tour' and 'Contact agent' paid-lead buttons crossed out and the real listing agent's name and phone number circled in the listing details"
+                width={1634}
+                height={1424}
+                className="w-full"
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            </div>
             <div className="mt-4 rounded-xl border border-gray-200 bg-white p-5">
               <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">Note</span>
               <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
                 We&apos;re here to help you buy without a traditional buyer&apos;s agent — not to waste the time of
                 hard-working agents paying for leads. If you don&apos;t intend to hire any of the agents behind that
-                &ldquo;Request a Showing&rdquo; button, reach out to the listing agent directly instead.
+                &ldquo;Request a Showing&rdquo; button, reach out to the listing agent directly instead — their name
+                and number are circled above, in the &ldquo;Listing Provided by&rdquo; line.
               </p>
             </div>
+            <ReelLink href="https://www.instagram.com/reel/DJ1tYO5NOki/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          </section>
+
+          {/* Redfin */}
+          <section id="find-redfin" className="scroll-mt-24">
+            <h2 className="text-2xl font-bold tracking-tight">Find the listing agent via Redfin</h2>
+            <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+              Redfin is a search tool <em>and</em> a brokerage, which creates a mismatch: request a tour or start an
+              offer through the site, and you&apos;re usually connected with a Redfin agent — not the actual listing
+              agent. The real listing agent&apos;s name and contact info are further down the page, in the listing
+              details.
+            </p>
+            <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white">
+              <Image
+                src="/images/playbook/find-agent-redfin-1.png"
+                alt="Redfin listing page with 'Request showing,' 'Ask a question,' and 'Start an offer' crossed out, and the real 'Listed by' agent name and contact number circled further down the page"
+                width={1810}
+                height={1414}
+                className="w-full"
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            </div>
+            <div className="mt-4 rounded-xl border border-gray-200 bg-white p-5">
+              <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">Note</span>
+              <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
+                Don&apos;t use &ldquo;Start an offer&rdquo; — it looks like the fastest path, but it does not go to the
+                listing agent.
+              </p>
+            </div>
+            <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white">
+              <Image
+                src="/images/playbook/find-agent-redfin-2.png"
+                alt="Redfin 'Offer terms received' confirmation screen, circled, with a note that this is not the listing agent and sends your info to an agent who has paid for lead generation through Redfin"
+                width={2350}
+                height={1014}
+                className="w-full"
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            </div>
+            <div className="mt-4 rounded-xl border border-gray-200 bg-white p-5">
+              <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-blue">Note</span>
+              <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
+                This is what &ldquo;Start an offer&rdquo; actually gets you: a &ldquo;local agent&rdquo; who paid Redfin
+                for the lead, not the person who represents the seller.
+                <strong className="font-semibold text-brand-navy"> Not the listing agent.</strong> Use the circled
+                contact info from the listing details instead.
+              </p>
+            </div>
+            <ReelLink href="https://www.instagram.com/reel/DJ4LUtMN_be/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
           </section>
 
           {/* Disclaimer */}
