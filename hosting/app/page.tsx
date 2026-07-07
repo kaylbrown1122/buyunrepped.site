@@ -51,8 +51,25 @@ export default function LandingPage() {
 
   const appUrl = getAppUrl();
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
 
       <main id="main-content" className="overflow-x-hidden">
@@ -80,7 +97,7 @@ export default function LandingPage() {
           <div className="absolute left-0 top-0 h-[3px] w-full bg-brand-gold" aria-hidden />
 
           <div className="relative mx-auto max-w-7xl px-4 pt-10 pb-20 sm:px-6 md:pt-14 md:pb-28 lg:px-8 lg:pt-[4.5rem] lg:pb-36">
-            <div className="grid items-center gap-12 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px] lg:gap-20">
+            <div className="grid origin-top items-center gap-12 scale-[0.95] lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px] lg:gap-20">
 
               {/* Left copy */}
               <div>
@@ -107,20 +124,14 @@ export default function LandingPage() {
                 </p>
 
                 <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.06] px-5 py-4">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue">
-                    Support
-                  </p>
-                  <p className="mt-2 text-[13px] leading-relaxed text-white/75">
+                  <p className="text-[13px] leading-relaxed text-white/75">
                     Pay for the offer upfront, then pay for transaction guidance once you&apos;re under
-                    contract or at closing.
+                    contract or at closing—with no obligatory buyer-agency relationship.
                   </p>
                 </div>
 
                 <div className="mt-7 max-w-xl">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue">
-                    Reassurance
-                  </p>
-                  <p className="mt-2 text-[1.15rem] font-semibold leading-snug text-white">
+                  <p className="text-[1.15rem] font-semibold leading-snug text-white">
                     Our brokers keep you confident.{' '}
                     <span className="font-normal text-white/65">
                       Our app keeps you organized, so you never miss a beat.
@@ -145,20 +156,6 @@ export default function LandingPage() {
                   </Link>
                 </div>
 
-                <dl className="mt-6 grid gap-3 border-t border-white/10 pt-5 sm:grid-cols-3 sm:gap-4 sm:items-start">
-                  {[
-                    ['Non-representation', 'No buyer agency relationship.'],
-                    ['Flat fee', 'Not a % of price—tiered pricing, confirmed in writing.'],
-                    ['Structured support', 'Checkpoints, paperwork, and broker-backed workflow.'],
-                  ].map(([t, d]) => (
-                    <div key={t} className="text-center sm:text-left">
-                      <dt className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue sm:text-[11px]">
-                        {t}
-                      </dt>
-                      <dd className="mt-1 text-[13px] leading-snug text-white/50">{d}</dd>
-                    </div>
-                  ))}
-                </dl>
               </div>
 
               {/* Right: pricing card */}
@@ -169,7 +166,7 @@ export default function LandingPage() {
                     'linear-gradient(160deg, rgba(57, 182, 255, 0.12) 0%, rgba(27, 83, 115, 0.22) 100%)',
                 }}
               >
-                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
                   Flat fee — no commission
                 </p>
 

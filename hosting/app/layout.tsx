@@ -87,7 +87,7 @@ const organizationSchema = {
     { '@type': 'City', name: 'Clarksville' },
     { '@type': 'City', name: 'Memphis' },
   ],
-  priceRange: '$995 - $3,595',
+  priceRange: '$995 - $3,490',
   serviceType: 'Real Estate Transaction Support',
   sameAs: [
     'https://www.instagram.com/buyunrepped',
