@@ -2,10 +2,34 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Check } from 'lucide-react';
+import { Check, HelpCircle, Home, ClipboardCheck } from 'lucide-react';
 import Link from 'next/link';
 import { getAppUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL, TRANSACTION_FEE_SPLIT, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
+
+const startHereCards = [
+  {
+    icon: <HelpCircle className="size-5 text-brand-blue" />,
+    title: 'Just starting',
+    body: 'Understand the process before you jump in.',
+    cta: 'Learn first',
+    href: '/guides',
+  },
+  {
+    icon: <Home className="size-5 text-brand-blue" />,
+    title: 'Found a home',
+    body: "Let's build your offer the right way.",
+    cta: 'Build your offer',
+    external: true,
+  },
+  {
+    icon: <ClipboardCheck className="size-5 text-brand-blue" />,
+    title: 'Already under contract',
+    body: 'We will help you finish strong.',
+    cta: 'Set up your transaction',
+    href: '/pricing#transaction-management',
+  },
+] as const;
 
 const pricingFaqs = [
   {
@@ -64,7 +88,41 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-5xl">
+          <div className="mx-auto mt-12 max-w-5xl" aria-labelledby="start-here-heading">
+            <p id="start-here-heading" className="text-center text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400">
+              Where are you right now?
+            </p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-3">
+              {startHereCards.map((card) => (
+                <div key={card.title} className="rounded-2xl border border-gray-200 bg-brand-gray p-5">
+                  <span className="flex size-9 items-center justify-center rounded-full bg-brand-blue/10">
+                    {card.icon}
+                  </span>
+                  <h3 className="mt-3 text-[15px] font-bold text-brand-navy">{card.title}</h3>
+                  <p className="mt-1 text-[13px] leading-relaxed text-gray-500">{card.body}</p>
+                  {'external' in card && card.external ? (
+                    <a
+                      href={appUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-brand-blue hover:underline"
+                    >
+                      {card.cta} →
+                    </a>
+                  ) : (
+                    <Link
+                      href={'href' in card ? card.href : '#'}
+                      className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-brand-blue hover:underline"
+                    >
+                      {card.cta} →
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mx-auto mt-16 max-w-5xl">
             <div className="grid gap-6 md:grid-cols-2 md:gap-8">
               <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
                 <h2 className="text-xl font-bold text-brand-navy">Offer Package</h2>
@@ -91,7 +149,7 @@ export default function PricingPage() {
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+              <div id="transaction-management" className="scroll-mt-24 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
                 <h2 className="text-xl font-bold text-brand-navy">Transaction Management</h2>
                 <p className="mt-1 text-sm text-gray-500">Contract through closing</p>
                 <p className="mt-6 text-4xl font-extrabold tracking-tight text-brand-navy">$2,495</p>
