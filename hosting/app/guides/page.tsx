@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import Link from 'next/link';
 import { getAllGuides } from '../../lib/guides';
-import { Clock, ArrowRight } from 'lucide-react';
+import { Clock, ArrowRight, MessageSquareText } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -63,6 +63,31 @@ export default function GuidesPage() {
           Comprehensive, Tennessee-specific guides covering every major decision in the home buying
           process, from understanding what an agent actually costs to closing without one.
         </p>
+      </section>
+
+      {/* Featured: Playbook */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <Link
+          href="/playbook"
+          className="group flex flex-col gap-5 rounded-2xl border border-brand-gold/40 bg-brand-navy p-6 shadow-sm transition-all hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:p-8"
+        >
+          <div className="flex items-start gap-4">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-gold">
+              <MessageSquareText className="size-5" aria-hidden />
+            </span>
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-gold">Featured · Scripts &amp; etiquette</span>
+              <h3 className="mt-1 text-xl font-bold leading-snug text-white">The buyer playbook: what to say, before the offer</h3>
+              <p className="mt-1.5 max-w-xl text-sm text-white/70">
+                Copy-paste scripts for scheduling a showing, talking to listing agents, and handling multiple
+                offers — plus what to wear and how to find the agent on Zillow or Homes.com.
+              </p>
+            </div>
+          </div>
+          <span className="inline-flex shrink-0 items-center gap-1.5 self-start rounded-full bg-brand-gold px-5 py-2.5 text-sm font-bold text-brand-navy transition-transform group-hover:translate-x-0.5 sm:self-center">
+            Open the playbook <ArrowRight className="size-4" aria-hidden />
+          </span>
+        </Link>
       </section>
 
       {/* Guide grid */}
