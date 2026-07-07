@@ -137,7 +137,7 @@ export default function StartLandingPage() {
               rel="noopener noreferrer"
               className="inline-flex min-h-[52px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[1rem] font-bold text-brand-navy shadow-lg shadow-brand-gold/20 transition-all hover:bg-[#e8b93d]"
             >
-              Start Your Offer Strategy →
+              Continue to App →
             </a>
             <a
               href="#how"
@@ -297,7 +297,7 @@ export default function StartLandingPage() {
                   rel="noopener noreferrer"
                   className="mt-6 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Build My Offer →
+                  Continue to App →
                 </a>
               </div>
               <div className="rounded-2xl border border-brand-gold/40 bg-white p-7">
@@ -321,7 +321,7 @@ export default function StartLandingPage() {
                   rel="noopener noreferrer"
                   className="mt-6 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-6 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
                 >
-                  Start My Transaction →
+                  Continue to App →
                 </a>
               </div>
             </div>
@@ -414,7 +414,7 @@ export default function StartLandingPage() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[52px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[1rem] font-bold text-brand-navy shadow-lg shadow-brand-gold/20 transition-all hover:bg-[#e8b93d]"
               >
-                Start Your Offer Strategy →
+                Continue to App →
               </a>
               <Link
                 href="/contact"

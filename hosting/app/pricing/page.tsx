@@ -81,7 +81,7 @@ export default function PricingPage() {
                   rel="noopener noreferrer"
                   className="mt-8 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Start Now
+                  Continue to App
                 </a>
                 <ul className="mt-8 space-y-3 text-[14px] leading-relaxed text-gray-600">
                   {[
@@ -108,7 +108,7 @@ export default function PricingPage() {
                   rel="noopener noreferrer"
                   className="mt-8 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Start Now
+                  Continue to App
                 </a>
                 <ul className="mt-8 space-y-3 text-[14px] leading-relaxed text-gray-600">
                   {[
@@ -248,7 +248,7 @@ export default function PricingPage() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
               >
-                Start in the app
+                Continue to App
               </a>
               <Link
                 href="/#savings"

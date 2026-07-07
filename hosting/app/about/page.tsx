@@ -317,7 +317,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-8 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
             >
-              Start in the app
+              Continue to App
             </a>
             <Link
               href="/contact"

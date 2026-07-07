@@ -101,7 +101,7 @@ export default function PlaybookPage() {
               rel="noopener noreferrer"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-7 py-3 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
             >
-              Start your offer
+              Continue to App
             </a>
             <Link
               href="/contact"

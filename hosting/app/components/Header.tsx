@@ -69,21 +69,23 @@ export default function Header() {
                     </nav>
 
                     {/* CTA - right */}
-                    <div className="flex min-h-0 min-w-0 flex-1 basis-0 items-center justify-end gap-3">
+                    <div className="flex min-h-0 min-w-0 flex-1 basis-0 items-center justify-end gap-2 sm:gap-3">
+                        <a
+                            href={getAppUrl()}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-[36px] shrink-0 items-center justify-center rounded-full bg-brand-gold px-4 py-2 text-xs font-bold text-brand-navy shadow-sm transition-colors hover:bg-[#e8b93d] md:hidden"
+                        >
+                            Continue to App
+                        </a>
                         <a
                             href={getAppUrl()}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden min-h-[40px] items-center justify-center rounded-md bg-brand-navy px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-navy/90 md:inline-flex"
                         >
-                            Start in app
+                            Continue to App
                         </a>
-                        <Link
-                            href="/contact"
-                            className="hidden min-h-[40px] items-center justify-center rounded-md bg-[#f7c74a] px-5 py-2 text-sm font-semibold text-brand-navy shadow-sm transition-colors hover:bg-[#e8b93d] md:inline-flex"
-                        >
-                            Reach Out
-                        </Link>
                         <button
                             onClick={() => setMobileOpen(!mobileOpen)}
                             className="md:hidden p-2 text-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-blue rounded-lg"
@@ -104,18 +106,6 @@ export default function Header() {
                     <Link href="/guides" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Resources</Link>
                     <Link href="/for-agents" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">For Agents</Link>
                     <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">About</Link>
-                    <a
-                        href={getAppUrl()}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setMobileOpen(false)}
-                        className="block w-full rounded-md bg-brand-navy py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-navy/90"
-                    >
-                        Start in app
-                    </a>
-                    <Link href="/contact" onClick={() => setMobileOpen(false)} className="block w-full rounded-md bg-[#f7c74a] py-3 text-center text-sm font-semibold text-brand-navy transition-colors hover:bg-[#e8b93d]">
-                        Reach Out
-                    </Link>
                 </div>
             )}
         </header>

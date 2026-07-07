@@ -107,7 +107,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
                 >
-                    Start in the app
+                    Continue to App
                 </a>
             </section>
 

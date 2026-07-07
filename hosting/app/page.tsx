@@ -146,7 +146,7 @@ export default function LandingPage() {
                     rel="noopener noreferrer"
                     className="inline-flex min-h-[52px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[1rem] font-bold text-brand-navy shadow-lg shadow-brand-gold/20 transition-all hover:bg-[#e8b93d] hover:shadow-xl hover:shadow-brand-gold/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
                   >
-                    Start in the app
+                    Continue to App
                   </a>
                   <Link
                     href="/pricing"
@@ -247,7 +247,7 @@ export default function LandingPage() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-brand-gold px-5 py-2 text-[13px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
               >
-                Start your offer
+                Continue to App
               </a>
               <Link
                 href="/pricing"
@@ -407,7 +407,7 @@ export default function LandingPage() {
                 {
                   label: 'Found a home',
                   desc: "Let's build your offer the right way",
-                  cta: 'Build your offer',
+                  cta: 'Continue to App',
                   href: appUrl,
                   external: true,
                   featured: true,
@@ -415,7 +415,7 @@ export default function LandingPage() {
                 {
                   label: 'Already under contract',
                   desc: "We'll help you finish strong",
-                  cta: 'Set up your transaction',
+                  cta: 'Continue to App',
                   href: appUrl,
                   external: true,
                   featured: false,
@@ -552,7 +552,7 @@ export default function LandingPage() {
                   rel="noopener noreferrer"
                   className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 py-2.5 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
                 >
-                  Start your offer
+                  Continue to App
                 </a>
                 <WaitlistButton className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-6 py-2.5 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-brand-gray">
                   Keep me posted →
