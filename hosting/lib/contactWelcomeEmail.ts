@@ -130,9 +130,14 @@ Cheers,
 The BuyUnrepped Team`;
 }
 
+export interface SendContactWelcomeEmailResult {
+  ok: boolean;
+  error?: string;
+}
+
 export async function sendContactWelcomeEmail(
   input: ContactWelcomeEmailInput
-): Promise<{ ok: true } | { ok: false; error: string }> {
+): Promise<SendContactWelcomeEmailResult> {
   const apiKey = process.env.SENDGRID_API_KEY?.trim();
   const fromEmail = process.env.SENDGRID_FROM_EMAIL?.trim() || 'info@buyunrepped.com';
   const fromName = process.env.SENDGRID_FROM_NAME?.trim() || 'BuyUnrepped';

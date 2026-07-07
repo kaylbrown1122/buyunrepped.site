@@ -159,7 +159,7 @@ export async function POST(request: Request) {
         email: payload.email,
       });
       if (!emailResult.ok) {
-        console.error('Contact welcome email failed:', emailResult.error);
+        console.error('Contact welcome email failed:', emailResult.error ?? 'Unknown error');
       }
     }
 
