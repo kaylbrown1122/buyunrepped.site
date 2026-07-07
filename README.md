@@ -55,6 +55,19 @@ npm run build
 
 ## Deployment
 
-Deployed automatically via Vercel on push to `main`.
+The Next.js app lives in **`hosting/`**, not the repo root. Vercel must use that folder as the project root.
+
+### Vercel (required)
+
+In [Vercel](https://vercel.com) → your project → **Settings** → **General** → **Root Directory**:
+
+1. Set **Root Directory** to `hosting`
+2. Save and redeploy
+
+If Root Directory is left blank, Vercel looks for `package.json` at the repo root, fails to find `next`, and shows the “No Next.js version detected” error.
+
+After connecting `kaylbrown1122/buyunrepped.site`, confirm **Production Branch** is `main` and env vars from `hosting/.env.sample` are set in Vercel.
+
+Deployed automatically via Vercel on push to `main` (GitHub Actions uses `hosting/` as the working directory).
 
 

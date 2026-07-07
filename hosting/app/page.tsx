@@ -215,6 +215,47 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* ── STATS BAND (credibility numbers) ─────────────────────────────── */}
+        <section
+          className="border-b border-gray-100 bg-white py-12 md:py-16"
+          aria-label="Kayla Brown experience and BuyUnrepped model metrics"
+        >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-10 md:flex-row md:items-stretch md:gap-0">
+              <div className="flex flex-1 flex-col justify-center md:border-r md:border-gray-200 md:pr-10 lg:pr-14">
+                <p className="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue md:text-left">
+                  Experience · Kayla Brown
+                </p>
+                <div className="mt-6 grid grid-cols-2 items-start gap-6 sm:gap-8">
+                  <div className="text-center md:text-left">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">$100M+</p>
+                    <p className="mt-2 text-[14px] leading-snug text-gray-500">Middle Tennessee transaction volume</p>
+                  </div>
+                  <div className="text-center md:text-left">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">175+</p>
+                    <p className="mt-2 text-[14px] leading-snug text-gray-500">Transactions facilitated</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col justify-center md:pl-10 lg:pl-14">
+                <p className="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue md:text-left">
+                  BuyUnrepped model
+                </p>
+                <div className="mt-6 grid grid-cols-2 items-start gap-6 sm:gap-8">
+                  <div className="text-center md:text-left">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">$3,490</p>
+                    <p className="mt-2 text-[14px] leading-snug text-gray-500">All-in flat fee</p>
+                  </div>
+                  <div className="text-center md:text-left">
+                    <p className="text-4xl font-extrabold tracking-tight text-brand-navy md:text-5xl">$0</p>
+                    <p className="mt-2 text-[14px] leading-snug text-gray-500">Buyer-agent commission</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── THE PROBLEM + SAVINGS (why you need it) ──────────────────────── */}
         <section
           id="savings"
@@ -280,7 +321,7 @@ export default function LandingPage() {
                   Built and run by{' '}
                   <span className="font-semibold text-brand-navy">Kayla Brown</span>
                   {' '}
-                  · Licensed Tennessee Principal Broker · Lic. #339134 · 175+ transactions · $100M+ in TN sales
+                  · Licensed Tennessee Principal Broker · Lic. #339134
                 </p>
               </div>
               <Link
