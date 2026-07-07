@@ -429,6 +429,21 @@ export default function PlaybookPage() {
             <ReelLink href="https://www.instagram.com/reel/DJ4LUtMN_be/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
           </section>
 
+          {/* Vendor list cross-link */}
+          <div className="rounded-2xl border border-brand-gold/40 bg-brand-cream p-6">
+            <h3 className="text-lg font-bold tracking-tight">Once you&apos;re ready to write the offer</h3>
+            <p className="mt-2 text-[14px] leading-relaxed text-gray-600">
+              You&apos;ll need a title company and, if you&apos;re financing, a lender. Kayla keeps a running list of who
+              she trusts in Middle Tennessee.
+            </p>
+            <Link
+              href="/vendors"
+              className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
+            >
+              See Kayla&apos;s title, lender &amp; warranty picks →
+            </Link>
+          </div>
+
           {/* Disclaimer */}
           <p className="border-t border-gray-200 pt-8 text-[13px] leading-relaxed text-gray-400">
             Educational only — not legal advice. Listing agents represent sellers. BuyUnrepped is a licensed Tennessee

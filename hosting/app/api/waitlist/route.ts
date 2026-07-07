@@ -5,6 +5,7 @@ const WAITLIST_SOURCE = 'website_waitlist';
 
 async function notifyDiscord(
   email: string,
+  source: string,
   firstName?: string,
   lastName?: string
 ): Promise<void> {
@@ -28,7 +29,7 @@ async function notifyDiscord(
           fields: [
             ...(name ? [{ name: 'Name', value: name }] : []),
             { name: 'Email', value: email },
-            { name: 'Source', value: WAITLIST_SOURCE },
+            { name: 'Source', value: source },
             { name: 'Timestamp', value: new Date().toISOString() },
           ],
         },
@@ -39,7 +40,7 @@ async function notifyDiscord(
 
 export async function POST(request: Request) {
   try {
-    const { email, firstName, lastName } = await request.json();
+    const { email, firstName, lastName, source } = await request.json();
 
     if (!email || typeof email !== 'string') {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
@@ -62,7 +63,7 @@ export async function POST(request: Request) {
       email: normalizedEmail,
       firstName: firstName.trim(),
       lastName: lastName.trim(),
-      source: WAITLIST_SOURCE,
+      source: typeof source === 'string' && source.trim() ? source.trim() : WAITLIST_SOURCE,
     };
 
     const supabaseResult = await saveMarketingContact(input);
@@ -70,7 +71,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Failed to submit' }, { status: 500 });
     }
 
-    await notifyDiscord(normalizedEmail, input.firstName, input.lastName);
+    await notifyDiscord(normalizedEmail, input.source, input.firstName, input.lastName);
 
     return NextResponse.json({ success: true });
   } catch (error) {
