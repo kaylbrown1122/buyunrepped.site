@@ -28,7 +28,9 @@ export default function Footer() {
               <span className="text-lg font-semibold tracking-tight text-white">BuyUnrepped</span>
             </Link>
             <p className="mt-2 max-w-sm text-pretty text-xs leading-relaxed text-gray-400">
-              Licensed Tennessee brokerage: offer prep and transaction coordination for unrepresented buyers.
+              Licensed Tennessee brokerage providing non-representational support for unrepresented buyers. We do
+              not act as your buyer&apos;s agent or communicate on your behalf, and remain subject to the duties
+              Tennessee law requires for the services we provide.
             </p>
             <div className="mt-3 flex flex-wrap gap-1.5">
               <a

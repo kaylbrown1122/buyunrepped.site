@@ -15,8 +15,8 @@ const services = [
   },
   {
     icon: <ClipboardCheck className="size-6 text-brand-blue" />,
-    title: 'Contracts Done Right',
-    body: 'All Tennessee-approved forms, completed correctly, nothing missed, nothing ambiguous.',
+    title: 'Offer Preparation',
+    body: 'Guidance using Tennessee residential purchase forms and common addenda. You review, approve, and submit your own offer.',
   },
   {
     icon: <Search className="size-6 text-brand-blue" />,
@@ -26,7 +26,7 @@ const services = [
   {
     icon: <Calendar className="size-6 text-brand-blue" />,
     title: 'Transaction Coordination',
-    body: 'Deadlines, title, lender, closing, all tracked so nothing falls through.',
+    body: 'Timeline tools, reminders, and next-step guidance to help you stay organized through closing.',
   },
   {
     icon: <MessageSquare className="size-6 text-brand-blue" />,
@@ -43,8 +43,8 @@ const steps = [
   },
   {
     num: '02',
-    title: 'We build your offer together',
-    body: 'We run comps, structure the terms, and prepare all your documents. You get an offer that listing agents take seriously.',
+    title: 'You prepare your offer with support',
+    body: 'We provide market-analysis and offer-preparation guidance. You decide the terms and approve your documents.',
   },
   {
     num: '03',
@@ -54,7 +54,7 @@ const steps = [
   {
     num: '04',
     title: 'We guide you to close',
-    body: 'We track every deadline, coordinate your inspection team, and stay in contact with lender and title so nothing gets missed between contract and keys.',
+    body: 'We provide transaction coordination, reminders, and guidance. You remain responsible for decisions and for communications made on your own behalf with the listing side and other parties.',
   },
 ];
 
@@ -122,8 +122,8 @@ export default function StartLandingPage() {
             <span className="text-brand-gold">without being on your own.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-[1.1rem] leading-relaxed text-white/70">
-            BuyUnrepped is a licensed Tennessee real estate brokerage. We consult, coordinate, and manage, we do
-            not speak on your behalf. Our goal is to make sure you&apos;re a great unrepresented buyer.
+            BuyUnrepped is a licensed Tennessee real estate brokerage providing non-representational support. We
+            consult and coordinate; you make the decisions and communicate directly with the listing side.
           </p>
           <p className="mx-auto mt-3 max-w-xl text-[14px] italic text-white/50">
             This isn&apos;t about replacing agents. It&apos;s about supporting buyers who don&apos;t want or need
@@ -190,8 +190,8 @@ export default function StartLandingPage() {
               This is where BuyUnrepped fits.
             </h2>
             <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-600">
-              We stay behind the scenes, helping you structure your offer, understand your options, and move
-              through the transaction correctly.
+              We stay behind the scenes, helping you understand your options, prepare your offer, and move through
+              the transaction with a clear process.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-gray-200 bg-white p-6">
@@ -203,12 +203,19 @@ export default function StartLandingPage() {
               <div className="rounded-2xl border border-brand-gold/40 bg-brand-navy p-6">
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-gold">BuyUnrepped</p>
                 <p className="mt-2 text-[15px] leading-relaxed text-white/90">
-                  Makes sure you&apos;re doing it right with structured, professional support.
+                  Provides structured, professional support without acting as your representative.
                 </p>
               </div>
             </div>
             <p className="mt-6 text-[14px] italic text-gray-500">
-              We consult, coordinate, and manage, we do not represent you or speak on your behalf.
+              We provide non-representational brokerage support. We do not negotiate, submit offers, or communicate
+              with the listing side on your behalf.
+            </p>
+            <p className="mt-3 text-[13px] leading-relaxed text-gray-500">
+              BuyUnrepped provides licensed brokerage services under Tennessee law. While we do not act as your
+              buyer&apos;s agent, we remain licensed real estate professionals and owe the duties Tennessee law
+              requires for the services we provide, including honesty, good faith, reasonable skill and care,
+              confidentiality where applicable, and required disclosures.
             </p>
           </div>
         </Reveal>
@@ -276,7 +283,7 @@ export default function StartLandingPage() {
               Tennessee forms). <strong className="text-white">${TRANSACTION_FEE_FULL.toLocaleString()}</strong>{' '}
               transaction coordination with platform, templates, self-guided help, and broker support.{' '}
               <strong className="text-brand-gold">${BUYUNREPPED_MAX_TOTAL.toLocaleString()}</strong> all in versus
-              typical 3%.
+              a hypothetical ~3% buyer-side fee.
             </p>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2">
@@ -286,7 +293,7 @@ export default function StartLandingPage() {
                   <sup className="text-lg font-semibold text-white/60">$</sup>{OFFER_FEE}
                 </p>
                 <ul className="mt-5 space-y-2 text-[14px] leading-relaxed text-white/75">
-                  <li>Ready-to-submit offer + Tennessee contracts</li>
+                  <li>Offer-preparation guidance + Tennessee residential forms</li>
                   <li>Strategy consultation</li>
                   <li>CMA + broker price opinion (BPO)</li>
                   <li>Submission guidance</li>
@@ -327,7 +334,8 @@ export default function StartLandingPage() {
             </div>
             <p className="mt-6 text-center text-[13px] text-white/50">
               ${OFFER_FEE} offer + ${TRANSACTION_FEE_FULL.toLocaleString()} transaction = $
-              {BUYUNREPPED_MAX_TOTAL.toLocaleString()} all in. Compare to ~3% buyer-side commission.
+              {BUYUNREPPED_MAX_TOTAL.toLocaleString()} all in. Illustration only; buyer-side compensation is
+              negotiable and varies by transaction.
             </p>
           </div>
         </Reveal>
@@ -438,11 +446,11 @@ export default function StartLandingPage() {
             <a href="tel:6152083390" className="text-brand-blue hover:underline">615-208-3390</a> · 2509 Cruzen St, Nashville, TN 37211
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-[11px] leading-relaxed text-gray-400">
-            BuyUnrepped is a licensed Tennessee real estate brokerage. We consult, coordinate, and manage, we do
-            not represent buyers or speak on their behalf. All services are provided under the supervision of
-            Principal Broker Kayla Brown (Lic. #339134). Full-service buyer agents continue to play an important
-            role in many transactions; BuyUnrepped exists to support a different, but equally legitimate, buyer
-            path. This page is for informational purposes and does not constitute legal or financial advice.
+            BuyUnrepped is a licensed Tennessee real estate brokerage providing non-representational support. We do
+            not act as your buyer&apos;s agent, negotiate, submit offers, or communicate with the listing side on your
+            behalf. You make all decisions and communicate directly. All services are provided under the supervision
+            of Principal Broker Kayla Brown (Lic. #339134). This page is for informational purposes and does not
+            constitute legal, tax, lending, or appraisal advice.
           </p>
           <p className="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-gray-400">
             <Home className="size-3.5" aria-hidden /> Equal Housing Opportunity

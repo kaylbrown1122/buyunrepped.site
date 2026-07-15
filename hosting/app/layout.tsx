@@ -9,7 +9,7 @@ export const metadata = {
     default: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
     template: '%s | BuyUnrepped',
   },
-  description: 'BuyUnrepped helps Tennessee home buyers purchase homes without a buyer\'s agent. Save thousands with flat-fee support from a licensed Nashville broker. Serving Nashville, Franklin, Murfreesboro, Knoxville, Chattanooga, Clarksville, and Memphis.',
+  description: 'BuyUnrepped is a licensed Tennessee brokerage providing non-representational flat-fee support for unrepresented buyers. Currently available in Middle Tennessee; contact us to confirm availability elsewhere.',
   keywords: [
     'buy home without agent Tennessee',
     'unrepresented buyer Tennessee',
@@ -37,7 +37,7 @@ export const metadata = {
     url: 'https://www.buyunrepped.com',
     siteName: 'BuyUnrepped',
     title: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
-    description: 'Tennessee home buyers: skip the buyer\'s agent and save thousands. Flat-fee support from a licensed Nashville broker. Professional forms, offer strategy, and transaction coordination.',
+    description: 'Licensed Tennessee brokerage providing non-representational flat-fee support for unrepresented buyers. Currently available in Middle Tennessee; contact us to confirm availability elsewhere.',
     images: [
       {
         url: 'https://www.buyunrepped.com/images/og-default.png',
@@ -50,7 +50,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
-    description: 'Tennessee home buyers: skip the buyer\'s agent and save thousands. Flat-fee support from a licensed Nashville broker.',
+    description: 'Licensed Tennessee brokerage providing non-representational flat-fee support for unrepresented buyers. Currently available in Middle Tennessee.',
     images: ['https://www.buyunrepped.com/images/og-default.png'],
     creator: '@buyunrepped',
   },
@@ -63,7 +63,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'BuyUnrepped',
-  description: 'Flat-fee home buying support for unrepresented buyers in Tennessee. Licensed broker assistance without traditional buyer agent commissions.',
+  description: 'Non-representational flat-fee home-buying support for unrepresented buyers from a licensed Tennessee brokerage.',
   url: 'https://www.buyunrepped.com',
   logo: 'https://www.buyunrepped.com/images/logo.png',
   founder: {
@@ -78,14 +78,9 @@ const organizationSchema = {
     addressCountry: 'US',
   },
   areaServed: [
-    { '@type': 'State', name: 'Tennessee' },
     { '@type': 'City', name: 'Nashville' },
     { '@type': 'City', name: 'Franklin' },
     { '@type': 'City', name: 'Murfreesboro' },
-    { '@type': 'City', name: 'Knoxville' },
-    { '@type': 'City', name: 'Chattanooga' },
-    { '@type': 'City', name: 'Clarksville' },
-    { '@type': 'City', name: 'Memphis' },
   ],
   priceRange: '$995 - $3,490',
   serviceType: 'Real Estate Transaction Support',

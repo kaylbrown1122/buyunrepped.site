@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Calculator, DollarSign, ChevronDown, RotateCcw, FileText, Landmark, Shield, Building2, Wallet } from 'lucide-react';
 import { CalculatorResults, FeeCategory, FeeItem } from './types';
 import { getCategoryTotal } from './calculate';
+import { BUYUNREPPED_MAX_TOTAL } from '../../../lib/fees';
 
 interface Props {
   results: CalculatorResults | null;
@@ -217,10 +218,11 @@ export default function ResultsPanel({ results, onToggleCategory, onOverrideItem
 
         {/* BuyUnrepped callout */}
         <div className="bg-brand-navy rounded-xl p-6 text-white">
-          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">With BuyUnrepped Full Strategy Pass</p>
-          <p className="text-lg font-bold mb-1">Get expert support through every line item, for a flat $3,595.</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">BuyUnrepped support</p>
+          <p className="text-lg font-bold mb-1">Flat-fee support up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()}.</p>
           <p className="text-sm text-gray-400 leading-relaxed">
-            Transaction coordination, deadline tracking, licensed REALTOR® on-call support, and full closing coordination, from offer to keys.
+            Timeline tools, deadline reminders, and licensed broker support within your purchased scope. This is
+            non-representational support, not buyer-agent representation.
           </p>
         </div>
       </div>

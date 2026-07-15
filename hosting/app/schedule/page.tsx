@@ -58,6 +58,18 @@ export default function SchedulePage() {
 
             {/* Right column: Calendly embed */}
             <div className="md:col-span-2">
+              <p className="mb-3 text-sm leading-relaxed text-gray-500">
+                Scheduling is provided through{' '}
+                <a
+                  href="https://calendly.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-blue underline"
+                >
+                  Calendly
+                </a>
+                . Information you submit there is also subject to Calendly&apos;s privacy practices.
+              </p>
               <div
                 className="calendly-inline-widget"
                 data-url="https://calendly.com/buyunrepped/introcallprogramfit?primary_color=f7c74a&hide_event_type_details=1"

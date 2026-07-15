@@ -256,7 +256,8 @@ export default function ContactPage() {
                                             className="mt-1 h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue"
                                         />
                                         <span className="text-sm text-gray-600">
-                                            Also send me BuyUnrepped updates and buyer tips by email.
+                                            Yes, send me BuyUnrepped buyer resources and occasional service updates by
+                                            email. Consent is optional and not required to receive a response.
                                         </span>
                                     </label>
 
@@ -282,6 +283,11 @@ export default function ContactPage() {
                                     {status === 'error' && (
                                         <p id="contact-error" role="alert" className="text-red-600 text-sm">{errorMessage}</p>
                                     )}
+
+                                    <p className="text-xs leading-relaxed text-gray-400">
+                                        By submitting, you agree to our <a href="/privacy" className="underline hover:text-gray-600">Privacy Policy</a>{' '}
+                                        and <a href="/terms" className="underline hover:text-gray-600">Terms</a>. We&apos;ll use your information to respond to your inquiry.
+                                    </p>
 
                                     <button
                                         type="submit"

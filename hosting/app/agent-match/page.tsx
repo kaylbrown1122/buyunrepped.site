@@ -57,8 +57,9 @@ export default function AgentMatchPage() {
             <h2 className="text-sm font-bold uppercase tracking-wide text-brand-navy">My promise to you</h2>
             <p className="mt-2 text-[15px] leading-relaxed text-gray-600">
               This is a merit-based match. I connect you with agents based on their track record, local expertise,
-              and fit with your specific situation, and I&apos;m always upfront about how it works, including
-              referral-fee disclosure.
+              and fit with your specific situation. If BuyUnrepped receives compensation in connection with a match,
+              we will disclose the nature of that relationship before you engage the referred provider. You are free
+              to choose any agent.
             </p>
           </div>
 

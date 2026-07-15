@@ -116,7 +116,6 @@ export default function VendorsPage() {
   const [unlocked, setUnlocked] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -142,7 +141,14 @@ export default function VendorsPage() {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ firstName, lastName, email, source: VENDOR_SOURCE, ...spamGuard.getPayload() }),
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          source: VENDOR_SOURCE,
+          marketingOptIn: consent,
+          ...spamGuard.getPayload(),
+        }),
       });
 
       if (!response.ok) {
@@ -171,8 +177,8 @@ export default function VendorsPage() {
             Kayla&apos;s go-to <span className="text-brand-gold">title, lenders &amp; warranty</span> notes
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">
-            Middle Tennessee partners and contacts Kayla reaches for often, not endorsements of every transaction
-            outcome, and not a substitute for your own due diligence.
+            Optional educational contacts for Middle Tennessee buyers. You may choose any provider; this is not a
+            required provider list or a substitute for your own due diligence.
           </p>
         </div>
       </section>
@@ -217,17 +223,6 @@ export default function VendorsPage() {
                   className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none transition-all focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
                 />
               </div>
-              <div>
-                <label htmlFor="vendor-phone" className="mb-1.5 block text-sm font-semibold text-gray-700">Phone (optional)</label>
-                <input
-                  id="vendor-phone"
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  autoComplete="tel"
-                  className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none transition-all focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
-                />
-              </div>
               <div className="flex items-start gap-2.5">
                 <input
                   id="vendor-consent"
@@ -238,7 +233,12 @@ export default function VendorsPage() {
                   className="mt-1 size-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue"
                 />
                 <label htmlFor="vendor-consent" className="text-[13px] leading-snug text-gray-600">
-                  I agree to receive email updates from BuyUnrepped. I can unsubscribe anytime.
+                  I agree to receive BuyUnrepped email updates and buyer resources. I can unsubscribe at any time.
+                  See the{' '}
+                  <Link href="/privacy" className="text-brand-blue underline">
+                    Privacy Policy
+                  </Link>
+                  .
                 </label>
               </div>
 
@@ -279,8 +279,8 @@ export default function VendorsPage() {
             <Reveal as="section" aria-labelledby="vendor-titles-heading">
               <h2 id="vendor-titles-heading" className="text-2xl font-bold tracking-tight">Title companies</h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Closing teams Kayla trusts to communicate clearly and run a tight file. Always confirm fees, wire
-                instructions, and timing directly with the office handling <em>your</em> transaction.
+                Optional title-company contacts. Confirm fees, wire instructions, and timing directly with the office
+                handling <em>your</em> transaction.
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {titleCompanies.map((t) => (
@@ -307,8 +307,8 @@ export default function VendorsPage() {
             <Reveal as="section" aria-labelledby="vendor-lenders-heading">
               <h2 id="vendor-lenders-heading" className="text-2xl font-bold tracking-tight">Lenders</h2>
               <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Loan officers who understand Middle Tennessee files and pick up the phone. Shop rates and programs
-                with at least two sources, use this as a starting point for conversations, not a single quote.
+                Optional lender contacts. Shop rates and programs with at least two sources; use this as a starting
+                point for conversations, not a single quote.
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {lenders.map((l) => (
@@ -364,9 +364,10 @@ export default function VendorsPage() {
             </Reveal>
 
             <p className="border-t border-gray-200 pt-8 text-[13px] leading-relaxed text-gray-400">
-              Educational reference only. BuyUnrepped does not receive compensation for listings on this page unless
-              disclosed separately in writing. Vendors, programs, and licensing change, verify details directly
-              before you engage any third party. Not legal or tax advice.
+              Educational reference only. You are free to choose any provider. BuyUnrepped will disclose any material
+              relationship or compensation connected to a referral before you engage a provider. Vendors, programs,
+              and licensing change; verify details directly before engaging any third party. Not legal, tax, or
+              lending advice.
             </p>
           </div>
         )}

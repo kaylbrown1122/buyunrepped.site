@@ -11,11 +11,11 @@ import Reveal from '../components/Reveal';
 const pricingFaqs = [
   {
     q: 'How does the flat fee compare to a traditional commission?',
-    a: "Traditional buyer-side compensation is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped is $3,490 all in for both tiers combined. Compare that to a percentage-based buyer-side line item.",
+    a: "This is an illustrative comparison: a hypothetical 3% buyer-side fee on a $500K home is $15,000, while BuyUnrepped is up to $3,490 for both tiers combined. Buyer-side compensation is negotiable and varies by transaction; savings are not guaranteed.",
   },
   {
     q: 'What does the Offer Package include?',
-    a: 'The $995 Offer Package includes a ready-to-submit offer using Tennessee forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO).',
+    a: 'The $995 Offer Package includes offer-preparation guidance using Tennessee residential forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). You decide the terms, approve the documents, and submit your own offer.',
   },
   {
     q: 'What does Transaction Management include?',
@@ -85,7 +85,7 @@ export default function PricingPage() {
                 </a>
                 <ul className="mt-8 space-y-3 text-[14px] leading-relaxed text-gray-600">
                   {[
-                    'Ready-to-submit offer using Tennessee forms',
+                    'Offer-preparation guidance using Tennessee residential forms',
                     'Strategy consultation',
                     'Comparative market analysis',
                     'Broker price opinion (BPO)',
@@ -172,10 +172,12 @@ export default function PricingPage() {
                   </h3>
                   <ul className="mt-3 list-disc space-y-2 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
                     <li>
-                      Guided lender, title, and warranty selection from our vetted network — see{' '}
+                      We can recommend providers we&apos;ve had positive experiences with — see{' '}
                       <Link href="/vendors" className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue">
-                        our picks
+                        available contacts
                       </Link>
+                      . You are always free to choose any lender, title company, inspector, warranty provider, or
+                      other vendor. Material relationships or compensation are disclosed before a referral.
                     </li>
                     <li>Tennessee property intake and address confirmation</li>
                     <li>Onboarding disclosures and guided questionnaire</li>
@@ -195,7 +197,7 @@ export default function PricingPage() {
                     <li>Contract timeline tracking and next-step guidance</li>
                     <li>Document organization and key-date reminders</li>
                     <li>Coordination support through inspections, escrow, and closing prep</li>
-                    <li>Third-party repair quotes after inspection through our BossCat partnership (~2 business days)</li>
+                    <li>Optional third-party repair-quote resources after inspection; any material relationship or compensation is disclosed before a referral</li>
                     <li>Closing-day checklist, including wire-fraud safety guidance</li>
                     <li>Termination-notice drafting if the deal falls through</li>
                     <li>&quot;Ask Kayla&quot; bookable broker calls — quick questions, post-inspection strategy, final walkthrough help</li>
@@ -206,8 +208,12 @@ export default function PricingPage() {
               <p className="mt-6 text-[13px] leading-relaxed text-gray-400">
                 Appraisal appeals are available as a separate paid add-on. A missed or late-cancelled strategy call may
                 carry a $200 rescheduling fee. BuyUnrepped supports the process and coordination of your purchase
-                within the scope you select. We do not act as your buyer&apos;s agent, negotiate on your behalf, or
-                provide legal advice.
+                within the scope you select. We provide non-representational brokerage support; we do not act as your
+                buyer&apos;s agent, negotiate, submit offers, or communicate with the listing side on your behalf. We
+                provide transaction coordination, reminders, and guidance; you remain responsible for decisions and
+                for communications made on your own behalf with the listing side and other parties. We do not provide
+                legal advice. CMAs and BPOs are for informational purposes only, not appraisals or guarantees of
+                value, acceptance, or appraisal outcome.
               </p>
             </div>
 

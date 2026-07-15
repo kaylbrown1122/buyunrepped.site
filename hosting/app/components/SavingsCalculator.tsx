@@ -81,7 +81,7 @@ export default function SavingsCalculator() {
 
         <div className="rounded-xl bg-brand-green/10 px-2 py-2.5 text-center sm:px-3">
           <p className="text-[8px] font-bold uppercase tracking-wide text-brand-green/70 sm:text-[9px]">
-            You keep
+            Illustrative difference
           </p>
           <p className="mt-0.5 text-base font-extrabold tabular-nums text-brand-green sm:text-lg">
             ${youKeep.toLocaleString()}
@@ -91,8 +91,8 @@ export default function SavingsCalculator() {
       </div>
 
       <p className="mt-2.5 text-[9px] leading-snug text-gray-400">
-        Illustration only - not whole transaction cost. Seller compensation, concessions, and lender/title
-        charges vary.
+        Illustration only; not your whole transaction cost or a savings guarantee. Buyer-side compensation,
+        seller concessions, loan terms, and lender/title charges vary by transaction.
       </p>
     </div>
   );

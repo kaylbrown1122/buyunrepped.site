@@ -6,10 +6,10 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Tennessee Locations | Buy a Home Without a Buyer\'s Agent | BuyUnrepped',
-  description: 'BuyUnrepped serves home buyers across Tennessee, Nashville, Franklin, Murfreesboro, Knoxville, Chattanooga, Clarksville, and Memphis. Buy without a buyer\'s agent and save thousands with flat-fee support.',
+  description: 'BuyUnrepped is licensed in Tennessee and currently offers early-access flat-fee support in Middle Tennessee. Contact us to confirm availability in other Tennessee markets.',
   openGraph: {
     title: 'Tennessee Locations | BuyUnrepped',
-    description: 'Buy a home without a buyer\'s agent in Nashville, Franklin, Murfreesboro, Knoxville, Chattanooga, Clarksville, and Memphis. Flat-fee support statewide.',
+    description: 'Licensed Tennessee brokerage with early-access flat-fee support in Middle Tennessee. Contact us to confirm availability in other markets.',
     url: 'https://www.buyunrepped.com/locations',
   },
   alternates: {
@@ -103,7 +103,8 @@ export default function LocationsPage() {
           Buying a Home in Tennessee Without a Buyer&apos;s Agent
         </h1>
         <p className="text-xl text-gray-500">
-          BuyUnrepped serves buyers statewide with flat-fee support from a licensed Tennessee broker. Select your market to see local details.
+          BuyUnrepped is licensed in Tennessee and currently offers early-access flat-fee support in Middle
+          Tennessee. Select a market for local educational resources, or contact us to confirm availability.
         </p>
       </section>
 
@@ -130,7 +131,7 @@ export default function LocationsPage() {
                     <p className="font-bold text-brand-navy">{city.medianPrice}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">Potential Savings</p>
+                    <p className="text-xs text-gray-400">3% illustration</p>
                     <p className="font-bold text-brand-blue">{city.savings}</p>
                   </div>
                 </div>
@@ -144,13 +145,14 @@ export default function LocationsPage() {
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Don&apos;t See Your City?</h2>
           <p className="text-gray-500 mb-8">
-            BuyUnrepped supports buyers across all of Tennessee. If your market isn&apos;t listed, schedule a call and we&apos;ll walk you through how we can help.
+            If your market isn&apos;t listed, contact us to confirm whether BuyUnrepped&apos;s current services are
+            available there.
           </p>
           <Link
             href="/schedule"
             className="inline-flex items-center gap-2 bg-brand-navy text-white px-8 py-4 rounded-full font-bold hover:bg-brand-blue transition-colors"
           >
-            Schedule a Free Call <ArrowRight className="w-4 h-4" />
+            Schedule a Call <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

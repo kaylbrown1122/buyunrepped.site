@@ -13,7 +13,7 @@ const tools = [
   {
     title: 'Savings Calculator',
     description:
-      "See how much you could save by buying without a traditional buyer's agent and keeping the 3% commission.",
+      "Compare a hypothetical buyer-side representation fee with BuyUnrepped's flat fees.",
     href: '/savings',
     icon: PiggyBank,
     available: true,

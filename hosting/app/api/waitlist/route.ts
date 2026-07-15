@@ -41,7 +41,7 @@ async function notifyDiscord(
 
 export async function POST(request: Request) {
   try {
-    const { email, firstName, lastName, source, captchaToken, captchaAnswer, honeypot } =
+    const { email, firstName, lastName, source, marketingOptIn, captchaToken, captchaAnswer, honeypot } =
       await request.json();
 
     const guardResult = verifyChallenge({ token: captchaToken, answer: captchaAnswer, honeypot });
@@ -66,6 +66,10 @@ export async function POST(request: Request) {
 
     if (!lastName || typeof lastName !== 'string' || !lastName.trim()) {
       return NextResponse.json({ error: 'Last name is required' }, { status: 400 });
+    }
+
+    if (marketingOptIn !== true) {
+      return NextResponse.json({ error: 'Email consent is required to join the waitlist' }, { status: 400 });
     }
 
     const normalizedEmail = email.trim().toLowerCase();

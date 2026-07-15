@@ -21,11 +21,11 @@ export default function LandingPage() {
     },
     {
       q: 'Is BuyUnrepped representing me as my agent?',
-      a: "No. BuyUnrepped consults, coordinates, and manages behind the scenes, on a non-representational basis scoped to the tier you purchase. We do not act as a buyer's agent, do not speak for you in negotiations, and do not owe buyer agency fiduciary duties. If you want full representation, you should hire a traditional buyer's agent. (This is not legal advice. Consult a licensed attorney for legal questions.)",
+      a: "No. BuyUnrepped provides licensed brokerage services on a non-representational basis within your purchased tier. We do not act as a buyer's agent or speak for you in negotiations. We remain licensed real estate professionals and owe the duties Tennessee law requires for the services we provide, including honesty, good faith, reasonable skill and care, confidentiality where applicable, and required disclosures. If you want full representation, you should hire a traditional buyer's agent. (This is not legal advice. Consult a licensed attorney for legal questions.)",
     },
     {
       q: 'What do I do vs what does BuyUnrepped do?',
-      a: 'You stay in control of the purchase. You choose the property, decide your offer terms, communicate with the listing side, negotiate directly, and decide how to respond at each step. BuyUnrepped provides the structure behind the scenes: we help you complete the offer questionnaire, draft the Tennessee forms, provide pricing guidance and broker oversight, organize your documents, track deadlines, and coordinate the transaction within the scope of your package. We support the process, but we do not replace your judgment or act as your buyer\'s agent.',
+      a: 'You stay in control of the purchase. You choose the property, decide your offer terms, negotiate directly, and decide how to respond at each step. BuyUnrepped provides offer-preparation support, transaction coordination, reminders, pricing guidance, broker oversight, document organization, and other services within your purchased package. You remain responsible for decisions and for communications made on your own behalf with the listing side and other parties. We support the process, but do not replace your judgment or act as your buyer\'s agent.',
     },
     {
       q: 'How does the flat fee compare to a traditional commission?',
@@ -33,7 +33,7 @@ export default function LandingPage() {
     },
     {
       q: "What's included in each tier?",
-      a: 'The $995 Offer Package includes a ready-to-submit offer using Tennessee forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). The $2,495 Transaction Management includes full coordination from contract through closing, platform access with templates and self-guided assistance, and direct broker support when you need it most.',
+      a: 'The $995 Offer Package includes offer-preparation guidance using Tennessee residential forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). You decide the terms, approve the documents, and submit your own offer. CMAs and BPOs are informational only, not appraisals or guarantees of value. The $2,495 Transaction Management includes timeline tools, templates, self-guided assistance, and direct broker support.',
     },
     {
       q: 'When is $995 due? When is the coordination fee due?',
@@ -41,7 +41,7 @@ export default function LandingPage() {
     },
     {
       q: 'Who is behind BuyUnrepped?',
-      a: 'Kayla Brown, CEO and Principal Broker, is a licensed Tennessee broker with 175+ transactions and $100M+ in Middle Tennessee sales. She is the sole public point of contact. All services are provided under her supervision through BuyUnrepped (Firm Lic. #267134). Email info@buyunrepped.com or use the contact form with questions.',
+      a: 'Kayla Brown, CEO and Principal Broker, is a licensed Tennessee broker who has assisted in over 175 transactions amounting to over $100M in sales. She is the sole public point of contact. All services are provided under her supervision through BuyUnrepped (Firm Lic. #267134). Email info@buyunrepped.com or use the contact form with questions.',
     },
     {
       q: 'Where is BuyUnrepped available?',
@@ -277,7 +277,7 @@ export default function LandingPage() {
               <div className="hidden h-10 w-px bg-white/15 sm:block" aria-hidden />
               <div className="text-center">
                 <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">175+</p>
-                <p className="mt-1 text-[12px] leading-snug text-white/55">Transactions facilitated</p>
+                <p className="mt-1 text-[12px] leading-snug text-white/55">Assisted sales</p>
               </div>
             </div>
 

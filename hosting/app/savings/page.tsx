@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Calculator, DollarSign, ArrowRight, Check, Play } from 'lucide-react';
 import Link from 'next/link';
+import { BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
 
 export default function CalculatorPage() {
     const [homePrice, setHomePrice] = useState<number>(0);
@@ -15,7 +16,7 @@ export default function CalculatorPage() {
     // Constants
     const SELLING_AGENT_RATE = 0.03;
     const BUYING_AGENT_RATE = 0.03;
-    const BUY_UNREPPED_FEE = 3595;
+    const BUY_UNREPPED_FEE = BUYUNREPPED_MAX_TOTAL;
 
     // Handler for input change
     const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,8 +66,9 @@ export default function CalculatorPage() {
                         <span className="text-brand-blue">save on your next home.</span>
                     </h1>
                     <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        In many transactions, sellers agree to pay compensation for a buyer&apos;s agent as part of their listing agreement.
-                        When you buy without an agent, that compensation may be available to you as a credit at closing or a reduction in the purchase price.
+                        Compare a hypothetical buyer-side representation fee with BuyUnrepped&apos;s flat fees. Buyer-agent
+                        compensation, seller concessions, credits, and price reductions are negotiated transaction by
+                        transaction and are not guaranteed.
                     </p>
                 </section>
 
@@ -109,7 +111,7 @@ export default function CalculatorPage() {
                                     </button>
 
                                     <p className="mt-4 text-center text-sm text-gray-500">
-                                        Enter the expected purchase price to see your savings.
+                                        Enter an expected purchase price to see an illustrative comparison.
                                     </p>
                                 </div>
 
@@ -122,7 +124,8 @@ export default function CalculatorPage() {
                                             <h3 className="font-bold text-brand-navy">Buyer Agent Commission</h3>
                                         </div>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                            When a seller agrees to pay buyer agent compensation, you may be able to request that amount as a credit at closing or a reduction in the purchase price.
+                                            Buyer-agent compensation is negotiable and varies by listing and
+                                            transaction. This calculator uses a hypothetical 3% buyer-side fee.
                                         </p>
                                     </div>
 
@@ -134,7 +137,8 @@ export default function CalculatorPage() {
                                             <h3 className="font-bold text-brand-navy">BuyUnrepped Fee</h3>
                                         </div>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                            A flat upfront fee to generate your offer and manage the closing process professionally.
+                                            Up to $3,490 in flat fees for the Offer Package and optional Transaction
+                                            Management.
                                         </p>
                                     </div>
                                 </div>
@@ -152,7 +156,7 @@ export default function CalculatorPage() {
                                     </div>
                                 ) : (
                                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-                                        <h3 className="text-2xl font-bold mb-8">Estimated Fee Breakdown</h3>
+                                            <h3 className="text-2xl font-bold mb-8">Illustrative Fee Comparison</h3>
 
                                         {/* Bars Chart Visualization */}
                                         <div className="space-y-8 mb-12">
@@ -204,7 +208,7 @@ export default function CalculatorPage() {
                                             </div>
 
                                             <div className="relative z-10">
-                                                <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-2">Total Potential Savings</p>
+                                            <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-2">Illustrative Difference</p>
                                                 <div className="flex items-baseline gap-2 mb-6">
                                                     <span className="text-5xl md:text-6xl font-bold text-white tracking-tight">
                                                         ${potentialSavings.toLocaleString()}
@@ -274,10 +278,11 @@ export default function CalculatorPage() {
                     <SectionBadge>How It Works</SectionBadge>
                     <h2 className="text-3xl font-bold mb-6 mt-4">How does buying unrepresented save you money?</h2>
                     <p className="text-gray-500 leading-relaxed mb-8">
-                        When a seller agrees to pay buyer agent compensation as part of their listing, that amount doesn&apos;t have to go to an agent.
-                        If you buy without representation, you may be able to request it as a credit at closing or a reduction in the purchase price.
+                        This calculator compares a hypothetical buyer-side representation fee with BuyUnrepped&apos;s flat
+                        fees. Actual costs and any savings depend on seller compensation practices, negotiation, loan
+                        requirements, and your transaction structure.
                         <br /><br />
-                        BuyUnrepped helps you navigate that conversation, professionally and with the right paperwork.
+                        This is an illustration, not a guarantee of savings, a credit, or a price reduction.
                     </p>
                     <Link href="/contact" className="text-brand-blue font-bold hover:underline">
                         Have questions? Talk to an expert

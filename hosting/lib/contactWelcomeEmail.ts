@@ -3,6 +3,7 @@ import sgMail from '@sendgrid/mail';
 const SITE_URL = 'https://www.buyunrepped.com';
 const LOGO_URL = `${SITE_URL}/images/buyunrepped-cropped.png`;
 const INSTAGRAM_URL = 'https://www.instagram.com/buyunrepped';
+const POSTAL_ADDRESS = '2509 Cruzen St, Nashville, TN 37211';
 
 export interface ContactWelcomeEmailInput {
   firstName: string;
@@ -23,10 +24,15 @@ function getAppUrl(): string {
   return url && url.length > 0 ? url.replace(/\/+$/, '') : 'https://app.buyunrepped.com';
 }
 
+function getUnsubscribeUrl(email: string): string {
+  return `${SITE_URL}/unsubscribe?email=${encodeURIComponent(email)}`;
+}
+
 export function buildContactWelcomeEmailHtml(input: ContactWelcomeEmailInput): string {
   const firstName = escapeHtml(input.firstName);
   const location = escapeHtml(input.location || 'Middle Tennessee');
   const appUrl = escapeHtml(getAppUrl());
+  const unsubscribeUrl = escapeHtml(getUnsubscribeUrl(input.email));
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -97,6 +103,12 @@ export function buildContactWelcomeEmailHtml(input: ContactWelcomeEmailInput): s
               Ready to start now? <a href="${appUrl}" style="color:#39b6ff;text-decoration:none;">Open the BuyUnrepped app</a>.
             </td>
           </tr>
+          <tr>
+            <td style="padding-top:20px;font-size:12px;line-height:1.5;color:#9ca3af;">
+              You received this email because you opted in at buyunrepped.com. <a href="${unsubscribeUrl}" style="color:#39b6ff;text-decoration:none;">Unsubscribe from marketing email</a>.<br />
+              BuyUnrepped, ${POSTAL_ADDRESS}
+            </td>
+          </tr>
         </table>
       </td>
     </tr>
@@ -108,6 +120,7 @@ export function buildContactWelcomeEmailHtml(input: ContactWelcomeEmailInput): s
 export function buildContactWelcomeEmailText(input: ContactWelcomeEmailInput): string {
   const location = input.location || 'Middle Tennessee';
   const appUrl = getAppUrl();
+  const unsubscribeUrl = getUnsubscribeUrl(input.email);
 
   return `Hi ${input.firstName} !
 
@@ -127,7 +140,11 @@ Follow us on Instagram: ${INSTAGRAM_URL}
 Open the BuyUnrepped app: ${appUrl}
 
 Cheers,
-The BuyUnrepped Team`;
+The BuyUnrepped Team
+
+You received this email because you opted in at buyunrepped.com.
+Unsubscribe from marketing email: ${unsubscribeUrl}
+BuyUnrepped, ${POSTAL_ADDRESS}`;
 }
 
 export interface SendContactWelcomeEmailResult {
@@ -156,6 +173,10 @@ export async function sendContactWelcomeEmail(
       subject: 'Welcome to BuyUnrepped!',
       text: buildContactWelcomeEmailText(input),
       html: buildContactWelcomeEmailHtml(input),
+      headers: {
+        'List-Unsubscribe': `<${getUnsubscribeUrl(input.email)}>`,
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+      },
     });
     return { ok: true };
   } catch (error) {

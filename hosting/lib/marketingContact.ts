@@ -20,7 +20,7 @@ export async function saveMarketingContact(
 
   const { data: existing } = await supabase
     .from('marketing_waitlist')
-    .select('id')
+    .select('id, email_subscribed, unsubscribed_at')
     .eq('email', email)
     .maybeSingle();
 
@@ -29,9 +29,11 @@ export async function saveMarketingContact(
   const lastName = input.lastName?.trim() || null;
 
   if (existing) {
+    if (!existing.email_subscribed || existing.unsubscribed_at) {
+      return { ok: false, error: 'This email has been unsubscribed. Please contact us if you would like to rejoin.' };
+    }
+
     const updates: Record<string, string | boolean | null> = {
-      email_subscribed: true,
-      unsubscribed_at: null,
       updated_at: now,
     };
 

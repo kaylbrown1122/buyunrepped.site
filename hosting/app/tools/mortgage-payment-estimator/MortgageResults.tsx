@@ -3,6 +3,7 @@
 import React from 'react';
 import { Home, DollarSign, Info } from 'lucide-react';
 import { MortgageResults } from './types';
+import { BUYUNREPPED_MAX_TOTAL } from '../../../lib/fees';
 
 interface Props {
   results: MortgageResults | null;
@@ -167,11 +168,11 @@ export default function MortgageResultsPanel({ results }: Props) {
 
         {/* BuyUnrepped callout */}
         <div className="bg-brand-navy rounded-xl p-6 text-white">
-          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">With BuyUnrepped Full Strategy Pass</p>
-          <p className="text-lg font-bold mb-1">Buy confidently without paying a buyer&apos;s agent commission.</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">BuyUnrepped support</p>
+          <p className="text-lg font-bold mb-1">Non-representational support for up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()} in flat fees.</p>
           <p className="text-sm text-gray-400 leading-relaxed">
-            Get expert support, transaction coordination, and licensed REALTOR® on-call help, for a flat $3,595.
-            That&apos;s thousands less than a traditional buyer&apos;s agent.
+            Buyer-side compensation is negotiable and varies by transaction. BuyUnrepped does not act as your
+            buyer&apos;s agent or negotiate on your behalf.
           </p>
         </div>
 

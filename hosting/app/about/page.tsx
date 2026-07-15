@@ -25,7 +25,7 @@ const credentials = [
   { label: 'Licensed since', value: 'Tennessee Real Estate Broker, License #339134' },
   { label: 'Brokerage', value: 'BuyUnrepped, Firm License #267134' },
   { label: 'Education', value: 'B.S. Microbiology, minor in Chemistry' },
-  { label: 'Volume', value: '$100M+ facilitated in Middle Tennessee' },
+  { label: 'Volume', value: '$100M+ in Middle Tennessee transaction volume' },
 ] as const;
 
 const scopeColumns = [
@@ -68,8 +68,8 @@ export default function AboutPage() {
               Built by an Experienced Nashville Broker.
             </h1>
             <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
-              BuyUnrepped is founded by Kayla Brown, Principal Broker and Realtor®, who has assisted in 175+
-              transactions during 10 active years as a full-service agent in Nashville.
+              As of July 2026, Kayla Brown has participated in more than 175 Middle Tennessee residential
+              transactions representing over $100 million in transaction volume.
             </p>
             <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-blue/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-brand-blue">
               Kayla Brown, CEO · Principal Broker
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 preparation is everything.
               </p>
               <p>
-                Over 175+ transactions and $100M+ in Middle Tennessee sales, I&apos;ve built genuine relationships
+                Assisting in over 175+ transactions and $100M+ in Middle Tennessee sales, I&apos;ve built genuine relationships
                 with lenders, inspectors, attorneys, title companies, and agents across this market. I know who
                 does excellent work and who doesn&apos;t. The through-line has always been honesty, and a
                 willingness to say what others won&apos;t.
@@ -287,25 +287,6 @@ export default function AboutPage() {
             <p className="mt-12 max-w-2xl text-[13px] leading-relaxed text-gray-400">
               Non-representational support is not legal advice. For legal questions, consult a licensed attorney.
             </p>
-
-            <div className="mt-16 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
-                What&apos;s included (CMA &amp; deliverables)
-              </p>
-              <h3 className="mt-2 text-xl font-extrabold text-brand-navy sm:text-2xl">
-                Honest scope after ${OFFER_FEE.toLocaleString()}
-              </h3>
-              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-gray-600">
-                <p>
-                  CMA data from Realtracs/MLS where available; otherwise public records. No universal MLS agent
-                  sheet promise.
-                </p>
-                <p>
-                  Deliverables after payment: offer packet prep, strategy consult, and, after acceptance, transaction
-                  coordination through closing prep.
-                </p>
-              </div>
-            </div>
           </div>
         </Reveal>
 

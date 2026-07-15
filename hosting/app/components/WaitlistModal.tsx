@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
+import Link from 'next/link';
 import { X } from 'lucide-react';
 import { useSpamGuard } from '../../lib/useSpamGuard';
 
@@ -39,6 +40,7 @@ function WaitlistModal() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const [marketingOptIn, setMarketingOptIn] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const spamGuard = useSpamGuard();
@@ -46,7 +48,7 @@ function WaitlistModal() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!firstName || !lastName || !email) return;
+    if (!firstName || !lastName || !email || !marketingOptIn) return;
 
     setStatus('loading');
     setErrorMessage('');
@@ -57,7 +59,7 @@ function WaitlistModal() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ firstName, lastName, email, ...spamGuard.getPayload() }),
+        body: JSON.stringify({ firstName, lastName, email, marketingOptIn, ...spamGuard.getPayload() }),
       });
 
       if (response.ok) {
@@ -65,6 +67,7 @@ function WaitlistModal() {
         setFirstName('');
         setLastName('');
         setEmail('');
+        setMarketingOptIn(false);
       } else {
         const data = await response.json().catch(() => null);
         spamGuard.refreshChallenge();
@@ -84,6 +87,7 @@ function WaitlistModal() {
       setFirstName('');
       setLastName('');
       setEmail('');
+      setMarketingOptIn(false);
       setErrorMessage('');
     }, 200);
   };
@@ -142,8 +146,8 @@ function WaitlistModal() {
             <div className="text-center mb-8">
               <h2 id="waitlist-modal-title" className="text-2xl font-bold mb-2">Stay in the loop</h2>
               <p className="text-gray-500">
-                BuyUnrepped is live in Tennessee today, with more states on the way. Drop your email and
-                we&apos;ll keep you posted on new locations and buyer tips.
+                BuyUnrepped currently offers early-access services in Middle Tennessee. Join the list for
+                availability updates and buyer resources.
               </p>
             </div>
 
@@ -200,6 +204,24 @@ function WaitlistModal() {
                 />
               </div>
 
+              <label className="flex cursor-pointer items-start gap-2.5 text-xs leading-snug text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={marketingOptIn}
+                  onChange={(e) => setMarketingOptIn(e.target.checked)}
+                  required
+                  className="mt-0.5 size-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue"
+                />
+                <span>
+                  I agree to receive BuyUnrepped email updates and buyer resources. I can unsubscribe at any time.
+                  See our{' '}
+                  <Link href="/privacy" className="text-brand-blue underline">
+                    Privacy Policy
+                  </Link>
+                  .
+                </span>
+              </label>
+
               {spamGuard.question && (
                 <div>
                   <label htmlFor="waitlist-captcha" className="block text-sm font-bold text-gray-700 mb-2">
@@ -232,7 +254,7 @@ function WaitlistModal() {
               </button>
 
               <p className="text-xs text-gray-400 text-center">
-                We'll never share your email. Unsubscribe anytime.
+                This consent is for email only and is not consent to marketing calls or texts.
               </p>
             </form>
           </>

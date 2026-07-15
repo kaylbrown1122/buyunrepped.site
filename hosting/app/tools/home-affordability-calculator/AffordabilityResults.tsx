@@ -3,6 +3,7 @@
 import React from 'react';
 import { DollarSign, Info, TrendingUp, AlertTriangle } from 'lucide-react';
 import { AffordabilityResults, AffordabilityScenario } from './types';
+import { BUYUNREPPED_MAX_TOTAL } from '../../../lib/fees';
 
 interface Props {
   results: AffordabilityResults | null;
@@ -248,11 +249,12 @@ export default function AffordabilityResultsPanel({ results }: Props) {
 
         {/* BuyUnrepped callout */}
         <div className="bg-brand-navy rounded-xl p-6 text-white">
-          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">With BuyUnrepped Full Strategy Pass</p>
-          <p className="text-lg font-bold mb-1">Buy up to your budget without paying a buyer&apos;s agent commission.</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">BuyUnrepped support</p>
+          <p className="text-lg font-bold mb-1">Flat-fee, non-representational support up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()}.</p>
           <p className="text-sm text-gray-400 leading-relaxed">
-            A traditional 3% buyer&apos;s agent commission on a {fmt(conservative.maxHomePrice)} home
-            is {fmt(Math.round(conservative.maxHomePrice * 0.03))}. Keep it with BuyUnrepped, flat $3,595.
+            A hypothetical 3% buyer-side fee on a {fmt(conservative.maxHomePrice)} home is{' '}
+            {fmt(Math.round(conservative.maxHomePrice * 0.03))}. Buyer-side compensation is negotiable and actual
+            costs vary by transaction.
           </p>
         </div>
 
