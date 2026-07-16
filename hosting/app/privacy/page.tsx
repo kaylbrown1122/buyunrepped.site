@@ -86,7 +86,9 @@ export default function PrivacyPage() {
               <p>
                 We will not discriminate against you for exercising privacy rights available under applicable law.
                 California residents may have additional rights to know, delete, correct, or limit certain uses of
-                personal information; they may submit a request using the contact information below.
+                personal information; they may submit a request using the contact information below. Tennessee
+                residents may have rights under the Tennessee Information Protection Act to the extent it applies to
+                our processing; residents of other states may have similar rights under their own state privacy laws.
               </p>
 
               <h2 className="mt-12 text-2xl font-bold text-brand-navy">Data security and retention</h2>

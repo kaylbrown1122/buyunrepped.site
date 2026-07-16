@@ -51,12 +51,12 @@ Chattanooga has a distinct geography shaped by the Tennessee River, Lookout Moun
 ### Mountain and Ridge Communities
 
 - **Signal Mountain**: Suburban municipality north of Chattanooga on Signal Mountain. Highly rated schools, outdoor access, larger lots. Entry-level around $400,000, significant inventory above $600,000.
-- **Lookout Mountain**: Straddles the Tennessee-Georgia border. Small, exclusive community. Limited inventory, high price points.
+- **Lookout Mountain**: Straddles the Tennessee-Georgia border. Small community with limited inventory and high price points.
 - **Missionary Ridge**: East of downtown, historic ridge with views. Mix of price points, from $250,000 starter homes to $700,000+ properties with views.
 
 ### Established Suburbs
 
-- **East Brainerd / Hamilton Place area**: Southeast Hamilton County, suburban, family-oriented. Strong school options, newer construction. Prices $270,000–$450,000.
+- **East Brainerd / Hamilton Place area**: Southeast Hamilton County, suburban and residential. Strong school options, newer construction. Prices $270,000–$450,000.
 - **Ooltewah**: One of Hamilton County's fastest-growing areas. New construction, expanding commercial base, longer commutes to downtown. Prices $280,000–$500,000 for new construction.
 - **Hixson**: North Chattanooga, established suburb. Good schools, access to Chester Frost Park and Lake Chickamauga. Prices $250,000–$450,000.
 

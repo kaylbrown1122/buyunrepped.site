@@ -69,7 +69,7 @@ export default function Footer() {
             <div>
               <p className="text-sm font-semibold text-white">BuyUnrepped</p>
               <address className="mt-2 space-y-1.5 not-italic text-sm leading-relaxed text-gray-400">
-                <p>TN License #267134</p>
+                <p>TN Firm Lic. #267134 · Broker Lic. #339134</p>
                 <p>
                   <a href="tel:6152083390" className="transition-colors hover:text-white">
                     615-208-3390
@@ -83,6 +83,9 @@ export default function Footer() {
                   >
                     info@buyunrepped.com
                   </a>
+                </p>
+                <p className="flex items-center gap-1.5 pt-0.5 text-gray-400">
+                  <Home className="size-3.5 shrink-0" aria-hidden /> Equal Housing Opportunity
                 </p>
               </address>
             </div>

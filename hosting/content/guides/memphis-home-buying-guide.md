@@ -64,7 +64,7 @@ Memphis is a large, geographically spread city with significant variation in pri
 
 ### Shelby County Suburbs
 
-- **Bartlett**: Popular suburb in northeast Shelby County. Family-oriented, good schools, newer housing stock. Prices $200,000–$350,000.
+- **Bartlett**: Popular suburb in northeast Shelby County. Residential, good schools, newer housing stock. Prices $200,000–$350,000.
 - **Cordova**: Eastern Shelby County. Mix of established neighborhoods and newer construction. Strong school options.
 - **Arlington**: Fastest-growing area of Shelby County. New construction, expanding infrastructure, lower prices than comparable Germantown/Collierville product.
 

@@ -39,7 +39,7 @@ const cities: Record<string, CityData> = {
     slug: 'nashville',
     county: 'Davidson County',
     medianPrice: 530000,
-    marketDescription: 'Nashville is one of the most competitive real estate markets in the Southeast. Davidson County median home prices hover around $530,000, and certain submarkets, Green Hills, 12 South, Germantown, regularly see offers over asking within days of listing. A 3% buyer\'s agent commission on a $530,000 home is $15,900. That\'s money that could reduce your purchase price, cover closing costs, or simply stay in your pocket.',
+    marketDescription: 'Nashville is one of the most competitive real estate markets in the Southeast. Davidson County median home prices hover around $530,000, and certain submarkets, Green Hills, 12 South, Germantown, regularly see offers over asking within days of listing. A buyer\'s agent commission, typically around 3% but always negotiable, would run about $15,900 on a $530,000 home. That\'s money that could reduce your purchase price, cover closing costs, or simply stay in your pocket.',
     localContext: 'Nashville\'s economy is anchored by healthcare (HCA Healthcare, Vanderbilt Medical), higher education, and a booming hospitality and tech sector. That economic diversity keeps demand strong year-round and across price points. The metro has absorbed significant in-migration from higher-cost cities, which has kept competition elevated even as interest rates have risen. For buyers who\'ve done their research and know what they want, moving confidently without an agent is entirely achievable, and financially smart.',
     whySkipAgent: [
       'Nashville\'s listing agents are experienced and well-resourced. In many transactions, the listing agent already has everything they need to close the deal, your buyer\'s agent is often just a relay. With BuyUnrepped, you get direct access to the same TREC-approved forms and offer guidance without paying $15,000+ for someone to forward emails.',
@@ -99,7 +99,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'Does it make sense financially to use BuyUnrepped in Nashville?',
-        answer: 'On a $530,000 Nashville home, the traditional buyer\'s agent commission is around $15,900. BuyUnrepped\'s full-service flat fee is $3,595. That\'s over $12,000 in potential savings, money you could use to reduce the purchase price, cover closing costs, or build your down payment reserve.',
+        answer: 'On a $530,000 Nashville home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) is often around $15,900. BuyUnrepped\'s full-service flat fee is $3,490. That\'s over $12,000 in potential savings, money you could use to reduce the purchase price, cover closing costs, or build your down payment reserve.',
       },
     ],
   },
@@ -109,10 +109,10 @@ const cities: Record<string, CityData> = {
     slug: 'franklin',
     county: 'Williamson County',
     medianPrice: 935000,
-    marketDescription: 'Franklin is the crown jewel of Middle Tennessee real estate. Williamson County\'s median home price has climbed steadily past $900,000, driven by excellent public schools, corporate relocations, and consistently high quality of life rankings. At this price level, a 3% buyer\'s agent commission approaches $28,000, a sum that meaningfully affects what you can afford or how much you can put toward your purchase.',
+    marketDescription: 'Franklin is the crown jewel of Middle Tennessee real estate. Williamson County\'s median home price has climbed steadily past $900,000, driven by excellent public schools, corporate relocations, and consistently high quality of life rankings. At this price level, a buyer\'s agent commission at a typical ~3% (though always negotiable) approaches $28,000, a sum that meaningfully affects what you can afford or how much you can put toward your purchase.',
     localContext: 'Franklin\'s appeal is rooted in substance: Williamson County Schools rank among the best in Tennessee, major employers like Mars Petcare, Nissan North America, and Community Health Systems have established operations in the area, and the city\'s historic downtown remains one of the most walkable in the state. Buyers in this market tend to be financially sophisticated and often prefer to manage their own transaction rather than defer to an agent who may not know the community as well as they do.',
     whySkipAgent: [
-      'Franklin\'s high price points mean the commission math is stark. On a $935,000 home, a 3% buyer\'s agent fee is $28,050. For buyers who are capable, informed, and have done their research, which describes most Franklin buyers, that\'s an enormous sum to pay for coordination services you can largely handle yourself with the right support.',
+      'Franklin\'s high price points mean the commission math is stark. On a $935,000 home, a buyer\'s agent fee at a typical ~3% (negotiable) is about $28,050. For buyers who are capable, informed, and have done their research, which describes most Franklin buyers, that\'s an enormous sum to pay for coordination services you can largely handle yourself with the right support.',
       'Williamson County\'s listing agents are well-organized and process-oriented. Transactions here tend to be clean and well-documented. An informed unrepresented buyer with professional forms and a licensed broker support structure doesn\'t create friction, in many cases, they simplify the deal.',
     ],
     marketInsights: [
@@ -169,7 +169,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How much can I actually save buying without an agent in Franklin?',
-        answer: 'On a $935,000 Franklin home, the traditional 3% buyer\'s agent commission is $28,050. BuyUnrepped\'s Full Strategy Pass is $3,595. The difference, over $24,000, can fund upgrades, reduce your purchase price, or simply stay in your account.',
+        answer: 'On a $935,000 Franklin home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) illustrated at ~3% is about $28,050. BuyUnrepped\'s full-service flat fee is $3,490. The difference, over $24,000, can fund upgrades, reduce your purchase price, or simply stay in your account.',
       },
     ],
   },
@@ -231,11 +231,11 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How much can I save buying without an agent in Murfreesboro?',
-        answer: 'On a $450,000 Murfreesboro home, the traditional 3% buyer\'s agent commission is $13,500. BuyUnrepped\'s Full Strategy Pass is $3,595, saving you nearly $10,000 that can go toward your down payment, closing costs, or a price reduction.',
+        answer: 'On a $450,000 Murfreesboro home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) illustrated at ~3% is about $13,500. BuyUnrepped\'s full-service flat fee is $3,490, saving you nearly $10,000 that can go toward your down payment, closing costs, or a price reduction.',
       },
       {
         question: 'How do home inspections work when I\'m not represented?',
-        answer: 'The inspection process is the same regardless of whether you have a buyer\'s agent. You hire a licensed inspector, review the report, and decide what repair requests or credits to negotiate. BuyUnrepped\'s Full Strategy Pass includes inspection guidance, helping you understand what\'s worth negotiating and what\'s standard wear.',
+        answer: 'The inspection process is the same regardless of whether you have a buyer\'s agent. You hire a licensed inspector, review the report, and decide what repair requests or credits to negotiate. BuyUnrepped\'s Transaction Management package includes inspection guidance, helping you understand what\'s worth negotiating and what\'s standard wear.',
       },
       {
         question: 'Are there good school districts in Murfreesboro?',
@@ -253,7 +253,7 @@ const cities: Record<string, CityData> = {
     localContext: 'The University of Tennessee is the heart of Knoxville\'s identity, but the city\'s economy runs deeper, Oak Ridge National Laboratory, Pilot Flying J, and a growing healthcare sector anchored by the University of Tennessee Medical Center create stable employment across income levels. Proximity to Great Smoky Mountains National Park adds a lifestyle dimension that draws buyers from across the country. For unrepresented buyers who understand the market, Knoxville\'s combination of affordability and growth momentum makes the savings from skipping a buyer\'s agent especially worthwhile.',
     whySkipAgent: [
       'Knoxville\'s market is more balanced than Nashville\'s, meaning buyers typically have time to do proper due diligence and make considered decisions. In this environment, the primary value of a buyer\'s agent, moving fast in a competitive market, is often not a factor. What matters is preparation, good documentation, and knowing the process.',
-      'At Knoxville\'s price points, a 3% buyer\'s agent commission of $9,450 represents a meaningful portion of a down payment or a full year of mortgage payments. That\'s a concrete financial reason to explore the BuyUnrepped model for a Knox County purchase.',
+      'At Knoxville\'s price points, a buyer\'s agent commission of about $9,450 at a typical ~3% (negotiable) represents a meaningful portion of a down payment or a full year of mortgage payments. That\'s a concrete financial reason to explore the BuyUnrepped model for a Knox County purchase.',
     ],
     marketInsights: [
       'Knox County median sale price: ~$315,000, well below Nashville and most Southeast metros',
@@ -328,7 +328,7 @@ const cities: Record<string, CityData> = {
     marketInsights: [
       'Hamilton County median price: ~$310,000, with significant variation by submarket',
       'North Shore and St. Elmo command premiums for walkability and character',
-      'Signal Mountain and Lookout Mountain carry premiums for views and exclusivity',
+      'Signal Mountain and Lookout Mountain carry premiums for views and limited inventory',
       'Inventory in Hamilton County has grown significantly, buyers have more choices than in 2022–2023',
       'Remote worker relocation has driven demand in Hixson and East Brainerd for larger suburban homes',
       'Chattanooga\'s short-term rental market (near Lookout Mountain, Chickamauga Lake) attracts investor buyers',
@@ -393,7 +393,7 @@ const cities: Record<string, CityData> = {
     localContext: 'Fort Campbell\'s roughly 30,000 active-duty personnel and their families create a permanent, rotating buyer pool that keeps demand steady regardless of broader economic conditions. Austin Peay State University adds a civilian buyer base, and Clarksville\'s growing commercial and healthcare sectors, including expansions by Amazon and major healthcare providers, have diversified the local economy. Montgomery County\'s relatively balanced supply (typically 4–5 months) means buyers have choices and negotiating room.',
     whySkipAgent: [
       'Military buyers in Clarksville are often on tight PCS timelines and highly motivated to close efficiently. They\'re not in the market for hand-holding, they want a clean, professional transaction that closes on schedule. BuyUnrepped is built for exactly this: professional documentation, licensed broker oversight, and a process that moves as fast as you need it to.',
-      'Clarksville\'s market is well-suited to informed, self-directed buyers. The inventory is sufficient, listing agents are experienced, and the transaction process in Montgomery County is well-established. The case for paying $9,420 in buyer\'s agent commission when you can get the same support for $995–$3,595 is difficult to make.',
+      'Clarksville\'s market is well-suited to informed, self-directed buyers. The inventory is sufficient, listing agents are experienced, and the transaction process in Montgomery County is well-established. The case for paying roughly $9,420 in buyer\'s agent commission (negotiable, not set by law or any MLS) when you can get the same support for $995–$3,490 is difficult to make.',
     ],
     marketInsights: [
       'Montgomery County has approximately 4–5 months of housing supply, a balanced market favoring informed buyers',
@@ -462,7 +462,7 @@ const cities: Record<string, CityData> = {
     marketDescription: 'Memphis is Tennessee\'s most affordable major market, with a median home price around $230,000, roughly half the Nashville median. Shelby County\'s market is active and moves relatively quickly, with homes in desirable zip codes often going under contract in 25–40 days. The combination of accessible prices and a broad range of home styles, from historic Midtown bungalows to newer East Memphis construction, gives buyers real flexibility in what and where they buy.',
     localContext: 'Memphis\'s economy is anchored by FedEx\'s global headquarters, a major healthcare sector led by St. Jude Children\'s Research Hospital and Methodist Le Bonheur, and one of the largest logistics and distribution hubs in the country. The city\'s cultural identity, rooted in blues, soul, and barbecue, makes it a unique place to live, and that distinctiveness attracts buyers who care about community character. For unrepresented buyers who understand the Memphis market\'s neighborhoods and price dynamics, the savings from skipping a buyer\'s agent are meaningful even at lower price points.',
     whySkipAgent: [
-      'At Memphis price points, a 3% buyer\'s agent commission of $6,900 represents a real percentage of the home\'s value. For a buyer who has done their research, knows their target neighborhoods, and understands the buying process, paying nearly $7,000 for representation is harder to justify than in higher-priced markets.',
+      'At Memphis price points, a buyer\'s agent commission of about $6,900 at a typical ~3% (negotiable) represents a real percentage of the home\'s value. For a buyer who has done their research, knows their target neighborhoods, and understands the buying process, paying nearly $7,000 for representation is harder to justify than in higher-priced markets.',
       'Memphis has a large and experienced pool of listing agents, many of whom are well-practiced at working with unrepresented buyers. The transaction process in Shelby County is well-documented and well-established. With BuyUnrepped\'s TREC-approved forms and licensed broker support, you\'re fully equipped to navigate it professionally.',
     ],
     marketInsights: [
@@ -655,7 +655,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How much can I save buying without an agent in Jackson?',
-        answer: 'On a $245,000 Jackson home, the traditional 3% buyer\'s agent commission is $7,350. BuyUnrepped\'s full transaction support package is $3,595, saving you over $3,700. At Jackson\'s price points, that\'s a meaningful percentage of the home\'s value.',
+        answer: 'On a $245,000 Jackson home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) illustrated at ~3% is about $7,350. BuyUnrepped\'s full-service flat fee is $3,490, saving you over $3,700. At Jackson\'s price points, that\'s a meaningful percentage of the home\'s value.',
       },
       {
         question: 'What should I know about flood risk in Madison County?',
@@ -733,7 +733,7 @@ export default async function CityPage({ params }: PageProps) {
       name: city.name,
       containedInPlace: { '@type': 'State', name: 'Tennessee' },
     },
-    priceRange: '$995 – $3,595',
+    priceRange: '$995 – $3,490',
     serviceType: 'Real Estate Transaction Support',
   };
 
@@ -802,7 +802,7 @@ export default async function CityPage({ params }: PageProps) {
             <SectionBadge className="bg-white/10 text-white border-white/20">Your Savings</SectionBadge>
             <h2 className="text-4xl font-bold mt-4 mb-6">How Much Can You Save in {city.name}?</h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              On a ${formattedPrice} {city.name} home, a traditional 3% buyer&apos;s agent commission totals ${formattedSavings}. BuyUnrepped&apos;s flat fee starts at $995, saving you the bulk of that commission whether it comes back as a price reduction, a closing credit, or simply stays in your account.
+              On a ${formattedPrice} {city.name} home, a traditional buyer&apos;s agent commission illustrated at ~3% totals about ${formattedSavings}. BuyUnrepped&apos;s flat fee starts at $995, saving you the bulk of that commission whether it comes back as a price reduction, a closing credit, or simply stays in your account.
             </p>
             <div className="grid sm:grid-cols-3 gap-6 mb-8">
               <div className="bg-white/10 rounded-2xl p-6">
@@ -810,7 +810,7 @@ export default async function CityPage({ params }: PageProps) {
                 <p className="text-3xl font-bold">${formattedPrice}</p>
               </div>
               <div className="bg-white/10 rounded-2xl p-6">
-                <p className="text-sm text-gray-400 mb-1">Traditional 3% Commission</p>
+                <p className="text-sm text-gray-400 mb-1">Traditional ~3% Commission (illustrative)</p>
                 <p className="text-3xl font-bold text-red-400">${formattedSavings}</p>
               </div>
               <div className="bg-brand-blue rounded-2xl p-6">
@@ -818,6 +818,9 @@ export default async function CityPage({ params }: PageProps) {
                 <p className="text-3xl font-bold">from $995</p>
               </div>
             </div>
+            <p className="text-xs text-gray-400 mb-8 leading-relaxed">
+              Illustration only. Buyer-side commissions are fully negotiable and are not set by law, any MLS, or any REALTOR® association; actual amounts vary by transaction. BuyUnrepped&apos;s flat fee is $995 for the Offer Package and $2,495 for optional Transaction Management ($3,490 combined).
+            </p>
             <Link href="/schedule" className="inline-flex items-center gap-2 bg-white text-brand-navy px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors">
               Get Started <ArrowRight className="w-4 h-4" />
             </Link>

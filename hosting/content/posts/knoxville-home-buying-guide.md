@@ -59,11 +59,11 @@ Knoxville's neighborhoods vary significantly in character, price, and inventory.
 ### North and South Knoxville
 
 - **North Knoxville / Fountain City**: More affordable than west or inner Knoxville. Established neighborhoods, larger lots, longer commutes to UT and ORNL. Prices $200,000–$350,000.
-- **South Knoxville**: Rapidly gentrifying area south of the river. Proximity to Urban Wilderness trail system driving price appreciation. Entry-level homes still under $300,000 in some pockets, but prices are rising.
+- **South Knoxville**: Rapidly revitalizing area south of the river. Proximity to Urban Wilderness trail system driving price appreciation. Entry-level homes still under $300,000 in some pockets, but prices are rising.
 
 ### Knox County Suburbs
 
-- **Powell / Halls**: North Knox County. Family-oriented, affordable, growing. Prices $220,000–$380,000.
+- **Powell / Halls**: North Knox County. Residential, affordable, growing. Prices $220,000–$380,000.
 - **Karns**: Northwest Knox County. Similar character to Powell, newer development, expanding commercial base.
 - **Hardin Valley**: West of Farragut, significant new construction, strong school district. Growing tech worker population near ORNL corridor. Prices $350,000–$600,000.
 
