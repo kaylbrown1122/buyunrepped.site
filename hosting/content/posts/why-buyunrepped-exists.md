@@ -6,222 +6,112 @@ category: "Company"
 readingTime: "7 min read"
 ---
 
-I did not start BuyUnrepped because I think real estate agents are useless.
+I did not start BuyUnrepped because I think real estate agents are useless. That would be a strange opinion for a licensed principal broker who has spent nearly a decade helping people buy and sell homes.
 
-That would be a strange opinion for a licensed principal broker who has spent nearly a decade helping people buy and sell homes.
+I started it because I kept meeting buyers who did not need everything a traditional buyer's agent provides, but were still being pushed toward the same full-service model. They had already found the house. They knew the neighborhood. Their financing was lined up. They were comfortable talking to the listing agent and making their own decisions. What they needed was an experienced person to look at the property, help them think through the offer, prepare the right documents, and make sure they did not miss something important between contract and closing.
 
-I started BuyUnrepped because I kept seeing buyers pay for—or be pushed into—a type of service they did not always need.
+The industry's answer was still, almost universally, "Hire an agent."
 
-They had already found the house.
+That felt a little like telling someone who needs an oil change that they should hire a full-time chauffeur.
 
-They knew the neighborhood.
+## How I ended up in real estate
 
-They had financing.
+Before real estate, I was headed toward dentistry. Then cancer showed up, rearranged the furniture, and made itself comfortable.
 
-They wanted to speak for themselves.
+During that chapter, my husband and I spent months searching for our first home. I researched neighborhoods, zoning, school districts, floor plans, and every new listing I could find. Somewhere along the way, I realized I was much more interested in the house hunt than the dental career I had been working toward.
 
-What they needed was a professional opinion, good documents and someone who knew what was supposed to happen next.
+It was not only the houses. It was what people were building inside them. These were the places where someone would have their first grown-up Christmas, bring home a baby, start a business, adopt a dog, hang a chandelier in a closet because why not, and eventually wonder who on earth chose that backsplash.
 
-The real estate industry kept offering them the same answer:
+Real estate gave me a way to help people make something exciting happen, so I jumped in. Then I learned how the business actually works.
 
-> Hire an agent.
+Real estate is not just pretty kitchens and handing someone a giant key for Instagram. It is pricing, contracts, deadlines, financing, inspections, appraisal, title, insurance, negotiation, emotions, and at least one appliance everyone assumed was staying even though nobody wrote it into the offer.
 
-That felt a little like requiring everyone who needs their oil changed to hire a full-time chauffeur.
+Good agents earn their money. They find properties, schedule showings, identify risks, coordinate professionals, structure offers, communicate with the other side, and keep the transaction moving when something inevitably becomes complicated.
 
-## I became an agent because I loved the houses—and the people
+But not every buyer needs all of that.
 
-Before real estate, my life was headed toward dentistry.
+Some buyers need six months of showings, constant advice, and someone fully responsible for advocating on their behalf. Others call after they have already found the house and say some version of, "I know what I want. I just need help making sure I do this correctly."
 
-Then cancer showed up, rearranged the furniture and made itself comfortable.
+Those buyers were usually paying for the same full-service structure anyway.
 
-During that chapter, my husband and I spent months searching for our first home. I studied neighborhoods, zoning, school districts, floor plans and every property I could find.
+## Buyers changed faster than the business model
 
-I fell in love with the process.
+Home-search platforms gave consumers access to information that once lived almost entirely behind the MLS curtain. Buyers can now find listings, watch price changes, research neighborhoods, compare recent sales, attend open houses, and know a home has hit the market before half the industry finishes its morning coffee.
 
-Not only the houses. The meaning behind them.
+That does not mean every buyer suddenly became a real estate expert. Access to information and knowing what to do with it are two different things. But it does mean the buyer's role changed.
 
-These were the places where people would have their first grown-up Christmas, bring home a baby, start a business, adopt a dog, hang a chandelier in a closet because why not, and occasionally wonder who on earth selected that backsplash.
+The traditional brokerage model did not change at the same speed. A buyer who found the property and wanted help preparing one offer was often expected to enter the same kind of relationship as someone who needed months of property searches, private tours, and full representation.
 
-Real estate gave me a way to help people make something exciting happen.
+The national practice changes that took effect in August 2024 made that mismatch harder to ignore. Buyer-broker compensation became more visible, and buyers were more directly confronted with what they were hiring, what it would cost, and who might ultimately be responsible for paying it.
 
-So I jumped in.
+That was a useful change. It also created a very reasonable question:
 
-## Then I learned how the business actually works
-
-Real estate is not just pretty kitchens and handing someone a giant key for Instagram.
-
-It is pricing, forms, deadlines, inspections, financing, appraisal, title, insurance, emotions, negotiation and at least one appliance everyone thought was staying but no one bothered to write down.
-
-Good agents earn their money.
-
-They find properties, schedule showings, identify risks, coordinate professionals, structure offers, communicate with the other side and keep people from setting the transaction on fire when the inspection report arrives.
-
-But not every buyer needs every one of those services.
-
-That became harder and harder to ignore.
-
-## Buyers changed
-
-Home-search platforms gave buyers access to information that once lived almost entirely behind the MLS curtain.
-
-Today, buyers often:
-
-* Find the property themselves
-* Track new listings
-* Research neighborhoods
-* Compare recent sales
-* Attend open houses
-* Watch price changes
-* Study schools and commutes
-* Know a home listed before half the industry finishes its morning coffee
-
-The traditional model did not change nearly as quickly.
-
-A buyer who found the home and wanted help writing one offer was often expected to enter the same type of relationship as a buyer who needed six months of tours and full representation.
-
-That did not make sense to me.
-
-## The industry changes made the gap impossible to ignore
-
-Buyer-broker compensation has always been negotiable, but the national practice changes implemented in August 2024 made the financial relationship more visible.
-
-Buyers are now generally asked to enter into a written agreement with a real estate professional before touring privately, and those agreements explain compensation responsibility.
-
-The buyer could no longer comfortably pretend the service was simply free because payment often came through the listing side.
-
-That was a healthy change.
-
-It also raised an obvious question:
-
-> What should buyers do when they do not want traditional representation but also do not want to go it alone?
+What should a buyer do when they do not want traditional representation, but also do not want to figure out a Tennessee real estate contract alone?
 
 BuyUnrepped is my answer.
 
-## We are not a form-filling website
+## It is not a form-filling website
 
-Real estate is nuanced.
+Real estate is too nuanced for that.
 
-Two houses can sit three doors apart and require completely different offer strategies.
+Two houses can sit three doors apart and require completely different offer strategies. One may be overpriced and sitting. The other may have five offers by dinner. One may have a straightforward title history. The other may involve an easement, septic system, temporary occupancy agreement, or appraisal risk that changes how the buyer should approach it.
 
-A contract checkbox can look harmless until it collides with financing, possession, inspection timing or the seller’s plans.
+A checkbox can look harmless until it collides with financing, inspection timing, possession, or the seller's plans. That is also why I do not believe the entire decision should be handed to artificial intelligence.
 
-That is why I do not believe buyers should leave the entire decision to artificial intelligence.
+AI is useful for organizing information, tracking next steps, and making the app easier to use. It can help carry the boxes. A licensed human still needs to check what is inside them.
 
-AI is great at organizing information, prompting next steps and helping an app run smoothly.
+BuyUnrepped uses technology where technology makes sense, but a licensed broker analyzes the property, reviews the offer logic, and works directly with the buyer on the decisions that matter.
 
-AI does not get to buy your house.
+## Why we became a REALTOR® brokerage
 
-BuyUnrepped uses technology for the parts technology handles well. A licensed human reviews the logic, analyzes the property and works directly with the buyer on the decisions that matter.
+We could have positioned BuyUnrepped as a generic consulting company or document-preparation service. I did not want to build it that way.
 
-The robot can carry the boxes.
+I wanted buyers to have access to established Tennessee transaction forms, licensed brokerage knowledge, real property analysis, professional standards, and people who have actually managed residential transactions from offer through closing.
 
-A broker still needs to check what is inside them.
+Tennessee REALTORS® maintains the forms commonly used throughout residential transactions, including the Purchase and Sale Agreement, repair documents, occupancy agreements, earnest-money forms, and property-specific addenda. REALTORS® also operate under NAR's Code of Ethics, including obligations involving honesty, fairness, and professional conduct when working in recognized non-agency roles.
 
-## We chose to be a REALTOR® brokerage
+I did not want BuyUnrepped standing outside the professional system and throwing generic PDFs over the fence. I wanted to make that system more accessible to buyers who needed a smaller, more focused version of the service.
 
-We could have tried to position BuyUnrepped as a generic consulting company or document-preparation service.
+## What BuyUnrepped actually does
 
-I did not want that.
+BuyUnrepped is a fee-for-service Tennessee real estate brokerage and app for buyers who have found the property and plan to remain unrepresented.
 
-I wanted buyers to have access to:
+The buyer stays in direct communication with the listing agent. Depending on the service purchased, we provide property analysis, comparable-sale review, offer strategy, professionally prepared Tennessee REALTOR® documents, deadline tracking, inspection support, repair-proposal guidance, transaction coordination, and closing preparation.
 
-* Established Tennessee REALTOR® forms
-* Licensed brokerage knowledge
-* Property and market analysis
-* Professional standards
-* Real transaction experience
-* A structure listing agents recognize
-* Human review
+The buyer reviews the terms, makes the decisions, and sends the offer from their own email. We do not contact the listing agent pretending to speak for the buyer. We do not negotiate as their representative or quietly drift into an agency relationship because everyone became too casual about the boundaries.
 
-Tennessee REALTORS® maintains a full forms library for residential transactions, including the Purchase and Sale Agreement, repair forms, temporary occupancy agreements, earnest-money documents and transaction addenda.
+The buyer speaks for themselves. We make sure they are prepared to do it.
 
-REALTORS® also voluntarily operate under NAR’s Code of Ethics, which establishes duties of honesty, fairness and professionalism, including when working in legally recognized non-agency roles.
+BuyUnrepped does not act as the buyer's agent or advocate. We do not search for the home, attend every showing, communicate or negotiate on the buyer's behalf, make the buyer's decisions, or guarantee that an offer will be accepted.
 
-Those things matter.
+We also do not replace the professionals whose expertise falls outside real estate brokerage. Buyers still need their lender, inspector, title or closing professional and, when appropriate, an attorney, engineer, surveyor, or other specialist.
 
-We did not want to stand outside the professional system throwing PDFs over the fence.
+We provide licensed brokerage facilitation, consultation, document preparation, and transaction support within the service the buyer selected. While we do not act as the buyer's agent, we remain licensed real estate professionals and owe the duties Tennessee law requires for the services we provide, including honesty, good faith, reasonable skill and care, confidentiality where applicable, and required disclosures.
 
-We wanted to improve how consumers could access it.
+That is not a watered-down version of buyer representation. It is a different service for a different buyer.
 
-## What BuyUnrepped does
+## This is not about getting rid of agents
 
-BuyUnrepped is a fee-for-service Tennessee real estate brokerage and app built for unrepresented home buyers.
-
-The buyer stays in direct contact with the listing agent.
-
-Depending on the purchased service, BuyUnrepped provides:
-
-* Property analysis
-* Pricing and comparable-sale review
-* Licensed offer strategy
-* Professionally prepared Tennessee REALTOR® documents
-* Offer-submission guidance
-* Deadline tracking
-* Inspection support
-* Repair-proposal guidance
-* Transaction coordination
-* Closing preparation
-
-The buyer sends the offer from their own email.
-
-We do not pretend to be them. We do not slide into the listing agent’s inbox wearing a buyer-agency costume.
-
-The buyer speaks for the buyer.
-
-We help make sure they are prepared to do it.
-
-## What BuyUnrepped does not do
-
-BuyUnrepped does not represent or advocate for the buyer as a buyer’s agent.
-
-We do not:
-
-* Search for the home
-* Attend every showing
-* Communicate or negotiate on the buyer’s behalf
-* Create an agency relationship by accident
-* Make the buyer’s decisions
-* Guarantee an accepted offer
-* Replace an attorney, lender, inspector or title professional
-
-We provide licensed brokerage facilitation, consultation, document preparation and transaction support within the purchased scope.
-
-That boundary is not a weakness.
-
-It is the product.
-
-## This is not about “beating” agents
-
-There is enough internet content built around declaring entire professions dead.
+There is already enough internet content announcing that some new technology has killed an entire profession.
 
 AI is killing agents. Zillow is killing agents. Consumers are killing agents. Agents are somehow also killing agents.
 
 Sorry, moving on.
 
-Traditional agents will continue to serve buyers who need and value full representation.
+Traditional buyer's agents will continue to serve people who need and value full representation. Plenty of buyers want someone finding the properties, scheduling every showing, communicating with the listing side, and advocating for them from the first tour through closing.
 
-BuyUnrepped serves another buyer:
+BuyUnrepped serves someone else.
 
-The buyer who has done the homework.
-
-The buyer who wants control.
-
-The buyer who does not want a stranger speaking for them.
-
-The buyer who wants expertise without buying the largest possible service package.
+The buyer who has already done the homework. The buyer who wants control. The buyer who does not want a stranger speaking for them. The buyer who wants professional expertise without purchasing the largest possible service package.
 
 Both models can exist.
 
 ## The bottom line
 
-BuyUnrepped exists because there was a giant gap between hiring a traditional buyer’s agent and figuring everything out alone.
+BuyUnrepped exists because there was a giant gap between hiring a traditional buyer's agent and figuring everything out alone.
 
-Buyers deserve a third option.
+Buyers deserved a third option.
 
-You find the house.
-
-You keep the communication.
-
-You make the decisions.
+You find the house. You keep the communication. You make the decisions.
 
 We help you buy it.
