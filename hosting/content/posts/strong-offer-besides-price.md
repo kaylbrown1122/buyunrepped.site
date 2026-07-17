@@ -1,6 +1,6 @@
 ---
 title: "What Makes a Strong Offer Besides Price?"
-date: "2026-07-17"
+date: "2026-05-05"
 description: "The highest offer doesn't always win — and cash isn't always king. Down payment, lender choice, clean terms, earnest money and solving the seller's problems can beat another buyer's bigger number."
 category: "Strategy"
 readingTime: "5 min read"
