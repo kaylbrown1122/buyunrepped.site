@@ -252,7 +252,7 @@ On a real Tennessee offer, BuyUnrepped works like this:
 
 That is the entire model in one sentence: **you stay in control of the purchase, and we keep the transaction from getting loose.**
 
-If you want to see the cost side of the same model, read our [pricing breakdown](/pricing). If you want the broader legal and tactical context for buying this way, start with our [guide to buying without a buyer’s agent in Tennessee](/resources/buying-home-without-buyers-agent-guide).
+If you want to see the cost side of the same model, read our [pricing breakdown](/pricing). If you want the tactical side — what to say to listing agents and how to handle showings — start with our [buyer playbook](/playbook).
 
 ---
 
