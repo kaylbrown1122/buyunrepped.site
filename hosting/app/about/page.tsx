@@ -94,7 +94,7 @@ export default function AboutPage() {
             <p className="mt-3 max-w-2xl text-[1.05rem] leading-relaxed text-gray-600">
               BuyUnrepped is a licensed Tennessee real estate brokerage that helps buyers purchase homes without
               hiring a traditional buyer&apos;s agent. Also known as: unrepresented buyer support, buying without a
-              realtor, flat-fee buyer assistance.
+              real estate agent, flat-fee buyer assistance.
             </p>
 
             <div className="mt-10 grid gap-10 sm:grid-cols-3">

@@ -119,7 +119,7 @@ export default function LandingPage() {
                 <p className="mt-7 max-w-xl text-[1.125rem] leading-relaxed text-white/65 md:text-[1.2rem]">
                   BuyUnrepped bridges the gap between full-service buyer&apos;s agent and full DIY real
                   estate. You control the property, the terms, and all communication with the listing side.
-                  We provide our proprietary app, state Realtor forms, licensed offer and strategy guidance,
+                  We provide our proprietary app, state REALTOR® forms, licensed offer and strategy guidance,
                   and administrative support through closing with transparent, flat-fee pricing.
                 </p>
 

@@ -109,8 +109,8 @@ const cities: Record<string, CityData> = {
     slug: 'franklin',
     county: 'Williamson County',
     medianPrice: 935000,
-    marketDescription: 'Franklin is the crown jewel of Middle Tennessee real estate. Williamson County\'s median home price has climbed steadily past $900,000, driven by excellent public schools, corporate relocations, and consistently high quality of life rankings. At this price level, a buyer\'s agent commission at a typical ~3% (though always negotiable) approaches $28,000, a sum that meaningfully affects what you can afford or how much you can put toward your purchase.',
-    localContext: 'Franklin\'s appeal is rooted in substance: Williamson County Schools rank among the best in Tennessee, major employers like Mars Petcare, Nissan North America, and Community Health Systems have established operations in the area, and the city\'s historic downtown remains one of the most walkable in the state. Buyers in this market tend to be financially sophisticated and often prefer to manage their own transaction rather than defer to an agent who may not know the community as well as they do.',
+    marketDescription: 'Franklin is one of Middle Tennessee\'s highest-priced markets. Williamson County\'s median home price has climbed steadily past $900,000, supported by strong buyer demand, corporate relocations, and limited inventory relative to that demand. At this price level, a buyer\'s agent commission at a typical ~3% (though always negotiable) approaches $28,000, a sum that meaningfully affects what you can afford or how much you can put toward your purchase.',
+    localContext: 'Franklin combines a broad regional job base, major employers like Mars Petcare, Nissan North America, and Community Health Systems, and a historic, walkable downtown. Many buyers in this market have done extensive research and prefer to manage their own transaction rather than defer to an agent who may not know the local inventory as well as they do. Buyers with school-age children can confirm assigned schools for any address directly through Williamson County Schools.',
     whySkipAgent: [
       'Franklin\'s high price points mean the commission math is stark. On a $935,000 home, a buyer\'s agent fee at a typical ~3% (negotiable) is about $28,050. For buyers who are capable, informed, and have done their research, which describes most Franklin buyers, that\'s an enormous sum to pay for coordination services you can largely handle yourself with the right support.',
       'Williamson County\'s listing agents are well-organized and process-oriented. Transactions here tend to be clean and well-documented. An informed unrepresented buyer with professional forms and a licensed broker support structure doesn\'t create friction, in many cases, they simplify the deal.',
@@ -118,7 +118,7 @@ const cities: Record<string, CityData> = {
     marketInsights: [
       'Williamson County median home price: ~$935,000 and rising',
       'New construction is active in Berry Farms, Ladd Park, and Thompson\'s Station',
-      'Top-rated school zones (Westwood, Page, Independence, Ravenwood) command meaningful price premiums',
+      'Home prices vary by subdivision and assigned school zone; buyers can verify zoning for any address directly with Williamson County Schools',
       'Luxury inventory $1.5M+ has grown, giving buyers in that range more time and negotiating room',
       'Corporate relocation buyers are common, often cash-strong with tight timelines',
       'Franklin\'s market tends to be more balanced than Nashville proper, with slightly longer average days-on-market',
@@ -132,12 +132,12 @@ const cities: Record<string, CityData> = {
     ],
     buyerTips: [
       {
-        title: 'Know the school zone before you fall in love with a house',
-        body: 'In Franklin, the school zone can move a home\'s value by $50,000–$100,000. Before you invest time in a property, verify the assigned elementary, middle, and high school, and understand what that means for resale.',
+        title: 'Verify the assigned school zone before you make an offer',
+        body: 'A home\'s assigned elementary, middle, and high school can affect its market value in Franklin. Before you make an offer, confirm the assigned schools for the specific address directly with Williamson County Schools so you\'re working from current, official information.',
       },
       {
-        title: 'New construction deserves independent representation',
-        body: 'Franklin has significant new construction activity. Builder sales agents represent the builder, not you. BuyUnrepped gives you an independent licensed broker to review contracts, understand what\'s negotiable, and protect your interests, without a full buyer\'s agent commission.',
+        title: 'New construction deserves an independent licensed review',
+        body: 'Franklin has significant new construction activity. Builder sales agents represent the builder, not you. BuyUnrepped gives you an independent licensed broker to review your contract, understand what\'s negotiable, and flag the risks, without a full buyer\'s agent commission.',
       },
       {
         title: 'Understand what\'s included in HOA communities',
@@ -157,7 +157,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How does the offer process work in Franklin\'s competitive market?',
-        answer: 'Franklin listings in desirable school zones can move quickly. BuyUnrepped prepares your TREC purchase agreement, helps you analyze comparable sales, and provides guidance on offer terms, escalation clauses, inspection contingencies, and seller concession strategy, so your offer is competitive and complete.',
+        answer: 'Some Franklin listings move quickly, especially in lower price bands and high-demand subdivisions. BuyUnrepped prepares your TREC purchase agreement, helps you analyze comparable sales, and provides guidance on offer terms, escalation clauses, inspection contingencies, and seller concession strategy, so your offer is competitive and complete.',
       },
       {
         question: 'What should I know about new construction in Franklin?',
@@ -180,7 +180,7 @@ const cities: Record<string, CityData> = {
     county: 'Rutherford County',
     medianPrice: 450000,
     marketDescription: 'Murfreesboro is one of the fastest-growing cities in the United States, and Rutherford County\'s real estate market reflects that momentum. With a median home price around $450,000, the market sits in a sweet spot, accessible relative to Nashville but with enough price appreciation to make buying decisions financially significant. New construction is active across multiple price points, and resale inventory has expanded, giving buyers more choices than they had two years ago.',
-    localContext: 'MTSU anchors Murfreesboro\'s identity as a college town, but the city\'s economy has grown well beyond campus. Nissan\'s Smyrna plant, a growing healthcare corridor, and distribution and logistics hubs have created a broad employment base. The buyer pool in Rutherford County is diverse, first-time buyers, upgraders, investors, and families relocating from Nashville, and the market reflects that range. For buyers who know what they want, the Murfreesboro market offers genuine opportunity.',
+    localContext: 'MTSU anchors Murfreesboro\'s identity as a college town, but the city\'s economy has grown well beyond campus. Nissan\'s Smyrna plant, a growing healthcare corridor, and distribution and logistics hubs have created a broad employment base. Rutherford County sees steady transaction volume across a wide range of price points and property types, from entry-level homes to new construction. For buyers who know what they want, the Murfreesboro market offers genuine opportunity.',
     whySkipAgent: [
       'Murfreesboro\'s growing inventory means buyers have more options and more time to make decisions than in Nashville proper. When the market isn\'t forcing you to decide in 48 hours, the case for paying a buyer\'s agent commission becomes even weaker. You have time to research, compare, and negotiate thoughtfully.',
       'New construction is particularly common in Murfreesboro, and builder sales agents work exclusively for the builder. If you\'re buying new construction, you were never going to have your interests fully represented by the onsite agent anyway. BuyUnrepped gives you independent licensed support for the same price, or less, than you\'d spend on a traditional buyer\'s agent.',
@@ -238,8 +238,8 @@ const cities: Record<string, CityData> = {
         answer: 'The inspection process is the same regardless of whether you have a buyer\'s agent. You hire a licensed inspector, review the report, and decide what repair requests or credits to negotiate. BuyUnrepped\'s Transaction Management package includes inspection guidance, helping you understand what\'s worth negotiating and what\'s standard wear.',
       },
       {
-        question: 'Are there good school districts in Murfreesboro?',
-        answer: 'Rutherford County Schools serves most of Murfreesboro and includes well-regarded options at multiple levels. Specific zones (Blackman, Riverdale, and Oakland clusters) are particularly sought-after. BuyUnrepped can help you verify school assignments for any property you\'re considering.',
+        question: 'How do I find out which schools serve a Murfreesboro address?',
+        answer: 'Rutherford County Schools serves most of Murfreesboro, and school assignments are set by address. You can confirm the assigned schools for any property directly through the district\'s zoning tool. BuyUnrepped can point you to the district resources so you\'re working from current, official information.',
       },
     ],
   },
@@ -258,7 +258,7 @@ const cities: Record<string, CityData> = {
     marketInsights: [
       'Knox County median sale price: ~$315,000, well below Nashville and most Southeast metros',
       'Strong demand from out-of-state buyers relocating from higher-cost markets',
-      'Farragut (West Knoxville) commands premium pricing due to school ratings and amenities',
+      'Farragut (West Knoxville) carries a price premium relative to the Knox County median',
       'South Knoxville has seen significant revitalization investment and rising prices',
       'Average days on market: 30–50 days across most Knox County zip codes, a buyer-friendly pace',
       'Historic neighborhoods (Old North Knoxville, Fourth & Gill) are appreciating faster than suburban counterparts',
@@ -272,8 +272,8 @@ const cities: Record<string, CityData> = {
     ],
     buyerTips: [
       {
-        title: 'Understand the Farragut premium',
-        body: 'West Knoxville\'s Farragut area commands a significant premium driven by school ratings and community amenities. If schools are a priority, Farragut is worth the cost, but if they\'re not, you can find equivalent homes in other Knox County zip codes for 20–30% less.',
+        title: 'Understand the Farragut price premium',
+        body: 'Homes in West Knoxville\'s Farragut area often price 20–30% above comparable homes in other Knox County zip codes. Comparing price per square foot and recent comparable sales across areas will show you what the premium reflects. You can verify the assigned schools for any address directly with Knox County Schools.',
       },
       {
         title: 'Watch for properties on the Knoxville-area growth path',
@@ -297,7 +297,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How do I buy near the University of Tennessee campus without an agent?',
-        answer: 'Properties near UT vary widely, from student-rental-oriented condos to established faculty neighborhoods. BuyUnrepped helps you evaluate the specific market dynamics of any target area near campus, understand rental zoning implications, and submit a professional offer with full documentation.',
+        answer: 'Properties near UT vary widely, from student-rental condos to established single-family neighborhoods. BuyUnrepped helps you evaluate the specific market dynamics of any target area near campus, understand rental zoning implications, and submit a professional offer with full documentation.',
       },
       {
         question: 'What are the closing costs for a Knox County purchase?',
@@ -320,7 +320,7 @@ const cities: Record<string, CityData> = {
     county: 'Hamilton County',
     medianPrice: 310000,
     marketDescription: 'Chattanooga has earned a national reputation as one of the most livable mid-sized cities in the United States, and its real estate market has taken notice. Hamilton County median home prices sit near $310,000, supported by the city\'s transformation from a manufacturing hub into a destination for outdoor recreation, technology, and remote workers seeking quality of life at an accessible price. Inventory has expanded considerably in recent years, which actually works in favor of informed, prepared buyers.',
-    localContext: 'Chattanooga\'s economy is anchored by Volkswagen\'s manufacturing facility, a growing healthcare sector led by CHI Memorial and Erlanger, and an emerging tech scene attracted by the city\'s world-class fiber internet infrastructure. The outdoor lifestyle draw, Lookout Mountain, the Tennessee River, proximity to hiking and climbing in the Appalachians, brings a consistent stream of relocation buyers who are often doing their research carefully before moving. That profile, analytical, self-directed, financially literate, is exactly the profile of a buyer who doesn\'t need to pay 3% for representation.',
+    localContext: 'Chattanooga\'s economy is anchored by Volkswagen\'s manufacturing facility, a growing healthcare sector led by CHI Memorial and Erlanger, and an emerging tech scene attracted by the city\'s world-class fiber internet infrastructure. The outdoor lifestyle draw, Lookout Mountain, the Tennessee River, proximity to hiking and climbing in the Appalachians, brings a consistent stream of relocation buyers who often research the market carefully before moving. Buyers who come prepared and know the process are exactly who the BuyUnrepped model is built for, without paying ~3% for representation.',
     whySkipAgent: [
       'Chattanooga\'s market has more inventory than many Tennessee metros right now. That means sellers are more motivated, days on market are longer, and buyers have real negotiating leverage. When you\'re not competing against five other offers, the value proposition of a buyer\'s agent shrinks considerably. What matters is knowing what to ask for and how to document it properly.',
       'Hamilton County\'s growth has attracted a lot of new listing activity, which means the market is producing experienced, organized listing agents on the sell side. Working through a listing agent directly, with professional documentation from BuyUnrepped, is a clean, straightforward process.',
@@ -389,8 +389,8 @@ const cities: Record<string, CityData> = {
     slug: 'clarksville',
     county: 'Montgomery County',
     medianPrice: 314000,
-    marketDescription: 'Clarksville is one of Tennessee\'s most active real estate markets, driven by one of the largest military installations in the world, Fort Campbell. Montgomery County\'s median home price sits near $314,000, and the market sees consistent transaction volume year-round as military families rotate in and out. For buyers who understand the market\'s rhythms, Clarksville offers accessible prices, a healthy inventory supply, and real opportunity to save by forgoing a traditional buyer\'s agent.',
-    localContext: 'Fort Campbell\'s roughly 30,000 active-duty personnel and their families create a permanent, rotating buyer pool that keeps demand steady regardless of broader economic conditions. Austin Peay State University adds a civilian buyer base, and Clarksville\'s growing commercial and healthcare sectors, including expansions by Amazon and major healthcare providers, have diversified the local economy. Montgomery County\'s relatively balanced supply (typically 4–5 months) means buyers have choices and negotiating room.',
+    marketDescription: 'Clarksville is one of Tennessee\'s most active real estate markets, driven by one of the largest military installations in the world, Fort Campbell. Montgomery County\'s median home price sits near $314,000, and the market sees consistent transaction volume year-round tied to Fort Campbell\'s regular rotation of personnel. For buyers who understand the market\'s rhythms, Clarksville offers accessible prices, a healthy inventory supply, and real opportunity to save by forgoing a traditional buyer\'s agent.',
+    localContext: 'Fort Campbell\'s roughly 30,000 active-duty personnel keep housing demand steady year-round, largely independent of broader economic conditions. Austin Peay State University and Clarksville\'s growing commercial and healthcare sectors, including expansions by Amazon and major healthcare providers, have further diversified the local economy. Montgomery County\'s relatively balanced supply (typically 4–5 months) means buyers have choices and negotiating room.',
     whySkipAgent: [
       'Military buyers in Clarksville are often on tight PCS timelines and highly motivated to close efficiently. They\'re not in the market for hand-holding, they want a clean, professional transaction that closes on schedule. BuyUnrepped is built for exactly this: professional documentation, licensed broker oversight, and a process that moves as fast as you need it to.',
       'Clarksville\'s market is well-suited to informed, self-directed buyers. The inventory is sufficient, listing agents are experienced, and the transaction process in Montgomery County is well-established. The case for paying roughly $9,420 in buyer\'s agent commission (negotiable, not set by law or any MLS) when you can get the same support for $995–$3,490 is difficult to make.',
@@ -433,7 +433,7 @@ const cities: Record<string, CityData> = {
     faqs: [
       {
         question: 'Can military buyers use BuyUnrepped in Clarksville?',
-        answer: 'Absolutely. BuyUnrepped is well-suited for military buyers who know what they want and need to move efficiently. We work with VA loan transactions, understand the Clarksville market, and provide professional documentation and licensed broker support, without the buyer\'s agent commission that many military families pay unnecessarily.',
+        answer: 'Absolutely. BuyUnrepped is well-suited for buyers using a VA loan who know what they want and need to move efficiently. We work with VA loan transactions, understand the Clarksville market, and provide professional documentation and licensed broker support, without the buyer\'s agent commission that many buyers pay unnecessarily.',
       },
       {
         question: 'How does the VA loan process work with BuyUnrepped?',
@@ -445,7 +445,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'Is Clarksville a good market for buying a rental property?',
-        answer: 'Yes. Fort Campbell\'s consistent rotation of military families creates a reliable rental demand. Properties within a reasonable commute of the main gate hold rental value well. BuyUnrepped can help you evaluate investment properties in Clarksville and execute the purchase professionally.',
+        answer: 'Yes. Fort Campbell\'s consistent rotation of personnel supports steady rental demand. Properties within a reasonable commute of the main gate hold rental value well. BuyUnrepped can help you evaluate investment properties in Clarksville and execute the purchase professionally.',
       },
       {
         question: 'How do I find out if a Clarksville property is near Fort Campbell noise zones?',
@@ -459,7 +459,7 @@ const cities: Record<string, CityData> = {
     slug: 'memphis',
     county: 'Shelby County',
     medianPrice: 230000,
-    marketDescription: 'Memphis is Tennessee\'s most affordable major market, with a median home price around $230,000, roughly half the Nashville median. Shelby County\'s market is active and moves relatively quickly, with homes in desirable zip codes often going under contract in 25–40 days. The combination of accessible prices and a broad range of home styles, from historic Midtown bungalows to newer East Memphis construction, gives buyers real flexibility in what and where they buy.',
+    marketDescription: 'Memphis is Tennessee\'s most affordable major market, with a median home price around $230,000, roughly half the Nashville median. Shelby County\'s market is active and moves relatively quickly, with homes in higher-demand zip codes often going under contract in 25–40 days. The combination of accessible prices and a broad range of home styles, from historic Midtown bungalows to newer East Memphis construction, gives buyers real flexibility in what and where they buy.',
     localContext: 'Memphis\'s economy is anchored by FedEx\'s global headquarters, a major healthcare sector led by St. Jude Children\'s Research Hospital and Methodist Le Bonheur, and one of the largest logistics and distribution hubs in the country. The city\'s cultural identity, rooted in blues, soul, and barbecue, makes it a unique place to live, and that distinctiveness attracts buyers who care about community character. For unrepresented buyers who understand the Memphis market\'s neighborhoods and price dynamics, the savings from skipping a buyer\'s agent are meaningful even at lower price points.',
     whySkipAgent: [
       'At Memphis price points, a buyer\'s agent commission of about $6,900 at a typical ~3% (negotiable) represents a real percentage of the home\'s value. For a buyer who has done their research, knows their target neighborhoods, and understands the buying process, paying nearly $7,000 for representation is harder to justify than in higher-priced markets.',
@@ -467,7 +467,7 @@ const cities: Record<string, CityData> = {
     ],
     marketInsights: [
       'Shelby County median price: ~$230,000, the most affordable among major Tennessee metros',
-      'Memphis proper moves faster than suburban areas, desirable city zip codes average 25–40 days on market',
+      'Memphis proper moves faster than suburban areas; higher-demand city zip codes average 25–40 days on market',
       'Midtown and Cooper-Young command premiums for walkability, character, and proximity to medical district',
       'East Memphis and Germantown offer suburban amenities with Shelby County\'s lower tax base',
       'Memphis is a significant investor market, cash buyer competition is real in certain price ranges',
@@ -482,8 +482,8 @@ const cities: Record<string, CityData> = {
     ],
     buyerTips: [
       {
-        title: 'Understand Memphis neighborhood variation',
-        body: 'Memphis neighborhoods vary significantly block by block. A home priced at $200,000 in one zip code may be in a very different context than one in an adjacent zip code at the same price. Do thorough neighborhood research, crime data, school ratings, walkability, before targeting a specific area.',
+        title: 'Understand Memphis market variation',
+        body: 'Prices and property conditions in Memphis vary significantly block by block. A home priced at $200,000 in one zip code may sit in a very different market than one in an adjacent zip code at the same price. Compare recent comparable sales, days on market, price per square foot, and property condition for the specific streets you\'re considering, and visit in person at different times of day to see the area for yourself.',
       },
       {
         title: 'Factor in Shelby County vs. municipal tax rates',
@@ -507,7 +507,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How do I evaluate Memphis neighborhoods without an agent?',
-        answer: 'Memphis neighborhoods vary significantly. We recommend using publicly available data on crime statistics, school ratings, and walkability scores alongside your own visits. BuyUnrepped can also help you access comparable sales data for any target neighborhood so you understand what homes are actually selling for.',
+        answer: 'Memphis neighborhoods vary significantly. We recommend touring in person at different times of day and reviewing objective market data, recent comparable sales, days on market, and price trends, for the specific streets you\'re considering. BuyUnrepped can help you access comparable sales data for any target area so you understand what homes are actually selling for. To compare schools, verify the assigned schools for a specific address directly with the district.',
       },
       {
         question: 'Are there historic tax incentives for buying in Memphis?',
@@ -515,11 +515,11 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How does buying in Germantown or Collierville differ from buying in Memphis proper?',
-        answer: 'Germantown and Collierville are incorporated municipalities with their own school systems, tax rates, and municipal services. Their schools generally have higher ratings than Memphis City Schools, and their home prices reflect that premium. The buying process is the same, TREC-approved Tennessee forms, but the market dynamics, price points, and buyer profiles are different.',
+        answer: 'Germantown and Collierville are incorporated municipalities with their own school systems, tax rates, and municipal services. Their home prices generally run higher than Memphis proper. The buying process is the same, TREC-approved Tennessee forms, though market dynamics and price points differ. Buyers can verify the assigned schools for any address directly with the relevant district.',
       },
       {
         question: 'What should I know about Memphis homes built before 1978?',
-        answer: 'Many of Memphis\'s most desirable neighborhoods, Midtown, Cooper-Young, Central Gardens, feature homes built before 1978, when lead paint was still in use. Federal law requires sellers to disclose known lead paint hazards, and buyers have a 10-day window to conduct lead paint inspections. BuyUnrepped includes guidance on lead paint disclosure requirements in our transaction support.',
+        answer: 'Many of Memphis\'s historic neighborhoods, Midtown, Cooper-Young, Central Gardens, have a large share of homes built before 1978, when lead paint was still in use. Federal law requires sellers to disclose known lead paint hazards, and buyers have a 10-day window to conduct lead paint inspections. BuyUnrepped includes guidance on lead paint disclosure requirements in our transaction support.',
       },
     ],
   },
@@ -577,7 +577,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'What\'s the buying process like near ETSU?',
-        answer: 'Properties near ETSU attract a mix of buyers, faculty relocations, investor buyers seeking student rentals, and first-time buyers. BuyUnrepped can help you evaluate any ETSU-area property, understand comparable sales, and execute the transaction professionally regardless of whether it\'s owner-occupied or investment-oriented.',
+        answer: 'Properties near ETSU range from student-rental condos to established single-family homes, and they trade for both owner-occupancy and investment. BuyUnrepped can help you evaluate any ETSU-area property, understand comparable sales, and execute the transaction professionally regardless of whether it\'s owner-occupied or investment-oriented.',
       },
       {
         question: 'How does buying in Johnson City compare to Kingsport or Bristol?',
@@ -622,8 +622,8 @@ const cities: Record<string, CityData> = {
     ],
     buyerTips: [
       {
-        title: 'Research school zones carefully',
-        body: 'Jackson-Madison County school zoning can vary significantly by address. If schools are a priority for your family, verify the assigned school before making an offer. Some Jackson buyers choose Madison County\'s suburban areas specifically for school zone purposes.',
+        title: 'Verify school zoning by address',
+        body: 'Jackson-Madison County school assignments are set by address and can vary from one street to the next. Confirm the assigned schools for any property directly with the district before making an offer so you\'re working from current, official information.',
       },
       {
         title: 'Factor in the North vs. South Jackson distinction',
@@ -651,7 +651,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'What do I need to know about buying near Union University in Jackson?',
-        answer: 'The Union University area in North Jackson is one of the city\'s most active submarkets, with demand from faculty, staff, and buyers who value proximity to the campus community. Properties here tend to be well-maintained and hold value well. BuyUnrepped provides comparable sales analysis for any Jackson submarket.',
+        answer: 'The Union University area in North Jackson is one of the city\'s most active submarkets, with steady demand and relatively quick sale times. Properties here tend to be well-maintained and hold value well. BuyUnrepped provides comparable sales analysis for any Jackson submarket.',
       },
       {
         question: 'How much can I save buying without an agent in Jackson?',
@@ -688,7 +688,7 @@ export async function generateMetadata({ params }: PageProps) {
     keywords: [
       `buy home without agent ${city.name} TN`,
       `unrepresented buyer ${city.name} Tennessee`,
-      `home buyer no realtor ${city.name}`,
+      `${city.name} home buyer without a real estate agent`,
       `flat fee home buying ${city.name}`,
       `${city.name} Tennessee real estate without agent`,
       `buy house ${city.name} TN`,
@@ -770,6 +770,9 @@ export default async function CityPage({ params }: PageProps) {
             See Pricing
           </Link>
         </div>
+        <p className="mt-8 text-sm text-gray-400 max-w-xl mx-auto leading-relaxed">
+          BuyUnrepped is a licensed Tennessee brokerage providing non-representational support. We do not act as your buyer&apos;s agent, negotiate, submit offers, or communicate with the listing side on your behalf, and we do not provide legal advice. For legal questions, consult a licensed attorney.
+        </p>
       </section>
 
       {/* Market Overview */}

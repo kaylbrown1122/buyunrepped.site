@@ -10,7 +10,7 @@ import Link from 'next/link';
 const faqs = [
   {
     question: 'Is BuyUnrepped acting as the buyer\'s agent?',
-    answer: 'No. BuyUnrepped is a coaching and guidance service, not licensed buyer representation. We do not enter into a buyer agency agreement, we do not negotiate on behalf of the buyer, and we do not insert ourselves into the agent relationship. There is no dual agency.',
+    answer: 'No. BuyUnrepped is a licensed Tennessee brokerage providing non-representational support, not buyer representation. We do not enter into a buyer agency agreement, we do not negotiate on behalf of the buyer, and we do not insert ourselves into the agent relationship. There is no dual agency.',
   },
   {
     question: 'Will this affect my commission?',
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: 'What forms does BuyUnrepped use?',
-    answer: 'We use standard Tennessee Association of Realtors (TAR) forms, the same forms you already know and work with. No custom paperwork, no surprises.',
+    answer: 'We use standard Tennessee Association of REALTORS® (TAR) forms, the same forms you already know and work with. No custom paperwork, no surprises.',
   },
   {
     question: 'What if a buyer I\'m working with wants to use BuyUnrepped?',

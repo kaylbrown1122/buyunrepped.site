@@ -16,6 +16,28 @@ const companyLinks: [string, string][] = [
 const socialClass =
   'flex size-8 items-center justify-center rounded-full border border-white/15 text-gray-300 transition-colors hover:border-white/30 hover:bg-white/5 hover:text-white';
 
+// Equal Housing Opportunity mark: a house outline enclosing an equals sign.
+function EqualHousingLogo({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      role="img"
+      aria-label="Equal Housing Opportunity"
+    >
+      <path d="M2.5 11 12 3.5 21.5 11" />
+      <path d="M5 10.5V20.5h14V10.5" />
+      <path d="M8.5 13.75h7" />
+      <path d="M8.5 16.75h7" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-brand-navy text-sm text-gray-400">
@@ -68,7 +90,7 @@ export default function Footer() {
 
           <nav className="grid grid-cols-2 gap-6 sm:gap-8 md:col-span-7 md:grid-cols-2">
             <div>
-              <p className="text-sm font-semibold text-white">BuyUnrepped</p>
+              <p className="text-sm font-semibold text-white">BuyUnrepped, Inc.</p>
               <address className="mt-2 space-y-1.5 not-italic text-sm leading-relaxed text-gray-400">
                 <p>TN Firm Lic. #267134 · Broker Lic. #339134</p>
                 <p>
@@ -86,7 +108,7 @@ export default function Footer() {
                   </a>
                 </p>
                 <p className="flex items-center gap-1.5 pt-0.5 text-gray-400">
-                  <Home className="size-3.5 shrink-0" aria-hidden /> Equal Housing Opportunity
+                  <EqualHousingLogo className="size-4 shrink-0" /> Equal Housing Opportunity
                 </p>
               </address>
             </div>
@@ -107,17 +129,27 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-3 sm:flex-row sm:px-6 lg:px-8">
-          <p className="text-center text-xs text-gray-500 sm:text-left">
-            © {new Date().getFullYear()} BuyUnrepped · Tennessee · Firm license #267134
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+          <p className="flex items-start gap-2 text-xs leading-relaxed text-gray-500">
+            <EqualHousingLogo className="mt-0.5 size-4 shrink-0" />
+            <span>
+              BuyUnrepped is committed to the Fair Housing Act and equal opportunity in housing. We do not discriminate
+              on the basis of race, color, religion, sex, disability, familial status, national origin, or any other
+              class protected by federal, state, or local law.
+            </span>
           </p>
-          <div className="flex items-center gap-4">
-            <Link href="/terms" className="text-xs text-gray-500 transition-colors hover:text-gray-300">
-              Terms
-            </Link>
-            <Link href="/privacy" className="text-xs text-gray-500 transition-colors hover:text-gray-300">
-              Privacy
-            </Link>
+          <div className="mt-4 flex flex-col items-center justify-between gap-2 border-t border-white/8 pt-4 sm:flex-row">
+            <p className="text-center text-xs text-gray-500 sm:text-left">
+              © {new Date().getFullYear()} BuyUnrepped, Inc. · Tennessee · Firm license #267134
+            </p>
+            <div className="flex items-center gap-4">
+              <Link href="/terms" className="text-xs text-gray-500 transition-colors hover:text-gray-300">
+                Terms
+              </Link>
+              <Link href="/privacy" className="text-xs text-gray-500 transition-colors hover:text-gray-300">
+                Privacy
+              </Link>
+            </div>
           </div>
         </div>
       </div>

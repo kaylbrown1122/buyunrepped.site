@@ -13,7 +13,7 @@ export const metadata = {
   keywords: [
     'buy home without agent Tennessee',
     'unrepresented buyer Tennessee',
-    'buy home without realtor TN',
+    'buy home without a real estate agent TN',
     'flat fee home buying Tennessee',
     'Nashville home buyer no agent',
     'Tennessee buyer agent alternative',

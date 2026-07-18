@@ -133,6 +133,14 @@ export default function TermsPage() {
                             Even though the listing agent does not represent you, he or she owes you certain duties under Tennessee law, including the duty to diligently exercise reasonable skill and care, to provide services with honesty and good faith, to disclose accurate information about market conditions in certain circumstances, to timely account to you for earnest money, to refrain from self-dealing unless disclosed to you. However, keep in mind that, at the end of the day, the listing agent represents the seller, not you.
                         </p>
 
+                        <h3 className="text-xl font-bold text-brand-navy mt-8 mb-4">C. Fair Housing and Equal Opportunity</h3>
+                        <p>
+                            BuyUnrepped is committed to the letter and spirit of the federal Fair Housing Act and all applicable federal, state, and local fair housing laws. We do not discriminate, and we will not knowingly assist anyone in discriminating, against any person because of race, color, religion, sex, disability, familial status, national origin, or any other characteristic protected by applicable law. All housing services offered through BuyUnrepped are available on an equal opportunity basis.
+                        </p>
+                        <p>
+                            Any market, neighborhood, school, or other information referenced on our website or provided during a transaction is general, publicly available information offered for your independent review only. We do not steer buyers toward or away from any property or area on the basis of a protected characteristic, and we do not evaluate, rank, or recommend communities on that basis. We encourage every buyer to make an independent evaluation of any property and community, including verifying school assignments directly with the applicable school district and reviewing objective, publicly available data.
+                        </p>
+
                         <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">6. Fees; Renewals and Cancellation</h2>
                         <p>
                             Fees may be subject to tax, collected by us or a third party through which you transact, and except as set out in these Terms are non-refundable. If your Service involves a recurring payment of a fee, unless you notify us before a charge that you want to cancel or do not want to automatically renew your Service, you understand it will automatically continue and you authorize us, or a third party through which you transact (without notice to you, unless required by applicable law) to collect the then-applicable fee and any taxes, using any credit card we have on record for you. You can cancel at any time by emailing us at BuyUnrepped.com. If you cancel your plan or Service, you will not receive a refund of any fees already paid, unless otherwise stated in these Terms.
