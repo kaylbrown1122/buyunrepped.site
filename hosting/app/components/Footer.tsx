@@ -6,8 +6,9 @@ import { Twitter, Instagram, Home } from 'lucide-react';
 const companyLinks: [string, string][] = [
   ['About Us', '/about'],
   ['Contact', '/contact'],
-  ['Guides', '/guides'],
-  ['Blog', '/resources'],
+  ['Resources', '/resources'],
+  ['Playbook', '/playbook'],
+  ['Tools', '/tools'],
   ['Agent Matchmaking', '/agent-match'],
   ['Vendor List', '/vendors'],
 ];

@@ -53,8 +53,13 @@ const nextConfig = {
                 destination: '/resources',
                 permanent: true,
             })),
-            // The entire long-form guides section was removed. /guides itself
-            // remains as the Resources hub; any /guides/<slug> is retired.
+            // The long-form guides section was removed and the /guides hub was
+            // consolidated into /resources. Redirect the hub and any /guides/<slug>.
+            {
+                source: '/guides',
+                destination: '/resources',
+                permanent: true,
+            },
             {
                 source: '/guides/:slug',
                 destination: '/resources',

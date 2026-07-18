@@ -49,8 +49,8 @@ export default function Header() {
                             Pricing
                         </Link>
                         <Link
-                            href="/guides"
-                            className={`text-sm font-medium transition-colors ${pathname.startsWith('/guides') ? 'text-brand-navy' : 'text-gray-600 hover:text-brand-navy'}`}
+                            href="/resources"
+                            className={`text-sm font-medium transition-colors ${pathname.startsWith('/resources') ? 'text-brand-navy' : 'text-gray-600 hover:text-brand-navy'}`}
                         >
                             Resources
                         </Link>
@@ -103,7 +103,7 @@ export default function Header() {
             {mobileOpen && (
                 <div id="mobile-menu" className="md:hidden border-t border-gray-100 bg-white px-4 py-6 space-y-4">
                     <Link href="/pricing" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Pricing</Link>
-                    <Link href="/guides" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Resources</Link>
+                    <Link href="/resources" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">Resources</Link>
                     <Link href="/for-agents" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">For Agents</Link>
                     <Link href="/about" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 hover:text-brand-navy">About</Link>
                 </div>

@@ -29,7 +29,7 @@ export default function LandingPage() {
     },
     {
       q: 'How does the flat fee compare to a traditional commission?',
-      a: "Traditional buyer-side compensation is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped charges a flat $995 for the Offer Package, with an optional $2,495 for Transaction Guidance if your offer is accepted and you'd like our help through closing. Either way, the cost doesn't move with the home's price.",
+      a: "Buyer-side compensation is negotiable and not set by law or any MLS, but it is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped charges a flat $995 for the Offer Package, with an optional $2,495 for Transaction Management if your offer is accepted and you'd like our help through closing. Either way, the cost doesn't move with the home's price.",
     },
     {
       q: "What's included in each tier?",
@@ -205,7 +205,7 @@ export default function LandingPage() {
                 </p>
 
                 <p className="mt-3 text-[12px] leading-relaxed text-white/70">
-                  Compare to a traditional buyer's agent ~3% commission. With BuyUnrepped, no matter the home's price, ours is always the same.
+                  Compare to a traditional buyer's agent commission — negotiable, and illustrated here at ~3%. With BuyUnrepped, no matter the home's price, ours is always the same.
                 </p>
               </div>
             </div>
@@ -239,6 +239,10 @@ export default function LandingPage() {
             </div>
 
             <SavingsCalculator />
+
+            <p className="mx-auto mt-3 max-w-xl text-center text-[11px] leading-snug text-gray-400">
+              Buyer-side commissions are negotiable and not set by law or any MLS. Figures use a hypothetical 3% illustration and are not a quote or a promise of savings.
+            </p>
 
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
               <a
@@ -401,7 +405,7 @@ export default function LandingPage() {
                   label: 'Just starting',
                   desc: 'Understand the process before you jump in',
                   cta: 'Learn first',
-                  href: '/guides',
+                  href: '/resources',
                   featured: false,
                 },
                 {
