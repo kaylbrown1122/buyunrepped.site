@@ -51,7 +51,7 @@ const cities: Record<string, CityData> = {
       'Condo supply is elevated, 8+ months in some Nashville zip codes, giving buyers more leverage',
       'New construction is active in Antioch, Donelson, and the Nations West corridor',
       'Seller concessions are increasingly common as days-on-market stretch in mid-tier price ranges',
-      'Tennessee does not allow buyer agent commission rebates, making flat-fee alternatives like BuyUnrepped the most efficient way to capture savings',
+      'Tennessee does not allow buyer agent commission rebates, making flat-fee alternatives like BuyUnrepped one of the most direct ways to capture savings',
     ],
     priceRanges: [
       { type: 'Condos / Townhomes', range: '$300,000 – $550,000' },
@@ -390,7 +390,7 @@ const cities: Record<string, CityData> = {
     county: 'Montgomery County',
     medianPrice: 314000,
     marketDescription: 'Clarksville is one of Tennessee\'s most active real estate markets, driven by one of the largest military installations in the world, Fort Campbell. Montgomery County\'s median home price sits near $314,000, and the market sees consistent transaction volume year-round tied to Fort Campbell\'s regular rotation of personnel. For buyers who understand the market\'s rhythms, Clarksville offers accessible prices, a healthy inventory supply, and real opportunity to save by forgoing a traditional buyer\'s agent.',
-    localContext: 'Fort Campbell\'s roughly 30,000 active-duty personnel keep housing demand steady year-round, largely independent of broader economic conditions. Austin Peay State University and Clarksville\'s growing commercial and healthcare sectors, including expansions by Amazon and major healthcare providers, have further diversified the local economy. Montgomery County\'s relatively balanced supply (typically 4–5 months) means buyers have choices and negotiating room.',
+    localContext: 'Fort Campbell\'s tens of thousands of active-duty personnel keep housing demand steady year-round, largely independent of broader economic conditions. Austin Peay State University and Clarksville\'s growing commercial and healthcare sectors, including expansions by Amazon and major healthcare providers, have further diversified the local economy. Montgomery County\'s relatively balanced supply (typically 4–5 months) means buyers have choices and negotiating room.',
     whySkipAgent: [
       'Military buyers in Clarksville are often on tight PCS timelines and highly motivated to close efficiently. They\'re not in the market for hand-holding, they want a clean, professional transaction that closes on schedule. BuyUnrepped is built for exactly this: professional documentation, licensed broker oversight, and a process that moves as fast as you need it to.',
       'Clarksville\'s market is well-suited to informed, self-directed buyers. The inventory is sufficient, listing agents are experienced, and the transaction process in Montgomery County is well-established. The case for paying roughly $9,420 in buyer\'s agent commission (negotiable, not set by law or any MLS) when you can get the same support for $995–$3,490 is difficult to make.',
@@ -684,7 +684,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `Buy a Home in ${city.name}, TN Without a Buyer's Agent | BuyUnrepped`,
-    description: `${city.name} home buyers: purchase without a buyer's agent and save up to $${formattedSavings} on a $${formattedPrice} home. Flat-fee support from a licensed Tennessee broker. Professional forms, offer strategy, and transaction coordination.`,
+    description: `${city.name} home buyers: purchase without a buyer's agent and save up to $${formattedSavings} on a $${formattedPrice} home — an illustrative figure, since buyer-side commissions are negotiable. Flat-fee support from a licensed Tennessee broker. Professional forms, offer strategy, and transaction coordination.`,
     keywords: [
       `buy home without agent ${city.name} TN`,
       `unrepresented buyer ${city.name} Tennessee`,
@@ -696,7 +696,7 @@ export async function generateMetadata({ params }: PageProps) {
     ],
     openGraph: {
       title: `Buy a Home in ${city.name}, TN Without a Buyer's Agent`,
-      description: `Save up to $${formattedSavings} when buying a home in ${city.name}. Flat-fee support from a licensed TN broker, no buyer's agent commission required.`,
+      description: `Save up to $${formattedSavings} (illustrative; buyer-side commissions are negotiable) when buying a home in ${city.name}. Flat-fee support from a licensed TN broker.`,
       url: `${BASE_URL}/locations/${city.slug}`,
       images: [
         {
@@ -759,8 +759,11 @@ export default async function CityPage({ params }: PageProps) {
         <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4 leading-tight">
           Buy a Home in {city.name} Without a Buyer&apos;s Agent
         </h1>
-        <p className="text-xl text-gray-500 mb-8">
+        <p className="text-xl text-gray-500 mb-2">
           Save up to <strong className="text-brand-blue">${formattedSavings}</strong> on a ${formattedPrice} {city.name} home. Flat-fee support from a licensed Tennessee broker.
+        </p>
+        <p className="text-sm text-gray-400 mb-8">
+          Illustrative estimate; buyer-side commissions are negotiable and vary by transaction.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/schedule" className="inline-flex items-center justify-center gap-2 bg-brand-navy text-white px-8 py-4 rounded-full font-bold hover:bg-brand-blue transition-colors">
@@ -782,6 +785,9 @@ export default async function CityPage({ params }: PageProps) {
           <h2 className="text-4xl font-bold mt-4 mb-6">What Buyers Need to Know in {city.name}</h2>
           <p className="text-lg text-gray-500 mb-6 leading-relaxed">{city.marketDescription}</p>
           <p className="text-lg text-gray-500 leading-relaxed">{city.localContext}</p>
+          <p className="mt-6 text-sm text-gray-400">
+            Market figures are approximate estimates drawn from public sources and change over time; verify current data independently.
+          </p>
         </div>
       </section>
 
@@ -844,6 +850,9 @@ export default async function CityPage({ params }: PageProps) {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-sm text-gray-400">
+            Estimates only, compiled from public sources and subject to change. Verify current figures independently.
+          </p>
         </div>
       </section>
 
