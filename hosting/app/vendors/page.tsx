@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import Link from 'next/link';
-import { Star, Lock } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { useSpamGuard } from '../../lib/useSpamGuard';
 import Reveal from '../components/Reveal';
 
@@ -14,17 +14,16 @@ const UNLOCK_KEY = 'bu_vendor_list_unlocked';
 
 interface TitleCompany {
   name: string;
-  rating: number;
   href: string;
 }
 
 const titleCompanies: TitleCompany[] = [
-  { name: 'Magnolia Title & Escrow', rating: 5.0, href: 'https://magnoliatitle.com/' },
-  { name: 'Chapman & Rosenthal', rating: 4.8, href: 'https://chapmanrosenthal.com/' },
-  { name: 'Windmill Title', rating: 4.6, href: 'https://www.windmilltitle.com/' },
-  { name: 'Wilson Berry Title', rating: 5.0, href: 'https://wilsonberrytitle.com/' },
-  { name: 'Cedar City Title', rating: 5.0, href: 'https://cedarcitytitle.com/' },
-  { name: 'Wagon Wheel Title', rating: 4.9, href: 'https://wagonwheeltitle.com/' },
+  { name: 'Magnolia Title & Escrow', href: 'https://magnoliatitle.com/' },
+  { name: 'Chapman & Rosenthal', href: 'https://chapmanrosenthal.com/' },
+  { name: 'Windmill Title', href: 'https://www.windmilltitle.com/' },
+  { name: 'Wilson Berry Title', href: 'https://wilsonberrytitle.com/' },
+  { name: 'Cedar City Title', href: 'https://cedarcitytitle.com/' },
+  { name: 'Wagon Wheel Title', href: 'https://wagonwheeltitle.com/' },
 ];
 
 interface Lender {
@@ -94,23 +93,6 @@ const lenders: Lender[] = [
     tags: ['First-time buyers', 'Conventional'],
   },
 ];
-
-function Stars({ rating }: { rating: number }) {
-  const full = Math.round(rating);
-  return (
-    <div className="flex items-center gap-1">
-      <span className="flex" aria-hidden>
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star
-            key={i}
-            className={`size-3.5 ${i < full ? 'fill-brand-gold text-brand-gold' : 'text-gray-300'}`}
-          />
-        ))}
-      </span>
-      <span className="text-[12px] font-semibold text-gray-500">{rating.toFixed(1)}</span>
-    </div>
-  );
-}
 
 export default function VendorsPage() {
   const [unlocked, setUnlocked] = useState(false);
@@ -294,9 +276,6 @@ export default function VendorsPage() {
                     <h3 className="text-[15px] font-bold leading-snug text-brand-navy group-hover:text-brand-blue">
                       {t.name}
                     </h3>
-                    <div className="mt-2">
-                      <Stars rating={t.rating} />
-                    </div>
                     <span className="mt-3 inline-block text-[13px] font-semibold text-brand-blue">Website →</span>
                   </a>
                 ))}

@@ -42,7 +42,7 @@ const cities: Record<string, CityData> = {
     marketDescription: 'Nashville is one of the most competitive real estate markets in the Southeast. Davidson County median home prices hover around $530,000, and certain submarkets, Green Hills, 12 South, Germantown, regularly see offers over asking within days of listing. A buyer\'s agent commission, typically around 3% but always negotiable, would run about $15,900 on a $530,000 home. That\'s money that could reduce your purchase price, cover closing costs, or simply stay in your pocket.',
     localContext: 'Nashville\'s economy is anchored by healthcare (HCA Healthcare, Vanderbilt Medical), higher education, and a booming hospitality and tech sector. That economic diversity keeps demand strong year-round and across price points. The metro has absorbed significant in-migration from higher-cost cities, which has kept competition elevated even as interest rates have risen. For buyers who\'ve done their research and know what they want, moving confidently without an agent is entirely achievable, and financially smart.',
     whySkipAgent: [
-      'Nashville\'s listing agents are experienced and well-resourced. In many transactions, the listing agent already has everything they need to close the deal, your buyer\'s agent is often just a relay. With BuyUnrepped, you get direct access to the same TREC-approved forms and offer guidance without paying $15,000+ for someone to forward emails.',
+      'Nashville\'s listing agents are experienced and well-resourced. In many transactions, the listing agent already has everything they need to close the deal, your buyer\'s agent is often just a relay. With BuyUnrepped, you get direct access to the same Tennessee REALTORS® standard forms and offer guidance without paying $15,000+ for someone to forward emails.',
       'In competitive Nashville situations, buyers who can credibly represent themselves, with professional documentation and a clear process, can sometimes negotiate directly and more effectively than buyers with an agent who\'s managing ten other transactions. BuyUnrepped gives you that infrastructure without the commission cost.',
     ],
     marketInsights: [
@@ -74,8 +74,8 @@ const cities: Record<string, CityData> = {
         body: 'In Nashville\'s condo market and outer zip codes like 37211, 37214, and 37076, sellers are increasingly open to concessions. An informed, unrepresented buyer who knows to ask has real leverage here.',
       },
       {
-        title: 'Know your TREC forms',
-        body: 'Tennessee uses TREC-approved purchase agreements. BuyUnrepped provides these forms and walks you through each clause, so you\'re not reading unfamiliar legal language for the first time at the offer table.',
+        title: 'Know your Tennessee REALTORS® forms',
+        body: 'Tennessee\'s standard residential purchase agreements are Tennessee REALTORS® (TAR) forms. BuyUnrepped provides these forms and walks you through each clause, so you\'re not reading unfamiliar legal language for the first time at the offer table.',
       },
     ],
     neighborhoods: ['Green Hills', '12 South', 'East Nashville', 'Germantown', 'The Nations', 'Sylvan Park', 'Hillsboro Village', 'Donelson', 'Antioch', 'Madison'],
@@ -87,7 +87,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'Will Nashville listing agents work with me if I\'m unrepresented?',
-        answer: 'Yes. Listing agents are legally required to treat all buyers fairly. Many Nashville agents actually prefer working with informed unrepresented buyers because it simplifies communication. BuyUnrepped\'s TREC-approved documentation signals professionalism and makes the transaction straightforward for the listing side.',
+        answer: 'Yes. Listing agents are legally required to treat all buyers fairly. Many Nashville agents actually prefer working with informed unrepresented buyers because it simplifies communication. BuyUnrepped\'s Tennessee REALTORS® standard documentation signals professionalism and makes the transaction straightforward for the listing side.',
       },
       {
         question: 'Is Nashville\'s market still competitive for buyers?',
@@ -153,11 +153,11 @@ const cities: Record<string, CityData> = {
     faqs: [
       {
         question: 'Is it realistic to buy a $900,000+ home in Franklin without a buyer\'s agent?',
-        answer: 'Absolutely. High-value transactions in Franklin are typically clean, well-documented, and involve experienced listing agents on the other side. BuyUnrepped provides licensed broker oversight, TREC-approved forms, and full transaction coordination, giving you the professional structure you need without the $28,000 commission.',
+        answer: 'Absolutely. High-value transactions in Franklin are typically clean, well-documented, and involve experienced listing agents on the other side. BuyUnrepped provides licensed broker oversight, Tennessee REALTORS® standard forms, and full transaction coordination, giving you the professional structure you need without the $28,000 commission.',
       },
       {
         question: 'How does the offer process work in Franklin\'s competitive market?',
-        answer: 'Some Franklin listings move quickly, especially in lower price bands and high-demand subdivisions. BuyUnrepped prepares your TREC purchase agreement, helps you analyze comparable sales, and provides guidance on offer terms, escalation clauses, inspection contingencies, and seller concession strategy, so your offer is competitive and complete.',
+        answer: 'Some Franklin listings move quickly, especially in lower price bands and high-demand subdivisions. BuyUnrepped prepares your Tennessee REALTORS® purchase agreement, helps you analyze comparable sales, and provides guidance on offer terms, escalation clauses, inspection contingencies, and seller concession strategy, so your offer is competitive and complete.',
       },
       {
         question: 'What should I know about new construction in Franklin?',
@@ -227,7 +227,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'What\'s the buying process like for new construction in Murfreesboro?',
-        answer: 'Builder contracts are different from standard TREC purchase agreements. They favor the builder on timelines, change orders, and contingencies. BuyUnrepped reviews your builder contract, identifies terms that can be negotiated, and provides independent guidance through the process, something the builder\'s onsite agent won\'t do.',
+        answer: 'Builder contracts are different from the standard Tennessee REALTORS® purchase agreements. They favor the builder on timelines, change orders, and contingencies. BuyUnrepped reviews your builder contract, identifies terms that can be negotiated, and provides independent guidance through the process, something the builder\'s onsite agent won\'t do.',
       },
       {
         question: 'How much can I save buying without an agent in Murfreesboro?',
@@ -367,7 +367,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How do I buy on North Shore without a buyer\'s agent?',
-        answer: 'North Shore transactions are like any other Hamilton County purchase, they use TREC-approved Tennessee forms, and the process is well-established. BuyUnrepped provides those forms, reviews comparables in the North Shore submarket, and supports your offer and negotiation strategy from start to close.',
+        answer: 'North Shore transactions are like any other Hamilton County purchase, they use Tennessee REALTORS® standard forms, and the process is well-established. BuyUnrepped provides those forms, reviews comparables in the North Shore submarket, and supports your offer and negotiation strategy from start to close.',
       },
       {
         question: 'What\'s special about buying property on Lookout Mountain?',
@@ -441,7 +441,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'What if I need to close quickly due to a PCS move?',
-        answer: 'We understand military timelines. BuyUnrepped\'s process is built to move as fast as you need it to. Our TREC-approved documentation is ready to go, our licensed broker is responsive, and we coordinate the transaction to meet your closing deadline.',
+        answer: 'We understand military timelines. BuyUnrepped\'s process is built to move as fast as you need it to. Our Tennessee REALTORS® standard documentation is ready to go, our licensed broker is responsive, and we coordinate the transaction to meet your closing deadline.',
       },
       {
         question: 'Is Clarksville a good market for buying a rental property?',
@@ -463,7 +463,7 @@ const cities: Record<string, CityData> = {
     localContext: 'Memphis\'s economy is anchored by FedEx\'s global headquarters, a major healthcare sector led by St. Jude Children\'s Research Hospital and Methodist Le Bonheur, and one of the largest logistics and distribution hubs in the country. The city\'s cultural identity, rooted in blues, soul, and barbecue, makes it a unique place to live, and that distinctiveness attracts buyers who care about community character. For unrepresented buyers who understand the Memphis market\'s neighborhoods and price dynamics, the savings from skipping a buyer\'s agent are meaningful even at lower price points.',
     whySkipAgent: [
       'At Memphis price points, a buyer\'s agent commission of about $6,900 at a typical ~3% (negotiable) represents a real percentage of the home\'s value. For a buyer who has done their research, knows their target neighborhoods, and understands the buying process, paying nearly $7,000 for representation is harder to justify than in higher-priced markets.',
-      'Memphis has a large and experienced pool of listing agents, many of whom are well-practiced at working with unrepresented buyers. The transaction process in Shelby County is well-documented and well-established. With BuyUnrepped\'s TREC-approved forms and licensed broker support, you\'re fully equipped to navigate it professionally.',
+      'Memphis has a large and experienced pool of listing agents, many of whom are well-practiced at working with unrepresented buyers. The transaction process in Shelby County is well-documented and well-established. With BuyUnrepped\'s Tennessee REALTORS® standard forms and licensed broker support, you\'re fully equipped to navigate it professionally.',
     ],
     marketInsights: [
       'Shelby County median price: ~$230,000, the most affordable among major Tennessee metros',
@@ -503,7 +503,7 @@ const cities: Record<string, CityData> = {
     faqs: [
       {
         question: 'Is Memphis a good city to buy a home without a buyer\'s agent?',
-        answer: 'Yes. Memphis\'s accessible price points, experienced listing agent pool, and well-established transaction process make it a strong market for self-directed buyers. BuyUnrepped gives you TREC-approved forms, offer strategy, and full transaction support, without the $6,900 buyer\'s agent commission.',
+        answer: 'Yes. Memphis\'s accessible price points, experienced listing agent pool, and well-established transaction process make it a strong market for self-directed buyers. BuyUnrepped gives you Tennessee REALTORS® standard forms, offer strategy, and full transaction support, without the $6,900 buyer\'s agent commission.',
       },
       {
         question: 'How do I evaluate Memphis neighborhoods without an agent?',
@@ -515,7 +515,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How does buying in Germantown or Collierville differ from buying in Memphis proper?',
-        answer: 'Germantown and Collierville are incorporated municipalities with their own school systems, tax rates, and municipal services. Their home prices generally run higher than Memphis proper. The buying process is the same, TREC-approved Tennessee forms, though market dynamics and price points differ. Buyers can verify the assigned schools for any address directly with the relevant district.',
+        answer: 'Germantown and Collierville are incorporated municipalities with their own school systems, tax rates, and municipal services. Their home prices generally run higher than Memphis proper. The buying process is the same, Tennessee REALTORS® standard forms, though market dynamics and price points differ. Buyers can verify the assigned schools for any address directly with the relevant district.',
       },
       {
         question: 'What should I know about Memphis homes built before 1978?',
@@ -581,7 +581,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How does buying in Johnson City compare to Kingsport or Bristol?',
-        answer: 'All three Tri-Cities markets use Tennessee TREC forms and follow the same state transaction process. The differences are in market dynamics, pricing, and community character. Johnson City tends to have the most active medical and university-driven demand; Kingsport is more corporate and industrial; Bristol straddles the Virginia state line with its own unique character.',
+        answer: 'All three Tri-Cities markets use Tennessee REALTORS® standard forms and follow the same state transaction process. The differences are in market dynamics, pricing, and community character. Johnson City tends to have the most active medical and university-driven demand; Kingsport is more corporate and industrial; Bristol straddles the Virginia state line with its own unique character.',
       },
       {
         question: 'Are there mountain properties available in Washington County?',
@@ -894,7 +894,7 @@ export default async function CityPage({ params }: PageProps) {
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              'TREC-approved Tennessee purchase agreement',
+              'Tennessee REALTORS® standard purchase agreement',
               'Offer strategy and comparable sales analysis',
               'Licensed REALTOR® on-call support',
               'Transaction coordination from contract to close',

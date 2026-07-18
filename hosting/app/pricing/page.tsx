@@ -47,7 +47,7 @@ const pricingFaqs = [
   },
   {
     q: 'What if I need to cancel, or want a refund?',
-    a: "Cancellation and refund specifics depend on where you are in the process. Reach out before you pay if you want terms confirmed for your situation — email info@buyunrepped.com.",
+    a: `All fees are final once paid. If you need to cancel, email info@buyunrepped.com and we may issue a full or partial refund at our discretion. Two limits always apply: the $${OFFER_FEE.toLocaleString()} Offer Package fee becomes nonrefundable once your offer strategy call takes place (or once you waive or miss it), and the $${TRANSACTION_FEE_FULL.toLocaleString()} Transaction Management fee becomes nonrefundable once your repair proposal has been sent. After either event, the corresponding fee is not refundable for any reason. Rescheduling and other service fees are nonrefundable once the service has been performed.`,
   },
 ] as const;
 
@@ -131,6 +131,35 @@ export default function PricingPage() {
               <p className="mt-1 text-[12px] text-gray-500">
                 Two separate charges, ${OFFER_FEE.toLocaleString()} then ${TRANSACTION_FEE_FULL.toLocaleString()},
                 not one combined invoice.
+              </p>
+            </div>
+
+            <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 sm:p-7">
+              <h2 className="text-[15px] font-bold text-brand-navy">Refunds &amp; cancellation</h2>
+              <p className="mt-1.5 text-[14px] leading-relaxed text-gray-600">
+                All fees are final once paid. If you need to cancel, email{' '}
+                <a
+                  href="mailto:info@buyunrepped.com"
+                  className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
+                >
+                  info@buyunrepped.com
+                </a>{' '}
+                and we may issue a full or partial refund at our discretion — with two limits that always apply:
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/70">
+                <li>
+                  The ${OFFER_FEE.toLocaleString()} Offer Package fee becomes nonrefundable once your offer strategy
+                  call takes place, or once you waive or miss it — your broker prepares your strategy in advance of
+                  the call.
+                </li>
+                <li>
+                  The ${TRANSACTION_FEE_FULL.toLocaleString()} Transaction Management fee becomes nonrefundable once
+                  your repair proposal has been sent.
+                </li>
+              </ul>
+              <p className="mt-3 text-[13px] leading-relaxed text-gray-400">
+                After either event, the corresponding fee is not refundable for any reason. Other service fees,
+                including the strategy-call rescheduling fee, are nonrefundable once the service has been performed.
               </p>
             </div>
 
