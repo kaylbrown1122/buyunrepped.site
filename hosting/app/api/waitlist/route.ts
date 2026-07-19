@@ -4,41 +4,6 @@ import { verifyChallenge } from '../../../lib/spamGuard';
 
 const WAITLIST_SOURCE = 'website_waitlist';
 
-async function notifyDiscord(
-  email: string,
-  source: string,
-  firstName?: string,
-  lastName?: string
-): Promise<void> {
-  if (!process.env.DISCORD_WAITLIST_WEBHOOK_URL) {
-    return;
-  }
-
-  const name = [firstName, lastName].filter(Boolean).join(' ');
-
-  await fetch(process.env.DISCORD_WAITLIST_WEBHOOK_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      content: `New waitlist signup: ${email}`,
-      embeds: [
-        {
-          title: 'Waitlist Signup',
-          color: 0x0891b2,
-          fields: [
-            ...(name ? [{ name: 'Name', value: name }] : []),
-            { name: 'Email', value: email },
-            { name: 'Source', value: source },
-            { name: 'Timestamp', value: new Date().toISOString() },
-          ],
-        },
-      ],
-    }),
-  });
-}
-
 export async function POST(request: Request) {
   try {
     const { email, firstName, lastName, source, marketingOptIn, captchaToken, captchaAnswer, honeypot } =
@@ -88,8 +53,6 @@ export async function POST(request: Request) {
     if (!supabaseResult.ok) {
       return NextResponse.json({ error: 'Failed to submit' }, { status: 500 });
     }
-
-    await notifyDiscord(normalizedEmail, input.source, input.firstName, input.lastName);
 
     return NextResponse.json({ success: true });
   } catch (error) {

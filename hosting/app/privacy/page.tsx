@@ -57,7 +57,7 @@ export default function PrivacyPage() {
               <p>
                 We use service providers to operate the site and deliver the services you request. Depending on the
                 form or feature you use, this may include Supabase for secure database storage, SendGrid for email
-                delivery, Calendly for scheduling, and internal Slack or Discord notifications for our team. These
+                delivery, Calendly for scheduling, and internal Slack notifications for our team. These
                 providers receive only the information needed to perform their services for us.
               </p>
               <p>
