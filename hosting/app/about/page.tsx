@@ -22,7 +22,7 @@ const areasServed = [
 ] as const;
 
 const credentials = [
-  { label: 'Licensed since', value: 'Tennessee Real Estate Broker, License #339134' },
+  { label: 'Licensed since', value: '2017 · Tennessee Real Estate Broker, License #339134' },
   { label: 'Brokerage', value: 'BuyUnrepped, Firm License #267134' },
   { label: 'Education', value: 'B.S. Microbiology, minor in Chemistry' },
   { label: 'Volume', value: '$100 million+ in assisted sales, Middle Tennessee' },

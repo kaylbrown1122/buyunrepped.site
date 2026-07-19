@@ -49,7 +49,7 @@ export default function AgentMatchPage() {
             agents who fit your property, your neighborhood, and your goals. For{' '}
             <strong className="font-semibold text-brand-navy">buyers</strong> who want a full-service buyer&apos;s
             agent, not BuyUnrepped&apos;s flat-fee model, she helps you find someone skilled, ethical, and
-            well-matched to how you buy. Over a decade building relationships across this market means every
+            well-matched to how you buy. Almost a decade building relationships across this market means every
             introduction is based on fit and track record.
           </p>
 
