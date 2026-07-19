@@ -23,7 +23,7 @@ const pricingFaqs = [
   },
   {
     q: 'When is $995 due? When is the coordination fee due?',
-    a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due after your offer is accepted, not at signup.`,
+    a: `$${OFFER_FEE} is due upfront when you start the offer package in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} transaction coordination fee is due when you upload your signed contract after acceptance.`,
   },
   {
     q: 'Where is BuyUnrepped available?',
