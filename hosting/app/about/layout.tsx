@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'About BuyUnrepped | Nashville Broker Kayla Brown',
-  description: 'BuyUnrepped was founded by Kayla Brown, a licensed Nashville Principal Broker who has assisted in the sale of over $100M of real estate. Learn how we help Tennessee buyers purchase homes without a traditional buyer\'s agent.',
+  description: 'BuyUnrepped was founded by Kayla Brown, a licensed Nashville Principal Broker who has guided 185+ transactions from contract to close over 10 years. Learn how we help Tennessee buyers purchase homes without a traditional buyer\'s agent.',
   openGraph: {
     title: 'About BuyUnrepped | Nashville Broker Kayla Brown',
     description: 'Founded by a Nashville Principal Broker with 10+ years of experience. Learn how BuyUnrepped helps Tennessee buyers purchase homes on their own terms.',

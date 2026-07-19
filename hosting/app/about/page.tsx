@@ -25,7 +25,7 @@ const credentials = [
   { label: 'Licensed since', value: 'Tennessee Real Estate Broker, License #339134' },
   { label: 'Brokerage', value: 'BuyUnrepped, Firm License #267134' },
   { label: 'Education', value: 'B.S. Microbiology, minor in Chemistry' },
-  { label: 'Volume', value: '$100M+ in Middle Tennessee transaction volume' },
+  { label: 'Volume', value: '$100 million+ in assisted sales, Middle Tennessee' },
 ] as const;
 
 const scopeColumns = [
@@ -68,7 +68,7 @@ export default function AboutPage() {
               Built by an Experienced Nashville Broker.
             </h1>
             <p className="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
-              As of July 2026, Kayla Brown has participated in more than 175 Middle Tennessee residential
+              As of July 2026, Kayla Brown has assisted in more than 185 Middle Tennessee residential
               transactions representing over $100 million in transaction volume.
             </p>
             <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-blue/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-brand-blue">
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 preparation is everything.
               </p>
               <p>
-                Assisting in over 175+ transactions and $100M+ in Middle Tennessee sales, I&apos;ve built genuine relationships
+                I&apos;ve been the boots on the ground for 185+ transactions and $100 million+ in Middle Tennessee sales, I&apos;ve built genuine relationships
                 with lenders, inspectors, attorneys, title companies, and agents across this market. I know who
                 does excellent work and who doesn&apos;t. The through-line has always been honesty, and a
                 willingness to say what others won&apos;t.
@@ -222,7 +222,7 @@ export default function AboutPage() {
               Areas served
             </h2>
             <p className="mt-3 text-[1.05rem] leading-relaxed text-gray-500">
-              I&apos;ve sold homes across all of these Middle Tennessee counties.
+              I&apos;ve helped buyers and sellers close across all of these Middle Tennessee counties.
             </p>
             <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
               {areasServed.map((area) => (

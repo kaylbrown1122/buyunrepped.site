@@ -41,7 +41,7 @@ export default function LandingPage() {
     },
     {
       q: 'Who is behind BuyUnrepped?',
-      a: 'Kayla Brown, CEO and Principal Broker, is a licensed Tennessee broker who has assisted in over 175 transactions amounting to over $100M in sales. She is the sole public point of contact. All services are provided under her supervision through BuyUnrepped (Firm Lic. #267134). Email info@buyunrepped.com or use the contact form with questions.',
+      a: 'Kayla Brown, CEO and Principal Broker, is a licensed Tennessee broker who has assisted in over 185 transactions amounting to over $100 million in sales. She is the sole public point of contact. All services are provided under her supervision through BuyUnrepped (Firm Lic. #267134). Email info@buyunrepped.com or use the contact form with questions.',
     },
     {
       q: 'Where is BuyUnrepped available?',
@@ -269,19 +269,16 @@ export default function LandingPage() {
           aria-label="Kayla Brown broker experience and BuyUnrepped brokerage credentials"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-[9px] font-bold uppercase tracking-[0.2em] text-brand-blue">
-              Experience you&apos;re buying into · Kayla Brown, Principal Broker
-            </p>
-
-            <div className="mx-auto mt-4 flex max-w-3xl items-center justify-center gap-8 sm:gap-14">
-              <div className="text-center">
-                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">$100M+</p>
-                <p className="mt-1 text-[12px] leading-snug text-white/55">Middle Tennessee transaction volume</p>
+            <div className="mx-auto mt-4 grid max-w-3xl grid-cols-3 gap-6 sm:gap-10">
+              <div className="text-center sm:text-left">
+                <p className="text-base font-extrabold tracking-tight text-white">Kayla Brown</p>
+                <p className="mt-2 text-[12px] leading-snug text-white/55">Assisted sales &gt;</p>
               </div>
-              <div className="hidden h-10 w-px bg-white/15 sm:block" aria-hidden />
               <div className="text-center">
-                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">175+</p>
-                <p className="mt-1 text-[12px] leading-snug text-white/55">Assisted sales</p>
+                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">$100 Million+</p>
+              </div>
+              <div className="text-center sm:text-right">
+                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">185+ Homes</p>
               </div>
             </div>
 
