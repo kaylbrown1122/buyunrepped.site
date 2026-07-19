@@ -115,7 +115,7 @@ export default function StartLandingPage() {
         <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 md:py-28">
           <p className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.07] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/85">
             <span className="size-1.5 rounded-full bg-brand-blue" aria-hidden />
-            175+ transactions · $100M+ experience · Licensed TN brokerage
+            185+ transactions · $100M+ experience · Licensed TN brokerage
           </p>
           <h1 className="mt-7 text-[2.25rem] font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-[3.25rem]">
             Buy a home without a buyer&apos;s agent{' '}
