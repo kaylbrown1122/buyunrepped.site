@@ -5,6 +5,7 @@ import { WaitlistProvider } from './components/WaitlistModal';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
+  metadataBase: new URL('https://www.buyunrepped.com'),
   title: {
     default: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
     template: '%s | BuyUnrepped',
@@ -38,20 +39,11 @@ export const metadata = {
     siteName: 'BuyUnrepped',
     title: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
     description: 'Licensed Tennessee brokerage providing non-representational flat-fee support for unrepresented buyers. Currently available in Middle Tennessee; contact us to confirm availability elsewhere.',
-    images: [
-      {
-        url: 'https://www.buyunrepped.com/images/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'BuyUnrepped - Home Buying Built for the Buyer',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BuyUnrepped - Buy a Home in Tennessee Without a Buyer\'s Agent',
     description: 'Licensed Tennessee brokerage providing non-representational flat-fee support for unrepresented buyers. Currently available in Middle Tennessee.',
-    images: ['https://www.buyunrepped.com/images/og-default.png'],
     creator: '@buyunrepped',
   },
   alternates: {
