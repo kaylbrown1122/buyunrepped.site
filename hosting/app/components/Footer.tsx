@@ -40,7 +40,7 @@ function EqualHousingLogo({ className }: { className?: string }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy text-sm text-gray-400">
+    <footer className="bg-brand-navy text-sm text-gray-300">
       <div className="mx-auto max-w-7xl px-4 pb-8 pt-8 sm:px-6 md:pt-10 lg:px-8">
         <div className="grid gap-8 md:grid-cols-12 md:items-start md:gap-6 lg:gap-8">
           <div className="md:col-span-5">
@@ -50,7 +50,7 @@ export default function Footer() {
               </div>
               <span className="text-lg font-semibold tracking-tight text-white">BuyUnrepped</span>
             </Link>
-            <p className="mt-2 max-w-sm text-pretty text-xs leading-relaxed text-gray-400">
+            <p className="mt-2 max-w-sm text-pretty text-xs leading-relaxed text-gray-300">
               Licensed Tennessee brokerage providing non-representational support for unrepresented buyers. We do
               not act as your buyer&apos;s agent or communicate on your behalf, and remain subject to the duties
               Tennessee law requires for the services we provide.
@@ -91,7 +91,7 @@ export default function Footer() {
           <nav className="grid grid-cols-2 gap-6 sm:gap-8 md:col-span-7 md:grid-cols-2">
             <div>
               <p className="text-sm font-semibold text-white">BuyUnrepped, Inc.</p>
-              <address className="mt-2 space-y-1.5 not-italic text-sm leading-relaxed text-gray-400">
+              <address className="mt-2 space-y-1.5 not-italic text-sm leading-relaxed text-gray-300">
                 <p>TN Firm Lic. #267134 · Broker Lic. #339134</p>
                 <p>
                   <a href="tel:6152083390" className="transition-colors hover:text-white">
@@ -107,17 +107,17 @@ export default function Footer() {
                     info@buyunrepped.com
                   </a>
                 </p>
-                <p className="flex items-center gap-1.5 pt-0.5 text-gray-400">
+                <p className="flex items-center gap-1.5 pt-0.5 text-gray-300">
                   <EqualHousingLogo className="size-4 shrink-0" /> Equal Housing Opportunity
                 </p>
               </address>
             </div>
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-widest text-white/50">Company</p>
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-white/70">Company</p>
               <ul role="list" className="mt-2 space-y-1.5">
                 {companyLinks.map(([label, href]) => (
                   <li key={href}>
-                    <Link href={href} className="text-sm text-gray-400 transition-colors hover:text-white">
+                    <Link href={href} className="text-sm text-gray-300 transition-colors hover:text-white">
                       {label}
                     </Link>
                   </li>
@@ -130,7 +130,7 @@ export default function Footer() {
 
       <div className="border-t border-white/8">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-          <p className="flex items-start gap-2 text-xs leading-relaxed text-gray-500">
+          <p className="flex items-start gap-2 text-xs leading-relaxed text-gray-300">
             <EqualHousingLogo className="mt-0.5 size-4 shrink-0" />
             <span>
               BuyUnrepped is committed to the Fair Housing Act and equal opportunity in housing. We do not discriminate
@@ -139,14 +139,14 @@ export default function Footer() {
             </span>
           </p>
           <div className="mt-4 flex flex-col items-center justify-between gap-2 border-t border-white/8 pt-4 sm:flex-row">
-            <p className="text-center text-xs text-gray-500 sm:text-left">
+            <p className="text-center text-xs text-gray-300 sm:text-left">
               © {new Date().getFullYear()} BuyUnrepped, Inc. · Tennessee · Firm license #267134
             </p>
             <div className="flex items-center gap-4">
-              <Link href="/terms" className="text-xs text-gray-500 transition-colors hover:text-gray-300">
+              <Link href="/terms" className="text-xs text-gray-300 transition-colors hover:text-white">
                 Terms
               </Link>
-              <Link href="/privacy" className="text-xs text-gray-500 transition-colors hover:text-gray-300">
+              <Link href="/privacy" className="text-xs text-gray-300 transition-colors hover:text-white">
                 Privacy
               </Link>
             </div>

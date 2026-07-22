@@ -179,7 +179,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
         >
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-brand-blue">
+              <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-brand-navy">
                 Why buyers are done overpaying
               </p>
               <h2
@@ -187,7 +187,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                 className="mx-auto mt-2 max-w-xl text-xl font-extrabold tracking-tight text-brand-navy sm:text-2xl"
               >
                 A buyer&apos;s agent costs about 3%. That&apos;s{' '}
-                <span className="text-brand-gold">$28,500</span> on a $950,000 home.
+                <span className="rounded bg-brand-gold/20 px-1.5 py-0.5 text-brand-navy">$28,500</span> on a $950,000 home.
               </h2>
               <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-gray-500">
                 Since the 2024 commission changes, that fee is increasingly yours to pay for someone to
@@ -199,7 +199,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
 
             <SavingsCalculator />
 
-            <p className="mx-auto mt-3 max-w-xl text-center text-[11px] leading-snug text-gray-400">
+            <p className="mx-auto mt-3 max-w-xl text-center text-[11px] leading-snug text-gray-600">
               Buyer-side commissions are negotiable and not set by law or any MLS. Figures use a hypothetical 3% illustration and are not a quote or a promise of savings.
             </p>
 
@@ -231,7 +231,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
             <div className="mx-auto mt-4 grid max-w-3xl grid-cols-3 gap-6 sm:gap-10">
               <div className="text-center sm:text-left">
                 <p className="text-base font-extrabold tracking-tight text-white">Kayla Brown</p>
-                <p className="mt-2 text-[12px] leading-snug text-white/55">Assisted sales &gt;</p>
+                <p className="mt-2 text-[12px] leading-snug text-white/70">Assisted sales &gt;</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">$100 Million+</p>
@@ -252,7 +252,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                   sizes="(max-width: 640px) 120px, 140px"
                   aria-hidden
                 />
-                <p className="text-center text-[12px] text-white/55 sm:text-left">
+                <p className="text-center text-[12px] text-white/70 sm:text-left">
                   Built and run by{' '}
                   <span className="font-semibold text-white/85">Kayla Brown</span>
                   {' '}
@@ -279,7 +279,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">The model</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-navy">The model</p>
               <h2
                 id="options-heading"
                 className="mt-2 text-3xl font-extrabold tracking-tight text-brand-navy sm:text-4xl"
@@ -294,14 +294,14 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
 
             <div className="mt-10 grid gap-5 md:grid-cols-3">
               <article className="rounded-xl border border-gray-200 bg-brand-gray/60 p-5">
-                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">
+                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-600">
                   Full-service representation
                 </h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
                   A buyer&apos;s agent represents you, advises on strategy, and typically manages much of the dialogue
                   with the listing side.
                 </p>
-                <p className="mt-3 text-[13px] text-gray-400">Best when you want full advocacy as your agent.</p>
+                <p className="mt-3 text-[13px] text-gray-600">Best when you want full advocacy as your agent.</p>
               </article>
               <article className="rounded-xl border border-brand-gold/50 bg-brand-gold/[0.08] p-5 ring-1 ring-brand-gold/30">
                 <span className="inline-flex rounded-full bg-brand-gold px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-brand-navy">
@@ -317,12 +317,12 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                 </p>
               </article>
               <article className="rounded-xl border border-gray-200 bg-brand-gray/60 p-5">
-                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-400">On your own</h3>
+                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-gray-600">On your own</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
                   You coordinate everything, from offer through closing, without a buyer&apos;s agent and without a
                   brokerage-backed workflow.
                 </p>
-                <p className="mt-3 text-[13px] text-gray-400">Higher execution risk when details slip.</p>
+                <p className="mt-3 text-[13px] text-gray-600">Higher execution risk when details slip.</p>
               </article>
             </div>
 
@@ -352,7 +352,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
               >
                 Where are you right now?
               </h2>
-              <p className="mt-2 text-[15px] text-white/50">Start where you are.</p>
+              <p className="mt-2 text-[15px] text-white/70">Start where you are.</p>
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -385,7 +385,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                   key={label}
                   className={`rounded-xl border p-6 transition-colors ${
                     featured
-                      ? 'border-brand-gold/50 bg-brand-gold/10'
+                      ? 'border-brand-gold/50 bg-brand-gold/5'
                       : 'border-white/10 bg-white/[0.03] hover:border-white/20'
                   }`}
                 >
@@ -395,7 +395,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                     </p>
                   )}
                   <h3 className="text-lg font-bold text-white">{label}</h3>
-                  <p className="mt-1.5 text-[14px] leading-relaxed text-white/55">
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-white/70">
                     {desc}
                   </p>
                   {external ? (
@@ -406,7 +406,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                       className={`mt-4 inline-flex items-center gap-1 text-[13px] font-semibold transition-colors ${
                         featured
                           ? 'text-brand-gold hover:text-white'
-                          : 'text-white/60 hover:text-white'
+                          : 'text-white/70 hover:text-white'
                       }`}
                     >
                       {cta} →
@@ -417,7 +417,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                       className={`mt-4 inline-flex items-center gap-1 text-[13px] font-semibold transition-colors ${
                         featured
                           ? 'text-brand-gold hover:text-white'
-                          : 'text-white/60 hover:text-white'
+                          : 'text-white/70 hover:text-white'
                       }`}
                     >
                       {cta} →
@@ -433,7 +433,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
         <section className="border-b border-gray-100 bg-brand-gray py-10 md:py-12" aria-labelledby="included-heading">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Scope</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-navy">Scope</p>
               <h2
                 id="included-heading"
                 className="mt-2 text-2xl font-extrabold tracking-tight text-brand-navy sm:text-3xl"
@@ -474,7 +474,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
               </div>
             </div>
 
-            <p className="mt-6 max-w-2xl text-[13px] leading-relaxed text-gray-400">
+            <p className="mt-6 max-w-2xl text-[13px] leading-relaxed text-gray-600">
               BuyUnrepped supports the process and coordination of your purchase within the scope you select. We do not
               act as your buyer&apos;s agent, negotiate on your behalf, or provide legal advice.
             </p>
@@ -490,7 +490,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-6 md:grid-cols-[1.4fr_auto] md:gap-10">
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-navy">
                   Live in Tennessee · expanding
                 </p>
                 <h2

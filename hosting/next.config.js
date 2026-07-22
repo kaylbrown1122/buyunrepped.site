@@ -1,3 +1,30 @@
+const contentSecurityPolicy = `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://assets.calendly.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: blob: https://images.unsplash.com;
+    font-src 'self' data:;
+    connect-src 'self' https://calendly.com https://*.calendly.com;
+    frame-src https://calendly.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+`.replace(/\s{2,}/g, ' ').trim();
+
+const securityHeaders = [
+    { key: 'Content-Security-Policy', value: contentSecurityPolicy },
+    { key: 'X-Frame-Options', value: 'DENY' },
+    { key: 'X-Content-Type-Options', value: 'nosniff' },
+    { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+    { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+    {
+        key: 'Strict-Transport-Security',
+        value: 'max-age=63072000; includeSubDomains',
+    },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
@@ -7,6 +34,14 @@ const nextConfig = {
                 hostname: 'images.unsplash.com',
             },
         ],
+    },
+    async headers() {
+        return [
+            {
+                source: '/:path*',
+                headers: securityHeaders,
+            },
+        ];
     },
     async redirects() {
         // Blog posts removed in the July 2026 content reset. Their old

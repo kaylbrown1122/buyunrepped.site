@@ -92,7 +92,7 @@ export default function StartPageClient({ tiersData }: { tiersData: RolloutTiers
               height={1200}
               className="h-8 w-auto object-contain"
               priority
-              unoptimized
+              sizes="140px"
             />
           </Link>
         </div>

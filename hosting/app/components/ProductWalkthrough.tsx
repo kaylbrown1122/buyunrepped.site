@@ -139,7 +139,7 @@ function OwnerPill({ owner, label }: { owner: Owner; label: string }) {
   return (
     <span
       className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${
-        isYou ? 'bg-brand-blue/8 text-brand-navy/80' : 'bg-brand-green/10 text-[#187a49]/90'
+        isYou ? 'bg-brand-blue/8 text-brand-navy' : 'bg-brand-green/10 text-[#047857]'
       }`}
     >
       <span
@@ -178,7 +178,7 @@ function BrowserFrame({
       <div className="overflow-hidden bg-brand-gray">
         {pending || !src ? (
           <div className="flex aspect-[4/3] flex-col items-center justify-center px-6 text-center">
-            <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-gray-400">
+            <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-gray-600">
               Image coming soon
             </span>
           </div>
@@ -224,7 +224,7 @@ export default function ProductWalkthrough() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">
+          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-navy">
             The product · screen by screen
           </p>
           <h2
@@ -257,7 +257,7 @@ export default function ProductWalkthrough() {
                     <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-navy text-[14px] font-bold tabular-nums text-white">
                       {s.n}
                     </span>
-                    <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-brand-blue">
+                    <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-brand-navy">
                       {s.phase}
                     </span>
                   </div>
