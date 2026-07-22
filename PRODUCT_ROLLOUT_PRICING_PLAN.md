@@ -1,5 +1,17 @@
 # Product Rollout: Tiered Pricing and Eligibility Qualifier
 
+> **Superseded for implementation.** The canonical master plan is
+> [`two-plans-i-need-giggly-wand.md`](file:///Users/kaylabrown/.claude/plans/two-plans-i-need-giggly-wand.md)
+> (porch + marketing). Use it for agent briefs, API contracts, checkout, and smoke tests.
+>
+> **Key deltas vs this doc (master plan wins):**
+> - **Fit Check** at `/fit-check` (not “qualifier” / `/qualify`)
+> - **Transaction Guidance prices:** Founding **$875**, Level 2 **$1,375**, Level 3 **$1,875**, Standard **$2,495** (table below is stale on transaction column)
+> - **Tier names:** Founding / Level 2 / Level 3 / Standard; capacities 15 / 20 / 25 / 10
+> - **No 30-minute reservations** in v1; tier spots consumed on confirmed payment only
+> - **No rollout-acknowledgment checkbox**; launch disclaimers are supporting copy only
+> - Checkout uses **Stripe coupons** off the $995 / $2,495 anchors (see master plan § Checkout pricing display)
+
 ## Purpose
 
 Introduce limited-volume early-access pricing and an eligibility qualifier before buyers enter the BuyUnrepped application.
