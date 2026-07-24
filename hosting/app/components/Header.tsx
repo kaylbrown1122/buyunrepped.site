@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { getFitCheckUrl } from '../../lib/appUrl';
+import { getFitCheckUrl, getSignInUrl } from '../../lib/appUrl';
 
 export default function Header() {
     const pathname = usePathname();
@@ -71,6 +71,14 @@ export default function Header() {
                     {/* CTA - right */}
                     <div className="flex min-h-0 min-w-0 flex-1 basis-0 items-center justify-end gap-2 sm:gap-3">
                         <a
+                            href={getSignInUrl()}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-[36px] shrink-0 items-center justify-center rounded-full bg-brand-navy px-3 py-2 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-brand-navy/90 md:hidden"
+                        >
+                            Login
+                        </a>
+                        <a
                             href={getFitCheckUrl()}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -79,10 +87,18 @@ export default function Header() {
                             Check your fit
                         </a>
                         <a
-                            href={getFitCheckUrl()}
+                            href={getSignInUrl()}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden min-h-[40px] items-center justify-center rounded-md bg-brand-navy px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-navy/90 md:inline-flex"
+                        >
+                            Login
+                        </a>
+                        <a
+                            href={getFitCheckUrl()}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hidden min-h-[40px] items-center justify-center rounded-md bg-brand-gold px-4 py-2 text-sm font-semibold text-brand-navy shadow-sm transition-colors hover:bg-[#e8b93d] md:inline-flex"
                         >
                             Check your fit
                         </a>

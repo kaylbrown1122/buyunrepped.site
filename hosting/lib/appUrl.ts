@@ -6,3 +6,7 @@ export function getAppUrl(): string {
 export function getFitCheckUrl(): string {
   return `${getAppUrl()}/fit-check`;
 }
+
+export function getSignInUrl(): string {
+  return getAppUrl();
+}

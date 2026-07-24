@@ -26,7 +26,7 @@ function tierBadge(
   if (isActive) {
     return {
       label: getActiveTierBadgeLabel(tier),
-      className: 'bg-brand-gold/20 text-brand-navy',
+      className: 'bg-brand-gold text-brand-navy',
     };
   }
 
