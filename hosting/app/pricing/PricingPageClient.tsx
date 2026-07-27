@@ -6,7 +6,7 @@ import RolloutTierLadder from '../components/RolloutTierLadder';
 import RolloutDisclaimers from '../components/RolloutDisclaimers';
 import { Check, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
-import { getFitCheckUrl } from '../../lib/appUrl';
+import { getSignInUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
 import type { RolloutTiersResult } from '../../lib/rolloutTier.types';
 import Reveal from '../components/Reveal';
@@ -66,7 +66,7 @@ const pricingFaqs = [
 ] as const;
 
 export default function PricingPageClient({ tiersData }: { tiersData: RolloutTiersResult }) {
-  const fitCheckUrl = getFitCheckUrl();
+  const signInUrl = getSignInUrl();
   return (
     <div className="min-h-screen bg-white font-sans text-brand-navy selection:bg-brand-blue/20">
       <Header />
@@ -90,12 +90,12 @@ export default function PricingPageClient({ tiersData }: { tiersData: RolloutTie
             </div>
             <div className="mt-8 flex justify-center">
               <a
-                href={fitCheckUrl}
+                href={signInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-8 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
               >
-                Check your fit
+                Login
               </a>
             </div>
 
@@ -111,12 +111,12 @@ export default function PricingPageClient({ tiersData }: { tiersData: RolloutTie
                 <p className="mt-1 text-sm text-gray-500">Strategy, forms, CMA + BPO</p>
                 <p className="mt-6 text-4xl font-extrabold tracking-tight text-brand-navy">$995</p>
                 <a
-                  href={fitCheckUrl}
+                  href={signInUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Check your fit
+                  Login
                 </a>
                 <ul className="mt-8 space-y-3 text-[14px] leading-relaxed text-gray-600">
                   {[
@@ -138,12 +138,12 @@ export default function PricingPageClient({ tiersData }: { tiersData: RolloutTie
                 <p className="mt-1 text-sm text-gray-500">Contract through closing</p>
                 <p className="mt-6 text-4xl font-extrabold tracking-tight text-brand-navy">$2,495</p>
                 <a
-                  href={fitCheckUrl}
+                  href={signInUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Check your fit
+                  Login
                 </a>
                 <ul className="mt-8 space-y-3 text-[14px] leading-relaxed text-gray-600">
                   {[
@@ -305,12 +305,12 @@ export default function PricingPageClient({ tiersData }: { tiersData: RolloutTie
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
-                href={fitCheckUrl}
+                href={signInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
               >
-                Check your fit
+                Login
               </a>
               <Link
                 href="/#savings"

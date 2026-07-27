@@ -9,7 +9,7 @@ import { WaitlistButton } from './components/WaitlistModal';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { getFitCheckUrl } from '../lib/appUrl';
+import { getFitCheckUrl, getSignInUrl } from '../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL } from '../lib/fees';
 import type { RolloutTiersResult } from '../lib/rolloutTier.types';
 
@@ -52,6 +52,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
   ];
 
   const fitCheckUrl = getFitCheckUrl();
+  const signInUrl = getSignInUrl();
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -205,12 +206,12 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
 
             <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
               <a
-                href={fitCheckUrl}
+                href={signInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-brand-gold px-5 py-2 text-[13px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
+                className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-brand-navy px-5 py-2 text-[13px] font-bold text-white shadow-sm transition-all hover:bg-brand-navy/90"
               >
-                Check your fit
+                Login
               </a>
               <Link
                 href="/pricing"
@@ -367,16 +368,16 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                 {
                   label: 'Found a home',
                   desc: "Let's build your offer the right way",
-                  cta: 'Check your fit',
-                  href: fitCheckUrl,
+                  cta: 'Login',
+                  href: signInUrl,
                   external: true,
                   featured: true,
                 },
                 {
                   label: 'Already under contract',
                   desc: "We'll help you finish strong",
-                  cta: 'Check your fit',
-                  href: fitCheckUrl,
+                  cta: 'Login',
+                  href: signInUrl,
                   external: true,
                   featured: false,
                 },
@@ -507,12 +508,12 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
               </div>
               <div className="flex flex-col gap-2.5 sm:min-w-[220px]">
                 <a
-                  href={fitCheckUrl}
+                  href={signInUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 py-2.5 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
+                  className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-6 py-2.5 text-[15px] font-bold text-white shadow-sm transition-all hover:bg-brand-navy/90"
                 >
-                  Check your fit
+                  Login
                 </a>
                 <WaitlistButton className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-6 py-2.5 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-brand-gray">
                   Keep me posted →

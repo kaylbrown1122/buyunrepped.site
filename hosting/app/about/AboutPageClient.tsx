@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getFitCheckUrl } from '../../lib/appUrl';
+import { getSignInUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL } from '../../lib/fees';
 import { formatTierDollars, getActiveTier } from '../../lib/rolloutTier.types';
 import type { RolloutTiersResult } from '../../lib/rolloutTier.types';
@@ -56,7 +56,7 @@ const scopeColumns = [
 ] as const;
 
 export default function AboutPageClient({ tiersData }: { tiersData: RolloutTiersResult }) {
-  const fitCheckUrl = getFitCheckUrl();
+  const signInUrl = getSignInUrl();
   const activeTier = getActiveTier(tiersData);
 
   return (
@@ -308,12 +308,12 @@ export default function AboutPageClient({ tiersData }: { tiersData: RolloutTiers
         <Reveal as="section" className="border-b border-gray-100 py-16 md:py-20">
           <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-4 px-4 sm:px-6">
             <a
-              href={fitCheckUrl}
+              href={signInUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-8 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
             >
-              Check your fit
+              Login
             </a>
             <Link
               href="/contact"

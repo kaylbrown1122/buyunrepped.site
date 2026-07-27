@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { TrendingUp, ClipboardCheck, Search, Calendar, MessageSquare, Home } from 'lucide-react';
-import { getFitCheckUrl } from '../../lib/appUrl';
+import { getSignInUrl } from '../../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
 import { formatTierDollars, getActiveTier } from '../../lib/rolloutTier.types';
 import type { RolloutTiersResult } from '../../lib/rolloutTier.types';
@@ -76,7 +76,7 @@ const notFor = [
 ];
 
 export default function StartPageClient({ tiersData }: { tiersData: RolloutTiersResult }) {
-  const fitCheckUrl = getFitCheckUrl();
+  const signInUrl = getSignInUrl();
   const activeTier = getActiveTier(tiersData);
 
   return (
@@ -135,12 +135,12 @@ export default function StartPageClient({ tiersData }: { tiersData: RolloutTiers
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
             <a
-              href={fitCheckUrl}
+              href={signInUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[52px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[1rem] font-bold text-brand-navy shadow-lg shadow-brand-gold/20 transition-all hover:bg-[#e8b93d]"
             >
-              Check your fit →
+              Login →
             </a>
             <a
               href="#how"
@@ -320,12 +320,12 @@ export default function StartPageClient({ tiersData }: { tiersData: RolloutTiers
                   <li>Submission guidance</li>
                 </ul>
                 <a
-                  href={fitCheckUrl}
+                  href={signInUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
                 >
-                  Check your fit →
+                  Login →
                 </a>
               </div>
               <div className="rounded-2xl border border-brand-gold/40 bg-white p-7">
@@ -344,12 +344,12 @@ export default function StartPageClient({ tiersData }: { tiersData: RolloutTiers
                   <li>Broker support when you need it most</li>
                 </ul>
                 <a
-                  href={fitCheckUrl}
+                  href={signInUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-6 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
                 >
-                  Check your fit →
+                  Login →
                 </a>
               </div>
             </div>
@@ -438,12 +438,12 @@ export default function StartPageClient({ tiersData }: { tiersData: RolloutTiers
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
-                href={fitCheckUrl}
+                href={signInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[52px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-[1rem] font-bold text-brand-navy shadow-lg shadow-brand-gold/20 transition-all hover:bg-[#e8b93d]"
               >
-                Check your fit →
+                Login →
               </a>
               <Link
                 href="/contact"

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { getFitCheckUrl } from '../../lib/appUrl';
+import { getSignInUrl } from '../../lib/appUrl';
 import {
   formatTierDollars,
   getActiveTierBadgeLabel,
@@ -127,7 +127,7 @@ export default function RolloutTierLadder({
   showCta = true,
   showCompactNote = false,
 }: RolloutTierLadderProps) {
-  const fitCheckUrl = getFitCheckUrl();
+  const signInUrl = getSignInUrl();
   const isNeutralFallback = Boolean(tiersData.isNeutralFallback);
   const fromHeadline = getFromPriceHeadline(tiersData);
   const compact = variant === 'compact';
@@ -155,7 +155,7 @@ export default function RolloutTierLadder({
           )}
           {isNeutralFallback && (
             <p className="mt-2 text-[13px] leading-relaxed text-white/75">
-              Check your fit for current pricing.
+              Log in for current pricing.
             </p>
           )}
         </>
@@ -172,7 +172,7 @@ export default function RolloutTierLadder({
             </p>
           )}
           {isNeutralFallback && (
-            <p className="mt-2 text-sm text-gray-500">Check your fit for current pricing.</p>
+            <p className="mt-2 text-sm text-gray-500">Log in for current pricing.</p>
           )}
         </div>
       )}
@@ -203,16 +203,16 @@ export default function RolloutTierLadder({
 
       {showCta && (
         <a
-          href={fitCheckUrl}
+          href={signInUrl}
           target="_blank"
           rel="noopener noreferrer"
           className={
             compact
-              ? 'mt-5 inline-flex min-h-[44px] w-full items-center justify-center rounded-xl bg-brand-gold px-6 text-[14px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]'
-              : 'mt-6 inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d] sm:w-auto'
+              ? 'mt-5 inline-flex min-h-[44px] w-full items-center justify-center rounded-xl bg-brand-navy px-6 text-[14px] font-bold text-white transition-colors hover:bg-brand-navy/90'
+              : 'mt-6 inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-brand-navy px-6 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90 sm:w-auto'
           }
         >
-          Check your fit →
+          Login →
         </a>
       )}
     </div>

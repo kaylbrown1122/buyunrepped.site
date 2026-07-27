@@ -7,7 +7,7 @@ import SectionBadge from '../components/SectionBadge';
 import { Copy, Check, Instagram } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getFitCheckUrl } from '../../lib/appUrl';
+import { getSignInUrl } from '../../lib/appUrl';
 import Reveal from '../components/Reveal';
 
 /* ── Instagram reel link ────────────────────────────────────────────── */
@@ -76,7 +76,7 @@ const toc = [
 ];
 
 export default function PlaybookPage() {
-  const fitCheckUrl = getFitCheckUrl();
+  const signInUrl = getSignInUrl();
 
   return (
     <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
@@ -96,12 +96,12 @@ export default function PlaybookPage() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
-              href={fitCheckUrl}
+              href={signInUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-7 py-3 text-[15px] font-bold text-brand-navy shadow-sm transition-all hover:bg-[#e8b93d]"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-7 py-3 text-[15px] font-bold text-white shadow-sm transition-all hover:bg-brand-navy/90"
             >
-              Check your fit
+              Login
             </a>
             <Link
               href="/contact"

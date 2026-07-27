@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { getFitCheckUrl } from '../../lib/appUrl';
+import { getSignInUrl } from '../../lib/appUrl';
 import { useSpamGuard } from '../../lib/useSpamGuard';
 
 const INTEREST_OPTIONS = [
@@ -18,7 +18,7 @@ const INTEREST_OPTIONS = [
 ];
 
 export default function ContactPage() {
-    const fitCheckUrl = getFitCheckUrl();
+    const signInUrl = getSignInUrl();
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -102,12 +102,12 @@ export default function ContactPage() {
                 </a>
                 <p className="mt-2 text-gray-500">+1 (615) 208-3390 · 2509 Cruzen St, Nashville, TN 37211</p>
                 <a
-                    href={fitCheckUrl}
+                    href={signInUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
                 >
-                    Check your fit
+                    Login
                 </a>
             </section>
 
