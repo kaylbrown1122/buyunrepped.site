@@ -52,3 +52,11 @@ next-env.d.ts
 
 data/*
 !data/.gitkeep
+
+# CRM import files and local CRM setup (personal contact data; not part of site repo)
+hosting/supabase/kayla-brown-crm-import.csv
+hosting/supabase/kayla-brown-crm-setup.sql
+hosting/supabase/migrations/
+hosting/supabase/scripts/
+hosting/supabase/README.md
+hosting/supabase/config.toml
