@@ -257,7 +257,8 @@ export default function ContactPage() {
                                         />
                                         <span className="text-sm text-gray-600">
                                             Yes, send me BuyUnrepped buyer resources and occasional service updates by
-                                            email. Consent is optional and not required to receive a response.
+                                            email. Consent is optional and not required to receive a response. This
+                                            consent is for email only and is not consent to marketing calls or texts.
                                         </span>
                                     </label>
 

@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { WaitlistProvider } from './components/WaitlistModal';
+import BrokerageDisclosureBar from './components/BrokerageDisclosureBar';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -54,10 +55,12 @@ export const metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'BuyUnrepped',
+  name: 'BuyUnrepped, Inc.',
+  legalName: 'BuyUnrepped, Inc.',
   description: 'Non-representational flat-fee home-buying support for unrepresented buyers from a licensed Tennessee brokerage.',
   url: 'https://www.buyunrepped.com',
   logo: 'https://www.buyunrepped.com/images/logo.png',
+  telephone: '+1-615-208-3390',
   founder: {
     '@type': 'Person',
     name: 'Kayla Brown',
@@ -65,14 +68,17 @@ const organizationSchema = {
   },
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '2509 Cruzen St',
     addressLocality: 'Nashville',
     addressRegion: 'TN',
+    postalCode: '37211',
     addressCountry: 'US',
   },
   areaServed: [
     { '@type': 'City', name: 'Nashville' },
     { '@type': 'City', name: 'Franklin' },
     { '@type': 'City', name: 'Murfreesboro' },
+    { '@type': 'City', name: 'Clarksville' },
   ],
   priceRange: '$995 - $3,490',
   serviceType: 'Real Estate Transaction Support',
@@ -104,6 +110,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <WaitlistProvider>
+          <BrokerageDisclosureBar />
           {children}
         </WaitlistProvider>
       </body>

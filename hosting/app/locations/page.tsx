@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { savings as illustrativeNetDifference } from '../../lib/fees';
 
 export const metadata = {
   title: 'Tennessee Locations | Buy a Home Without a Buyer\'s Agent | BuyUnrepped',
@@ -22,75 +23,66 @@ const cities = [
     name: 'Nashville',
     slug: 'nashville',
     county: 'Davidson County',
-    medianPrice: '$530,000',
-    savings: '$15,900',
+    medianPriceNum: 530_000,
     description: 'Tennessee\'s capital and one of the fastest-growing markets in the Southeast.',
   },
   {
     name: 'Franklin',
     slug: 'franklin',
     county: 'Williamson County',
-    medianPrice: '$935,000',
-    savings: '$28,050',
+    medianPriceNum: 935_000,
     description: 'One of Tennessee\'s most sought-after markets with strong schools and proximity to Nashville.',
   },
   {
     name: 'Murfreesboro',
     slug: 'murfreesboro',
     county: 'Rutherford County',
-    medianPrice: '$450,000',
-    savings: '$13,500',
+    medianPriceNum: 450_000,
     description: 'One of Tennessee\'s fastest-growing cities with active new construction and resale markets.',
   },
   {
     name: 'Knoxville',
     slug: 'knoxville',
     county: 'Knox County',
-    medianPrice: '$315,000',
-    savings: '$9,450',
+    medianPriceNum: 315_000,
     description: 'East Tennessee\'s largest market with outdoor lifestyle and accessible prices.',
   },
   {
     name: 'Chattanooga',
     slug: 'chattanooga',
     county: 'Hamilton County',
-    medianPrice: '$310,000',
-    savings: '$9,300',
+    medianPriceNum: 310_000,
     description: 'A dynamic Southeast Tennessee market with growing inventory and strong demand.',
   },
   {
     name: 'Clarksville',
     slug: 'clarksville',
     county: 'Montgomery County',
-    medianPrice: '$314,000',
-    savings: '$9,420',
+    medianPriceNum: 314_000,
     description: 'Northwest Tennessee\'s largest city with consistent demand driven by Fort Campbell.',
   },
   {
     name: 'Memphis',
     slug: 'memphis',
     county: 'Shelby County',
-    medianPrice: '$230,000',
-    savings: '$6,900',
+    medianPriceNum: 230_000,
     description: 'West Tennessee\'s largest market with the most accessible prices among major TN metros.',
   },
   {
     name: 'Johnson City',
     slug: 'johnson-city',
     county: 'Washington County',
-    medianPrice: '$295,000',
-    savings: '$8,850',
+    medianPriceNum: 295_000,
     description: 'Anchor of the Northeast Tennessee Tri-Cities region, with a stable market and strong affordability.',
   },
   {
     name: 'Jackson',
     slug: 'jackson',
     county: 'Madison County',
-    medianPrice: '$245,000',
-    savings: '$7,350',
+    medianPriceNum: 245_000,
     description: 'West Tennessee\'s regional hub between Memphis and Nashville, with steady demand and accessible prices.',
   },
-];
+] as const;
 
 export default function LocationsPage() {
   return (
@@ -111,7 +103,10 @@ export default function LocationsPage() {
       <section className="py-12 pb-24">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cities.map((city) => (
+            {cities.map((city) => {
+              const medianPrice = `$${city.medianPriceNum.toLocaleString()}`;
+              const netDifference = `$${illustrativeNetDifference(city.medianPriceNum).toLocaleString()}`;
+              return (
               <Link
                 key={city.slug}
                 href={`/locations/${city.slug}`}
@@ -128,15 +123,16 @@ export default function LocationsPage() {
                 <div className="flex gap-4 pt-4 border-t border-gray-100">
                   <div>
                     <p className="text-xs text-gray-400">Median Price</p>
-                    <p className="font-bold text-brand-navy">{city.medianPrice}</p>
+                    <p className="font-bold text-brand-navy">{medianPrice}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">3% illustration</p>
-                    <p className="font-bold text-brand-blue">{city.savings}</p>
+                    <p className="text-xs text-gray-400">Illustrative net diff.</p>
+                    <p className="font-bold text-brand-blue">{netDifference}</p>
                   </div>
                 </div>
               </Link>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>

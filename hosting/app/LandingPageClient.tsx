@@ -31,11 +31,11 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
     },
     {
       q: 'How does the flat fee compare to a traditional commission?',
-      a: "Buyer-side compensation is negotiable and not set by law or any MLS, but it is often around 3% of the purchase price. On a $500K home that's $15,000. BuyUnrepped launch tier pricing starts lower during early access, with a standard price of $995 for the Offer Package and $2,495 for Transaction Guidance after launch. Either way, the cost doesn't move with the home's price.",
+      a: "This is an illustrative comparison: a hypothetical 3% buyer-side fee on a $500K home is $15,000, while BuyUnrepped standard pricing is up to $3,490 for both tiers combined after launch. Buyer-side compensation is negotiable and varies by transaction; savings are not guaranteed.",
     },
     {
       q: "What's included in each tier?",
-      a: 'Launch tier pricing applies during early access. The standard price after launch is $995 for the Offer Package and $2,495 for Transaction Guidance. Each includes offer-preparation guidance using Tennessee residential forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). You decide the terms, approve the documents, and submit your own offer. CMAs and BPOs are informational only, not appraisals or guarantees of value.',
+      a: 'Launch tier pricing applies during early access. The standard price after launch is $995 for the Offer Package and $2,495 for Transaction Guidance. Each includes offer-preparation guidance using Tennessee REALTORS® forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). You decide the terms, approve the documents, and submit your own offer. CMAs and BPOs are informational only, not appraisals or guarantees of value.',
     },
     {
       q: 'When is $995 due? When is the coordination fee due?',
@@ -187,12 +187,12 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                 id="savings-heading"
                 className="mx-auto mt-2 max-w-xl text-xl font-extrabold tracking-tight text-brand-navy sm:text-2xl"
               >
-                A buyer&apos;s agent costs about 3%. That&apos;s{' '}
+                A hypothetical ~3% buyer-side fee is{' '}
                 <span className="rounded bg-brand-gold/20 px-1.5 py-0.5 text-brand-navy">$28,500</span> on a $950,000 home.
               </h2>
               <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-gray-500">
-                Since the 2024 commission changes, that fee is increasingly yours to pay for someone to
-                write an offer and relay messages. BuyUnrepped is flat: ${OFFER_FEE.toLocaleString()} to build
+                Buyer-side compensation is negotiable and not set by law or any MLS — it may be $0, paid by the seller
+                as a concession, or handled differently post-settlement. BuyUnrepped is flat: ${OFFER_FEE.toLocaleString()} to build
                 and submit your offer, ${TRANSACTION_FEE_FULL.toLocaleString()} only if it&apos;s accepted and you
                 want full coordination. Slide to your price.
               </p>
@@ -231,8 +231,10 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto mt-4 grid max-w-3xl grid-cols-3 gap-6 sm:gap-10">
               <div className="text-center sm:text-left">
-                <p className="text-base font-extrabold tracking-tight text-white">Kayla Brown</p>
-                <p className="mt-2 text-[12px] leading-snug text-white/70">Assisted sales &gt;</p>
+                <p className="text-base font-extrabold tracking-tight text-white">BuyUnrepped, Inc.</p>
+                <p className="mt-2 text-[12px] leading-snug text-white/70">
+                  Principal Broker Kayla Brown · 185+ assisted sales
+                </p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">$100 Million+</p>
@@ -254,10 +256,9 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                   aria-hidden
                 />
                 <p className="text-center text-[12px] text-white/70 sm:text-left">
-                  Built and run by{' '}
-                  <span className="font-semibold text-white/85">Kayla Brown</span>
+                  <span className="font-semibold text-white/85">BuyUnrepped, Inc.</span>
                   {' '}
-                  · Licensed Tennessee Principal Broker · Broker Lic. #339134 · Firm Lic. #267134
+                  · Licensed Tennessee Principal Broker Kayla Brown · Broker Lic. #339134 · Firm Lic. #267134
                 </p>
               </div>
               <Link

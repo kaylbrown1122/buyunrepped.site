@@ -15,6 +15,7 @@ export default function TermsPage() {
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
                     Terms and Conditions of Use
                 </h1>
+                <p className="text-lg text-gray-500">Updated: July 29, 2026</p>
             </section>
 
             {/* Terms Content */}
@@ -185,7 +186,7 @@ export default function TermsPage() {
 
                         <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">12. Developments</h2>
                         <p>
-                            Company does not grant any rights (and Customer hereby disclaims any such grant) to use Company's Confidential Information or Company's intellectual property in any manner beyond what is expressly set forth in this Agreement. Customer is prohibited from carrying out any research and development activities that may lead to the disclosure by any of them to third parties of Company's intellectual property that comprises either Confidential Information or proprietary know-how, in each case proprietary to Company and not generally known to the public. Should any new or improved technology, material, or processes, which is developed by or on behalf of Customer, be related to methods and technology that are proprietary to Company, including its affiliates, in whole or in part, then Customer hereby grants to Company, at no cost, a non-exclusive, irrevocable, transferrable license to all such developments.
+                            BuyUnrepped does not grant you any rights to use BuyUnrepped&apos;s Confidential Information or intellectual property beyond what is expressly set forth in these Terms. You are prohibited from carrying out research or development activities that may lead to the disclosure to third parties of BuyUnrepped intellectual property comprising Confidential Information or proprietary know-how. If you develop any new or improved technology, material, or processes related to methods or technology proprietary to BuyUnrepped, you grant BuyUnrepped, at no cost, a non-exclusive, irrevocable, transferable license to such developments to the extent required for BuyUnrepped to provide and improve the Services.
                         </p>
 
                         <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">13. Third Party Platforms</h2>

@@ -1,7 +1,7 @@
 // Tennessee-specific closing cost constants
 export const TN_TRANSFER_TAX_PER_100 = 0.37;
 export const TN_MORTGAGE_TAX_PER_100 = 0.115;
-export const PROPERTY_TAX_ANNUAL_RATE = 0.01;
+export const PROPERTY_TAX_ANNUAL_RATE = 0.0064; // TN avg effective rate ~0.64%
 export const ORIGINATION_FEE_RATE = 0.01;
 export const APPRAISAL_FEE = 450;
 export const HOME_INSPECTION_FEE = 450;

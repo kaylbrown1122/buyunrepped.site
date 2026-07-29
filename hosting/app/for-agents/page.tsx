@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: 'Will this affect my commission?',
-    answer: 'No. BuyUnrepped does not take any portion of the buyer-side commission. We charge buyers a flat service fee directly. Your commission structure is completely unaffected.',
+    answer: 'No. BuyUnrepped does not take any portion of the buyer-side commission. We charge buyers a flat service fee directly. Your listing-side compensation is separate from BuyUnrepped\'s buyer fee, though unrepped deals may affect whether any buyer-side offer exists — that is negotiated between you and the seller.',
   },
   {
     question: 'What forms does BuyUnrepped use?',

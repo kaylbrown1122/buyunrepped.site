@@ -247,10 +247,11 @@ export default function PlaybookPage() {
 
           {/* Commission */}
           <Reveal as="section" id="commission" className="scroll-mt-24">
-            <h3 className="text-xl font-bold tracking-tight">When should I mention commission?</h3>
+            <h3 className="text-xl font-bold tracking-tight">Should I bring up commission?</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-              Don&apos;t. What a listing agent gets paid is between them and their seller, and it shouldn&apos;t affect
-              the terms of your offer. By not using an agent, you simply have more leverage than a buyer who is.
+              Commission is between the listing agent and their seller — it should not drive your offer terms. Some
+              unrepresented buyers may have more room to negotiate seller concessions (closing costs, credits, or price),
+              but outcomes vary by listing and market. Ask your lender what credits are allowed on your loan program.
             </p>
           </Reveal>
 

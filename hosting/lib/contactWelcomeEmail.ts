@@ -4,6 +4,9 @@ const SITE_URL = 'https://www.buyunrepped.com';
 const LOGO_URL = `${SITE_URL}/images/buyunrepped-cropped.png`;
 const INSTAGRAM_URL = 'https://www.instagram.com/buyunrepped';
 const POSTAL_ADDRESS = '2509 Cruzen St, Nashville, TN 37211';
+const FIRM_PHONE = '615-208-3390';
+const FIRM_LINE =
+  'BuyUnrepped, Inc. · TN Firm Lic. #267134 · Broker Lic. #339134 · Licensed Tennessee real estate brokerage';
 
 export interface ContactWelcomeEmailInput {
   firstName: string;
@@ -24,15 +27,21 @@ function getAppUrl(): string {
   return url && url.length > 0 ? url.replace(/\/+$/, '') : 'https://app.buyunrepped.com';
 }
 
-function getUnsubscribeUrl(email: string): string {
+/** Human-readable unsubscribe page (for email body links) */
+function getUnsubscribePageUrl(email: string): string {
   return `${SITE_URL}/unsubscribe?email=${encodeURIComponent(email)}`;
+}
+
+/** One-click List-Unsubscribe target (POST /api/unsubscribe) */
+export function getOneClickUnsubscribeUrl(email: string): string {
+  return `${SITE_URL}/api/unsubscribe?email=${encodeURIComponent(email)}`;
 }
 
 export function buildContactWelcomeEmailHtml(input: ContactWelcomeEmailInput): string {
   const firstName = escapeHtml(input.firstName);
   const location = escapeHtml(input.location || 'Middle Tennessee');
   const appUrl = escapeHtml(getAppUrl());
-  const unsubscribeUrl = escapeHtml(getUnsubscribeUrl(input.email));
+  const unsubscribePageUrl = escapeHtml(getUnsubscribePageUrl(input.email));
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -58,30 +67,28 @@ export function buildContactWelcomeEmailHtml(input: ContactWelcomeEmailInput): s
           </tr>
           <tr>
             <td style="font-size:16px;line-height:1.7;color:#1b5373;">
-              <p style="margin:0 0 18px;">Hi ${firstName} !</p>
+              <p style="margin:0 0 18px;">Hi ${firstName}!</p>
               <p style="margin:0 0 18px;">
-                You&apos;re in! &#127881; We&apos;re thrilled you stopped by to check out <strong>BuyUnrepped</strong>,
-                and we can&apos;t wait to help equip you with everything you need to confidently <strong>buy</strong> a home
-                in <strong>${location}</strong>.
+                Thanks for opting in at <strong>BuyUnrepped</strong>. We&apos;re glad you stopped by, and we look forward to
+                sharing buyer resources for <strong>${location}</strong>.
               </p>
               <p style="margin:0 0 18px;">
-                We&apos;re not here to spam you, but we <em>do</em> want to support you. Here&apos;s what you&apos;ll receive from us:
+                Here&apos;s what you may receive from us:
               </p>
-              <p style="margin:0 0 10px;">&#127968; A heads-up when we&apos;re fully live in your market</p>
-              <p style="margin:0 0 10px;">&#128140; Our monthly newsletter packed with useful tips</p>
+              <p style="margin:0 0 10px;">&#127968; Updates when we expand into your market</p>
+              <p style="margin:0 0 10px;">&#128140; Our monthly buyer newsletter</p>
               <p style="margin:0 0 10px;">&#128184; Special rate promotions, when available</p>
-              <p style="margin:0 0 24px;">&#128276; Alerts if/when you have a running offer or transaction within our webapp!</p>
+              <p style="margin:0 0 24px;">&#128276; Transaction alerts if you use the BuyUnrepped app</p>
               <p style="margin:0 0 28px;">
-                In the meantime, feel free to click around our temporary landing page, and don&apos;t hesitate to reach out
-                if you have questions, concerns, or would like to connect. We&apos;re here when you need us!
-                And if you need to <strong>buy</strong> a home pronto, <em>we can totally get you set up to purchase using our Beta!</em>
+                Explore our site, browse resources, or reach out anytime with questions. Ready to move forward?
+                <a href="${appUrl}" style="color:#39b6ff;text-decoration:none;">Open the BuyUnrepped app</a> to get started.
               </p>
             </td>
           </tr>
           <tr>
             <td align="center" style="padding-bottom:28px;">
               <a href="${SITE_URL}" style="display:inline-block;background-color:#f7c74a;color:#1b5373;font-size:16px;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;">
-                Explore Our Landing Page
+                Visit BuyUnrepped.com
               </a>
             </td>
           </tr>
@@ -99,14 +106,11 @@ export function buildContactWelcomeEmailHtml(input: ContactWelcomeEmailInput): s
             </td>
           </tr>
           <tr>
-            <td style="padding-top:24px;font-size:12px;line-height:1.5;color:#9ca3af;">
-              Ready to start now? <a href="${appUrl}" style="color:#39b6ff;text-decoration:none;">Open the BuyUnrepped app</a>.
-            </td>
-          </tr>
-          <tr>
             <td style="padding-top:20px;font-size:12px;line-height:1.5;color:#9ca3af;">
-              You received this email because you opted in at buyunrepped.com. <a href="${unsubscribeUrl}" style="color:#39b6ff;text-decoration:none;">Unsubscribe from marketing email</a>.<br />
-              BuyUnrepped, ${POSTAL_ADDRESS}
+              You received this email because you opted in at buyunrepped.com.
+              <a href="${unsubscribePageUrl}" style="color:#39b6ff;text-decoration:none;">Unsubscribe from marketing email</a>.<br />
+              ${FIRM_LINE}<br />
+              ${POSTAL_ADDRESS} · ${FIRM_PHONE}
             </td>
           </tr>
         </table>
@@ -120,31 +124,29 @@ export function buildContactWelcomeEmailHtml(input: ContactWelcomeEmailInput): s
 export function buildContactWelcomeEmailText(input: ContactWelcomeEmailInput): string {
   const location = input.location || 'Middle Tennessee';
   const appUrl = getAppUrl();
-  const unsubscribeUrl = getUnsubscribeUrl(input.email);
+  const unsubscribePageUrl = getUnsubscribePageUrl(input.email);
 
-  return `Hi ${input.firstName} !
+  return `Hi ${input.firstName}!
 
-You're in! We're thrilled you stopped by to check out BuyUnrepped, and we can't wait to help equip you with everything you need to confidently buy a home in ${location}.
+Thanks for opting in at BuyUnrepped. We're glad you stopped by, and we look forward to sharing buyer resources for ${location}.
 
-We're not here to spam you, but we do want to support you. Here's what you'll receive from us:
+Here's what you may receive from us:
 
-- A heads-up when we're fully live in your market
-- Our monthly newsletter packed with useful tips
+- Updates when we expand into your market
+- Our monthly buyer newsletter
 - Special rate promotions, when available
-- Alerts if/when you have a running offer or transaction within our webapp!
+- Transaction alerts if you use the BuyUnrepped app
 
-In the meantime, feel free to click around our temporary landing page, and don't hesitate to reach out if you have questions, concerns, or would like to connect. We're here when you need us! And if you need to buy a home pronto, we can totally get you set up to purchase using our Beta!
-
-Explore our landing page: ${SITE_URL}
+Explore our site at ${SITE_URL}, or open the BuyUnrepped app to get started: ${appUrl}
 Follow us on Instagram: ${INSTAGRAM_URL}
-Open the BuyUnrepped app: ${appUrl}
 
 Cheers,
 The BuyUnrepped Team
 
 You received this email because you opted in at buyunrepped.com.
-Unsubscribe from marketing email: ${unsubscribeUrl}
-BuyUnrepped, ${POSTAL_ADDRESS}`;
+Unsubscribe from marketing email: ${unsubscribePageUrl}
+${FIRM_LINE}
+${POSTAL_ADDRESS} · ${FIRM_PHONE}`;
 }
 
 export interface SendContactWelcomeEmailResult {
@@ -174,7 +176,7 @@ export async function sendContactWelcomeEmail(
       text: buildContactWelcomeEmailText(input),
       html: buildContactWelcomeEmailHtml(input),
       headers: {
-        'List-Unsubscribe': `<${getUnsubscribeUrl(input.email)}>`,
+        'List-Unsubscribe': `<${getOneClickUnsubscribeUrl(input.email)}>`,
         'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
       },
     });

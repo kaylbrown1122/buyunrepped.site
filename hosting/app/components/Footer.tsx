@@ -48,7 +48,7 @@ export default function Footer() {
               <div className="rounded-lg bg-white/10 p-1.5">
                 <Home className="size-4 text-white" />
               </div>
-              <span className="text-lg font-semibold tracking-tight text-white">BuyUnrepped</span>
+              <span className="text-lg font-semibold tracking-tight text-white">BuyUnrepped, Inc.</span>
             </Link>
             <p className="mt-2 max-w-sm text-pretty text-xs leading-relaxed text-gray-300">
               Licensed Tennessee brokerage providing non-representational support for unrepresented buyers. We do
@@ -137,6 +137,10 @@ export default function Footer() {
               on the basis of race, color, religion, sex, disability, familial status, national origin, or any other
               class protected by federal, state, or local law.
             </span>
+          </p>
+          <p className="mt-3 text-[10px] leading-relaxed text-gray-400">
+            REALTOR® is a registered collective membership mark that identifies a real estate professional who is a
+            member of the National Association of REALTORS® and subscribes to its strict Code of Ethics.
           </p>
           <div className="mt-4 flex flex-col items-center justify-between gap-2 border-t border-white/8 pt-4 sm:flex-row">
             <p className="text-center text-xs text-gray-300 sm:text-left">

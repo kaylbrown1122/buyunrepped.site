@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '../../../lib/supabaseAdmin';
+import { addSendGridGlobalSuppression } from '../../../lib/sendgridSuppression';
 
 function normalizeEmail(value: unknown): string | null {
   if (typeof value !== 'string') return null;
@@ -40,6 +41,8 @@ export async function POST(request: Request) {
       console.error('Marketing unsubscribe error:', error);
       return NextResponse.json({ error: 'Unable to update email preferences' }, { status: 500 });
     }
+
+    await addSendGridGlobalSuppression(email);
 
     return NextResponse.json({ success: true });
   } catch (error) {

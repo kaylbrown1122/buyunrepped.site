@@ -6,16 +6,13 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Calculator, DollarSign, ArrowRight, Check, Play } from 'lucide-react';
 import Link from 'next/link';
-import { BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
+import { BUYUNREPPED_MAX_TOTAL, BUYER_AGENT_PCT_DEFAULT, savings as illustrativeNetDifference, traditionalBuyerSide } from '../../lib/fees';
 
 export default function CalculatorPage() {
     const [homePrice, setHomePrice] = useState<number>(0);
     const [displayPrice, setDisplayPrice] = useState<string>('0');
     const [showResults, setShowResults] = useState<boolean>(false);
 
-    // Constants
-    const SELLING_AGENT_RATE = 0.03;
-    const BUYING_AGENT_RATE = 0.03;
     const BUY_UNREPPED_FEE = BUYUNREPPED_MAX_TOTAL;
 
     // Handler for input change
@@ -45,13 +42,11 @@ export default function CalculatorPage() {
         }
     };
 
-    // Calculations
-    const sellingAgentFee = homePrice * SELLING_AGENT_RATE;
-    const buyingAgentFee = homePrice * BUYING_AGENT_RATE;
-    const traditionalTotal = sellingAgentFee + buyingAgentFee;
-
-    const buyUnreppedTotal = sellingAgentFee + BUY_UNREPPED_FEE;
-    const potentialSavings = buyingAgentFee - BUY_UNREPPED_FEE;
+    // Buyer-side only (matches homepage SavingsCalculator)
+    const buyerSideFee = traditionalBuyerSide(homePrice);
+    const buyUnreppedTotal = BUY_UNREPPED_FEE;
+    const potentialSavings = Math.max(illustrativeNetDifference(homePrice), 0);
+    const pctLabel = `${(BUYER_AGENT_PCT_DEFAULT * 100).toFixed(0)}%`;
 
     return (
         <div className="min-h-screen bg-brand-cream font-sans text-brand-navy selection:bg-brand-blue selection:text-white">
@@ -138,7 +133,7 @@ export default function CalculatorPage() {
                                         </div>
                                         <p className="text-gray-500 text-sm leading-relaxed">
                                             Up to $3,490 in flat fees for the Offer Package and optional Transaction
-                                            Management.
+                                            Guidance.
                                         </p>
                                     </div>
                                 </div>
@@ -161,41 +156,28 @@ export default function CalculatorPage() {
                                         {/* Bars Chart Visualization */}
                                         <div className="space-y-8 mb-12">
 
-                                            {/* Traditional Route */}
+                                            {/* Traditional buyer-side fee */}
                                             <div>
                                                 <div className="flex justify-between text-sm font-bold mb-2">
-                                                    <span className="text-gray-500">Traditional Agent Model</span>
-                                                    <span className="text-brand-navy">${traditionalTotal.toLocaleString()}</span>
+                                                    <span className="text-gray-500">Hypothetical buyer-side fee (~{pctLabel})</span>
+                                                    <span className="text-brand-navy">${buyerSideFee.toLocaleString()}</span>
                                                 </div>
-                                                <div className="h-4 bg-gray-100 rounded-full overflow-hidden flex">
-                                                    <div className="h-full bg-gray-400 w-1/2"></div> {/* Selling Agent */}
-                                                    <div className="h-full bg-gray-300 w-1/2"></div> {/* Buying Agent */}
-                                                </div>
-                                                <div className="flex justify-between text-[10px] uppercase font-bold text-gray-400 mt-2">
-                                                    <span>Seller Agent Commission</span>
-                                                    <span>Buyer Agent Commission</span>
+                                                <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
+                                                    <div className="h-full w-full bg-gray-400"></div>
                                                 </div>
                                             </div>
 
-                                            {/* BuyUnrepped Route */}
+                                            {/* BuyUnrepped flat fee */}
                                             <div>
                                                 <div className="flex justify-between text-sm font-bold mb-2">
-                                                    <span className="text-brand-blue">With BuyUnrepped</span>
+                                                    <span className="text-brand-blue">BuyUnrepped flat fee (max)</span>
                                                     <span className="text-brand-blue">${buyUnreppedTotal.toLocaleString()}</span>
                                                 </div>
-                                                <div className="h-4 bg-gray-100 rounded-full overflow-hidden flex relative">
-                                                    <div
-                                                        className="h-full bg-gray-400 transition-all duration-500"
-                                                        style={{ width: `${(sellingAgentFee / traditionalTotal) * 100}%` }}
-                                                    ></div>
+                                                <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
                                                     <div
                                                         className="h-full bg-brand-blue transition-all duration-500"
-                                                        style={{ width: `${(BUY_UNREPPED_FEE / traditionalTotal) * 100}%` }}
+                                                        style={{ width: buyerSideFee > 0 ? `${Math.min((buyUnreppedTotal / buyerSideFee) * 100, 100)}%` : '0%' }}
                                                     ></div>
-                                                </div>
-                                                <div className="flex gap-4 text-[10px] uppercase font-bold text-gray-400 mt-2">
-                                                    <span>Seller Agent Commission</span>
-                                                    <span className="text-brand-blue">BuyUnrepped Fee</span>
                                                 </div>
                                             </div>
 
@@ -241,27 +223,21 @@ export default function CalculatorPage() {
                                                 </div>
 
                                                 <div className="grid grid-cols-3 py-3 border-b border-gray-50 items-center">
-                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Seller Agent Commission</div>
-                                                    <div className="col-span-1 text-right text-sm font-bold text-gray-900">${sellingAgentFee.toLocaleString()}</div>
-                                                    <div className="col-span-1 text-right text-sm font-bold text-gray-900">${sellingAgentFee.toLocaleString()}</div>
+                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Hypothetical buyer-side fee</div>
+                                                    <div className="col-span-1 text-right text-sm font-bold text-gray-900">${buyerSideFee.toLocaleString()}</div>
+                                                    <div className="col-span-1 text-right text-sm font-bold text-gray-400">—</div>
                                                 </div>
 
                                                 <div className="grid grid-cols-3 py-3 border-b border-gray-50 items-center">
-                                                    <div className="col-span-1 text-sm font-medium text-gray-600">Buyer Agent Commission</div>
-                                                    <div className="col-span-1 text-right text-sm font-bold text-gray-900">${buyingAgentFee.toLocaleString()}</div>
-                                                    <div className="col-span-1 text-right text-sm font-bold text-brand-blue">$0</div>
-                                                </div>
-
-                                                <div className="grid grid-cols-3 py-3 border-b border-gray-50 items-center">
-                                                    <div className="col-span-1 text-sm font-medium text-gray-600">BuyUnrepped Fee</div>
-                                                    <div className="col-span-1 text-right text-sm font-bold text-gray-900">$0</div>
-                                                    <div className="col-span-1 text-right text-sm font-bold text-red-500">${BUY_UNREPPED_FEE}</div>
+                                                    <div className="col-span-1 text-sm font-medium text-gray-600">BuyUnrepped flat fee</div>
+                                                    <div className="col-span-1 text-right text-sm font-bold text-gray-400">—</div>
+                                                    <div className="col-span-1 text-right text-sm font-bold text-brand-blue">${BUY_UNREPPED_FEE.toLocaleString()}</div>
                                                 </div>
 
                                                 <div className="grid grid-cols-3 pt-4 items-center">
-                                                    <div className="col-span-1 font-bold text-brand-navy">Total Fees</div>
-                                                    <div className="col-span-1 text-right font-bold text-gray-900">${traditionalTotal.toLocaleString()}</div>
-                                                    <div className="col-span-1 text-right font-bold text-brand-blue">${buyUnreppedTotal.toLocaleString()}</div>
+                                                    <div className="col-span-1 font-bold text-brand-navy">Illustrative difference</div>
+                                                    <div className="col-span-1 text-right font-bold text-gray-400">—</div>
+                                                    <div className="col-span-1 text-right font-bold text-brand-blue">${potentialSavings.toLocaleString()}</div>
                                                 </div>
                                             </div>
                                         </div>

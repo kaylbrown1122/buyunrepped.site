@@ -216,7 +216,7 @@ export default function VendorsPage() {
                 />
                 <label htmlFor="vendor-consent" className="text-[13px] leading-snug text-gray-600">
                   I agree to receive BuyUnrepped email updates and buyer resources. I can unsubscribe at any time.
-                  See the{' '}
+                  This consent is for email only and is not consent to marketing calls or texts. See the{' '}
                   <Link href="/privacy" className="text-brand-blue underline">
                     Privacy Policy
                   </Link>
