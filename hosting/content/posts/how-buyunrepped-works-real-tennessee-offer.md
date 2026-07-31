@@ -259,7 +259,7 @@ If you want to see the cost side of the same model, read our [pricing breakdown]
 **Sources**
 
 1. [BuyUnrepped product workflow, ProductWalkthrough component](https://www.buyunrepped.com/)
-2. [What the NAR Settlement Means for Home Buyers and Sellers, National Association of Realtors](https://www.nar.realtor/the-facts/what-the-nar-settlement-means-for-home-buyers-and-sellers)
+2. [What the NAR Settlement Means for Home Buyers and Sellers, National Association of REALTORS®](https://www.nar.realtor/the-facts/what-the-nar-settlement-means-for-home-buyers-and-sellers)
 3. [Tennessee Code § 62-13-405, Written Disclosure (Justia)](https://law.justia.com/codes/tennessee/title-62/chapter-13/part-4/section-62-13-405/)
 4. [Tennessee Real Estate Commission Rules and Laws](https://www.tn.gov/commerce/regboards/trec/rules-and-laws.html)
 5. [What is a Loan Estimate?, Consumer Financial Protection Bureau](https://www.consumerfinance.gov/ask-cfpb/what-is-a-loan-estimate-en-1995/)

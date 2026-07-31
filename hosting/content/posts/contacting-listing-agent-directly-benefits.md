@@ -158,7 +158,7 @@ REALTORS® owe duties of honesty and fair treatment even when working in a non-a
 
 BuyUnrepped operates behind the scenes.
 
-You communicate directly with the listing side. We help you analyze the property, understand your options, prepare Tennessee REALTOR® documents and make informed decisions.
+You communicate directly with the listing side. We help you analyze the property, understand your options, prepare Tennessee REALTORS® documents and make informed decisions.
 
 The listing agent does not become your adviser.
 

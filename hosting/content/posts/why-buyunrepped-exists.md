@@ -76,7 +76,7 @@ I did not want BuyUnrepped standing outside the professional system and throwing
 
 BuyUnrepped is a fee-for-service Tennessee real estate brokerage and app for buyers who have found the property and plan to remain unrepresented.
 
-The buyer stays in direct communication with the listing agent. Depending on the service purchased, we provide property analysis, comparable-sale review, offer strategy, professionally prepared Tennessee REALTOR® documents, deadline tracking, inspection support, repair-proposal guidance, transaction coordination, and closing preparation.
+The buyer stays in direct communication with the listing agent. Depending on the service purchased, we provide property analysis, comparable-sale review, offer strategy, professionally prepared Tennessee REALTORS® documents, deadline tracking, inspection support, repair-proposal guidance, transaction coordination, and closing preparation.
 
 The buyer reviews the terms, makes the decisions, and sends the offer from their own email. We do not contact the listing agent pretending to speak for the buyer. We do not negotiate as their representative or quietly drift into an agency relationship because everyone became too casual about the boundaries.
 

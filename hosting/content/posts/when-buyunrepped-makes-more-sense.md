@@ -137,7 +137,7 @@ Some buyers say they need an agent when what they actually need is:
 
 * Property analysis
 * A professionally prepared offer
-* Tennessee REALTOR® forms
+* Tennessee REALTORS® forms
 * A strategy consultation
 * Deadline tracking
 * Inspection guidance
@@ -174,7 +174,7 @@ You find the property and stay in direct contact with the listing side.
 BuyUnrepped provides licensed brokerage support within the service you purchase. Depending on your package, that may include:
 
 * Property and pricing analysis
-* Tennessee REALTOR® offer documents
+* Tennessee REALTORS® offer documents
 * A licensed contract-and-strategy consultation
 * Offer-email guidance
 * Transaction tracking

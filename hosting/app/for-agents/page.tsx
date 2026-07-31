@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: 'What forms does BuyUnrepped use?',
-    answer: 'We use standard Tennessee Association of REALTORS® (TAR) forms, the same forms you already know and work with. No custom paperwork, no surprises.',
+    answer: 'We use standard Tennessee REALTORS® forms, the same forms you already know and work with. No custom paperwork, no surprises.',
   },
   {
     question: 'What if a buyer I\'m working with wants to use BuyUnrepped?',
@@ -58,7 +58,7 @@ const steps = [
     step: '02',
     icon: <CalendarCheck className="w-6 h-6 text-brand-blue" />,
     title: 'We guide them through the process',
-    description: 'We walk the buyer through offer preparation, deadlines, inspections, and contract milestones using TAR forms you already know.',
+    description: 'We walk the buyer through offer preparation, deadlines, inspections, and contract milestones using Tennessee REALTORS® forms you already know.',
   },
   {
     step: '03',
@@ -162,7 +162,7 @@ export default function ForAgentsPage() {
                   When a buyer comes to you prepared, with the right forms, an understanding of the timeline, and someone keeping them accountable, your job gets easier. Deals are more likely to close. Friction drops. Everyone wins.
                 </p>
                 <p>
-                  We use standard TAR forms throughout. No surprises, no unfamiliar paperwork. Just a smoother path from contract to close.
+                  We use standard Tennessee REALTORS® forms throughout. No surprises, no unfamiliar paperwork. Just a smoother path from contract to close.
                 </p>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function ForAgentsPage() {
                   'Fewer missed contract deadlines',
                   'Less back-and-forth on process questions',
                   'Reduced confusion about forms and next steps',
-                  'TAR forms you already know and expect',
+                  'Tennessee REALTORS® forms you already know and expect',
                   'No dual agency gray area',
                   'No commission conflict, we don\'t touch your fee',
                   'A buyer who shows up prepared',

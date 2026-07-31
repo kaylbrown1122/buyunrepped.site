@@ -223,7 +223,7 @@ With Transaction Guidance, BuyUnrepped helps buyers:
 * Track deadlines
 * Gather quotes
 * Consider possible resolutions
-* Prepare the appropriate Tennessee REALTOR® documents based on the buyer’s instructions
+* Prepare the appropriate Tennessee REALTORS® documents based on the buyer’s instructions
 
 We do not decide what the buyer should tolerate.
 

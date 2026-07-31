@@ -95,7 +95,7 @@ Be upfront. Tell them you are not seeking buyer representation and intend to com
 
 BuyUnrepped is built for buyers who have already found the property and do not need someone to search for homes or speak on their behalf.
 
-You communicate directly with the listing side. We provide licensed guidance, property analysis, Tennessee REALTOR® documents, offer preparation, strategy support and optional transaction guidance for a flat fee.
+You communicate directly with the listing side. We provide licensed guidance, property analysis, Tennessee REALTORS® documents, offer preparation, strategy support and optional transaction guidance for a flat fee.
 
 No roulette wheel. No mystery match. No pretending a stranger is suddenly “your agent” because you wanted to see whether the primary bedroom would fit a king-size bed.
 

@@ -137,9 +137,9 @@ export default function AboutPageClient({ tiersData }: { tiersData: RolloutTiers
 
             <p className="mt-10 max-w-2xl text-[14px] leading-relaxed text-gray-500">
               BuyUnrepped is a member of the <strong className="font-semibold text-brand-navy">National Association
-              of REALTORS® (NAR)</strong>, the <strong className="font-semibold text-brand-navy">Tennessee
-              Association of REALTORS® (TAR)</strong>, and the <strong className="font-semibold text-brand-navy">
-              Greater Nashville Association of REALTORS® (GNAR)</strong>. Our forms and brokerage policies are
+              of REALTORS® (NAR)</strong>, <strong className="font-semibold text-brand-navy">Tennessee
+              REALTORS®</strong>, and <strong className="font-semibold text-brand-navy">
+              Greater Nashville REALTORS®</strong>. Our forms and brokerage policies are
               guided by those associations&apos; standards and the REALTOR® Code of Ethics, alongside Tennessee
               real estate license law.
             </p>

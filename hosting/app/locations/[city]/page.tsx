@@ -90,7 +90,7 @@ const cities: Record<string, CityData> = {
       },
       {
         title: 'Know your Tennessee REALTORS® forms',
-        body: 'Tennessee\'s standard residential purchase agreements are Tennessee REALTORS® (TAR) forms. BuyUnrepped provides these forms and walks you through each clause, so you\'re not reading unfamiliar legal language for the first time at the offer table.',
+        body: 'Tennessee\'s standard residential purchase agreements are Tennessee REALTORS® forms. BuyUnrepped provides these forms and walks you through each clause, so you\'re not reading unfamiliar legal language for the first time at the offer table.',
       },
     ],
     neighborhoods: ['Green Hills', '12 South', 'East Nashville', 'Germantown', 'The Nations', 'Sylvan Park', 'Hillsboro Village', 'Donelson', 'Antioch', 'Madison'],
@@ -943,7 +943,7 @@ export default async function CityPage({ params }: PageProps) {
             {[
               'Tennessee REALTORS® standard purchase agreement',
               'Offer strategy and comparable sales analysis',
-              'Licensed REALTOR® on-call support',
+              'On-call support from a licensed broker',
               'Transaction coordination from contract to close',
               'Deadline tracking and reminders',
               'Inspection and appraisal guidance',

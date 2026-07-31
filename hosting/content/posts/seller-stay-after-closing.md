@@ -197,7 +197,7 @@ The people financing and insuring the property need accurate information.
 
 ## How BuyUnrepped helps
 
-BuyUnrepped helps buyers evaluate the request, identify the major risks and prepare the applicable Tennessee REALTOR® documents based on the agreed terms.
+BuyUnrepped helps buyers evaluate the request, identify the major risks and prepare the applicable Tennessee REALTORS® documents based on the agreed terms.
 
 We generally push for:
 
