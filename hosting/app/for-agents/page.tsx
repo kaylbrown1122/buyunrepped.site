@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Check, ChevronDown, AlertTriangle, Clock, ShieldAlert, FileText, CalendarCheck, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
+import ForAgentsCta from '../components/ForAgentsCta';
 
 const faqs = [
   {
@@ -230,26 +231,7 @@ export default function ForAgentsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-brand-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-brand-blue to-cyan-700 rounded-3xl p-12 md:p-16 text-center">
-            <SectionBadge className="bg-white/20 text-white">Get in Touch</SectionBadge>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mt-6 mb-4">
-              Have questions about how it works?
-            </h2>
-            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-              We&apos;re happy to walk you through how BuyUnrepped supports your transactions, and why listing agents across Tennessee are glad it exists.
-            </p>
-            <Link
-              href="/schedule"
-              className="px-8 py-4 bg-white text-brand-blue font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg inline-block"
-            >
-              Schedule a Call
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ForAgentsCta />
 
       <Footer />
     </div>

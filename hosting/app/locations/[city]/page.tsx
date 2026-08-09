@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import SectionBadge from '../../components/SectionBadge';
+import LocationContactButton from '../../components/LocationContactButton';
+import LocationContactInline from '../../components/LocationContactInline';
 import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import {
@@ -793,9 +795,12 @@ export default async function CityPage({ params }: PageProps) {
           guaranteed.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/schedule" className="inline-flex items-center justify-center gap-2 bg-brand-navy text-white px-8 py-4 rounded-full font-bold hover:bg-brand-blue transition-colors">
-            Schedule a Free Call <ArrowRight className="w-4 h-4" />
-          </Link>
+          <LocationContactButton
+            cityName={city.name}
+            className="inline-flex items-center justify-center gap-2 bg-brand-navy text-white px-8 py-4 rounded-full font-bold hover:bg-brand-blue transition-colors"
+          >
+            Email us <ArrowRight className="w-4 h-4" />
+          </LocationContactButton>
           <Link href="/pricing" className="inline-flex items-center justify-center gap-2 border-2 border-brand-navy text-brand-navy px-8 py-4 rounded-full font-bold hover:bg-brand-navy hover:text-white transition-colors">
             See Pricing
           </Link>
@@ -867,9 +872,12 @@ export default async function CityPage({ params }: PageProps) {
               {TRANSACTION_FEE_FULL.toLocaleString()} for optional Transaction Guidance ($
               {BUYUNREPPED_MAX_TOTAL.toLocaleString()} combined).
             </p>
-            <Link href="/schedule" className="inline-flex items-center gap-2 bg-white text-brand-navy px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors">
-              Get Started <ArrowRight className="w-4 h-4" />
-            </Link>
+            <LocationContactButton
+              cityName={city.name}
+              className="inline-flex items-center gap-2 bg-white text-brand-navy px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
+            >
+              Email us <ArrowRight className="w-4 h-4" />
+            </LocationContactButton>
           </div>
         </div>
       </section>
@@ -1015,15 +1023,30 @@ export default async function CityPage({ params }: PageProps) {
         <div className="max-w-2xl mx-auto px-4 text-center">
           <SectionBadge>Get Started</SectionBadge>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-            Ready to Buy in {city.name}?
+            Interested in {city.name}?
           </h2>
           <p className="text-xl text-gray-500 mb-8">
-            Schedule a free call with a licensed Tennessee broker. No commitment required.
+            Email us about {city.name}, TN and tell us what you&apos;re looking for. We&apos;ll reply personally — no open scheduling.
           </p>
-          <Link href="/schedule" className="inline-flex items-center gap-2 bg-brand-navy text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-brand-blue transition-colors">
-            Schedule a Free Call <ArrowRight className="w-5 h-5" />
-          </Link>
+          <LocationContactButton
+            cityName={city.name}
+            className="inline-flex items-center gap-2 bg-brand-navy text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-brand-blue transition-colors"
+          >
+            Email us <ArrowRight className="w-5 h-5" />
+          </LocationContactButton>
           <p className="text-sm text-gray-400 mt-4">Serving {city.name} and all of Tennessee</p>
+        </div>
+      </section>
+
+      <section className="pb-16">
+        <div className="mx-auto max-w-2xl px-4">
+          <LocationContactInline
+            formId={`website_locations_${city.slug}`}
+            headline={`Get in touch about ${city.name}, TN`}
+            description="Share your city, state, and what you need. We'll follow up by email."
+            defaultCity={city.name}
+            defaultState="TN"
+          />
         </div>
       </section>
 

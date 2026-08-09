@@ -1,0 +1,11 @@
+# Supabase CLI config for the buyunrepped.com marketing project.
+# Project ref: gxdqsonpcngzjiugfhzy
+#
+# From hosting/:
+#   supabase link --project-ref gxdqsonpcngzjiugfhzy
+#   supabase db push
+
+project_id = "gxdqsonpcngzjiugfhzy"
+
+[db]
+major_version = 15

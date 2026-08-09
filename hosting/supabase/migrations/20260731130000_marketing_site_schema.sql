@@ -1,5 +1,4 @@
--- Run in Supabase SQL editor for project gxdqsonpcngzjiugfhzy
--- Collects website signups now; email sending can be added later from your backend.
+-- Marketing site lead capture (buyunrepped.com)
 
 create table if not exists public.marketing_waitlist (
   id uuid primary key default gen_random_uuid(),
@@ -31,4 +30,21 @@ create index if not exists marketing_waitlist_email_subscribed_idx
 
 alter table public.marketing_waitlist enable row level security;
 
--- No public policies: marketing site API uses the secret key server-side only.
+create table if not exists public.contact_submissions (
+  id uuid primary key default gen_random_uuid(),
+  first_name text not null,
+  last_name text not null,
+  email text not null,
+  interested_in text,
+  message text,
+  marketing_opt_in boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists contact_submissions_created_at_idx
+  on public.contact_submissions (created_at desc);
+
+create index if not exists contact_submissions_email_idx
+  on public.contact_submissions (email);
+
+alter table public.contact_submissions enable row level security;

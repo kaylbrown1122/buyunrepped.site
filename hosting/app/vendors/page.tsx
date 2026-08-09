@@ -8,6 +8,8 @@ import Link from 'next/link';
 import { Lock } from 'lucide-react';
 import { useSpamGuard } from '../../lib/useSpamGuard';
 import Reveal from '../components/Reveal';
+import LeadQualifierSelect from '../components/LeadQualifierSelect';
+import { DEFAULT_LEAD_QUALIFIER } from '../../lib/leadQualifiers';
 
 const VENDOR_SOURCE = 'buyers_vendor_list';
 const UNLOCK_KEY = 'bu_vendor_list_unlocked';
@@ -98,6 +100,8 @@ export default function VendorsPage() {
   const [unlocked, setUnlocked] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [interestedIn, setInterestedIn] = useState("I'm a vendor who is curious");
+  const [message, setMessage] = useState('');
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -127,6 +131,8 @@ export default function VendorsPage() {
           firstName,
           lastName,
           email,
+          interestedIn,
+          message: message.trim() || undefined,
           source: VENDOR_SOURCE,
           marketingOptIn: consent,
           ...spamGuard.getPayload(),
@@ -203,6 +209,24 @@ export default function VendorsPage() {
                   autoComplete="email"
                   required
                   className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none transition-all focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
+                />
+              </div>
+              <LeadQualifierSelect
+                id="vendor-interested-in"
+                value={interestedIn}
+                onChange={setInterestedIn}
+              />
+              <div>
+                <label htmlFor="vendor-message" className="mb-1.5 block text-sm font-semibold text-gray-700">
+                  Anything else?
+                </label>
+                <textarea
+                  id="vendor-message"
+                  rows={3}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Optional — tell us what you're looking for."
+                  className="w-full resize-none rounded-xl border border-gray-200 px-4 py-3 outline-none transition-all focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
                 />
               </div>
               <div className="flex items-start gap-2.5">

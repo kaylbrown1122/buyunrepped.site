@@ -11,6 +11,8 @@ export async function GET() {
 
 BuyUnrepped does not act as the buyer's agent or enter into a buyer agency relationship. Instead, we provide tools, templates, and licensed expert access so buyers can navigate the home purchase process independently.
 
+Turnaround: most buyers go from first contact to an offer ready to send in about one day. Timing depends on how quickly the buyer provides details and signs, and is not guaranteed.
+
 ## Pages
 
 - [About](https://www.buyunrepped.com/about): Our story, founder Kayla Brown, and mission to make home buying more affordable in Tennessee

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Twitter, Instagram, Home } from 'lucide-react';
+import { WaitlistButton } from './WaitlistModal';
 
 const companyLinks: [string, string][] = [
   ['About Us', '/about'],
@@ -55,6 +56,12 @@ export default function Footer() {
               not act as your buyer&apos;s agent or communicate on your behalf, and remain subject to the duties
               Tennessee law requires for the services we provide.
             </p>
+            <WaitlistButton
+              source="website_footer"
+              className="mt-3 text-sm font-semibold text-brand-gold transition-colors hover:text-white"
+            >
+              Keep me posted →
+            </WaitlistButton>
             <div className="mt-3 flex flex-wrap gap-1.5">
               <a
                 href="https://www.instagram.com/buyunrepped"

@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '../../../lib/supabaseAdmin';
-import { saveMarketingContact } from '../../../lib/marketingContact';
+import { saveMarketingContact, markWelcomeEmailSent } from '../../../lib/marketingContact';
 import { sendContactWelcomeEmail } from '../../../lib/contactWelcomeEmail';
+import { notifySlackContactForm } from '../../../lib/slackNotify';
+import { normalizeLeadQualifier } from '../../../lib/leadQualifiers';
 import { verifyChallenge } from '../../../lib/spamGuard';
 
 const CONTACT_SOURCE = 'website_contact';
@@ -36,54 +38,6 @@ async function saveContactSubmission(input: {
   }
 
   return { ok: true };
-}
-
-async function notifySlack(input: {
-  firstName: string;
-  lastName: string;
-  email: string;
-  interestedIn?: string;
-  message?: string;
-  marketingOptIn: boolean;
-}): Promise<void> {
-  const webhookUrl = process.env.SLACK_CONTACT_WEBHOOK_URL;
-  if (!webhookUrl) {
-    return;
-  }
-
-  const name = `${input.firstName} ${input.lastName}`;
-
-  await fetch(webhookUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      text: `New contact form submission from ${name} (${input.email})`,
-      blocks: [
-        {
-          type: 'header',
-          text: { type: 'plain_text', text: 'New Contact Form Submission', emoji: true },
-        },
-        {
-          type: 'section',
-          fields: [
-            { type: 'mrkdwn', text: `*Name:*\n${name}` },
-            { type: 'mrkdwn', text: `*Email:*\n${input.email}` },
-            { type: 'mrkdwn', text: `*Interested In:*\n${input.interestedIn || 'Not specified'}` },
-            { type: 'mrkdwn', text: `*Marketing opt-in:*\n${input.marketingOptIn ? 'Yes' : 'No'}` },
-          ],
-        },
-        {
-          type: 'section',
-          text: {
-            type: 'mrkdwn',
-            text: `*Message:*\n${input.message || '_No message provided_'}`,
-          },
-        },
-      ],
-    }),
-  });
 }
 
 export async function POST(request: Request) {
@@ -124,11 +78,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'A valid email is required' }, { status: 400 });
     }
 
+    const normalizedQualifier = normalizeLeadQualifier(interestedIn);
+    if (!normalizedQualifier) {
+      return NextResponse.json({ error: 'Please select what best describes you' }, { status: 400 });
+    }
+
     const payload = {
       firstName: firstName.trim(),
       lastName: lastName.trim(),
       email: normalizedEmail,
-      interestedIn: typeof interestedIn === 'string' ? interestedIn.trim() : undefined,
+      interestedIn: normalizedQualifier,
       message: typeof message === 'string' ? message.trim() : undefined,
       marketingOptIn: Boolean(marketingOptIn),
     };
@@ -143,6 +102,8 @@ export async function POST(request: Request) {
         email: payload.email,
         firstName: payload.firstName,
         lastName: payload.lastName,
+        interestedIn: payload.interestedIn,
+        message: payload.message,
         source: CONTACT_SOURCE,
       });
 
@@ -151,14 +112,18 @@ export async function POST(request: Request) {
       }
     }
 
-    await notifySlack(payload);
+    await notifySlackContactForm(payload);
 
     if (payload.marketingOptIn) {
       const emailResult = await sendContactWelcomeEmail({
         firstName: payload.firstName,
         email: payload.email,
+        interestedIn: payload.interestedIn,
+        message: payload.message,
       });
-      if (!emailResult.ok) {
+      if (emailResult.ok) {
+        await markWelcomeEmailSent(payload.email);
+      } else {
         console.error('Contact welcome email failed:', emailResult.error ?? 'Unknown error');
       }
     }

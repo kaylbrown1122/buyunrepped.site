@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import { buildContactUrl } from '../../../lib/contactUrl';
 import { getPostSlugs, getPostBySlugWithHtml } from '../../../lib/posts';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { Metadata } from 'next';
@@ -88,15 +89,18 @@ export default async function PostPage({ params }: PageProps) {
 
         {/* CTA */}
         <div className="mt-16 p-8 bg-white rounded-2xl text-center shadow-sm border border-gray-100">
-          <h3 className="text-2xl font-bold mb-3">Ready to buy smarter?</h3>
+          <h3 className="text-2xl font-bold mb-3">Want to talk it through?</h3>
           <p className="text-gray-500 mb-6">
-            Get access to all the tools you need to purchase your Tennessee home without paying agent fees.
+            Email our Founder to discuss your situation, your market, and whether BuyUnrepped is the right fit.
           </p>
           <Link
-            href="/schedule"
+            href={buildContactUrl({
+              interest: 'I just want to chat',
+              message: "I'd like to schedule a call with the Founder to discuss my situation.",
+            })}
             className="px-8 py-3 bg-brand-blue text-white font-bold rounded-full hover:bg-cyan-700 transition-colors inline-block shadow-lg"
           >
-            Schedule a Call
+            Email our Founder
           </Link>
         </div>
       </article>

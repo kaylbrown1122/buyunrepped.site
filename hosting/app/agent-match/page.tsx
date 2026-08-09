@@ -65,13 +65,13 @@ export default function AgentMatchPage() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/contact?interest=Agent+Matchmaking&role=seller"
+              href="/contact?interest=I+just+want+to+chat&role=seller"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-7 text-[15px] font-bold text-brand-navy shadow-sm transition-colors hover:bg-[#e8b93d]"
             >
               Seller: request a match
             </Link>
             <Link
-              href="/contact?interest=Agent+Matchmaking&role=buyer"
+              href="/contact?interest=I+just+want+to+chat&role=buyer"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50"
             >
               Buyer: find a full-service agent
@@ -111,7 +111,7 @@ export default function AgentMatchPage() {
               situation.&rdquo;
             </p>
             <Link
-              href="/contact?interest=Agent+Matchmaking"
+              href="/contact?interest=I+just+want+to+chat"
               className="inline-flex shrink-0 min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-7 text-[15px] font-bold text-brand-navy shadow-sm transition-colors hover:bg-[#e8b93d]"
             >
               Let&apos;s discuss your situation

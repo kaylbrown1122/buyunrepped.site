@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
+import LocationContactInline from '../components/LocationContactInline';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { savings as illustrativeNetDifference } from '../../lib/fees';
@@ -138,18 +139,12 @@ export default function LocationsPage() {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Don&apos;t See Your City?</h2>
-          <p className="text-gray-500 mb-8">
-            If your market isn&apos;t listed, contact us to confirm whether BuyUnrepped&apos;s current services are
-            available there.
-          </p>
-          <Link
-            href="/schedule"
-            className="inline-flex items-center gap-2 bg-brand-navy text-white px-8 py-4 rounded-full font-bold hover:bg-brand-blue transition-colors"
-          >
-            Schedule a Call <ArrowRight className="w-4 h-4" />
-          </Link>
+        <div className="mx-auto max-w-2xl px-4">
+          <LocationContactInline
+            formId="website_locations"
+            headline="Don't see your city?"
+            description="Tell us your city, state, and what you're looking for. We'll reply by email — no open scheduling."
+          />
         </div>
       </section>
 

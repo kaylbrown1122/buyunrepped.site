@@ -7,6 +7,7 @@ import SectionBadge from '../components/SectionBadge';
 import { Calculator, DollarSign, ArrowRight, Check, Play } from 'lucide-react';
 import Link from 'next/link';
 import { BUYUNREPPED_MAX_TOTAL, BUYER_AGENT_PCT_DEFAULT, savings as illustrativeNetDifference, traditionalBuyerSide } from '../../lib/fees';
+import ToolResultsEmailCapture from '../components/ToolResultsEmailCapture';
 
 export default function CalculatorPage() {
     const [homePrice, setHomePrice] = useState<number>(0);
@@ -73,11 +74,11 @@ export default function CalculatorPage() {
                         {/* Background Blob */}
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3"></div>
 
-                        <div className="grid lg:grid-cols-12 gap-0">
+                        <div className="grid lg:grid-cols-12 lg:grid-rows-[auto_auto] gap-0">
 
-                            {/* Left Side: Input */}
-                            <div className="lg:col-span-5 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-gray-100 bg-gray-50/30 flex flex-col justify-center">
-                                <div className="mb-8">
+                            {/* Input */}
+                            <div className="order-1 lg:col-span-5 lg:row-start-1 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-gray-100 bg-gray-50/30 flex flex-col justify-center">
+                                <div className="mb-0 lg:mb-8">
                                     <label htmlFor="homePrice" className="block text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
                                         Enter Home Price
                                     </label>
@@ -109,38 +110,10 @@ export default function CalculatorPage() {
                                         Enter an expected purchase price to see an illustrative comparison.
                                     </p>
                                 </div>
-
-                                <div className="space-y-6 opacity-70 hover:opacity-100 transition-opacity">
-                                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                                        <div className="flex items-center gap-3 mb-2">
-                                            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                                                <span className="text-brand-blue font-bold text-xs">%</span>
-                                            </div>
-                                            <h3 className="font-bold text-brand-navy">Buyer Agent Commission</h3>
-                                        </div>
-                                        <p className="text-gray-500 text-sm leading-relaxed">
-                                            Buyer-agent compensation is negotiable and varies by listing and
-                                            transaction. This calculator uses a hypothetical 3% buyer-side fee.
-                                        </p>
-                                    </div>
-
-                                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm ring-2 ring-brand-blue/5">
-                                        <div className="flex items-center gap-3 mb-2">
-                                            <div className="w-8 h-8 rounded-full bg-brand-navy flex items-center justify-center">
-                                                <span className="text-white font-bold text-xs">$</span>
-                                            </div>
-                                            <h3 className="font-bold text-brand-navy">BuyUnrepped Fee</h3>
-                                        </div>
-                                        <p className="text-gray-500 text-sm leading-relaxed">
-                                            Up to $3,490 in flat fees for the Offer Package and optional Transaction
-                                            Guidance.
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
 
-                            {/* Right Side: Results */}
-                            <div className="lg:col-span-7 p-8 md:p-12 bg-white flex flex-col justify-center min-h-[600px]">
+                            {/* Results — before disclaimers on mobile when calculated */}
+                            <div className={`${showResults ? 'order-2' : 'order-3'} lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:row-span-2 p-8 md:p-12 bg-white flex flex-col justify-center min-h-[400px] lg:min-h-[600px] border-b lg:border-b-0 border-gray-100`}>
                                 {!showResults ? (
                                     <div className="flex flex-col items-center justify-center text-center h-full opacity-50">
                                         <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
@@ -242,8 +215,43 @@ export default function CalculatorPage() {
                                             </div>
                                         </div>
 
+                                        <div className="mt-8">
+                                            <ToolResultsEmailCapture source="tool_savings" toolLabel="savings" />
+                                        </div>
+
                                     </div>
                                 )}
+                            </div>
+
+                            {/* Disclaimers — after results on mobile when calculated */}
+                            <div className={`${showResults ? 'order-3' : 'order-2'} lg:order-none lg:col-span-5 lg:row-start-2 p-8 md:p-12 pt-0 lg:pt-12 border-b lg:border-b-0 lg:border-r border-gray-100 bg-gray-50/30`}>
+                                <div className="space-y-6 opacity-70 hover:opacity-100 transition-opacity">
+                                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                                        <div className="flex items-center gap-3 mb-2">
+                                            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                                <span className="text-brand-blue font-bold text-xs">%</span>
+                                            </div>
+                                            <h3 className="font-bold text-brand-navy">Buyer Agent Commission</h3>
+                                        </div>
+                                        <p className="text-gray-500 text-sm leading-relaxed">
+                                            Buyer-agent compensation is negotiable and varies by listing and
+                                            transaction. This calculator uses a hypothetical 3% buyer-side fee.
+                                        </p>
+                                    </div>
+
+                                    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm ring-2 ring-brand-blue/5">
+                                        <div className="flex items-center gap-3 mb-2">
+                                            <div className="w-8 h-8 rounded-full bg-brand-navy flex items-center justify-center">
+                                                <span className="text-white font-bold text-xs">$</span>
+                                            </div>
+                                            <h3 className="font-bold text-brand-navy">BuyUnrepped Fee</h3>
+                                        </div>
+                                        <p className="text-gray-500 text-sm leading-relaxed">
+                                            Up to $3,490 in flat fees for the Offer Package and optional Transaction
+                                            Guidance.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

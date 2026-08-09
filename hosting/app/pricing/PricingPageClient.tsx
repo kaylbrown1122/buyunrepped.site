@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RolloutTierLadder from '../components/RolloutTierLadder';
 import RolloutDisclaimers from '../components/RolloutDisclaimers';
+import { WaitlistButton } from '../components/WaitlistModal';
 import { Check, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { getSignInUrl } from '../../lib/appUrl';
@@ -22,6 +23,10 @@ const pricingFaqs = [
   {
     q: 'Something look wrong?',
     a: 'During launch, email info@buyunrepped.com if a price, screen, or data point does not look right so we can assist and fix the issue.',
+  },
+  {
+    q: 'How fast can I get an offer out?',
+    a: 'Usually about a day. From the time you reach out, most buyers are ready to send an offer within 24 hours. That depends on you getting us your details and being ready to sign. Timing is not guaranteed and can run longer on complex properties or if we are waiting on you, your lender, or the listing side.',
   },
   {
     q: 'How does the flat fee compare to a traditional commission?',
@@ -88,7 +93,7 @@ export default function PricingPageClient({ tiersData }: { tiersData: RolloutTie
             <div className="mt-6">
               <RolloutDisclaimers />
             </div>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
                 href={signInUrl}
                 target="_blank"
@@ -97,6 +102,12 @@ export default function PricingPageClient({ tiersData }: { tiersData: RolloutTie
               >
                 Login
               </a>
+              <WaitlistButton
+                source="website_pricing"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50"
+              >
+                Keep me posted
+              </WaitlistButton>
             </div>
 
             <div className="mt-14 text-center">
@@ -312,6 +323,12 @@ export default function PricingPageClient({ tiersData }: { tiersData: RolloutTie
               >
                 Login
               </a>
+              <WaitlistButton
+                source="website_pricing"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50"
+              >
+                Keep me posted
+              </WaitlistButton>
               <Link
                 href="/#savings"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50"

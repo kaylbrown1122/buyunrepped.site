@@ -30,6 +30,10 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
       a: 'You stay in control of the purchase. You choose the property, decide your offer terms, negotiate directly, and decide how to respond at each step. BuyUnrepped provides offer-preparation support, transaction coordination, reminders, pricing guidance, broker oversight, document organization, and other services within your purchased package. You remain responsible for decisions and for communications made on your own behalf with the listing side and other parties. We support the process, but do not replace your judgment or act as your buyer\'s agent.',
     },
     {
+      q: 'How fast can I get an offer out?',
+      a: 'Usually about a day. From the time you reach out, most buyers are ready to send an offer within 24 hours. That depends on you getting us your details and being ready to sign. Timing is not guaranteed and can run longer on complex properties or if we are waiting on you, your lender, or the listing side.',
+    },
+    {
       q: 'How does the flat fee compare to a traditional commission?',
       a: "This is an illustrative comparison: a hypothetical 3% buyer-side fee on a $500K home is $15,000, while BuyUnrepped standard pricing is up to $3,490 for both tiers combined after launch. Buyer-side compensation is negotiable and varies by transaction; savings are not guaranteed.",
     },
@@ -231,13 +235,13 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto mt-4 grid max-w-3xl grid-cols-3 gap-6 sm:gap-10">
               <div className="text-center sm:text-left">
-                <p className="text-base font-extrabold tracking-tight text-white">BuyUnrepped, Inc.</p>
+                <p className="text-base font-extrabold tracking-tight text-white">Principal Broker Experience</p>
                 <p className="mt-2 text-[12px] leading-snug text-white/70">
                   Principal Broker Kayla Brown · 185+ assisted sales
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">$100 Million+</p>
+                <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">$100M Assisted Sales</p>
               </div>
               <div className="text-center sm:text-right">
                 <p className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">185+ Homes</p>
@@ -516,7 +520,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                 >
                   Login
                 </a>
-                <WaitlistButton className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-6 py-2.5 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-brand-gray">
+                <WaitlistButton className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-6 py-2.5 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-brand-gray" source="website_homepage">
                   Keep me posted →
                 </WaitlistButton>
               </div>

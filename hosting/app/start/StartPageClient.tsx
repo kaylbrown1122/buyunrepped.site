@@ -253,7 +253,8 @@ export default function StartPageClient({ tiersData }: { tiersData: RolloutTiers
               Simple. Structured. Clear.
             </h2>
             <p className="mt-3 text-center text-[1.05rem] text-gray-500">
-              Four steps from finding the home to closing day.
+              Four steps from finding the home to closing day. Most buyers go from first contact to an offer ready to
+              send in about a day.
             </p>
             <div className="mt-10 space-y-6">
               {steps.map((step) => (

@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import ToolCards from '../components/ToolCards';
+import ResourcesHubCta from '../components/ResourcesHubCta';
 import { getAllPosts } from '../../lib/posts';
 import { getFitCheckUrl } from '../../lib/appUrl';
 import { ArrowRight, BookOpen, ChevronLeft, ChevronRight, MessageSquareText } from 'lucide-react';
@@ -244,26 +245,7 @@ export default async function ResourcesPage({
       )}
 
       {/* Bottom CTA — hub page only */}
-      {isHubPage && (
-        <section className="bg-brand-navy py-16 text-white">
-          <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-            <SectionBadge>Get Started</SectionBadge>
-            <h2 className="mb-4 mt-4 text-3xl font-bold">Ready to put it into practice?</h2>
-            <p className="mb-8 text-lg text-gray-300">
-              BuyUnrepped gives you the tools, agreements, and support to buy your Tennessee home with
-              transparent flat-fee pricing.
-            </p>
-            <a
-              href={fitCheckUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-8 py-3 text-base font-bold text-brand-navy shadow-lg transition-all hover:bg-[#e8b93d]"
-            >
-              Check your fit
-            </a>
-          </div>
-        </section>
-      )}
+      {isHubPage && <ResourcesHubCta fitCheckUrl={fitCheckUrl} />}
 
       <Footer />
     </div>

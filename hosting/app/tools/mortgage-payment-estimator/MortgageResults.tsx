@@ -4,6 +4,7 @@ import React from 'react';
 import { Home, DollarSign, Info } from 'lucide-react';
 import { MortgageResults } from './types';
 import { BUYUNREPPED_MAX_TOTAL } from '../../../lib/fees';
+import ToolResultsEmailCapture from '../../components/ToolResultsEmailCapture';
 
 interface Props {
   results: MortgageResults | null;
@@ -175,6 +176,8 @@ export default function MortgageResultsPanel({ results }: Props) {
             buyer&apos;s agent or negotiate on your behalf.
           </p>
         </div>
+
+        <ToolResultsEmailCapture source="tool_mortgage" toolLabel="mortgage payment" />
 
       </div>
     </div>

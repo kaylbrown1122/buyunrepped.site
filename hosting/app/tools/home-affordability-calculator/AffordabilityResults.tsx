@@ -4,6 +4,7 @@ import React from 'react';
 import { DollarSign, Info, TrendingUp, AlertTriangle } from 'lucide-react';
 import { AffordabilityResults, AffordabilityScenario } from './types';
 import { BUYUNREPPED_MAX_TOTAL } from '../../../lib/fees';
+import ToolResultsEmailCapture from '../../components/ToolResultsEmailCapture';
 
 interface Props {
   results: AffordabilityResults | null;
@@ -257,6 +258,8 @@ export default function AffordabilityResultsPanel({ results }: Props) {
             costs vary by transaction.
           </p>
         </div>
+
+        <ToolResultsEmailCapture source="tool_affordability" toolLabel="affordability" />
 
       </div>
     </div>

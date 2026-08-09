@@ -238,6 +238,10 @@ export default function ProductWalkthrough() {
             control of the property, the terms, and the communication. The app, the workflow, and your licensed broker
             support handle the structure behind the scenes, from offer prep to submission to closing coordination.
           </p>
+          <p className="mx-auto mt-4 max-w-xl text-[1.05rem] leading-relaxed text-gray-500">
+            Most buyers go from first contact to an offer ready to send in about a day. Timing depends on how fast you
+            get us your details and sign, and is not guaranteed.
+          </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
             <OwnerPill owner="you" label="You keep control" />
             <OwnerPill owner="we" label="We handle the structure" />
