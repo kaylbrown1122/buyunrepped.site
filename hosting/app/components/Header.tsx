@@ -29,13 +29,13 @@ export default function Header() {
                     <div className="flex min-h-0 min-w-0 flex-1 basis-0 items-center">
                         <Link href="/" className="block w-fit min-w-0 max-w-full">
                             <Image
-                                src="/images/buyunrepped-cropped.png"
+                                src="/images/buyunrepped-wordmark.png"
                                 alt="BuyUnrepped"
-                                width={4249}
-                                height={1200}
-                                className="h-11 w-auto max-w-full object-contain object-left sm:h-12"
+                                width={1024}
+                                height={233}
+                                className="h-9 w-auto max-w-full object-contain object-left sm:h-10"
                                 priority
-                                sizes="200px"
+                                sizes="220px"
                             />
                         </Link>
                     </div>
