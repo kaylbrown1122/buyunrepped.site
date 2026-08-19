@@ -4,16 +4,19 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SavingsCalculator from './components/SavingsCalculator';
 import ProductWalkthrough from './components/ProductWalkthrough';
-import RolloutTierLadder from './components/RolloutTierLadder';
 import { WaitlistButton } from './components/WaitlistModal';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { getFitCheckUrl, getSignInUrl } from '../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL, BUNDLE_FEE, BUYUNREPPED_ALACARTE_TOTAL } from '../lib/fees';
-import type { RolloutTiersResult } from '../lib/rolloutTier.types';
 
-export default function LandingPageClient({ tiersData }: { tiersData: RolloutTiersResult }) {
+const INTRO_BUNDLE = 1225;
+const INTRO_OFFER = 650;
+const INTRO_TXN = 875;
+const INTRO_BUNDLE_SAVE = INTRO_OFFER + INTRO_TXN - INTRO_BUNDLE;
+
+export default function LandingPageClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -165,13 +168,35 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
 
               </div>
 
-              {/* Right: launch tier ladder */}
-              <RolloutTierLadder
-                tiersData={tiersData}
-                variant="compact"
-                showCta={false}
-                showCompactNote
-              />
+              {/* Right: intro pricing */}
+              <div className="rounded-2xl border border-white/15 bg-white/[0.08] p-6 sm:p-7">
+                <p className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-navy">
+                  🚀 Limited intro pricing
+                </p>
+                <p className="mt-4 text-[1.05rem] font-semibold leading-snug text-white">
+                  Introductory pricing is available for a limited number of users.
+                </p>
+                <p className="mt-3 text-[2rem] font-extrabold tracking-tight text-white">
+                  ${INTRO_BUNDLE.toLocaleString()}
+                </p>
+                <p className="mt-1 text-[15px] leading-relaxed text-white/80">
+                  Go from offer to closed for as little as ${INTRO_BUNDLE.toLocaleString()}
+                  {' '}(${INTRO_OFFER.toLocaleString()} for the offer and ${INTRO_TXN.toLocaleString()} for the
+                  transaction when bought together).
+                </p>
+                <p className="mt-4 text-[1.15rem] font-extrabold text-brand-gold">
+                  That&apos;s a savings of ${INTRO_BUNDLE_SAVE.toLocaleString()}!
+                </p>
+                <p className="mt-3 text-[15px] leading-relaxed text-white/75">
+                  If you&apos;ve found the house — it&apos;s time to buy it.
+                </p>
+                <Link
+                  href="/pricing"
+                  className="mt-6 inline-flex min-h-[44px] items-center justify-center rounded-xl bg-brand-gold px-5 text-[14px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
+                >
+                  See pricing
+                </Link>
+              </div>
             </div>
           </div>
         </section>
