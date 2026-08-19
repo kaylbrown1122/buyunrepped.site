@@ -60,7 +60,6 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
     tiersData.tiers.find((tier) => tier.tier_name === 'Founding') ?? getActiveTier(tiersData);
   const standardTier = tiersData.tiers.find((tier) => tier.tier_name === 'Standard');
   const foundingBundleCents = foundingTier?.bundle_price_cents ?? 122500;
-  const foundingOfferCents = foundingTier?.offer_price_cents ?? 65000;
   const foundingTxnCents = foundingTier?.transaction_price_cents ?? 87500;
   const standardBundleCents = standardTier?.bundle_price_cents ?? BUNDLE_FEE * 100;
   const foundingSavingsCents = Math.max(standardBundleCents - foundingBundleCents, 0);
@@ -177,26 +176,23 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                 <p className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-navy">
                   🚀 Introductory pricing
                 </p>
-                <p className="mt-4 text-[1.05rem] font-semibold leading-snug text-white">
-                  Introductory prices are available for a limited number of users.
+                <p className="mt-4 text-[1.15rem] font-semibold leading-snug text-white">
+                  Buy your home from offer to closing for just {formatTierDollars(foundingBundleCents)}.
                 </p>
-                <p className="mt-3 text-[2rem] font-extrabold tracking-tight text-white">
-                  {formatTierDollars(foundingBundleCents)}
-                </p>
-                <p className="mt-1 text-[15px] leading-relaxed text-white/80">
-                  Go from offer to closed for as little as {formatTierDollars(foundingBundleCents)} (
-                  {formatTierDollars(foundingOfferCents)} for the offer and {formatTierDollars(foundingTxnCents)} for
-                  the transaction when bought together).
+                <p className="mt-3 text-[15px] leading-relaxed text-white/80">
+                  {formatTierDollars(foundingBundleCents - foundingTxnCents)} for your offer +{' '}
+                  {formatTierDollars(foundingTxnCents)} for transaction guidance when purchased together.
                 </p>
                 <p className="mt-4 text-[1.15rem] font-extrabold text-brand-gold">
-                  That&apos;s {formatTierDollars(foundingSavingsCents)} saved on our standard{' '}
-                  {formatTierDollars(standardBundleCents)} price!
+                  Save {formatTierDollars(foundingSavingsCents)} off our standard{' '}
+                  {formatTierDollars(standardBundleCents)} price.
                 </p>
                 <p className="mt-2 text-[14px] font-semibold leading-relaxed text-white/80">
-                  (and almost $20k less than a full-service buyer&apos;s agent on a $750k home!)
+                  And on a $750K home, that&apos;s nearly $20,000 less than a traditional full-service buyer&apos;s
+                  agent.
                 </p>
-                <p className="mt-3 text-[15px] leading-relaxed text-white/75">
-                  If you&apos;ve found the house — it&apos;s time to buy it.
+                <p className="mt-4 text-[15px] leading-relaxed text-white/75">
+                  If you&apos;ve found the house, it&apos;s time to buy it.
                 </p>
                 <Link
                   href="/pricing"
@@ -204,6 +200,9 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                 >
                   See pricing
                 </Link>
+                <p className="mt-3 text-[12px] font-bold text-white">
+                  Limited introductory spots available.
+                </p>
               </div>
             </div>
           </div>
