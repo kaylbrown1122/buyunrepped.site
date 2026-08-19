@@ -233,14 +233,41 @@ const pricingFaqs: { q: string; a: React.ReactNode }[] = [
     a: (
       <>
         <p>
-          Fees are subject to our cancellation and refund policy. Email{' '}
-          <a
-            href="mailto:info@buyunrepped.com"
-            className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
-          >
-            info@buyunrepped.com
-          </a>{' '}
-          if you need to cancel. Full refund and cancellation terms are in our{' '}
+          Email info@buyunrepped.com to cancel. Here's a summary of the current policy:
+        </p>
+        <p className="mt-2">
+          <strong>Offer Package:</strong> Full refund available until your broker price opinion (BPO) is published. After
+          the BPO is published, the Offer Package fee is nonrefundable.
+        </p>
+        <p className="mt-2">
+          <strong>Transaction Guidance:</strong> Not refunded in cash. If your transaction ends before closing, you may
+          qualify for an account credit based on how far coordination progressed:
+        </p>
+        <ul className="mt-1.5 list-disc space-y-1 pl-5">
+          <li>
+            <strong>100%</strong> &mdash; offer rejected/cancelled, or accepted but never onboarded
+          </li>
+          <li>
+            <strong>75%</strong> &mdash; transaction onboarded but ended before much coordination was delivered
+          </li>
+          <li>
+            <strong>50%</strong> &mdash; inspections coordinated but deal ended before repair negotiation
+          </li>
+          <li>
+            <strong>20%</strong> &mdash; repair negotiation underway or further; issued at our discretion
+          </li>
+        </ul>
+        <p className="mt-2">
+          Credits are issued after we review a verifiable uploaded termination notice and signed earnest money release.
+          Credits can be used toward a future offer, transaction, or bundle.
+        </p>
+        <p className="mt-2">
+          <strong>Bundle:</strong> If you don't use your second offer or your restart, those don't convert to
+          cash or credit &mdash; they're bundle perks, not refundable line items. If your deal falls through and you still
+          have your restart available, you use the restart instead of the credit ladder above.
+        </p>
+        <p className="mt-2 text-[11px] text-gray-400">
+          This is a summary and is subject to change. The full, binding refund and cancellation terms are in our{' '}
           <Link
             href="/terms#fees-cancellation-refunds"
             className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
