@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Calculator, DollarSign, ChevronDown, RotateCcw, FileText, Landmark, Shield, Building2, Wallet } from 'lucide-react';
 import { CalculatorResults, FeeCategory, FeeItem } from './types';
 import { getCategoryTotal } from './calculate';
-import { BUYUNREPPED_MAX_TOTAL } from '../../../lib/fees';
+import { BUNDLE_FEE } from '../../../lib/fees';
 
 interface Props {
   results: CalculatorResults | null;
@@ -219,7 +219,9 @@ export default function ResultsPanel({ results, onToggleCategory, onOverrideItem
         {/* BuyUnrepped callout */}
         <div className="bg-brand-navy rounded-xl p-6 text-white">
           <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">BuyUnrepped support</p>
-          <p className="text-lg font-bold mb-1">Flat-fee support up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()}.</p>
+          <p className="text-lg font-bold mb-1">
+            Recommended Offer + Transaction Bundle: ${BUNDLE_FEE.toLocaleString()}.
+          </p>
           <p className="text-sm text-gray-400 leading-relaxed">
             Timeline tools, deadline reminders, and licensed broker support within your purchased scope. This is
             non-representational support, not buyer-agent representation.

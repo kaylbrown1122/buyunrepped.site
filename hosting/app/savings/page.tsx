@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
 import { Calculator, DollarSign, ArrowRight, Check, Play } from 'lucide-react';
 import Link from 'next/link';
-import { BUYUNREPPED_MAX_TOTAL, BUYER_AGENT_PCT_DEFAULT, savings as illustrativeNetDifference, traditionalBuyerSide } from '../../lib/fees';
+import { BUNDLE_FEE, BUYER_AGENT_PCT_DEFAULT, savings as illustrativeNetDifference, traditionalBuyerSide } from '../../lib/fees';
 import ToolResultsEmailCapture from '../components/ToolResultsEmailCapture';
 
 export default function CalculatorPage() {
@@ -14,7 +14,7 @@ export default function CalculatorPage() {
     const [displayPrice, setDisplayPrice] = useState<string>('0');
     const [showResults, setShowResults] = useState<boolean>(false);
 
-    const BUY_UNREPPED_FEE = BUYUNREPPED_MAX_TOTAL;
+    const BUY_UNREPPED_FEE = BUNDLE_FEE;
 
     // Handler for input change
     const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -247,8 +247,8 @@ export default function CalculatorPage() {
                                             <h3 className="font-bold text-brand-navy">BuyUnrepped Fee</h3>
                                         </div>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                            Up to $3,490 in flat fees for the Offer Package and optional Transaction
-                                            Guidance.
+                                            Recommended Offer + Transaction Bundle — ${BUNDLE_FEE.toLocaleString()} at
+                                            Standard. One payment; coordination starts when you&apos;re under contract.
                                         </p>
                                     </div>
                                 </div>

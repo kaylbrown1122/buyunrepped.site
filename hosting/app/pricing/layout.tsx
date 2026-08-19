@@ -1,9 +1,11 @@
 export const metadata = {
   title: 'Pricing | Flat-Fee Home Buying Support in Tennessee',
-  description: 'BuyUnrepped offers flat-fee home buying support starting at $995. Get professional offer assistance and full transaction coordination without paying 3% buyer agent commission. Early access in Middle Tennessee; contact us to confirm availability elsewhere.',
+  description:
+    'Flat-fee buyer support in Nashville TN for unrepresented buyers. Recommended Offer + Transaction Bundle: $1,225 launch / $3,490 Standard — one payment, coordination starts when you\'re under contract. Franklin, Murfreesboro, Brentwood, Clarksville.',
   openGraph: {
     title: 'Pricing | Flat-Fee Home Buying Support in Tennessee',
-    description: 'Starting at $995, professional home buying support without the 3% buyer agent commission. Flat fee regardless of home price.',
+    description:
+      'Recommended Offer + Transaction Bundle — flat fee for unrepresented buyers who toured a home and need an offer without a traditional agent. Middle Tennessee.',
     url: 'https://www.buyunrepped.com/pricing',
   },
   alternates: {

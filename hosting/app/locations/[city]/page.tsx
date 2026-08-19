@@ -9,7 +9,8 @@ import Link from 'next/link';
 import {
   OFFER_FEE,
   TRANSACTION_FEE_FULL,
-  BUYUNREPPED_MAX_TOTAL,
+  BUNDLE_FEE,
+  BUYUNREPPED_ALACARTE_TOTAL,
   traditionalBuyerSide,
   savings as illustrativeNetDifference,
 } from '../../../lib/fees';
@@ -56,7 +57,7 @@ const cities: Record<string, CityData> = {
     slug: 'nashville',
     county: 'Davidson County',
     medianPrice: 530000,
-    marketDescription: 'Nashville is one of the most competitive real estate markets in the Southeast. Davidson County median home prices hover around $530,000, and certain submarkets, Green Hills, 12 South, Germantown, regularly see offers over asking within days of listing. A hypothetical buyer-side fee illustrated at ~3% (negotiable, not set by law or any MLS) would be about $15,900 on a $530,000 home — compared to BuyUnrepped\'s flat fee of up to $3,490. How any fee difference shows up in your deal (price, concessions, or cash flow) varies by transaction and is not guaranteed.',
+    marketDescription: 'Nashville is one of the most competitive real estate markets in the Southeast. Davidson County median home prices hover around $530,000, and certain submarkets, Green Hills, 12 South, Germantown, regularly see offers over asking within days of listing. A hypothetical buyer-side fee illustrated at ~3% (negotiable, not set by law or any MLS) would be about $15,900 on a $530,000 home — compared to BuyUnrepped\'s recommended Offer + Transaction Bundle at $3,490 Standard. How any fee difference shows up in your deal (price, concessions, or cash flow) varies by transaction and is not guaranteed.',
     localContext: 'Nashville\'s economy is anchored by healthcare (HCA Healthcare, Vanderbilt Medical), higher education, and a booming hospitality and tech sector. That economic diversity keeps demand strong year-round and across price points. The metro has absorbed significant in-migration from higher-cost cities, which has kept competition elevated even as interest rates have risen. For buyers who\'ve done their research and know what they want, moving confidently without an agent is entirely achievable, and financially smart.',
     whySkipAgent: [
       'Nashville\'s listing agents are experienced and well-resourced. In many transactions, the listing agent already has everything they need to close the deal, your buyer\'s agent is often just a relay. With BuyUnrepped, you get direct access to the same Tennessee REALTORS® standard forms and offer guidance without paying $15,000+ for someone to forward emails.',
@@ -116,7 +117,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'Does it make sense financially to use BuyUnrepped in Nashville?',
-        answer: 'On a $530,000 Nashville home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) is often around $15,900. BuyUnrepped\'s full-service flat fee is $3,490. That\'s over $12,000 in potential savings, money you could use to reduce the purchase price, cover closing costs, or build your down payment reserve.',
+        answer: 'On a $530,000 Nashville home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) is often around $15,900. BuyUnrepped\'s recommended Offer + Transaction Bundle is $3,490 at Standard pricing. That\'s over $12,000 in potential savings, money you could use to reduce the purchase price, cover closing costs, or build your down payment reserve.',
       },
     ],
   },
@@ -186,7 +187,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How much can I actually save buying without an agent in Franklin?',
-        answer: 'On a $935,000 Franklin home, a hypothetical buyer-side fee illustrated at ~3% (negotiable, not set by law or any MLS) is about $28,050. BuyUnrepped\'s combined flat fee is $3,490 — an illustrative difference of about $24,560. How any fee difference appears in your transaction varies and is not guaranteed.',
+        answer: 'On a $935,000 Franklin home, a hypothetical buyer-side fee illustrated at ~3% (negotiable, not set by law or any MLS) is about $28,050. BuyUnrepped\'s recommended Offer + Transaction Bundle is $3,490 at Standard pricing — an illustrative difference of about $24,560. How any fee difference appears in your transaction varies and is not guaranteed.',
       },
     ],
   },
@@ -248,7 +249,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How much can I save buying without an agent in Murfreesboro?',
-        answer: 'On a $450,000 Murfreesboro home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) illustrated at ~3% is about $13,500. BuyUnrepped\'s full-service flat fee is $3,490, saving you nearly $10,000 that can go toward your down payment, closing costs, or a price reduction.',
+        answer: 'On a $450,000 Murfreesboro home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) illustrated at ~3% is about $13,500. BuyUnrepped\'s recommended Offer + Transaction Bundle is $3,490 at Standard pricing, saving you nearly $10,000 that can go toward your down payment, closing costs, or a price reduction.',
       },
       {
         question: 'How do home inspections work when I\'m not represented?',
@@ -410,7 +411,7 @@ const cities: Record<string, CityData> = {
     localContext: 'Fort Campbell\'s tens of thousands of active-duty personnel keep housing demand steady year-round, largely independent of broader economic conditions. Austin Peay State University and Clarksville\'s growing commercial and healthcare sectors, including expansions by Amazon and major healthcare providers, have further diversified the local economy. Montgomery County\'s relatively balanced supply (typically 4–5 months) means buyers have choices and negotiating room.',
     whySkipAgent: [
       'Military buyers in Clarksville are often on tight PCS timelines and highly motivated to close efficiently. They\'re not in the market for hand-holding, they want a clean, professional transaction that closes on schedule. BuyUnrepped is built for exactly this: professional documentation, licensed broker oversight, and a process that moves as fast as you need it to.',
-      'Clarksville\'s market is well-suited to informed, self-directed buyers. The inventory is sufficient, listing agents are experienced, and the transaction process in Montgomery County is well-established. The case for paying roughly $9,420 in buyer\'s agent commission (negotiable, not set by law or any MLS) when you can get the same support for $995–$3,490 is difficult to make.',
+      'Clarksville\'s market is well-suited to informed, self-directed buyers. The inventory is sufficient, listing agents are experienced, and the transaction process in Montgomery County is well-established. The case for paying roughly $9,420 in buyer\'s agent commission (negotiable, not set by law or any MLS) when you can use BuyUnrepped\'s founder-tiered bundle pricing (starting at $1,225 in launch tiers) and the recommended Standard Offer + Transaction Bundle at $3,490 is difficult to make.',
     ],
     marketInsights: [
       'Montgomery County has approximately 4–5 months of housing supply, a balanced market favoring informed buyers',
@@ -672,7 +673,7 @@ const cities: Record<string, CityData> = {
       },
       {
         question: 'How much can I save buying without an agent in Jackson?',
-        answer: 'On a $245,000 Jackson home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) illustrated at ~3% is about $7,350. BuyUnrepped\'s full-service flat fee is $3,490, saving you over $3,700. At Jackson\'s price points, that\'s a meaningful percentage of the home\'s value.',
+        answer: 'On a $245,000 Jackson home, a traditional buyer\'s agent commission (negotiable, not set by law or any MLS) illustrated at ~3% is about $7,350. BuyUnrepped\'s recommended Offer + Transaction Bundle is $3,490 at Standard pricing, saving you over $3,700. At Jackson\'s price points, that\'s a meaningful percentage of the home\'s value.',
       },
       {
         question: 'What should I know about flood risk in Madison County?',
@@ -703,7 +704,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `Buy a Home in ${city.name}, TN Without a Buyer's Agent | BuyUnrepped`,
-    description: `${city.name} home buyers: educational resources on purchasing without a buyer's agent. Illustrative ~3% buyer-side fee on a $${formattedPrice} home is about $${formattedBuyerSide}; BuyUnrepped flat fee up to $${BUYUNREPPED_MAX_TOTAL.toLocaleString()} — illustrative difference about $${formattedNet}. Commissions are negotiable; savings not guaranteed.`,
+    description: `${city.name} home buyers: educational resources on purchasing without a buyer's agent. Illustrative ~3% buyer-side fee on a $${formattedPrice} home is about $${formattedBuyerSide}; BuyUnrepped recommended Offer + Transaction Bundle is $${BUNDLE_FEE.toLocaleString()} (Standard) — illustrative difference about $${formattedNet}. Commissions are negotiable; savings not guaranteed.`,
     keywords: [
       `buy home without agent ${city.name} TN`,
       `unrepresented buyer ${city.name} Tennessee`,
@@ -715,7 +716,7 @@ export async function generateMetadata({ params }: PageProps) {
     ],
     openGraph: {
       title: `Buy a Home in ${city.name}, TN Without a Buyer's Agent`,
-      description: `Illustrative fee comparison for ${city.name}: ~3% buyer-side fee about $${formattedBuyerSide} vs BuyUnrepped flat fee up to $${BUYUNREPPED_MAX_TOTAL.toLocaleString()}. Commissions negotiable; savings not guaranteed.`,
+      description: `Illustrative fee comparison for ${city.name}: ~3% buyer-side fee about $${formattedBuyerSide} vs BuyUnrepped recommended Offer + Transaction Bundle at $${BUNDLE_FEE.toLocaleString()} (Standard). Commissions negotiable; savings not guaranteed.`,
       url: `${BASE_URL}/locations/${city.slug}`,
     },
     alternates: {
@@ -747,7 +748,7 @@ export default async function CityPage({ params }: PageProps) {
       name: city.name,
       containedInPlace: { '@type': 'State', name: 'Tennessee' },
     },
-    priceRange: '$995 – $3,490',
+    priceRange: '$650 – $3,990',
     serviceType: 'Real Estate Transaction Support',
   };
 
@@ -786,8 +787,10 @@ export default async function CityPage({ params }: PageProps) {
         </h1>
         <p className="text-xl text-gray-500 mb-2">
           On a ${formattedPrice} {city.name} home, a hypothetical ~3% buyer-side fee is about{' '}
-          <strong className="text-brand-blue">${formattedBuyerSide}</strong>. BuyUnrepped&apos;s flat fee is up to{' '}
-          <strong className="text-brand-navy">${BUYUNREPPED_MAX_TOTAL.toLocaleString()}</strong> — an illustrative
+          <strong className="text-brand-blue">${formattedBuyerSide}</strong>. BuyUnrepped&apos;s recommended Offer +
+          Transaction Bundle is{' '}
+          <strong className="text-brand-navy">${BUNDLE_FEE.toLocaleString()}</strong> at Standard pricing — an
+          illustrative
           difference of about <strong className="text-brand-blue">${formattedNet}</strong>.
         </p>
         <p className="text-sm text-gray-400 mb-8">
@@ -845,9 +848,8 @@ export default async function CityPage({ params }: PageProps) {
             <h2 className="text-4xl font-bold mt-4 mb-6">Illustrative Fee Comparison in {city.name}</h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
               On a ${formattedPrice} {city.name} home, a hypothetical buyer-side fee illustrated at ~3% is about $
-              {formattedBuyerSide}. BuyUnrepped&apos;s flat fee is ${OFFER_FEE.toLocaleString()} for the Offer Package
-              plus ${TRANSACTION_FEE_FULL.toLocaleString()} for optional Transaction Guidance ($
-              {BUYUNREPPED_MAX_TOTAL.toLocaleString()} combined) — an illustrative difference of about $
+              {formattedBuyerSide}. BuyUnrepped&apos;s recommended Offer + Transaction Bundle is $
+              {BUNDLE_FEE.toLocaleString()} at Standard — an illustrative difference of about $
               {formattedNet}. How any fee difference appears in your transaction varies and is not guaranteed.
             </p>
             <div className="grid sm:grid-cols-3 gap-6 mb-8">
@@ -860,17 +862,16 @@ export default async function CityPage({ params }: PageProps) {
                 <p className="text-3xl font-bold text-red-400">${formattedBuyerSide}</p>
               </div>
               <div className="bg-brand-blue rounded-2xl p-6">
-                <p className="text-sm text-blue-100 mb-1">BuyUnrepped flat fee (max)</p>
-                <p className="text-3xl font-bold">${BUYUNREPPED_MAX_TOTAL.toLocaleString()}</p>
+                <p className="text-sm text-blue-100 mb-1">BuyUnrepped bundle (recommended)</p>
+                <p className="text-3xl font-bold">${BUNDLE_FEE.toLocaleString()}</p>
               </div>
             </div>
             <p className="text-xs text-gray-400 mb-8 leading-relaxed">
               Illustration only. Buyer-side commissions are fully negotiable and are not set by law, any MLS, or any
               REALTOR® association; actual amounts vary by transaction. Illustrative difference (${formattedNet}) =
-              hypothetical buyer-side fee minus BuyUnrepped&apos;s combined flat fee; savings are not guaranteed.
-              BuyUnrepped&apos;s flat fee is ${OFFER_FEE.toLocaleString()} for the Offer Package and $
-              {TRANSACTION_FEE_FULL.toLocaleString()} for optional Transaction Guidance ($
-              {BUYUNREPPED_MAX_TOTAL.toLocaleString()} combined).
+              hypothetical buyer-side fee minus BuyUnrepped&apos;s bundle fee; savings are not guaranteed.
+              BuyUnrepped&apos;s recommended bundle is ${BUNDLE_FEE.toLocaleString()} at Standard (à la carte up to $
+              {BUYUNREPPED_ALACARTE_TOTAL.toLocaleString()}).
             </p>
             <LocationContactButton
               cityName={city.name}

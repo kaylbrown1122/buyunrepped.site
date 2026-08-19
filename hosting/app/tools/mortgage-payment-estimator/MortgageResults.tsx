@@ -3,7 +3,7 @@
 import React from 'react';
 import { Home, DollarSign, Info } from 'lucide-react';
 import { MortgageResults } from './types';
-import { BUYUNREPPED_MAX_TOTAL } from '../../../lib/fees';
+import { BUNDLE_FEE } from '../../../lib/fees';
 import ToolResultsEmailCapture from '../../components/ToolResultsEmailCapture';
 
 interface Props {
@@ -170,7 +170,9 @@ export default function MortgageResultsPanel({ results }: Props) {
         {/* BuyUnrepped callout */}
         <div className="bg-brand-navy rounded-xl p-6 text-white">
           <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">BuyUnrepped support</p>
-          <p className="text-lg font-bold mb-1">Non-representational support for up to ${BUYUNREPPED_MAX_TOTAL.toLocaleString()} in flat fees.</p>
+          <p className="text-lg font-bold mb-1">
+            Recommended Offer + Transaction Bundle: ${BUNDLE_FEE.toLocaleString()}.
+          </p>
           <p className="text-sm text-gray-400 leading-relaxed">
             Buyer-side compensation is negotiable and varies by transaction. BuyUnrepped does not act as your
             buyer&apos;s agent or negotiate on your behalf.

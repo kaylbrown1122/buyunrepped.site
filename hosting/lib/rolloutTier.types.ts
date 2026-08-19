@@ -5,6 +5,7 @@ export type RolloutTierPublic = {
   tier_name: string;
   offer_price_cents: number;
   transaction_price_cents: number;
+  bundle_price_cents: number;
   status: RolloutTierStatus;
 };
 

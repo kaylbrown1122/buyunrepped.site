@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "verify:outreach": "node --env-file=.env.local scripts/verify-outreach-setup.mjs"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",

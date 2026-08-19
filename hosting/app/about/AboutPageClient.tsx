@@ -6,7 +6,7 @@ import SectionBadge from '../components/SectionBadge';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getSignInUrl } from '../../lib/appUrl';
-import { OFFER_FEE, TRANSACTION_FEE_FULL } from '../../lib/fees';
+import { OFFER_FEE, TRANSACTION_FEE_FULL, BUNDLE_FEE } from '../../lib/fees';
 import { formatTierDollars, getActiveTier } from '../../lib/rolloutTier.types';
 import type { RolloutTiersResult } from '../../lib/rolloutTier.types';
 import Reveal from '../components/Reveal';
@@ -245,20 +245,24 @@ export default function AboutPageClient({ tiersData }: { tiersData: RolloutTiers
               <p>
                 {activeTier ? (
                   <>
-                    Launch tier pricing is available during early access, currently{' '}
-                    {formatTierDollars(activeTier.offer_price_cents)} for the Offer Package and{' '}
-                    {formatTierDollars(activeTier.transaction_price_cents)} for Transaction Guidance. The standard
-                    price after launch is ${OFFER_FEE.toLocaleString()} upfront for the offer package, then $
-                    {TRANSACTION_FEE_FULL.toLocaleString()} for Transaction Guidance after acceptance.
+                    Launch tier pricing is available during early access —{' '}
+                    {formatTierDollars(activeTier.bundle_price_cents)} for the recommended Offer + Transaction Bundle,
+                    or {formatTierDollars(activeTier.offer_price_cents)} /{' '}
+                    {formatTierDollars(activeTier.transaction_price_cents)} à la carte. Standard after launch: $
+                    {BUNDLE_FEE.toLocaleString()} bundle or ${OFFER_FEE.toLocaleString()} + $
+                    {TRANSACTION_FEE_FULL.toLocaleString()} separately.
                   </>
                 ) : (
                   <>
+                    Recommended{' '}
+                    <span className="font-semibold text-brand-navy">${BUNDLE_FEE.toLocaleString()} bundle</span> — one
+                    payment, coordination starts when you&apos;re under contract. Or{' '}
                     <span className="font-semibold text-brand-navy">${OFFER_FEE.toLocaleString()} upfront</span> for
-                    the offer package when you start in the app. After acceptance, the{' '}
+                    the offer package, then{' '}
                     <span className="font-semibold text-brand-navy">
-                      ${TRANSACTION_FEE_FULL.toLocaleString()} Transaction Guidance fee
+                      ${TRANSACTION_FEE_FULL.toLocaleString()} Transaction Guidance
                     </span>{' '}
-                    unlocks coordination through closing with flat-fee pricing, not commission-based pricing.
+                    after acceptance.
                   </>
                 )}
               </p>

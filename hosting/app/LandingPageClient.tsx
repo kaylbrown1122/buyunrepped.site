@@ -10,7 +10,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { getFitCheckUrl, getSignInUrl } from '../lib/appUrl';
-import { OFFER_FEE, TRANSACTION_FEE_FULL } from '../lib/fees';
+import { OFFER_FEE, TRANSACTION_FEE_FULL, BUNDLE_FEE, BUYUNREPPED_ALACARTE_TOTAL } from '../lib/fees';
 import type { RolloutTiersResult } from '../lib/rolloutTier.types';
 
 export default function LandingPageClient({ tiersData }: { tiersData: RolloutTiersResult }) {
@@ -35,15 +35,15 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
     },
     {
       q: 'How does the flat fee compare to a traditional commission?',
-      a: "This is an illustrative comparison: a hypothetical 3% buyer-side fee on a $500K home is $15,000, while BuyUnrepped standard pricing is up to $3,490 for both tiers combined after launch. Buyer-side compensation is negotiable and varies by transaction; savings are not guaranteed.",
+      a: `This is an illustrative comparison: a hypothetical 3% buyer-side fee on a $500K home is $15,000, while BuyUnrepped's recommended bundle at Standard is $${BUNDLE_FEE.toLocaleString()}. Buyer-side compensation is negotiable and varies by transaction; savings are not guaranteed.`,
     },
     {
       q: "What's included in each tier?",
-      a: 'Launch tier pricing applies during early access. The standard price after launch is $995 for the Offer Package and $2,495 for Transaction Guidance. Each includes offer-preparation guidance using Tennessee REALTORS® forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). You decide the terms, approve the documents, and submit your own offer. CMAs and BPOs are informational only, not appraisals or guarantees of value.',
+      a: `Launch tier pricing applies during early access. Standard pricing after launch: Offer Package $${OFFER_FEE.toLocaleString()}, Transaction Guidance $${TRANSACTION_FEE_FULL.toLocaleString()}, or the recommended Offer + Transaction Bundle $${BUNDLE_FEE.toLocaleString()} (one payment — coordination starts when you're under contract). Each includes offer-preparation guidance using Tennessee REALTORS® forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). CMAs and BPOs are informational only, not appraisals or guarantees of value.`,
     },
     {
-      q: 'When is $995 due? When is the coordination fee due?',
-      a: `$${OFFER_FEE} is the standard Offer Package price after launch and is due upfront when you start in the app. The $${TRANSACTION_FEE_FULL.toLocaleString()} Transaction Guidance fee is due after your offer is accepted, not at signup. During launch, your active tier price applies at checkout.`,
+      q: 'When do I pay?',
+      a: `Bundle buyers pay once at signup ($${BUNDLE_FEE.toLocaleString()} at Standard) — no second checkout after acceptance. À la carte: $${OFFER_FEE.toLocaleString()} for the Offer Package upfront, then $${TRANSACTION_FEE_FULL.toLocaleString()} for Transaction Guidance after acceptance. During launch, your active tier price applies at checkout.`,
     },
     {
       q: 'Who is behind BuyUnrepped?',
@@ -51,7 +51,7 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
     },
     {
       q: 'Where is BuyUnrepped available?',
-      a: 'Early access · Middle Tennessee. We are rolling out in phases across the Nashville metro and surrounding counties. Start with a Fit Check if you are unsure whether BuyUnrepped is the right fit for your purchase.',
+      a: 'Early access · Middle Tennessee — Nashville, Franklin, Murfreesboro, Brentwood, Mt Juliet, Hendersonville, Lebanon, Nolensville, Smyrna, Gallatin, Clarksville, and surrounding counties. Start with a Fit Check if you are unsure whether BuyUnrepped is the right fit for your purchase.',
     },
   ];
 
@@ -196,11 +196,16 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
               </h2>
               <p className="mx-auto mt-2 max-w-xl text-[13px] leading-snug text-gray-500">
                 Buyer-side compensation is negotiable and not set by law or any MLS — it may be $0, paid by the seller
-                as a concession, or handled differently post-settlement. BuyUnrepped is flat: ${OFFER_FEE.toLocaleString()} to build
-                and submit your offer, ${TRANSACTION_FEE_FULL.toLocaleString()} only if it&apos;s accepted and you
-                want full coordination. Slide to your price.
+                as a concession, or handled differently post-settlement. BuyUnrepped is flat: the recommended bundle is $
+                {BUNDLE_FEE.toLocaleString()} (offer + transaction, one payment) or ${OFFER_FEE.toLocaleString()} for the
+                offer alone if you add Transaction Guidance later. Slide to your price.
               </p>
             </div>
+
+            <p className="mx-auto mt-4 max-w-2xl text-center text-[13px] leading-snug text-gray-500">
+              Recommended bundle: ${BUNDLE_FEE.toLocaleString()} all in · À la carte up to $
+              {BUYUNREPPED_ALACARTE_TOTAL.toLocaleString()}. Illustration only.
+            </p>
 
             <SavingsCalculator />
 

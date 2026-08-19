@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { TrendingUp, ClipboardCheck, Search, Calendar, MessageSquare, Home } from 'lucide-react';
 import { getSignInUrl } from '../../lib/appUrl';
-import { OFFER_FEE, TRANSACTION_FEE_FULL, BUYUNREPPED_MAX_TOTAL } from '../../lib/fees';
+import { OFFER_FEE, TRANSACTION_FEE_FULL, BUNDLE_FEE, BUYUNREPPED_ALACARTE_TOTAL } from '../../lib/fees';
 import { formatTierDollars, getActiveTier } from '../../lib/rolloutTier.types';
 import type { RolloutTiersResult } from '../../lib/rolloutTier.types';
 import Reveal from '../components/Reveal';
@@ -283,81 +283,87 @@ export default function StartPageClient({ tiersData }: { tiersData: RolloutTiers
               Flat-fee support. <span className="text-brand-gold">No commission.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-center text-[1rem] leading-relaxed text-white/70">
+              Already toured a home? The recommended{' '}
+              <strong className="text-brand-gold">Offer + Transaction Bundle</strong> is one payment — coordination
+              starts when you&apos;re under contract, no second checkout.
               {activeTier ? (
                 <>
-                  Launch tier pricing:{' '}
-                  <strong className="text-white">{formatTierDollars(activeTier.offer_price_cents)}</strong> offer
-                  package and{' '}
-                  <strong className="text-white">
-                    {formatTierDollars(activeTier.transaction_price_cents)}
-                  </strong>{' '}
-                  Transaction Guidance. Standard pricing after launch is{' '}
-                  <strong className="text-white">${OFFER_FEE}</strong> and{' '}
-                  <strong className="text-white">${TRANSACTION_FEE_FULL.toLocaleString()}</strong>, up to{' '}
-                  <strong className="text-brand-gold">${BUYUNREPPED_MAX_TOTAL.toLocaleString()}</strong> all in
-                  versus a hypothetical ~3% buyer-side fee.
+                  {' '}
+                  Launch tier bundle:{' '}
+                  <strong className="text-white">{formatTierDollars(activeTier.bundle_price_cents)}</strong>. Standard:{' '}
+                  <strong className="text-white">${BUNDLE_FEE.toLocaleString()}</strong> bundle vs $
+                  {BUYUNREPPED_ALACARTE_TOTAL.toLocaleString()} à la carte.
                 </>
               ) : (
                 <>
-                  <strong className="text-white">${OFFER_FEE}</strong> ready-to-submit offer (strategy, CMA + BPO,
-                  Tennessee forms). <strong className="text-white">${TRANSACTION_FEE_FULL.toLocaleString()}</strong>{' '}
-                  Transaction Guidance with platform, templates, self-guided help, and broker support.{' '}
-                  <strong className="text-brand-gold">${BUYUNREPPED_MAX_TOTAL.toLocaleString()}</strong> all in versus
-                  a hypothetical ~3% buyer-side fee.
+                  {' '}
+                  Standard bundle: <strong className="text-white">${BUNDLE_FEE.toLocaleString()}</strong>.
                 </>
               )}
             </p>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            <article className="mt-10 rounded-2xl border border-brand-gold/50 bg-brand-gold/[0.08] p-7 ring-1 ring-brand-gold/30 sm:p-8">
+              <span className="inline-flex rounded-full bg-brand-gold px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-brand-navy">
+                Recommended
+              </span>
+              <h3 className="mt-3 text-xl font-bold text-white">Offer + Transaction Bundle</h3>
+              <p className="mt-2 text-3xl font-extrabold text-white">
+                {activeTier ? formatTierDollars(activeTier.bundle_price_cents) : `$${BUNDLE_FEE.toLocaleString()}`}
+                {activeTier && (
+                  <span className="ml-2 text-base font-semibold text-white/60">
+                    · ${BUNDLE_FEE.toLocaleString()} Standard
+                  </span>
+                )}
+              </p>
+              <p className="mt-3 text-[14px] leading-relaxed text-white/80">
+                Up to two offers, full transaction coordination, one restart if the deal falls through. No paywall
+                after acceptance.
+              </p>
+              <a
+                href={signInUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
+              >
+                Login →
+              </a>
+            </article>
+
+            <p className="mt-8 text-center text-[10px] font-bold uppercase tracking-[0.22em] text-white/50">
+              Or pay as you go
+            </p>
+
+            <div className="mt-4 grid gap-5 sm:grid-cols-2">
               <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-7">
                 <h3 className="text-lg font-bold text-white">Offer Package</h3>
                 <p className="mt-2 text-3xl font-extrabold text-white">
                   <sup className="text-lg font-semibold text-white/60">$</sup>{OFFER_FEE}
                 </p>
+                <p className="mt-2 text-[13px] text-white/60">Second payment for Transaction Guidance after acceptance</p>
                 <ul className="mt-5 space-y-2 text-[14px] leading-relaxed text-white/75">
                   <li>Offer-preparation guidance + Tennessee residential forms</li>
                   <li>Strategy consultation</li>
                   <li>CMA + broker price opinion (BPO)</li>
                   <li>Submission guidance</li>
                 </ul>
-                <a
-                  href={signInUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-gold px-6 text-[15px] font-bold text-brand-navy transition-colors hover:bg-[#e8b93d]"
-                >
-                  Login →
-                </a>
               </div>
-              <div className="rounded-2xl border border-brand-gold/40 bg-white p-7">
-                <p className="inline-block rounded-full bg-brand-gold px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-brand-navy">
-                  After Contract
+              <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-7">
+                <h3 className="text-lg font-bold text-white">Transaction Guidance</h3>
+                <p className="mt-2 text-3xl font-extrabold text-white">
+                  <sup className="text-lg font-semibold text-white/60">$</sup>{TRANSACTION_FEE_FULL.toLocaleString()}
                 </p>
-                <h3 className="mt-3 text-lg font-bold text-brand-navy">Transaction Guidance</h3>
-                <p className="mt-2 text-3xl font-extrabold text-brand-navy">
-                  <sup className="text-lg font-semibold text-gray-400">$</sup>{TRANSACTION_FEE_FULL.toLocaleString()}
-                </p>
-                <ul className="mt-5 space-y-2 text-[14px] leading-relaxed text-gray-600">
+                <p className="mt-2 text-[13px] text-white/60">Due after your offer is accepted</p>
+                <ul className="mt-5 space-y-2 text-[14px] leading-relaxed text-white/75">
                   <li>Full coordination from mutual acceptance to closing</li>
                   <li>Platform: templates + self-guided assistance</li>
                   <li>Inspection + repair guidance</li>
                   <li>Deadlines, lender, title, closing team</li>
-                  <li>Broker support when you need it most</li>
                 </ul>
-                <a
-                  href={signInUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-6 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90"
-                >
-                  Login →
-                </a>
               </div>
             </div>
             <p className="mt-6 text-center text-[13px] text-white/50">
-              ${OFFER_FEE} offer + ${TRANSACTION_FEE_FULL.toLocaleString()} transaction = $
-              {BUYUNREPPED_MAX_TOTAL.toLocaleString()} all in. Illustration only; buyer-side compensation is
-              negotiable and varies by transaction.
+              À la carte: ${OFFER_FEE.toLocaleString()} + ${TRANSACTION_FEE_FULL.toLocaleString()} = $
+              {BUYUNREPPED_ALACARTE_TOTAL.toLocaleString()}. Illustration only; buyer-side compensation is negotiable.
             </p>
           </div>
         </Reveal>

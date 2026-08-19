@@ -8,6 +8,7 @@ import {
   getFromPriceHeadline,
   type RolloutTiersResult,
 } from '../../lib/rolloutTier.types';
+import { formatTierBundleSavings } from './BundleValuePanel';
 
 type RolloutTierLadderProps = {
   tiersData: RolloutTiersResult;
@@ -62,6 +63,11 @@ function TierRow({
   const muted = filled || tier.status === 'draft';
   const badge = tierBadge(tier, isActive, isNeutralFallback);
   const compact = variant === 'compact';
+  const savingsLabel = formatTierBundleSavings(
+    tier.offer_price_cents,
+    tier.transaction_price_cents,
+    tier.bundle_price_cents
+  );
 
   const rowClasses = compact
     ? `flex flex-col gap-2 border-b border-white/10 py-3 last:border-b-0 sm:flex-row sm:items-center sm:justify-between ${
@@ -112,10 +118,25 @@ function TierRow({
             {badge.label}
           </span>
         )}
+        {isActive && !isNeutralFallback && savingsLabel && (
+          <span
+            className={`inline-flex rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] ${
+              compact
+                ? 'bg-brand-green/20 text-white'
+                : 'bg-brand-green/10 text-[#047857]'
+            }`}
+          >
+            {savingsLabel}
+          </span>
+        )}
       </div>
       <p className={priceClasses}>
+        <span className={isActive && !isNeutralFallback ? 'font-extrabold' : ''}>
+          {formatTierDollars(tier.bundle_price_cents)} bundle
+        </span>
+        {' · '}
         {formatTierDollars(tier.offer_price_cents)} offer ·{' '}
-        {formatTierDollars(tier.transaction_price_cents)} transaction guidance
+        {formatTierDollars(tier.transaction_price_cents)} transaction
       </p>
     </div>
   );
@@ -173,6 +194,11 @@ export default function RolloutTierLadder({
           )}
           {isNeutralFallback && (
             <p className="mt-2 text-sm text-gray-500">Log in for current pricing.</p>
+          )}
+          {!isNeutralFallback && (
+            <p className="mt-2 text-sm text-gray-500">
+              Bundle includes offer + transaction — coordination starts when you&apos;re under contract.
+            </p>
           )}
         </div>
       )}

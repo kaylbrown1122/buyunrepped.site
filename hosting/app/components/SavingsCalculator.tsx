@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import {
   BUYER_AGENT_PCT_DEFAULT,
-  OFFER_FEE,
-  TRANSACTION_FEE_FULL,
   buyUnreppedTotalFull,
   savings,
   traditionalBuyerSide,
@@ -69,13 +67,13 @@ export default function SavingsCalculator() {
 
         <div className="rounded-xl border border-brand-gold/40 bg-brand-navy/5 px-2 py-2.5 ring-1 ring-brand-gold/25 sm:px-3">
           <p className="text-[8px] font-bold uppercase tracking-wide text-brand-navy sm:text-[9px]">
-            BuyUnrepped
+            Bundle (recommended)
           </p>
           <p className="mt-0.5 text-base font-extrabold tabular-nums text-brand-navy sm:text-lg">
             ${buyUnreppedTotal.toLocaleString()}
           </p>
           <p className="mt-0.5 text-[9px] leading-tight text-gray-600">
-            ${OFFER_FEE.toLocaleString()} offer · ${TRANSACTION_FEE_FULL.toLocaleString()} after
+            Offer + transaction — coordination starts when you&apos;re under contract
           </p>
         </div>
 

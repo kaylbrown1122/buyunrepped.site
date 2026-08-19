@@ -1,4 +1,5 @@
 import { getAllPosts } from '../../lib/posts';
+import { llmsPagesBlock, llmsSummaryBlock } from '../../lib/llmsCopy';
 
 export const dynamic = 'force-static';
 
@@ -7,18 +8,13 @@ export async function GET() {
 
   const header = `# BuyUnrepped
 
-> BuyUnrepped is a Tennessee-based licensed real estate brokerage (BuyUnrepped, Inc.) that helps home buyers purchase property without traditional full-service agent representation. We offer flat-fee pricing (a $995 Offer Package, plus an optional $2,495 Transaction Guidance tier) with structured, non-representational support. Early access is currently available in Middle Tennessee; contact us to confirm availability elsewhere. Fee comparisons on the site are illustrative; buyer-side compensation is negotiable and savings are not guaranteed.
+> ${llmsSummaryBlock().split('\n\n')[0]}
 
-BuyUnrepped does not act as the buyer's agent or enter into a buyer agency relationship. Instead, we provide tools, templates, and licensed expert access so buyers can navigate the home purchase process independently.
+${llmsSummaryBlock().split('\n\n').slice(1).join('\n\n')}
 
 Turnaround: most buyers go from first contact to an offer ready to send in about one day. Timing depends on how quickly the buyer provides details and signs, and is not guaranteed.
 
-## Pages
-
-- [About](https://www.buyunrepped.com/about): Our story, founder Kayla Brown, and mission to make home buying more affordable in Tennessee
-- [Pricing](https://www.buyunrepped.com/pricing): Two flat-fee tiers — the $995 Offer Package and the $2,495 Transaction Guidance — with feature comparison
-- [Savings Calculator](https://www.buyunrepped.com/savings): Interactive calculator comparing a hypothetical buyer-side fee with BuyUnrepped flat fees
-- [Contact](https://www.buyunrepped.com/contact): Get in touch — email info@buyunrepped.com or visit our Nashville office
+${llmsPagesBlock()}
 
 ## Legal
 

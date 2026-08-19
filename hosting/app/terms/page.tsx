@@ -3,6 +3,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionBadge from '../components/SectionBadge';
+import { refundPolicyParagraphs } from '../../lib/refundPolicyCopy';
 
 export default function TermsPage() {
     return (
@@ -15,7 +16,7 @@ export default function TermsPage() {
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-4">
                     Terms and Conditions of Use
                 </h1>
-                <p className="text-lg text-gray-500">Updated: July 29, 2026</p>
+                <p className="text-lg text-gray-500">Updated: August 19, 2026</p>
             </section>
 
             {/* Terms Content */}
@@ -142,13 +143,12 @@ export default function TermsPage() {
                             Any market, neighborhood, school, or other information referenced on our website or provided during a transaction is general, publicly available information offered for your independent review only. We do not steer buyers toward or away from any property or area on the basis of a protected characteristic, and we do not evaluate, rank, or recommend communities on that basis. We encourage every buyer to make an independent evaluation of any property and community, including verifying school assignments directly with the applicable school district and reviewing objective, publicly available data.
                         </p>
 
-                        <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">6. Fees; Cancellation and Refunds</h2>
-                        <p>
-                            Fees may be subject to tax and may be collected by us or by a third party through which you transact. All fees paid to BuyUnrepped are final. If you wish to cancel a paid service, contact us by email at info@buyunrepped.com; we may, in our sole discretion, issue a full or partial refund.
-                        </p>
-                        <p>
-                            Two limits apply without exception: the Offer Package fee becomes nonrefundable once your offer strategy call takes place, or once you waive or miss that call, because your broker prepares your offer strategy in advance of the scheduled call; and the Transaction Guidance fee becomes nonrefundable once your repair proposal has been sent. After either event, no refund of the corresponding fee will be issued for any reason. Other service fees, including consultation rescheduling fees, are as stated at the time of purchase and are nonrefundable once the service has been performed.
-                        </p>
+                        <h2 id="fees-cancellation-refunds" className="text-2xl font-bold text-brand-navy mt-12 mb-4">6. Fees; Cancellation and Refunds</h2>
+                        {refundPolicyParagraphs().map((paragraph) => (
+                          <p key={paragraph.slice(0, 48)} className="mb-4">
+                            {paragraph}
+                          </p>
+                        ))}
 
                         <h2 className="text-2xl font-bold text-brand-navy mt-12 mb-4">7. Termination; Modifications</h2>
                         <p>
