@@ -1,3 +1,5 @@
+const path = require('path');
+
 const contentSecurityPolicy = `
     default-src 'self';
     script-src 'self' 'unsafe-inline' https://assets.calendly.com;
@@ -27,6 +29,9 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    turbopack: {
+        root: path.resolve(__dirname),
+    },
     images: {
         remotePatterns: [
             {
