@@ -86,6 +86,27 @@ const pricingFaqs: { q: string; a: React.ReactNode }[] = [
     ),
   },
   {
+    q: 'Why choose the bundle?',
+    a: (
+      <>
+        <p>
+          The Offer + Transaction Bundle is one upfront payment. When your offer is accepted, coordination starts
+          immediately — no second checkout or paywall while deadlines tick. At Standard pricing it is $
+          {BUNDLE_FEE.toLocaleString()} versus ${(OFFER_FEE + TRANSACTION_FEE_FULL).toLocaleString()} à la carte, and
+          it includes up to two offers plus a restart if the deal falls through before closing.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'What happens when my offer is accepted?',
+    a: 'Bundle buyers: upload your contract and we start coordinating right away — transaction support is already paid. À la carte buyers: you complete a second payment for Transaction Guidance before coordination unlocks.',
+  },
+  {
+    q: 'What is launch tier pricing?',
+    a: 'Launch tiers fill in order: Founding, Level 2, Level 3, then Standard. Prices are limited and subject to availability. The price shown at checkout is the price that applies to your purchase.',
+  },
+  {
     q: 'How does the tiered pricing work?',
     a: (
       <>
@@ -140,16 +161,36 @@ const pricingFaqs: { q: string; a: React.ReactNode }[] = [
     ),
   },
   {
+    q: 'What does the Offer Package include?',
+    a: `The standard Offer Package after launch is $${OFFER_FEE.toLocaleString()}. It includes offer-preparation guidance using Tennessee residential forms, a strategy consultation, a comparative market analysis, and a broker price opinion (BPO). You decide the terms, approve the documents, and submit your own offer.`,
+  },
+  {
+    q: 'What does Transaction Guidance include?',
+    a: `The standard Transaction Guidance price after launch is $${TRANSACTION_FEE_FULL.toLocaleString()}. It includes full coordination from contract through closing, platform access with templates and self-guided assistance, and direct broker support when you need it most.`,
+  },
+  {
+    q: 'When do I pay?',
+    a: `Bundle: one payment at signup ($${BUNDLE_FEE.toLocaleString()} at Standard). À la carte: $${OFFER_FEE.toLocaleString()} for the Offer Package upfront, then $${TRANSACTION_FEE_FULL.toLocaleString()} for Transaction Guidance after acceptance. During launch, your active tier price applies at checkout.`,
+  },
+  {
     q: 'How fast can I get an offer out?',
-    a: 'Usually about a day. Most buyers are ready within 24 hours, depending on property complexity and timely inputs.',
+    a: 'Usually about a day. From the time you reach out, most buyers are ready to send an offer within 24 hours. That depends on you getting us your details and being ready to sign. Timing is not guaranteed and can run longer on complex properties or if we are waiting on you, your lender, or the listing side.',
   },
   {
     q: 'How does the flat fee compare to a traditional commission?',
-    a: 'Illustrative example: a hypothetical 3% buyer-side fee on a $500K home is $15,000. Buyer-side compensation is negotiable and varies; savings are not guaranteed.',
+    a: `This is an illustrative comparison: a hypothetical 3% buyer-side fee on a $500K home is $15,000, while BuyUnrepped's recommended bundle at Standard is $${BUNDLE_FEE.toLocaleString()}. Buyer-side compensation is negotiable and varies by transaction; savings are not guaranteed.`,
   },
   {
     q: 'Where is BuyUnrepped available?',
-    a: 'Early access: Middle Tennessee — Nashville, Franklin, Murfreesboro, Brentwood, Mt Juliet, Hendersonville, Lebanon, Nolensville, Smyrna, Gallatin, Clarksville, and surrounding counties.',
+    a: 'Early access · Middle Tennessee — Nashville, Franklin, Murfreesboro, Brentwood, Mt Juliet, Hendersonville, Lebanon, Nolensville, Smyrna, Gallatin, Clarksville, and surrounding counties.',
+  },
+  {
+    q: 'What data sources power the CMA?',
+    a: 'Realtracs/MLS where we have access; otherwise public records. We do not promise a universal MLS agent sheet on every property.',
+  },
+  {
+    q: 'How should I read the savings calculator?',
+    a: 'The calculator uses an ~3% buyer-side fee illustration. It compares that line item to the recommended bundle price, not your full transaction cost.',
   },
   {
     q: 'Who is the public point of contact?',
@@ -184,45 +225,22 @@ const pricingFaqs: { q: string; a: React.ReactNode }[] = [
     ),
   },
   {
-    q: 'What if I need to cancel or want a refund?',
+    q: 'Is there a free or lite offer option?',
+    a: `No. BuyUnrepped offers a single offer package at signup during launch tiers, with no free estimate or lite tier. The standard price after launch is $${OFFER_FEE.toLocaleString()}.`,
+  },
+  {
+    q: 'What if I need to cancel, or want a refund?',
     a: (
       <>
         <p>
-          Email info@buyunrepped.com to cancel. Here&apos;s a summary of the current policy:
-        </p>
-        <p className="mt-2">
-          <strong>Offer Package:</strong> Full refund available until your broker price opinion (BPO) is published. After
-          the BPO is published, the Offer Package fee is nonrefundable.
-        </p>
-        <p className="mt-2">
-          <strong>Transaction Guidance:</strong> Not refunded in cash. If your transaction ends before closing, you may
-          qualify for an account credit based on how far coordination progressed:
-        </p>
-        <ul className="mt-1.5 list-disc space-y-1 pl-5">
-          <li>
-            <strong>100%</strong> — offer rejected/cancelled, or accepted but never onboarded
-          </li>
-          <li>
-            <strong>75%</strong> — transaction onboarded but ended before much coordination was delivered
-          </li>
-          <li>
-            <strong>50%</strong> — inspections coordinated but deal ended before repair negotiation
-          </li>
-          <li>
-            <strong>20%</strong> — repair negotiation underway or further; issued at our discretion
-          </li>
-        </ul>
-        <p className="mt-2">
-          Credits are issued after we review a verifiable uploaded termination notice and signed earnest money release.
-          Credits can be used toward a future offer, transaction, or bundle.
-        </p>
-        <p className="mt-2">
-          <strong>Bundle:</strong> If you don&apos;t use your second offer or your restart, those don&apos;t convert to
-          cash or credit — they&apos;re bundle perks, not refundable line items. If your deal falls through and you still
-          have your restart available, you use the restart instead of the credit ladder above.
-        </p>
-        <p className="mt-2 text-[11px] text-gray-400">
-          This is a summary and is subject to change. The full, binding refund and cancellation terms are in our{' '}
+          Fees are subject to our cancellation and refund policy. Email{' '}
+          <a
+            href="mailto:info@buyunrepped.com"
+            className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
+          >
+            info@buyunrepped.com
+          </a>{' '}
+          if you need to cancel. Full refund and cancellation terms are in our{' '}
           <Link
             href="/terms#fees-cancellation-refunds"
             className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
@@ -231,6 +249,21 @@ const pricingFaqs: { q: string; a: React.ReactNode }[] = [
           </Link>
           .
         </p>
+      </>
+    ),
+  },
+  {
+    q: 'Something look wrong?',
+    a: (
+      <>
+        During launch, email{' '}
+        <a
+          href="mailto:info@buyunrepped.com"
+          className="font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue"
+        >
+          info@buyunrepped.com
+        </a>{' '}
+        if a price, screen, or data point does not look right so we can assist and fix the issue.
       </>
     ),
   },
