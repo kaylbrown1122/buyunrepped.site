@@ -189,7 +189,11 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                   the transaction when bought together).
                 </p>
                 <p className="mt-4 text-[1.15rem] font-extrabold text-brand-gold">
-                  That&apos;s a savings of {formatTierDollars(foundingSavingsCents)} off Standard bundle pricing!
+                  That&apos;s {formatTierDollars(foundingSavingsCents)} saved on our standard{' '}
+                  {formatTierDollars(standardBundleCents)} price!
+                </p>
+                <p className="mt-2 text-[14px] font-semibold leading-relaxed text-white/80">
+                  (and almost $20k less than a full-service buyer&apos;s agent on a $750k home!)
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-white/75">
                   If you&apos;ve found the house — it&apos;s time to buy it.
