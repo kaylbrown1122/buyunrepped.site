@@ -14,7 +14,7 @@ import { OFFER_FEE, TRANSACTION_FEE_FULL, BUNDLE_FEE, BUYUNREPPED_ALACARTE_TOTAL
 const INTRO_BUNDLE = 1225;
 const INTRO_OFFER = 650;
 const INTRO_TXN = 875;
-const INTRO_BUNDLE_SAVE = INTRO_OFFER + INTRO_TXN - INTRO_BUNDLE;
+const INTRO_BUNDLE_SAVE = BUNDLE_FEE - INTRO_BUNDLE;
 
 export default function LandingPageClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -185,7 +185,8 @@ export default function LandingPageClient() {
                   transaction when bought together).
                 </p>
                 <p className="mt-4 text-[1.15rem] font-extrabold text-brand-gold">
-                  That&apos;s a savings of ${INTRO_BUNDLE_SAVE.toLocaleString()}!
+                  That&apos;s a savings of ${INTRO_BUNDLE_SAVE.toLocaleString()} off the standard $
+                  {BUNDLE_FEE.toLocaleString()} bundle!
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-white/75">
                   If you&apos;ve found the house — it&apos;s time to buy it.
