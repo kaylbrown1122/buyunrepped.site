@@ -172,13 +172,13 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
 
               </div>
 
-              {/* Right: founding rollout pricing */}
+              {/* Right: introductory pricing */}
               <div className="rounded-2xl border border-white/15 bg-white/[0.08] p-6 sm:p-7">
                 <p className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-navy">
-                  🚀 Founding tier pricing
+                  🚀 Introductory pricing
                 </p>
                 <p className="mt-4 text-[1.05rem] font-semibold leading-snug text-white">
-                  Founding tiered rollout pricing is available for a limited number of users.
+                  Introductory prices are available for a limited number of users.
                 </p>
                 <p className="mt-3 text-[2rem] font-extrabold tracking-tight text-white">
                   {formatTierDollars(foundingBundleCents)}
