@@ -194,8 +194,8 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                   And on a $750K home, that&apos;s nearly $20,000 less than a traditional full-service buyer&apos;s
                   agent.
                 </p>
-                <p className="mt-4 text-[15px] leading-relaxed text-white/75">
-                  If you&apos;ve found the house, it&apos;s time to buy it.
+                <p className="mt-4 text-[1.05rem] font-extrabold leading-snug text-white">
+                  If you&apos;ve found the house, it&apos;s time to buy it!
                 </p>
                 <Link
                   href="/pricing"
