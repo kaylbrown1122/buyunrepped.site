@@ -177,15 +177,18 @@ export default function LandingPageClient({ tiersData }: { tiersData: RolloutTie
                   🚀 Introductory pricing
                 </p>
                 <p className="mt-4 text-[1.15rem] font-semibold leading-snug text-white">
-                  Buy your home from offer to closing for just {formatTierDollars(foundingBundleCents)}.
+                  Buy your home from offer to closing for just{' '}
+                  <span className="font-semibold text-white/50 line-through">
+                    {formatTierDollars(standardBundleCents)}
+                  </span>{' '}
+                  <span className="font-extrabold text-white">{formatTierDollars(foundingBundleCents)}</span>.
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-white/80">
-                  {formatTierDollars(foundingBundleCents - foundingTxnCents)} for your offer +{' '}
-                  {formatTierDollars(foundingTxnCents)} for transaction guidance when purchased together.
+                  That&apos;s only {formatTierDollars(foundingBundleCents - foundingTxnCents)} for your offer +{' '}
+                  {formatTierDollars(foundingTxnCents)} for transaction guidance when purchased together today!
                 </p>
                 <p className="mt-4 text-[1.15rem] font-extrabold text-brand-gold">
-                  Save {formatTierDollars(foundingSavingsCents)} off our standard{' '}
-                  {formatTierDollars(standardBundleCents)} price.
+                  That&apos;s an instant savings of {formatTierDollars(foundingSavingsCents)}!!
                 </p>
                 <p className="mt-2 text-[14px] font-semibold leading-relaxed text-white/80">
                   And on a $750K home, that&apos;s nearly $20,000 less than a traditional full-service buyer&apos;s
