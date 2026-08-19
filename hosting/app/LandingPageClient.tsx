@@ -10,13 +10,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { getFitCheckUrl, getSignInUrl } from '../lib/appUrl';
 import { OFFER_FEE, TRANSACTION_FEE_FULL, BUNDLE_FEE, BUYUNREPPED_ALACARTE_TOTAL } from '../lib/fees';
+import { formatTierDollars, getActiveTier, type RolloutTiersResult } from '../lib/rolloutTier.types';
 
-const INTRO_BUNDLE = 1225;
-const INTRO_OFFER = 650;
-const INTRO_TXN = 875;
-const INTRO_BUNDLE_SAVE = BUNDLE_FEE - INTRO_BUNDLE;
-
-export default function LandingPageClient() {
+export default function LandingPageClient({ tiersData }: { tiersData: RolloutTiersResult }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -60,6 +56,14 @@ export default function LandingPageClient() {
 
   const fitCheckUrl = getFitCheckUrl();
   const signInUrl = getSignInUrl();
+  const foundingTier =
+    tiersData.tiers.find((tier) => tier.tier_name === 'Founding') ?? getActiveTier(tiersData);
+  const standardTier = tiersData.tiers.find((tier) => tier.tier_name === 'Standard');
+  const foundingBundleCents = foundingTier?.bundle_price_cents ?? 122500;
+  const foundingOfferCents = foundingTier?.offer_price_cents ?? 65000;
+  const foundingTxnCents = foundingTier?.transaction_price_cents ?? 87500;
+  const standardBundleCents = standardTier?.bundle_price_cents ?? BUNDLE_FEE * 100;
+  const foundingSavingsCents = Math.max(standardBundleCents - foundingBundleCents, 0);
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -168,25 +172,24 @@ export default function LandingPageClient() {
 
               </div>
 
-              {/* Right: intro pricing */}
+              {/* Right: founding rollout pricing */}
               <div className="rounded-2xl border border-white/15 bg-white/[0.08] p-6 sm:p-7">
                 <p className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-navy">
-                  🚀 Limited intro pricing
+                  🚀 Founding tier pricing
                 </p>
                 <p className="mt-4 text-[1.05rem] font-semibold leading-snug text-white">
-                  Introductory pricing is available for a limited number of users.
+                  Founding tiered rollout pricing is available for a limited number of users.
                 </p>
                 <p className="mt-3 text-[2rem] font-extrabold tracking-tight text-white">
-                  ${INTRO_BUNDLE.toLocaleString()}
+                  {formatTierDollars(foundingBundleCents)}
                 </p>
                 <p className="mt-1 text-[15px] leading-relaxed text-white/80">
-                  Go from offer to closed for as little as ${INTRO_BUNDLE.toLocaleString()}
-                  {' '}(${INTRO_OFFER.toLocaleString()} for the offer and ${INTRO_TXN.toLocaleString()} for the
-                  transaction when bought together).
+                  Go from offer to closed for as little as {formatTierDollars(foundingBundleCents)} (
+                  {formatTierDollars(foundingOfferCents)} for the offer and {formatTierDollars(foundingTxnCents)} for
+                  the transaction when bought together).
                 </p>
                 <p className="mt-4 text-[1.15rem] font-extrabold text-brand-gold">
-                  That&apos;s a savings of ${INTRO_BUNDLE_SAVE.toLocaleString()} off the standard $
-                  {BUNDLE_FEE.toLocaleString()} bundle!
+                  That&apos;s a savings of {formatTierDollars(foundingSavingsCents)} off Standard bundle pricing!
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-white/75">
                   If you&apos;ve found the house — it&apos;s time to buy it.
