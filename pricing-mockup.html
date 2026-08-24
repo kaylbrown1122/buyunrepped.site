@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pricing Mockup — BuyUnrepped</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'brand-navy': '#1b3a4b',
+        'brand-blue': '#39b6ff',
+        'brand-gray': '#f7f8fa',
+      },
+      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+    },
+  },
+};
+</script>
+<style>
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: '+'; float: right; font-size: 1.25rem; font-weight: 700; color: #94a3b8; transition: transform .2s; }
+  details[open] summary::after { content: '\2212'; }
+</style>
+</head>
+
+<body class="min-h-screen bg-white font-sans text-brand-navy antialiased">
+
+<!-- HEADER -->
+<header class="border-b border-gray-100">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <span class="text-lg font-extrabold tracking-tight text-brand-navy">BuyUnrepped</span>
+    <nav class="hidden gap-6 text-sm font-medium text-gray-500 sm:flex">
+      <a href="#" class="hover:text-brand-navy">How it works</a>
+      <a href="#" class="hover:text-brand-navy">Resources</a>
+      <a href="#" class="hover:text-brand-navy">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- SECTION 1 — HERO + TIER LADDER -->
+  <section class="border-b border-gray-100 bg-white px-4 pb-10 pt-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Pricing</p>
+      <h1 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl md:text-[2.5rem]">
+        Flat-fee home buying support
+      </h1>
+      <p class="mt-4 text-[1.05rem] leading-relaxed text-gray-500">
+        No commission. One payment &mdash; coordination starts when you're under contract.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-10 max-w-4xl">
+      <div class="rounded-2xl border border-gray-200 bg-brand-gray p-5 sm:p-8">
+        <div class="mb-5 text-center">
+          <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Launch tier pricing</p>
+          <p class="mt-2 text-2xl font-extrabold tracking-tight">From $650</p>
+          <p class="mt-1 text-sm text-gray-500">Tiers fill in order. The price at checkout is the price you pay.</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <div class="min-w-[34rem]">
+            <div class="grid grid-cols-[9rem_1fr_1fr_1fr] items-end gap-x-2 px-3 pb-2 sm:grid-cols-[10.5rem_1fr_1fr_1fr] sm:px-4">
+              <div></div>
+              <p class="text-center text-[9px] font-bold uppercase leading-snug tracking-[0.06em] text-gray-400 sm:text-[10px]">
+                bundled<br>offer+transaction+do-over
+              </p>
+              <p class="text-center text-[9px] font-bold uppercase leading-snug tracking-[0.06em] text-gray-400 sm:text-[10px]">
+                offer only
+              </p>
+              <p class="text-center text-[9px] font-bold uppercase leading-snug tracking-[0.06em] text-gray-400 sm:text-[10px]">
+                transaction only
+              </p>
+            </div>
+
+            <div class="grid grid-cols-[9rem_1fr_1fr_1fr] items-center gap-x-2 rounded-xl bg-brand-blue/10 px-3 py-3 ring-2 ring-brand-blue/50 sm:grid-cols-[10.5rem_1fr_1fr_1fr] sm:px-4">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="font-semibold">Founding</span>
+                <span class="rounded-full bg-brand-blue px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Active</span>
+              </div>
+              <span class="text-center text-sm font-extrabold">$1,225</span>
+              <span class="text-center text-sm font-bold">$650</span>
+              <span class="text-center text-sm font-bold">$875</span>
+            </div>
+
+            <div class="mt-1 grid grid-cols-[9rem_1fr_1fr_1fr] items-center gap-x-2 px-3 py-3 sm:grid-cols-[10.5rem_1fr_1fr_1fr] sm:px-4">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="font-semibold text-gray-400">Level 2</span>
+                <span class="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">Upcoming</span>
+              </div>
+              <span class="text-center text-sm text-gray-400">$1,925</span>
+              <span class="text-center text-sm text-gray-400">$950</span>
+              <span class="text-center text-sm text-gray-400">$1,375</span>
+            </div>
+
+            <div class="grid grid-cols-[9rem_1fr_1fr_1fr] items-center gap-x-2 px-3 py-3 sm:grid-cols-[10.5rem_1fr_1fr_1fr] sm:px-4">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="font-semibold text-gray-400">Level 3</span>
+                <span class="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">Upcoming</span>
+              </div>
+              <span class="text-center text-sm text-gray-400">$2,625</span>
+              <span class="text-center text-sm text-gray-400">$1,150</span>
+              <span class="text-center text-sm text-gray-400">$1,875</span>
+            </div>
+
+            <div class="grid grid-cols-[9rem_1fr_1fr_1fr] items-center gap-x-2 px-3 py-3 sm:grid-cols-[10.5rem_1fr_1fr_1fr] sm:px-4">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="font-semibold text-gray-400">Standard</span>
+                <span class="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-400">Upcoming</span>
+              </div>
+              <span class="text-center text-sm text-gray-400">$3,490</span>
+              <span class="text-center text-sm text-gray-400">$1,495</span>
+              <span class="text-center text-sm text-gray-400">$2,495</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="#" class="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90">Login</a>
+        <a href="#" class="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50">Keep me posted</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — BUNDLE vs A LA CARTE -->
+  <section class="border-b border-gray-100 bg-brand-gray px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl">
+      <p class="text-center text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Choose your path</p>
+      <p class="mx-auto mt-2 max-w-xl text-center text-sm text-gray-500">Standard pricing shown. During launch, your active tier price applies at checkout.</p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2 md:gap-8">
+
+        <!-- Bundle -->
+        <article class="relative rounded-2xl border-2 border-brand-blue bg-white p-8">
+          <span class="absolute -top-3 left-6 inline-flex rounded-full bg-brand-blue px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-white">Recommended</span>
+          <h2 class="mt-2 text-2xl font-bold">Offer + Transaction Bundle</h2>
+          <p class="mt-2 text-[15px] leading-relaxed text-gray-600">One payment. When your offer is accepted, coordination starts immediately &mdash; no second checkout.</p>
+          <p class="mt-6 text-4xl font-extrabold tracking-tight">$3,490</p>
+          <p class="mt-1 text-[14px] font-semibold text-emerald-700">Save $500 vs buying separately</p>
+
+          <div class="mt-6 space-y-2.5 text-[14px] leading-relaxed text-gray-700">
+            <div class="flex items-start gap-2.5">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>1 payment</strong> upfront &mdash; that's it</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Coordination starts <strong>at acceptance</strong></span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Up to <strong>2 offers</strong> + restart if deal falls through</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Strategy call, CMA, BPO, TN offer forms, full closing coordination</span>
+            </div>
+          </div>
+
+          <a href="#" class="mt-8 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-6 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90">Login</a>
+        </article>
+
+        <!-- A La Carte -->
+        <article class="rounded-2xl border border-gray-200 bg-white p-8">
+          <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-gray-400">Or pay as you go</p>
+          <h2 class="mt-3 text-2xl font-bold">Offer + Transaction Separately</h2>
+          <p class="mt-2 text-[15px] leading-relaxed text-gray-600">Two separate payments. Coordination starts only after your second checkout.</p>
+
+          <div class="mt-6 space-y-4">
+            <div class="rounded-xl border border-gray-200 bg-brand-gray p-4">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <p class="font-bold">Offer Package</p>
+                  <p class="text-xs text-gray-500">Strategy, forms, CMA + BPO</p>
+                </div>
+                <p class="text-2xl font-extrabold">$1,495</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center text-xs font-bold text-gray-300">then</div>
+            <div class="rounded-xl border border-gray-200 bg-brand-gray p-4">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <p class="font-bold">Transaction Guidance</p>
+                  <p class="text-xs text-gray-500">Contract through closing</p>
+                </div>
+                <p class="text-2xl font-extrabold">$2,495</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-4 text-center text-[13px] text-gray-500">Combined: <strong>$3,990</strong> &mdash; $500 more than the bundle</p>
+
+          <div class="mt-6 space-y-2.5 text-[14px] leading-relaxed text-gray-600">
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-block h-4 w-4 shrink-0 text-center text-gray-300">&mdash;</span>
+              <span>2 separate payments</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-block h-4 w-4 shrink-0 text-center text-gray-300">&mdash;</span>
+              <span>Coordination starts after second checkout</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-block h-4 w-4 shrink-0 text-center text-gray-300">&mdash;</span>
+              <span>1 offer per purchase</span>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="mt-0.5 inline-block h-4 w-4 shrink-0 text-center text-gray-300">&mdash;</span>
+              <span>No free do-over if your offer isn&rsquo;t accepted or your contract is terminated</span>
+            </div>
+          </div>
+
+          <a href="#" class="mt-8 flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-6 text-[15px] font-semibold text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50">Login</a>
+        </article>
+      </div>
+
+      <p class="mt-5 text-center text-[12px] text-gray-400">Illustration: a ~3% buyer-side fee on a $500K home would be $15,000. BuyUnrepped's bundle at Standard is $3,490. Savings are not guaranteed.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — NOT THE RIGHT FIT -->
+  <section class="border-b border-gray-100 bg-white px-4 py-10 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="flex items-start gap-4 rounded-2xl border border-brand-blue/20 bg-brand-blue/[0.04] p-6 sm:p-7">
+        <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </span>
+        <div>
+          <h2 class="text-[15px] font-bold">Not the right fit? We'll tell you.</h2>
+          <p class="mt-1.5 text-[14px] leading-relaxed text-gray-600">If your situation calls for full-service representation, a complex negotiation, or more hand-holding than a flat fee covers, we'll connect you with our agent matchmaking service instead.</p>
+          <a href="#" class="mt-2.5 inline-flex items-center gap-1 text-[13px] font-semibold text-brand-navy underline decoration-gray-300 underline-offset-4 hover:decoration-brand-blue">See how agent matching works &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — WHAT'S INCLUDED (accordion) -->
+  <section class="border-b border-gray-100 bg-brand-gray px-4 py-14 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-blue">Scope</p>
+      <h2 class="mt-2 text-xl font-bold sm:text-2xl">What's included</h2>
+      <p class="mt-2 text-[14px] text-gray-500">Strategy call, CMA, offer forms, full transaction coordination through closing.</p>
+
+      <div class="mt-6 space-y-3">
+        <details class="rounded-xl border border-gray-200 bg-white">
+          <summary class="cursor-pointer px-6 py-4 font-bold">Before you submit your offer</summary>
+          <ul class="border-t border-gray-100 px-6 pb-5 pt-3 list-disc space-y-2 pl-10 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/60">
+            <li>Tennessee property intake and address confirmation</li>
+            <li>Onboarding disclosures and guided questionnaire</li>
+            <li>Tennessee offer documents based on your 1:1 broker call</li>
+            <li>Strategy call scheduling and broker review</li>
+            <li>Pricing guidance, broker price opinion, and supporting property data</li>
+            <li>Submission prep so your offer package is ready to send</li>
+          </ul>
+        </details>
+
+        <details class="rounded-xl border border-gray-200 bg-white">
+          <summary class="cursor-pointer px-6 py-4 font-bold">After your offer is accepted</summary>
+          <ul class="border-t border-gray-100 px-6 pb-5 pt-3 list-disc space-y-2 pl-10 text-[14px] leading-relaxed text-gray-600 marker:text-brand-blue/60">
+            <li>Transaction setup inside your dashboard</li>
+            <li>Contract timeline tracking and next-step guidance</li>
+            <li>Coordination support through inspections, escrow, and closing prep</li>
+            <li>Closing-day checklist, including wire-fraud safety guidance</li>
+            <li>Termination-notice drafting if the deal falls through</li>
+            <li>"Ask Kayla" bookable broker calls</li>
+          </ul>
+        </details>
+      </div>
+
+      <p class="mt-5 text-[12px] leading-relaxed text-gray-400">We provide non-representational brokerage support. You remain responsible for decisions and communications. CMAs and BPOs are informational, not appraisals.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — FAQ (trimmed, accordion) -->
+  <section class="border-b border-gray-100 bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="text-center text-2xl font-extrabold sm:text-3xl">Questions</h2>
+
+      <div class="mt-10 space-y-3">
+        <details class="rounded-xl border border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer px-6 py-4 text-[15px] font-bold">What is launch tier pricing?</summary>
+          <p class="border-t border-gray-100 px-6 pb-5 pt-3 text-[14px] leading-relaxed text-gray-600">Launch tiers fill in order: Founding, Level 2, Level 3, then Standard. Prices are limited and subject to availability. The price shown at checkout is the price that applies to your purchase.</p>
+        </details>
+        <details class="rounded-xl border border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer px-6 py-4 text-[15px] font-bold">How fast can I get an offer out?</summary>
+          <p class="border-t border-gray-100 px-6 pb-5 pt-3 text-[14px] leading-relaxed text-gray-600">Usually about a day. Most buyers are ready to send an offer within 24 hours, depending on property complexity and timely inputs.</p>
+        </details>
+        <details class="rounded-xl border border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer px-6 py-4 text-[15px] font-bold">How does the flat fee compare to a traditional commission?</summary>
+          <p class="border-t border-gray-100 px-6 pb-5 pt-3 text-[14px] leading-relaxed text-gray-600">Illustrative example: a hypothetical 3% buyer-side fee on a $500K home is $15,000. The recommended bundle at Standard is $3,490. Buyer-side compensation is negotiable; savings are not guaranteed.</p>
+        </details>
+        <details class="rounded-xl border border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer px-6 py-4 text-[15px] font-bold">Where is BuyUnrepped available?</summary>
+          <p class="border-t border-gray-100 px-6 pb-5 pt-3 text-[14px] leading-relaxed text-gray-600">Early access: Middle Tennessee &mdash; Nashville, Franklin, Murfreesboro, Brentwood, Mt Juliet, Hendersonville, Lebanon, Nolensville, Smyrna, Gallatin, Clarksville, and surrounding counties.</p>
+        </details>
+        <details class="rounded-xl border border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer px-6 py-4 text-[15px] font-bold">Who is the public point of contact?</summary>
+          <p class="border-t border-gray-100 px-6 pb-5 pt-3 text-[14px] leading-relaxed text-gray-600">Kayla Brown, CEO and Principal Broker. Email info@buyunrepped.com.</p>
+        </details>
+        <details class="rounded-xl border border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer px-6 py-4 text-[15px] font-bold">What if I need to cancel, or want a refund?</summary>
+          <p class="border-t border-gray-100 px-6 pb-5 pt-3 text-[14px] leading-relaxed text-gray-600">Fees are subject to our cancellation and refund policy. Email info@buyunrepped.com if you need to cancel. Full terms are in the Terms of Use under "Fees / Cancellation / Refunds."</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="px-4 py-14 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-4">
+      <a href="#" class="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-brand-navy px-8 text-[15px] font-bold text-white transition-colors hover:bg-brand-navy/90">Login</a>
+      <a href="#" class="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50">Keep me posted</a>
+      <a href="#" class="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-brand-navy/20 px-7 text-[15px] font-medium text-brand-navy transition-colors hover:border-brand-navy/40 hover:bg-gray-50">See savings calculator</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-gray-100 py-8">
+  <div class="mx-auto max-w-5xl px-4 text-center text-xs text-gray-400 sm:px-6 lg:px-8">
+    BuyUnrepped, Inc. &middot; TN Firm Lic. #267134 &middot; Broker Lic. #339134 &middot; 615-208-3390
+  </div>
+</footer>
+
+</body>
+</html>
